@@ -1,0 +1,968 @@
+{
+  "domain": "color_and_coloring",
+  "version": "1.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 2: The Power of Color",
+    "The Concept Wardrobe - Seasonal Color Analysis Comprehensive Guide",
+    "The VOU - All 12 Seasonal Colour Palettes for Men",
+    "Gentleman's Gazette - How to Use the Color Wheel to Assemble Superior Outfits"
+  ],
+  "parameters": [
+    {
+      "name": "skin_undertone",
+      "description": "The underlying color temperature of the skin. The most fundamental color analysis parameter. Determines whether warm or cool colors harmonize with the person.",
+      "values": [
+        {
+          "value": "warm",
+          "definition": "Yellow/golden/peachy undertones. Veins on wrist appear green. Gold jewelry flatters, silver makes skin look pale, muddy, or greenish. Golden, warm glow to skin.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "cool",
+          "definition": "Blue/pink/red undertones. Veins on wrist appear blue or purple. Silver jewelry flatters, gold makes skin appear yellowish or greenish. Pink or rosy quality to skin.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "neutral_warm",
+          "definition": "Orange undertones (yellow + red). Leans warm but not strongly. Gold slightly preferred over silver. Can wear both warm and cool colors with some flexibility.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "neutral_cool",
+          "definition": "Purple undertones (blue + red). Leans cool but not strongly. Silver slightly preferred over gold. Can wear both warm and cool colors with some flexibility.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "pure_neutral",
+          "definition": "Red undertones, no strong reaction to either gold or silver. Rarest. Can wear both warm and cool colors equally well.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "determination_methods": [
+        "Vein test: blue/purple veins = cool, green veins = warm",
+        "Metal test: gold suits you = warm, silver suits you = cool, both = neutral",
+        "White paper test: hold white paper near face — skin appears yellowish (warm) or pinkish (cool)"
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "skin_depth",
+      "description": "How light or dark the overall skin tone is. Combines with undertone to influence which value range of colors to wear.",
+      "values": [
+        {
+          "value": "light",
+          "definition": "Fair skin. Dark colors and black can make skin look washed out (unless high contrast with dark hair). Pastel shades and lighter tints work best near face.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "medium_light",
+          "definition": "Light-medium skin. Some flexibility with both light and medium-depth colors.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Moderate skin depth. Can wear more true hues. Slight shades or tints work without being too extreme.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "medium_dark",
+          "definition": "Olive to deeper skin. Can handle richer, more saturated colors comfortably.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "dark",
+          "definition": "Deep skin. Can wear both true hues and darker shades — face in no danger of looking washed out by darker colors. Extremely light tints can create distracting high contrast.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "hair_value",
+      "description": "How light or dark the hair is. Key input for determining overall contrast level.",
+      "values": [
+        {
+          "value": "light",
+          "definition": "Light blonde, golden blonde, strawberry blonde, light grey/white. Low value contribution.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Medium brown, medium auburn, medium golden, dark blonde. Moderate value contribution.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "dark",
+          "definition": "Dark brown, black, black-brown, dark auburn, chestnut. High value contribution.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "hair_tone",
+      "description": "The warmth or coolness of the hair color",
+      "values": [
+        {
+          "value": "warm",
+          "definition": "Golden highlights, copper, strawberry, bright auburn. Bright golden hues visible.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "cool",
+          "definition": "Ashy quality, no golden highlights. Ash blonde, ash brown, platinum, silver, grey. Darker auburns without warmth.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "neutral",
+          "definition": "Weakened versions of warm or cool — neither strongly golden nor strongly ashy.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "eye_color_family",
+      "description": "The dominant color and warmth/coolness of the eyes",
+      "values": [
+        {
+          "value": "warm_light",
+          "definition": "Turquoise blues, mossy greens, ochre browns, hazel with gold flecks, amber, topaz. Warm yellow undertones visible. Brighter and lighter appearance. Gold highlights them.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "cool_light",
+          "definition": "Cool blue, grey-blue, grey-green, soft green. Blue undertones. Greyish, less clear quality. Silver highlights them.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "warm_dark",
+          "definition": "Dark brown with warm tones, red-brown, black-brown with warmth, dark hazel with gold.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "cool_dark",
+          "definition": "Dark brown without warmth, charcoal grey, pure black. Cool or neutral quality.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "bright",
+          "definition": "Clear blue, turquoise, bright/emerald green, sparkly amber or dark brown with clearly defined whites of eyes. High saturation and clarity.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "overall_contrast",
+      "description": "The degree of difference in value (light/dark) between skin, hair, and eyes. Critical for determining how much contrast to use in clothing.",
+      "values": [
+        {
+          "value": "low",
+          "definition": "All features similarly light (fair skin + light hair + light eyes) OR all features similarly dark. Features blend together. Should be most careful pairing contrasting colors — must mute the hues. Pastel and tonal dressing works best.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Moderate difference between features. Different but not extreme. Can wear true hues with slight shades/tints. Bolder color will draw some attention from face.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "high",
+          "definition": "Strong difference — light skin + dark hair, or dark skin + grey/light hair. Can wear bolder colors, pairing primaries or complementaries. Avoid all true hues simultaneously — use tinting or shading when pairing bold colors.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "chroma",
+      "description": "How saturated/vivid or muted/soft the person's natural coloring is. Determines whether the person can wear bright saturated colors or needs muted tones.",
+      "values": [
+        {
+          "value": "bright",
+          "definition": "Fully saturated features. Vibrant, full of color. No grey pigments. High contrast between features. Cannot wear grey alone without being washed out. Can wear highly saturated colors comfortably.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Between extremes. Slightly more saturated or muted based on season. Can handle moderate saturation in clothing.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        },
+        {
+          "value": "muted",
+          "definition": "'Greyed out' appearance. Desaturated, ashy quality. High grey pigment content. Low contrast between features. Can wear grey/neutrals alone successfully. Saturated colors overpower and draw attention away from face.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "color_season",
+      "description": "The 12-season classification combining undertone + value + chroma. Determines the ideal color palette for the person.",
+      "values": [
+        {
+          "value": "true_spring",
+          "definition": "Warm + bright. Obvious warmth radiating from features. Medium contrast. Needs saturated, fresh warm colors. Gold flatters, silver makes pale.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "light_spring",
+          "definition": "Light + warm. Absence of depth in features. Low contrast — all features similarly light. Very dark colors age. Light, warm, colorful tints work best.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "bright_spring",
+          "definition": "Bright + warm. Clearness and high saturation of features. High to very high contrast. Needs highly saturated warm colors. Greyish colors make bland.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "true_summer",
+          "definition": "Cool + muted. Gentle, subdued coolness. Medium to high contrast. Needs gentler cool colors with lower chroma. Overwhelmed by saturated Winter colors.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "light_summer",
+          "definition": "Light + cool. Low contrast, all features similarly light but cool-toned. Soft, cool, pastel shades work best. Dark colors overpower.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "soft_summer",
+          "definition": "Muted + cool. 'Greyed out' cool appearance. High grey pigment. Low to medium contrast. Dusty, grayed cool tones create sophisticated elegance. Saturated colors draw attention away.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "true_autumn",
+          "definition": "Warm + muted. Obvious warmth but more subdued than Spring. Medium contrast. Needs rich, earthy, muted warm colors. Browns work well.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "soft_autumn",
+          "definition": "Muted + warm. 'Greyed out' warm appearance. Higher walnut/olive pigment. Low to medium contrast. Earthy muted shades work. Saturated colors overpower.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "dark_autumn",
+          "definition": "Dark + warm. Depth of features with warm base. High contrast. Rich, deep warm colors — dark reds, chocolate, olive. Golden/bronzy glow.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "true_winter",
+          "definition": "Cool + bright. Obvious coolness, absence of warmth. Medium to high contrast. Needs saturated cool colors with higher chroma. Gold makes yellowish/sickly, silver looks healthy.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "dark_winter",
+          "definition": "Dark + cool. Depth of features with cool base. High contrast. Deep cool jewel tones — navy, charcoal, deep purple. Light colors wash out.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "bright_winter",
+          "definition": "Bright + cool. Clearness and high saturation with cool base. Very high contrast. Clear, vibrant cool colors. More intense and slightly darker than Bright Spring. Greyish colors make bland.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        }
+      ],
+      "determination_process": [
+        "Step 1: Identify undertone (warm vs cool) using vein/metal test",
+        "Step 2: Assess value — are features overall light, medium, or dark?",
+        "Step 3: Evaluate chroma — are features saturated/vivid or muted/ashy?",
+        "Step 4: Find the season where the dominant characteristic aligns"
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "color_combination_scheme",
+      "description": "How colors are combined in an outfit using color wheel relationships",
+      "values": [
+        {
+          "value": "analogous",
+          "definition": "Colors close to each other on the color wheel. Similar temperature, share a common primary. Low contrast, harmonious. Example: yellow-orange to red-orange. Safe and easy.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "complementary",
+          "definition": "Colors directly across from each other on the color wheel. Highest contrast possible. Pairs: red-green, yellow-purple, blue-orange. Bold and attention-grabbing.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "split_complementary",
+          "definition": "One color + the two analogues of its complement. Example: yellow with red-purple and blue-purple. High contrast but more nuanced than direct complementary.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "monochromatic",
+          "definition": "One hue in different shades and tints. Lowest contrast. Creates elongation and sophistication. Safest combination.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "outfit_contrast_level",
+      "description": "How much contrast between clothing pieces should match the person's natural contrast level",
+      "values": [
+        {
+          "value": "low_outfit_contrast",
+          "definition": "Subtle differences between garment colors. Best for low-contrast individuals (all light or all dark features). Tonal dressing, muted combinations.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "medium_outfit_contrast",
+          "definition": "Moderate differences between garment colors. Best for medium-contrast individuals. True hues with slight shading/tinting.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "high_outfit_contrast",
+          "definition": "Strong differences between garment colors. Best for high-contrast individuals (light skin + dark hair). Can pair primaries or complementaries. Must still use tinting/shading to avoid overwhelming.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "key_principle": "Match clothing contrast to your natural skin-hair-eye contrast level. Directing the viewer's eyes to the face and making the face look healthy is the primary objective.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "color_temperature_in_garments",
+      "description": "Whether garment colors lean warm or cool — must align with person's undertone",
+      "values": [
+        {
+          "value": "warm_garment_colors",
+          "definition": "Colors with yellow/red base: warm reds, oranges, golden yellows, warm browns (camel, tan, chocolate), olive, rust, coral, warm navy. For warm-undertone individuals.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "cool_garment_colors",
+          "definition": "Colors with blue base: cool blues, blue-greys, charcoal, cool purples, burgundy, cool pinks, icy tones, silver grey. For cool-undertone individuals.",
+          "sources": [
+            "Gentleman's Gazette",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "neutral_garment_colors",
+          "definition": "Colors that work across undertones: navy (universal), medium grey, white, black (use with caution — high contrast). Form the base wardrobe foundation.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "metal_compatibility",
+      "description": "Which metal jewelry/accessories harmonize with the person's coloring",
+      "values": [
+        {
+          "value": "gold",
+          "definition": "Harmonizes with warm undertones. Creates healthy glow on warm skin. Makes cool skin appear yellowish or greenish.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "silver",
+          "definition": "Harmonizes with cool undertones. Creates even, healthy tone on cool skin. Makes warm skin appear pale, muddy, or greenish.",
+          "sources": [
+            "The Concept Wardrobe",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "both",
+          "definition": "For neutral undertones. Both metals work equally well. Rose gold is also a good option.",
+          "sources": [
+            "The Concept Wardrobe"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "flusser_complexion_type",
+      "description": "Flusser's simplified complexion classification. Rather than 12 seasons, Flusser divides all male complexions into two primary types based on the contrast between hair and skin. This is his foundational framework for all color recommendations.",
+      "values": [
+        {
+          "value": "contrast",
+          "definition": "Dark hair + light skin. Hair and skin in powerful counterpoint. Surrounding them with contrasting colors of equal strength serves to enliven the face's natural vitality. Monotone/tonal clothing dampens the drama. Subdivided into high-contrast and medium-contrast.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "muted",
+          "definition": "Hair and skin tone are similar (both light, or both medium). Low-intensity complexion. Requires nurturing effect of softer, monotoned color format. Like watercolors needing a lighter frame. High-contrast clothing bullies it into submission. Subdivided into muted and light-bright.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "flusser_complexion_subtype",
+      "description": "Flusser's four complexion subtypes within the contrast/muted framework. Each has specific color coordination rules.",
+      "values": [
+        {
+          "value": "high_contrast",
+          "definition": "Strongest dark-light differential (e.g., very dark hair + fair skin, classic East Asian coloring). Needs bold, dramatic clothing colors. Bright and dramatic shades make skin radiant. Monochromatic coordination can never fully underscore the boldness of the complexion.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "medium_contrast",
+          "definition": "Substantial but not extreme distinction between hair and skin (e.g., dark-brown hair + slightly tanned skin). Most latitude of any type. Free to experiment with almost any medium-to-strong color coordination. High-contrast clothing makes tanned skin glisten.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "muted_tonal",
+          "definition": "Hair and skin tones similar and subdued (e.g., sandy/brown hair + fair/doughy skin). Demands vigilance. Needs softer, warmer shadings. Starkness of black-and-white bullies complexion into submission. Bracket face below in same color as hair above.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "light_bright",
+          "definition": "Low-contrast with very light features (e.g., fair skin + blond/turning-white hair). Highly susceptible to washing out. Must pay special attention to colors that siphon off pigmentation. Avoid near-black navy or ice blue — use richer, warmer shades instead. Echo gold/warm tones of hair in clothing.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "flusser_color_technique",
+      "description": "Flusser's two foundational color techniques for men. Both serve the same goal: ensuring the face remains the focal point.",
+      "values": [
+        {
+          "value": "contrast_matching",
+          "definition": "TECHNIQUE 1: The colors of any given ensemble should exhibit the same degree of contrast as manifested by one's skin and hair tones. Contrast complexion = contrasting clothing. Muted complexion = muted clothing. A person's two primary color signposts are skin and hair.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "color_echoing",
+          "definition": "TECHNIQUE 2: Enhance the face by repeating one or more of its natural pigments in the clothing worn below. Hair color → suit shade draws attention to what's bracketed in between (the face). Eye color → shirt/tie shade. Ruddy skin → reddish/burgundy necktie. Suntanned skin → step up clothing color strength incrementally.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "facial_color_features",
+      "description": "Flusser's hierarchy of facial color indicators that should be echoed in clothing. Ordered by importance.",
+      "values": [
+        {
+          "value": "hair_color",
+          "definition": "Most important. Brown hair → brown suit brackets face. Blond hair → gold/warm tones in clothing. As age lightens hair and skin, clothing should adopt muted, tonal approach.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "skin_tone",
+          "definition": "Second most important. Ruddy cheeks → reddish/burgundy tie or scarf. Swarthy/tanned skin → medium-to-strong color coordination. Ashen/fair skin → pale, warm tones near face.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "eye_color",
+          "definition": "Third. Especially impactful for blue eyes — 'Nothing brings an azure-eyed countenance into more engaging focus than a blue-toned shirt or like-hued necktie.' Also applies to brown, green, etc.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        },
+        {
+          "value": "special_pigment",
+          "definition": "Any special coloration like rosy cheeks, suntanned skin, or freckles. Play up such colorations by keying them to apparel in close proximity. Bronze → step up clothing color strength. Warm-weather climes tend to bring out the peacock in a man.",
+          "sources": [
+            "Flusser Ch 2"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "indian_summer_color_strategy",
+      "description": "Color selection principles for Indian menswear driven by heat management, sweat visibility, and seasonal appropriateness",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual"
+      ],
+      "values": [
+        {
+          "value": "light_reflective_summer",
+          "definition": "White, beige, pastels, and earthy tones that reflect sunlight and reduce heat absorption for peak summer wear. Keeps the wearer visually and physically cooler. Includes off-white, cream, sky blue, mint, lavender, sand, and stone tones",
+          "sources": [
+            "BLNK Store",
+            "The Bear House",
+            "Hatkay",
+            "LM Street"
+          ]
+        },
+        {
+          "value": "dark_monsoon_practical",
+          "definition": "Navy, charcoal, olive, dark grey, and black preferred during monsoon to hide water splashes, mud stains, and wet-fabric transparency. Practical choice that maintains appearance despite rain exposure throughout the day",
+          "sources": [
+            "Entimessi",
+            "The Hub",
+            "Urbano Fashion"
+          ]
+        },
+        {
+          "value": "muted_transitional",
+          "definition": "Muted earthy tones for post-monsoon and autumn transitional dressing; olive, burgundy, rust, tan, and forest green. Signals seasonal shift while working with layered outfits appropriate for variable temperatures",
+          "sources": [
+            "Nihal Fashions",
+            "Lotus Boutique"
+          ]
+        },
+        {
+          "value": "rich_winter",
+          "definition": "Deeper, richer tones for north Indian winter including deep maroon, navy, forest green, charcoal, and burgundy. Pairs with heavier fabrics like wool, velvet, and heavy knits that naturally come in saturated colors",
+          "sources": [
+            "Nihal Fashions",
+            "Hatkay"
+          ]
+        }
+      ]
+    }
+  ],
+  "color_effect_principles": [
+    {
+      "principle": "face_health_is_primary_objective",
+      "description": "The primary goal of color in menswear is directing the viewer's eyes to the face and making the face look as well-colored and healthy as possible. Wrong colors create: emphasized shadows, uneven skin tone, sickly greenish tinge. Correct colors create: even healthy skin tone, natural glow, enhanced features.",
+      "sources": [
+        "Gentleman's Gazette",
+        "The Concept Wardrobe"
+      ]
+    },
+    {
+      "principle": "match_clothing_contrast_to_natural_contrast",
+      "description": "The degree of contrast in your outfit should mirror the degree of contrast in your natural coloring. High natural contrast = can wear high outfit contrast. Low natural contrast = should wear low outfit contrast.",
+      "sources": [
+        "Gentleman's Gazette"
+      ]
+    },
+    {
+      "principle": "echo_natural_colors",
+      "description": "Repeating or echoing one of your natural colors (skin, hair, or eye color) in your outfit creates automatic harmony.",
+      "sources": [
+        "Gentleman's Gazette"
+      ]
+    },
+    {
+      "principle": "wear_season_colors_near_face",
+      "description": "Colors from your season palette have maximum effect when worn near the face (shirts, ties, scarves). Pants can be more neutral.",
+      "sources": [
+        "The VOU"
+      ]
+    },
+    {
+      "principle": "neutral_base_wardrobe",
+      "description": "Build a base wardrobe from grayscale, shades of brown, and shades of blue. These are universally versatile. Then add seasonal accent colors.",
+      "sources": [
+        "Gentleman's Gazette"
+      ]
+    },
+    {
+      "principle": "wrong_undertone_mixing_creates_green",
+      "description": "Yellow undertone skin + blue/silver garments = sickly green appearance. Blue undertone skin + yellow/gold garments = sickly green appearance. The clash happens at the chemical/optical level and cannot be overridden by style.",
+      "sources": [
+        "The Concept Wardrobe"
+      ]
+    },
+    {
+      "principle": "dark_minimizes_light_expands",
+      "description": "CANONICAL PRINCIPLE (referenced by D01, D02, D07). Dark colors recede, minimize, and make areas appear smaller/thinner. Light colors advance, expand, and make areas appear larger. Medium-to-dark register recommended for stout physiques. Thin men can use lighter colors to advantage. Bright/vibrant colors make one stand out and appear bigger. Muted colors minimize size emphasis.",
+      "sources": [
+        "Flusser Ch2",
+        "Gentleman's Gazette"
+      ],
+      "referenced_by": [
+        "D01",
+        "D02",
+        "D07"
+      ]
+    }
+  ],
+  "cross_domain_dependencies": [
+    {
+      "from_param": "skin_undertone",
+      "to_domain": "D09",
+      "to_param": "cufflink_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "metal_compatibility",
+      "to_domain": "D09",
+      "to_param": "watch_timepiece_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "metal_compatibility",
+      "to_domain": "D09",
+      "to_param": "belt_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "flusser_complexion_type",
+      "to_domain": "D02",
+      "to_param": "top_bottom_contrast",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "overall_contrast",
+      "to_domain": "D02",
+      "to_param": "top_bottom_contrast",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "color_season",
+      "to_domain": "D04",
+      "to_param": "shirt_collar_style",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "chroma",
+      "to_domain": "D02",
+      "to_param": "pattern_mixing_count",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "color_temperature_in_garments",
+      "to_domain": "D08",
+      "to_param": "suiting_fabric",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "skin_depth",
+      "to_domain": "D03",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into"
+    },
+    {
+      "from_param": "hair_value",
+      "to_domain": "D03",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into"
+    },
+    {
+      "from_param": "eye_color_family",
+      "to_domain": "D03",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into"
+    },
+    {
+      "from_param": "hair_tone",
+      "to_domain": "D03",
+      "to_param": "color_temperature_in_garments",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "outfit_contrast_level",
+      "to_domain": "D02",
+      "to_param": "top_bottom_contrast",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "flusser_complexion_subtype",
+      "to_domain": "D03",
+      "to_param": "flusser_color_technique",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "indian_summer_color_strategy",
+      "to_domain": "D05",
+      "to_param": "indian_season_type",
+      "relationship": "determined_by"
+    }
+  ],
+  "intra_domain_dependencies": [
+    {
+      "from_param": "skin_undertone",
+      "to_param": "color_season",
+      "relationship": "feeds_into",
+      "note": "Step 1 of season determination"
+    },
+    {
+      "from_param": "skin_depth",
+      "to_param": "color_season",
+      "relationship": "feeds_into",
+      "note": "Step 2: value assessment"
+    },
+    {
+      "from_param": "chroma",
+      "to_param": "color_season",
+      "relationship": "feeds_into",
+      "note": "Step 3: saturation assessment"
+    },
+    {
+      "from_param": "skin_depth",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into",
+      "note": "Skin lightness vs hair darkness"
+    },
+    {
+      "from_param": "hair_value",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into",
+      "note": "Hair darkness vs skin lightness"
+    },
+    {
+      "from_param": "eye_color_family",
+      "to_param": "overall_contrast",
+      "relationship": "feeds_into",
+      "note": "Eye lightness contributes to contrast"
+    },
+    {
+      "from_param": "hair_tone",
+      "to_param": "skin_undertone",
+      "relationship": "influences",
+      "note": "Hair warmth/coolness often aligns with skin undertone"
+    },
+    {
+      "from_param": "overall_contrast",
+      "to_param": "outfit_contrast_level",
+      "relationship": "determines",
+      "note": "Natural contrast level determines appropriate outfit contrast"
+    },
+    {
+      "from_param": "color_season",
+      "to_param": "color_temperature_in_garments",
+      "relationship": "determines",
+      "note": "Season determines warm vs cool garment colors"
+    },
+    {
+      "from_param": "skin_undertone",
+      "to_param": "metal_compatibility",
+      "relationship": "determines",
+      "note": "Warm undertone → gold; cool → silver"
+    },
+    {
+      "from_param": "flusser_complexion_type",
+      "to_param": "flusser_complexion_subtype",
+      "relationship": "determines",
+      "note": "Contrast/muted splits into 4 subtypes"
+    },
+    {
+      "from_param": "flusser_complexion_subtype",
+      "to_param": "flusser_color_technique",
+      "relationship": "determines",
+      "note": "Subtype determines which technique to apply"
+    },
+    {
+      "from_param": "overall_contrast",
+      "to_param": "color_combination_scheme",
+      "relationship": "constrains",
+      "note": "Low contrast → analogous/monochromatic; high → can use complementary"
+    }
+  ],
+  "status": "production"
+}

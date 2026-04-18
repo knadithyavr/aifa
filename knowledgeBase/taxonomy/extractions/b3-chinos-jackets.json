@@ -1,0 +1,747 @@
+{
+  "extraction_batch": "b3-chinos-jackets",
+  "extraction_date": "2026-04-02",
+  "sources": [
+    {
+      "id": "S1",
+      "name": "Real Men Real Style",
+      "url": "https://www.realmenrealstyle.com/types-of-pants/",
+      "status": "fetched_via_search",
+      "title": "15 Types Of Pants - The Trouser Style Guide EVERY Man Needs"
+    },
+    {
+      "id": "S2",
+      "name": "Primal Gray",
+      "url": "https://www.primalgray.com/en-ca/blogs/men/types-of-chinos-and-trousers-a-complete-guide-for-men",
+      "status": "fetched_via_search",
+      "title": "Types of Chinos and Trousers: A Complete Guide for Men"
+    },
+    {
+      "id": "S3",
+      "name": "Pant Project",
+      "url": "https://pantproject.com/blogs/pantology/types-of-pants-for-men",
+      "status": "fetched_via_search",
+      "title": "Must Have Types of Pants In Every Modern Man's Wardrobe"
+    },
+    {
+      "id": "S4",
+      "name": "Primer Magazine",
+      "url": "https://www.primermagazine.com/2025/spend/types-of-jackets",
+      "status": "fetched_via_search",
+      "title": "Types of Jackets: An Encyclopedic Guide to Finding Your Perfect Style [28 Styles]"
+    },
+    {
+      "id": "S5",
+      "name": "Ape to Gentleman",
+      "url": "https://www.apetogentleman.com/types-of-jacket/",
+      "status": "fetched_via_search",
+      "title": "14 Types Of Jacket Every Man Should Know"
+    },
+    {
+      "id": "S6",
+      "name": "Buffalo Jackson",
+      "url": "https://buffalojackson.com/blogs/insight/types-of-leather-jackets",
+      "status": "fetched_via_search",
+      "title": "Types of Leather Jackets: Which Style Are You?"
+    },
+    {
+      "id": "S7",
+      "name": "ModaKnits",
+      "url": "https://modaknits.com/types-of-hoodies/",
+      "status": "fetched_via_search",
+      "title": "20 Popular Types of Hoodies: Styles, Features & How to Choose"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "casual_trouser_type",
+      "description": "The category/style of casual trousers or pants, distinguishing between different silhouettes, constructions, and intended use cases",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "chino",
+          "definition": "Lightweight cotton twill trousers with hidden stitching and a tapered, form-fitting cut. Originated from the 1898 Spanish-American War when soldiers improvised uniforms using Chinese twill cotton. Strikes a balance between casual and formal, suitable for business-casual to casual settings.",
+          "sources": ["Real Men Real Style", "Primal Gray", "Pant Project"]
+        },
+        {
+          "value": "khaki",
+          "definition": "Cotton twill trousers with visible stitching and pockets, offering a more relaxed fit than chinos. Heavier, thicker cotton twill fabric with a sturdy workwear heritage. Name derived from Persian for 'dust', originating from British military uniforms in 19th-century India.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "jogger",
+          "definition": "Modern evolution of sweatpants with elastic or drawstring waist and close-fitting leg that tapers to elasticated cuffs. Made from softer fabrics like fleece, cotton, or tech materials. Offers a streamlined, athletic-casual silhouette compared to traditional sweatpants.",
+          "sources": ["Real Men Real Style", "Pant Project", "Primal Gray"]
+        },
+        {
+          "value": "cargo",
+          "definition": "Rugged cotton or cotton-blend trousers featuring multiple large utility pockets on the legs. Military-inspired design originating from 1938 British army and later adopted by US military in WWII. The most storage-friendly pant style.",
+          "sources": ["Real Men Real Style", "Pant Project", "Primal Gray"]
+        },
+        {
+          "value": "linen_trouser",
+          "definition": "Lightweight, breathable trousers made from linen fabric, ideal for warm weather and summer occasions. Ultra-breathable, naturally cooling, with a relaxed drape. Suited for resort, travel, and minimalist summer looks.",
+          "sources": ["Real Men Real Style", "Primal Gray", "Pant Project"]
+        },
+        {
+          "value": "drawstring_trouser",
+          "definition": "Casual trousers with an elastic or drawstring waistband instead of a traditional button/zip closure. Offers maximum comfort with easy fit adjustment. Often made from linen, cotton, or blended fabrics.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Trousers made from corduroy fabric featuring distinctive raised parallel ridges (wales). Available in various wale widths from fine to wide. A textured alternative to chinos suited for autumn/winter.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "seersucker",
+          "definition": "Lightweight trousers made from puckered seersucker fabric, traditionally in blue-and-white stripes. The puckered texture allows airflow, making them ideal for hot weather. A preppy, summer-specific option.",
+          "sources": ["Pant Project", "Real Men Real Style"]
+        },
+        {
+          "value": "sweatpant",
+          "definition": "Soft, loose-fitting athletic trousers with elastic waist and often elastic cuffs. Made from fleece or jersey cotton. Primarily loungewear or athletic wear, less streamlined than joggers.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "chino_jogger",
+          "definition": "Hybrid style combining the polished look of chinos with the elastic waist and tapered cuffs of joggers. Offers a contemporary option that transitions from casual weekends to informal business meetings.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "korean_pant",
+          "definition": "Wide-leg, relaxed-fit trousers inspired by Korean fashion trends. Often features a high waist, pleated front, and generous drape through the leg. A fashion-forward alternative to traditional relaxed-fit trousers.",
+          "sources": ["Pant Project"]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_fit",
+      "description": "The silhouette and cut of casual trousers, determining how closely the fabric follows the body from waist to ankle",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Cut closer to the body throughout the leg creating a sleek, modern silhouette. Pairs well with fitted blazers and dress shirts. Best suited for lean to average builds.",
+          "sources": ["Primal Gray", "Real Men Real Style"]
+        },
+        {
+          "value": "tapered",
+          "definition": "Features a gradual narrowing from the thigh to the ankle, offering room at the hip and thigh while maintaining a clean ankle line. A contemporary balance between classic and slim fits, versatile for both professional and casual settings.",
+          "sources": ["Primal Gray", "Real Men Real Style"]
+        },
+        {
+          "value": "straight",
+          "definition": "Consistent width from the thigh through the leg opening with no tapering. The most traditional and universally flattering silhouette. A balanced look that works for most body types.",
+          "sources": ["Primal Gray", "Real Men Real Style"]
+        },
+        {
+          "value": "relaxed",
+          "definition": "Looser cut through the seat and thigh area providing maximum ease of movement and comfort. A more traditional, generous fit ideal for casual settings and weekend wear. Works well for broader frames.",
+          "sources": ["Primal Gray", "Real Men Real Style"]
+        },
+        {
+          "value": "athletic",
+          "definition": "Roomier through the thigh and seat to accommodate muscular builds, then tapering to a narrower leg opening. Designed for men with larger thighs relative to waist. Combines comfort with a modern silhouette.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "classic",
+          "definition": "The most traditional silhouette with a straight leg and comfortable room throughout. Sits at the natural waist and provides a balanced look that flatters most body types without being too loose or too fitted.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "cropped",
+          "definition": "Trousers that end above the ankle, creating a modern, fashion-forward look. Works particularly well in warmer weather and when styled with loafers or sneakers. Often combined with slim or tapered cuts.",
+          "sources": ["Primal Gray"]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_rise",
+      "description": "The distance from the crotch seam to the top of the waistband, affecting comfort, proportions, and visual leg length",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "high",
+          "definition": "Waistband sits at or above the natural waist. Elongates the legs visually and provides a more classic, polished appearance. Comfortable for most body types.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "mid",
+          "definition": "Waistband sits between the hip bone and the natural waist. The most common and versatile rise, offering a balanced silhouette suitable for most occasions.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "low",
+          "definition": "Waistband sits below the hip bone. Offers a casual, contemporary vibe. Can visually shorten the legs and is best suited for taller frames.",
+          "sources": ["Primal Gray"]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_fabric",
+      "description": "The primary material used in casual trouser construction, affecting comfort, drape, formality, and seasonal appropriateness",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "cotton_twill",
+          "definition": "The classic chino fabric: breathable, durable, soft, and slightly structured. Diagonal weave pattern provides durability while remaining comfortable. The standard for most chinos and khakis.",
+          "sources": ["Real Men Real Style", "Primal Gray"]
+        },
+        {
+          "value": "cotton_stretch",
+          "definition": "Cotton twill blended with elastane/lycra for added flexibility and comfort. Retains the look of traditional cotton twill with improved range of motion and shape retention.",
+          "sources": ["Primal Gray", "Pant Project"]
+        },
+        {
+          "value": "linen",
+          "definition": "Ultra-breathable, naturally cooling fabric with a relaxed drape and characteristic texture. Wrinkles easily but valued for summer comfort. Ideal for warm weather, resort travel, and casual settings.",
+          "sources": ["Real Men Real Style", "Primal Gray", "Pant Project"]
+        },
+        {
+          "value": "linen_blend",
+          "definition": "Linen combined with cotton or synthetic fibers to reduce wrinkling while maintaining breathability. Offers a more practical alternative to pure linen with better shape retention.",
+          "sources": ["Real Men Real Style", "Primal Gray"]
+        },
+        {
+          "value": "fleece",
+          "definition": "Soft, insulating synthetic fabric used primarily in joggers and sweatpants. Brushed interior for warmth and comfort. Best for loungewear and cold-weather casual wear.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "cotton_jersey",
+          "definition": "Soft, stretchy knit cotton fabric used in joggers and athletic-style pants. Lightweight, comfortable, and flexible. Suited for lounging and casual outings.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "tech_fabric",
+          "definition": "Synthetic or blended performance fabrics with moisture-wicking, quick-dry, or four-way stretch properties. Used in modern joggers and athleisure trousers. Suited for active lifestyles and travel.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Cotton fabric with distinctive raised parallel ridges (wales). Available in fine-wale and wide-wale varieties. Provides warmth and texture, ideal for autumn/winter.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "seersucker",
+          "definition": "Puckered cotton fabric with alternating smooth and textured stripes. The puckered texture allows airflow, making it ideal for hot, humid climates. A seasonal summer fabric.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "organic_cotton",
+          "definition": "GOTS-certified organic heavy cotton twill used in sustainable chinos. Maintains the same properties as conventional cotton twill but grown without synthetic pesticides or fertilizers.",
+          "sources": ["Primal Gray"]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_color",
+      "description": "The predominant color of casual trousers, affecting versatility, formality, and outfit coordination",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "navy",
+          "definition": "Deep blue tone that is among the most versatile chino colors. Pairs well with a variety of blazers and dress shirts. Appropriate for any occasion and easily dressed up or down. Contrasts nicely with lighter tops.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "khaki",
+          "definition": "The original and most traditional chino color, a dusty tan derived from the Persian word for 'dust'. Highly versatile neutral that pairs with most colors. A wardrobe essential.",
+          "sources": ["Real Men Real Style", "Primal Gray"]
+        },
+        {
+          "value": "charcoal_grey",
+          "definition": "Dark grey tone that is among the most versatile trouser colors alongside navy. Pairs with a wide range of tops and can read as semi-formal. A sophisticated neutral suitable for office and evening wear.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "grey",
+          "definition": "Medium grey offering a contemporary, modern aesthetic. Works well in chino jogger styles. Transitions easily from casual weekends to informal business settings.",
+          "sources": ["Primal Gray"]
+        },
+        {
+          "value": "olive",
+          "definition": "Military-inspired green-brown tone that adds visual interest while remaining neutral enough for versatile pairing. A classic casual trouser color with outdoor and heritage connotations.",
+          "sources": ["Real Men Real Style"]
+        },
+        {
+          "value": "stone",
+          "definition": "Light, warm neutral tone similar to beige or sand. A lighter alternative to khaki that works well in spring/summer. Pairs easily with most tops.",
+          "sources": ["Real Men Real Style", "Primal Gray"]
+        },
+        {
+          "value": "black",
+          "definition": "The darkest neutral, offering maximum versatility and a sleek, modern appearance. Can read as more formal than other casual trouser colors. A wardrobe staple.",
+          "sources": ["Primal Gray", "Real Men Real Style"]
+        },
+        {
+          "value": "white_cream",
+          "definition": "Light, summer-appropriate color that creates a clean, fresh look. Best suited for warm weather and resort settings. Requires more care to maintain.",
+          "sources": ["Real Men Real Style"]
+        },
+        {
+          "value": "burgundy",
+          "definition": "A bold, rich color option that adds personality to an outfit. Best balanced with neutral tops (white, grey, navy). A seasonal autumn/winter accent color.",
+          "sources": ["Primal Gray"]
+        }
+      ]
+    },
+    {
+      "name": "shorts_type",
+      "description": "The category/style of men's shorts, distinguishing between different constructions, pocket configurations, and intended use cases",
+      "style_track": ["casual"],
+      "values": [
+        {
+          "value": "chino_shorts",
+          "definition": "Tailored shorts made from cotton twill with a polished, clean finish. Sharp and classy, suitable for lunch dates and relaxed days out. Often feature a flat front and welt or slant pockets. Pair well with polos, casual tees, sneakers, or loafers.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "athletic_shorts",
+          "definition": "Performance-oriented shorts made from moisture-wicking polyester blends. Typically feature an elastic waist, lightweight construction, and quick-dry properties. Often end 5-6 inches above the knee. Designed for workouts, running, and gym activities.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "cargo_shorts",
+          "definition": "Casual shorts featuring multiple large utility pockets on the legs. Made from sturdy cotton blends for durability. Popular across all ages for their functionality, ideal for hiking, outdoor activities, and casual wear.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "swim_trunks",
+          "definition": "Swim-specific shorts made from nylon with a mesh inner lining for quick drying. Available as shorter trunks with elastic waistband or longer boardshorts with a front opening. Designed specifically for water activities.",
+          "sources": ["Real Men Real Style"]
+        },
+        {
+          "value": "denim_shorts",
+          "definition": "Shorts cut from denim fabric, either manufactured or cut from full-length jeans. Casual summer staple with a relaxed, laid-back aesthetic. Best suited for very casual settings.",
+          "sources": ["Real Men Real Style"]
+        },
+        {
+          "value": "linen_shorts",
+          "definition": "Lightweight, breathable shorts made from linen fabric. Extremely skin-friendly and ideal for warm weather. Look great on weekend getaways and at seaside resorts. A summer wardrobe necessity.",
+          "sources": ["Pant Project"]
+        },
+        {
+          "value": "stretch_chino_shorts",
+          "definition": "Chino shorts with added elastane for flexibility and comfort. Popular in shorter inseams (5-inch). Combines the polished look of traditional chinos with modern comfort technology.",
+          "sources": ["Real Men Real Style"]
+        }
+      ]
+    },
+    {
+      "name": "shorts_length",
+      "description": "The inseam length of shorts relative to the knee, affecting both aesthetics and occasion-appropriateness",
+      "style_track": ["casual"],
+      "values": [
+        {
+          "value": "above_knee",
+          "definition": "Shorts ending 2-3 inches above the knee (typically 5-7 inch inseam). The most recommended length for casual shorts with t-shirts, button-downs, or polos. Creates a balanced, modern look.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "mid_thigh",
+          "definition": "Shorts ending at mid-thigh (typically 5 inch inseam or shorter). Common for athletic and swim shorts. A fashion-forward length that works best on taller or leaner frames.",
+          "sources": ["Real Men Real Style"]
+        },
+        {
+          "value": "at_knee",
+          "definition": "Shorts ending right at the kneecap (typically 9-10 inch inseam). A more conservative, traditional length. Common in cargo shorts and older chino short styles.",
+          "sources": ["Real Men Real Style", "Pant Project"]
+        },
+        {
+          "value": "below_knee",
+          "definition": "Shorts ending below the kneecap (11+ inch inseam). Common in boardshorts and some cargo styles. Generally considered a dated or sport-specific length in modern menswear.",
+          "sources": ["Real Men Real Style"]
+        }
+      ]
+    },
+    {
+      "name": "casual_jacket_type",
+      "description": "The category/style of men's casual jackets and outerwear, distinguishing between different heritage origins, constructions, and silhouettes",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "bomber",
+          "definition": "Short, cropped jacket originally designed for Air Force fighter pilots. Defined by elasticated cuffs, collar, and hem, full-zip front, zip pockets including one on the arm, and typically a shiny nylon face fabric. The MA-1 by Alpha Industries is the definitive model. Currently enjoying a renewed spike in popularity.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "denim_trucker",
+          "definition": "Cropped jacket usually cut from denim with button front, chest pockets, classic collar, and seam details. Dates back to the late 1800s, originally created for farmers and gold prospectors. Raw denim versions develop unique fades over time. Extremely versatile and timeless.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "harrington",
+          "definition": "Lightweight blouson jacket with stand collar, ribbed or tapered waist, and slanted or vertical pockets. Originally the Baracuta G9, created in 1930s Manchester. A pop culture icon worn by Steve McQueen, James Dean, and Elvis Presley. Perfect for transitional weather and smart casual outfits.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "windbreaker",
+          "definition": "Sporty, lightweight jacket designed primarily for wind and light rain protection. Made from thin synthetic fabric, often nylon. A functional transitional jacket brought back into spotlight by the gorpcore trend. Typically features zip front, elastic cuffs, and drawstring hem.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "hoodie",
+          "definition": "Casual hooded sweatshirt available in pullover and zip-up variants. Made from cotton, fleece, or blended fabrics. Ranges from athletic to streetwear styling. Can be worn as a standalone top or layered under jackets. See hoodie_type parameter for subtypes.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "puffer",
+          "definition": "Down-insulated jacket defined by oversized baffles creating a distinctive 'Michelin Man' appearance. First rose to fame in the 1990s. Often features a cropped body and oversized fit. Only works as an outer layer due to bulk. Current trend favors big baffles and cropped cuts.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "field_jacket",
+          "definition": "Military-heritage utilitarian outerwear based on the M-65. Constructed from heavy cotton twill with a funnel collar. Features multiple pockets and a rugged, practical design. Three main variants: military field jacket, barn-style field coat, and motorcycle field jacket. Extremely versatile for layering.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "leather_biker",
+          "definition": "Cropped leather jacket with asymmetric zipper, belted waist, and large collar. First introduced by Schott NYC as the 'Perfecto' in 1928. Popularized by Marlon Brando in The Wild One (1953). A counterculture icon and universal symbol of rebellion. The most recognizable outerwear design.",
+          "sources": ["Ape to Gentleman", "Buffalo Jackson"]
+        },
+        {
+          "value": "leather_bomber",
+          "definition": "The oldest and most iconic leather jacket style, originally designed for WWI pilots. Features a relaxed fit, shoulder epaulets, standup collar, front slit or flap pockets, and side zip pockets. Often includes sherpa or shearling collar. Also called flight or aviator jacket.",
+          "sources": ["Buffalo Jackson", "Ape to Gentleman"]
+        },
+        {
+          "value": "leather_racer",
+          "definition": "Sleek leather jacket with minimal embellishments, also called a cafe racer or moto jacket. Features a snap-over band collar, straightforward zip front, and slim fit. A cleaner, more versatile alternative to the biker jacket with a polished aesthetic.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "leather_trucker",
+          "definition": "Leather version of the classic denim trucker jacket. Features a waist-length cut, button-flap chest pockets, button front closure, and heavy seam work. Combines the classic trucker silhouette with premium leather for a rugged, elevated look.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "chore_coat",
+          "definition": "Lightweight workwear jacket originating from 1900s France, designed for laborers and artists. Features oversized pockets (at least one chest pocket and larger hip pockets), generous cut for unrestricted movement, and button front. Made from denim, waxed cotton, canvas, or boiled wool.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "coach_jacket",
+          "definition": "Lightweight windbreaker-style jacket with snap button closure, originally worn by NFL coaches in the 1990s. Made from thin nylon with a classic collar, slit pockets, elasticated cuffs, and drawstring hem. Moves easily, resists moisture, and goes on/off quickly.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "quilted_jacket",
+          "definition": "Jacket featuring insulating padding stitched in quilted patterns for lightweight warmth. Less bulky than puffers, with a more tailored appearance. Available in diamond or horizontal quilt patterns. Perfect for layering in transitional weather.",
+          "sources": ["Ape to Gentleman"]
+        },
+        {
+          "value": "track_jacket",
+          "definition": "Lightweight zip-front athletic jacket, often with contrast stripes along the sleeves. Typically made from polyester or tricot fabric with a stand-up collar. Originates from sportswear but adopted into casual and retro-inspired street style.",
+          "sources": ["Primer Magazine"]
+        },
+        {
+          "value": "varsity_letterman",
+          "definition": "Cropped, boxy jacket originating from US high school and college sports. Traditional version has a wool body with leather sleeves. Modern interpretations use fleece or cotton blends with a trimmer cut. Snap-button front closure with ribbed cuffs, hem, and collar.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "waxed_jacket",
+          "definition": "Country-heritage jacket made from cotton treated with wax coating (beeswax or paraffin) for water resistance and durability. Develops a unique patina over time. Features storm fly front, corduroy collar, fleece-lined pockets. Best in earthy green and brown. Needs periodic re-waxing.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "barn_jacket",
+          "definition": "Farm-heritage jacket built from heavy cotton canvas or waxed cotton with a boxier cut and soft corduroy collar. Features flannel or quilted lining, patch pockets placed lower on the body, and a relaxed fit. A more easy-going, broken-in alternative to the field jacket.",
+          "sources": ["Primer Magazine"]
+        },
+        {
+          "value": "shacket_overshirt",
+          "definition": "Hybrid garment between a shirt and a jacket, also known as a shirt jacket, shirt jac, or CPO jacket. Provides warmth of a light jacket without bulk. Excellent freedom of movement. Made from cotton blends, flannel, corduroy, or wool. An alternative to a cardigan or hoodie for layering.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "fleece_jacket",
+          "definition": "Cozy mid-layer jacket primarily designed for insulation, particularly when combined with a shell jacket. Heavy-pile versions (like Patagonia's Retro-X) are popular. Associated with gorpcore trend. Great for adding texture to autumn/winter outfits.",
+          "sources": ["Ape to Gentleman"]
+        },
+        {
+          "value": "aviator_shearling",
+          "definition": "US Air Force-style jacket made from sheepskin with a thick shearling collar. Similar in cut to a bomber but differs in materials and lining. Predates the nylon MA-1 bomber. Provides exceptional warmth and a rugged, heritage aesthetic.",
+          "sources": ["Ape to Gentleman", "Buffalo Jackson"]
+        },
+        {
+          "value": "parka",
+          "definition": "Long, heavily insulated winter coat, often extending to mid-thigh or below. Features a hood (frequently fur-trimmed), multiple pockets, and a drawstring waist. Favored by Arctic explorers and mountaineers. The ultimate winter coat for extreme cold protection.",
+          "sources": ["Ape to Gentleman"]
+        },
+        {
+          "value": "anorak",
+          "definition": "Pullover-style weatherproof jacket, typically with a half-zip or quarter-zip front and a kangaroo pocket. Lighter than a parka, designed for wind and rain protection. Often features a hood. A practical outdoor and urban option.",
+          "sources": ["Primer Magazine"]
+        }
+      ]
+    },
+    {
+      "name": "hoodie_type",
+      "description": "The specific subtype or variation of hoodie, distinguished by closure style, fit, sleeve configuration, and fabric weight",
+      "style_track": ["casual"],
+      "values": [
+        {
+          "value": "pullover",
+          "definition": "Classic collarless, slip-on hooded sweatshirt without a front opening. Often features a kangaroo pocket. Offers more warmth and a cleaner silhouette than zip-up variants. The most traditional hoodie design.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "full_zip",
+          "definition": "Hoodie with a full-length zipper from hem to collar allowing easy wear and temperature control. Also called a zip-front hoodie. Offers better breathability and layering versatility than pullovers. The most common hoodie closure variant.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "half_zip",
+          "definition": "Hoodie with a zipper extending from the chest to the collar (approximately half the front). Provides some ventilation control while maintaining a cleaner front aesthetic than a full zip. A sportier, more polished alternative.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "quarter_zip",
+          "definition": "Hoodie with a short zipper at the collar for minimal ventilation adjustment. Maintains most of the pullover's clean front appearance while allowing easier on/off. Often seen in athletic and performance styles.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "oversized",
+          "definition": "Relaxed, generously cut hoodie with a street-style aesthetic. Often gender-neutral in design. Features dropped shoulders and extra room throughout. Popular in streetwear and athleisure contexts.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "fitted",
+          "definition": "Tailored hoodie with a sleek, close-to-body silhouette. Ideal for layering under jackets or for activewear. Available in both pullover and zip-up designs. Creates a more polished appearance than standard-fit hoodies.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "sleeveless",
+          "definition": "Hoodie with sleeves removed for greater arm mobility and ventilation. Provides a more athletic silhouette. Commonly used in training, bodybuilding, and casual streetwear crossover. Often features a half-zip front.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "fleece",
+          "definition": "Hoodie made from fleece fabric with a soft brushed interior for excellent insulation. Best for cold weather and lounging. Can pill if low-quality. Available in heavyweight variants for outerwear-level warmth.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "lightweight",
+          "definition": "Hoodie under 300g/m2 fabric weight. Ideal for spring layering and workouts. Made from thin cotton, cotton-poly blends, or performance fabrics. Not designed as standalone cold-weather wear.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "Hoodie at 400g/m2 or above fabric weight. Structured, premium feel perfect for outerwear looks. Provides substantial warmth and body. Often features a more boxy, substantial silhouette.",
+          "sources": ["ModaKnits"]
+        }
+      ]
+    },
+    {
+      "name": "casual_jacket_formality",
+      "description": "The formality range of a casual jacket, indicating the dress codes it can appropriately serve within the casual-to-smart-casual spectrum",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "casual_only",
+          "definition": "Jacket suitable exclusively for casual, relaxed settings. Not appropriate for business-casual or smart-casual dress codes. Includes: puffer, anorak, track jacket, hoodie (standard), fleece jacket, parka, sleeveless hoodie. These styles read as athletic, outdoor, or loungewear.",
+          "sources": ["Ape to Gentleman", "Primer Magazine", "ModaKnits"]
+        },
+        {
+          "value": "casual_to_smart_casual",
+          "definition": "Jacket that spans from casual to smart-casual settings, versatile enough to pair with both t-shirts/jeans and chinos/button-downs. Includes: bomber, denim trucker, harrington, field jacket, chore coat, barn jacket, coach jacket, waxed jacket, shacket/overshirt, quilted jacket, varsity. These styles can be dressed up or down depending on what is worn underneath.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "smart_casual",
+          "definition": "Jacket that leans toward the dressier end of casual outerwear, suitable for smart-casual occasions and can sometimes work for informal business settings. Includes: leather racer/cafe racer, leather bomber (quality versions), suede bomber, harrington (in premium fabrics). These styles pair well with dress shirts, tailored trousers, and loafers.",
+          "sources": ["Ape to Gentleman", "Buffalo Jackson"]
+        }
+      ]
+    },
+    {
+      "name": "leather_jacket_subtype",
+      "description": "The specific subtype of leather jacket based on design origin, silhouette, and closure style",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "biker_perfecto",
+          "definition": "The iconic double-rider jacket with an asymmetric front zipper, belted waist, wide lapels/collar, and cropped length. First produced by Schott NYC in 1928. Double layer of front material for insulation. The most recognizable leather jacket style and a symbol of rebellion.",
+          "sources": ["Buffalo Jackson", "Ape to Gentleman"]
+        },
+        {
+          "value": "cafe_racer",
+          "definition": "Clean, minimalist leather jacket with a snap-over band collar, simple zip front, and slim fit. Few embellishments for a polished, versatile look. Named after 1960s British motorcycle culture. The most versatile leather jacket style for everyday wear.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "bomber_flight",
+          "definition": "Relaxed-fit leather jacket inspired by WWI pilot gear. Features shoulder epaulets, standup collar, front slit or flap pockets, side zip pockets. Often with sherpa or shearling collar. The oldest leather jacket style.",
+          "sources": ["Buffalo Jackson", "Ape to Gentleman"]
+        },
+        {
+          "value": "aviator_shearling",
+          "definition": "Sheepskin leather jacket with thick shearling wool lining visible at the collar, cuffs, and sometimes the hem. Inspired by WWII Air Force jackets. Provides exceptional warmth. A heritage style combining rugged leather with luxurious wool.",
+          "sources": ["Buffalo Jackson", "Ape to Gentleman"]
+        },
+        {
+          "value": "leather_trucker",
+          "definition": "Leather interpretation of the classic denim trucker jacket silhouette. Waist-length cut with button-flap chest pockets, button front, and heavy seam work. Combines workwear heritage with leather's premium feel.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "leather_field",
+          "definition": "Military-inspired leather jacket with the practical, multi-pocket design of a field jacket rendered in premium leather. Features funnel collar and utilitarian pocket placement. Looks sharp paired with slacks and tucked-in shirts.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "leather_blazer",
+          "definition": "Structured leather jacket cut in a blazer silhouette with notch lapels and button front. Bridges the gap between casual leather and tailored clothing. A refined option for smart-casual to semi-formal settings. Shearling versions available for added warmth.",
+          "sources": ["Buffalo Jackson"]
+        }
+      ]
+    },
+    {
+      "name": "leather_jacket_material",
+      "description": "The specific type of leather or skin used in jacket construction, affecting durability, texture, weight, and price",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "full_grain_cowhide",
+          "definition": "The highest grade of leather, using the complete outer surface of the hide with natural grain intact. Most durable, develops a rich patina over time, and molds to the wearer's body. The gold standard for leather jackets.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "lambskin",
+          "definition": "Softer, lighter, and more supple than cowhide. Offers a more refined, luxurious feel. Less durable than cowhide but provides superior drape and comfort. Often used in fashion-forward styles.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "sheepskin_shearling",
+          "definition": "Sheep or lamb skin shorn once then tanned with wool intact. Leather on one side, soft insulating wool on the other. Dense, even wool provides superior warmth. Used in aviator and lined jacket styles.",
+          "sources": ["Buffalo Jackson"]
+        },
+        {
+          "value": "suede",
+          "definition": "Leather with a napped, velvety finish created from the inner surface of the hide. Softer texture and a more casual appearance than smooth leather. Requires more care and is less water-resistant. Popular for bomber styles.",
+          "sources": ["Buffalo Jackson", "Ape to Gentleman"]
+        },
+        {
+          "value": "goatskin",
+          "definition": "Durable leather with a distinctive pebbled grain texture. Lighter than cowhide but highly resistant to abrasion. Develops character and patina with wear. A practical choice for daily-wear jackets.",
+          "sources": ["Buffalo Jackson"]
+        }
+      ]
+    },
+    {
+      "name": "casual_jacket_fabric",
+      "description": "The primary material used in non-leather casual jacket construction, affecting weather protection, durability, and style",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "nylon",
+          "definition": "Lightweight synthetic fabric used in bombers, windbreakers, and coach jackets. Water-resistant, quick-drying, and durable. The original MA-1 bomber material. Often has a slight sheen.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "denim",
+          "definition": "Sturdy cotton twill fabric used in trucker and jean jackets. Raw denim develops unique fades and wear marks over time. Available in various weights and washes. A heritage workwear fabric.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "cotton_canvas",
+          "definition": "Heavy-duty woven cotton used in chore coats, barn jackets, and field jackets. Durable and sturdy with a matte finish. Often used in workwear-inspired pieces. Can be unlined or lined with flannel/quilting.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "waxed_cotton",
+          "definition": "Cotton fabric treated with beeswax or paraffin coating for water resistance. Develops a unique patina with wear as the wax creases and ages. Needs periodic re-waxing. Used in field jackets, truckers, and country-style jackets.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "wool",
+          "definition": "Natural fiber used in varsity jacket bodies, overcoats, and some chore coats (boiled wool). Provides warmth and structure. Heavier than cotton alternatives. Includes blended wool options for lighter-weight garments.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "polyester_fleece",
+          "definition": "Synthetic fabric used in fleece jackets and hoodie linings. Soft, insulating, and lightweight. Available in different pile heights. Associated with outdoor and gorpcore styling.",
+          "sources": ["Ape to Gentleman"]
+        },
+        {
+          "value": "cotton_twill_drill",
+          "definition": "Structured woven cotton used in chore jackets and field jackets. Heavier than standard cotton, offering better wind resistance and durability. Includes drill and duck canvas variants.",
+          "sources": ["Ape to Gentleman", "Primer Magazine"]
+        },
+        {
+          "value": "flannel",
+          "definition": "Soft, brushed cotton or wool fabric used in shackets and shirt jackets. Provides warmth without excessive weight. Often in plaid patterns. Creates a relaxed, heritage aesthetic.",
+          "sources": ["Primer Magazine"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Ribbed cotton fabric used in some overshirts and shackets. Adds texture and warmth. Available in various wale widths. A vintage-inspired fabric choice for casual jackets.",
+          "sources": ["Primer Magazine", "Ape to Gentleman"]
+        },
+        {
+          "value": "down_fill",
+          "definition": "Natural down insulation used inside puffer jackets and some quilted jackets. Provides exceptional warmth-to-weight ratio. Traps body heat in the baffled chambers. The standard insulation for high-performance cold-weather jackets.",
+          "sources": ["Ape to Gentleman"]
+        }
+      ]
+    },
+    {
+      "name": "hoodie_fabric_weight",
+      "description": "The weight classification of hoodie fabric measured in grams per square meter, determining warmth, structure, and appropriate use",
+      "style_track": ["casual"],
+      "values": [
+        {
+          "value": "lightweight",
+          "definition": "Under 300 g/m2. Ideal for spring, layering, or workouts. Thin and breathable, not suitable as standalone cold-weather wear. Best for active use and warm-weather layering.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "midweight",
+          "definition": "300-400 g/m2. Balanced warmth and comfort for year-round wear. The most versatile weight class. Suitable as a standalone layer in mild weather or as a mid-layer in cold weather.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "400 g/m2 and above. Structured, premium feel. Perfect for outerwear looks where the hoodie serves as the main jacket. Provides substantial warmth and has a boxy, substantial silhouette.",
+          "sources": ["ModaKnits"]
+        }
+      ]
+    },
+    {
+      "name": "hoodie_fabric_type",
+      "description": "The primary fabric material used in hoodie construction, affecting softness, warmth, durability, and performance characteristics",
+      "style_track": ["casual"],
+      "values": [
+        {
+          "value": "cotton",
+          "definition": "Classic hoodie fabric that is soft, breathable, and comfortable. Natural fiber that absorbs moisture. Best for everyday casual wear. Available in various weights.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "fleece",
+          "definition": "Fabric with a soft brushed interior providing excellent insulation and comfort. Can pill if low-quality. Best for cold weather and lounging. The most popular hoodie fabric for warmth.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "french_terry",
+          "definition": "Looped-back knit fabric that is lighter and more breathable than fleece. Smooth on the outside with looped pile on the inside. Ideal for transitional weather and active wear.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "cotton_poly_blend",
+          "definition": "Cotton blended with polyester for improved durability, shape retention, and reduced shrinkage. Offers a balance of cotton's comfort with polyester's performance properties. The most common hoodie fabric blend.",
+          "sources": ["ModaKnits"]
+        },
+        {
+          "value": "performance_moisture_wicking",
+          "definition": "Synthetic or blended fabrics engineered to draw moisture away from the body. Quick-drying and breathable. Designed for workouts and athletic use. Often features stretch properties.",
+          "sources": ["ModaKnits"]
+        }
+      ]
+    }
+  ]
+}

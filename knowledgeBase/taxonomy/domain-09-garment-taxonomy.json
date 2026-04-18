@@ -1,0 +1,2620 @@
+{
+  "domain": "garment_taxonomy",
+  "version": "1.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 9: Hosiery Harmonies",
+    "Dressing the Man - Alan Flusser - Chapter 10: Foot Decorum",
+    "Dressing the Man - Alan Flusser - Chapter 11: Accessories",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Shoes",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Accessories",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Necktie",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Hat"
+  ],
+  "parameters": [
+    {
+      "name": "shoe_type",
+      "description": "Categories of men's shoes with their characteristics, formality, and appropriate contexts",
+      "values": [
+        {
+          "value": "oxford_plain_cap_toe",
+          "definition": "Closed lacing (Balmoral). Most formal shoe. Two narrow rows of stitching with a round or slightly square plain toe, sometimes with a medallion decoration. Beveled waist enhances elegance. The basis shoe style for smart, tailored town wear. Black is de rigueur for formal occasions.",
+          "formality": "highest",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "half_brogue",
+          "definition": "Oxford with perforated toecap decoration (broguing) but no wing. Stylistically midway between plain Oxford and full brogue — not as formal as sleek Oxford, not as rustic as full brogue. Good match for softer or patterned suiting fabrics like flannel or Prince of Wales check.",
+          "formality": "high",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "full_brogue_wingtip",
+          "definition": "Oxford with perforations and curved toecap extending back in a W shape (wingtip). Bulkier, less formal than plain cap-toe. Larger proportions allow a more robust match with flannels, cheviots, or tweeds. Called 'Budapests' in continental Europe. In brown, ideal for informal wear with tweed and country suits.",
+          "formality": "medium_high",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "derby_blucher",
+          "definition": "Open lacing — sides sewn on top of the vamp. Less formal than Oxford due to open throat. Suitable for those not compelled to wear elegant Oxfords. In caramel brown, popular in southern Europe with flannel pants and navy blazers. Also goes well with corduroy and jeans.",
+          "formality": "medium",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "monkstrap",
+          "definition": "Buckle closure instead of laces. Halfway between formal lace-up and casual loafer. Superbly proportioned symmetry. Can be found in plain toe or brogued. Black calf to brown reversed calf, from dressy to casual. Particularly popular in France. Best with slim-cut pants that don't catch on the buckle.",
+          "formality": "medium",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "penny_loafer",
+          "definition": "Slip-on with cross-strap on instep. Named because 1950s Ivy League students put pennies under the strap for luck. Bass Weejuns are the classic. Shape said to originate from Norwegian fishermen's shoes. Less formal than any lace-up. Originally seen as 'going out in slippers.'",
+          "formality": "low_medium",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "tassel_loafer",
+          "definition": "Loafer with decorative leather tassels on instep. Often compared to navy blue blazer — equally versatile and hard to classify. Alden claims credit for the modern design. Popular in southern Europe with dark suits as business wear. English makers cut them higher than American originals.",
+          "formality": "low_medium",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "gucci_loafer",
+          "definition": "Horsebit loafer with gilt snaffle decoration. One of a handful of timeless classics regarded worldwide as a badge of good taste. Can be worn with English corduroy, rough tweed, cashmere, khaki shorts, jeans, or even a tuxedo. Three pairs in black and brown can hold their own against a whole shoe cupboard of welted shoes.",
+          "formality": "low_medium",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "chelsea_boot",
+          "definition": "Ankle boot with elastic side panels. Originally designed by Queen Victoria's boot maker J. Sparkes Hall. The elastic allows a trimly fitted ankle without laces. Traditionally bespoke style. A well-heeled loafer aficionado's champion of this traditional style.",
+          "formality": "medium",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "chukka_boot",
+          "definition": "Ankle boot with two or three eyelets, named after the chukka period in polo. Often unlined. Can be found in smooth tan calfskin or suede. Fitted with Tyrolean crepe or rubber sole. Traditionally attired toff in brown leather with lug sole — the dress-down urbanite.",
+          "formality": "low_medium",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "dress_slipper_pump",
+          "definition": "Slip-on evening shoe, often with silk bow or monogram. Patent leather or velvet. For formal evening wear (white tie, black tie) and home entertaining. Albert slipper with embroidered motifs for smoking jacket wear. Cecil Beaton made these famous as an evening staple.",
+          "formality": "formal_evening",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "white_buck",
+          "definition": "White buckskin Oxford with red rubber sole. American preppy staple. Perfect companion to the khaki pant or madras Bermuda shorts. More relaxed style than American white bucks — character so charismatic it can be in their understated manner. Summer and resort wear.",
+          "formality": "low",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "spectator_correspondent",
+          "definition": "Two-tone shoe, originally designed in brown willow calf and white buck or reverse calf suede. Also known as 'co-respondent' in England (associated with characters who acted as correspondents in divorce cases). Unusual contrast of texture. Holiday and sport wardrobe essential.",
+          "formality": "low",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "boat_shoe",
+          "definition": "Sperry Topsiders are the classic. Originally designed for sailing — non-slip sole. Popular with landlubbers as well. Casual summer/weekend shoe. Goes with shorts, chinos, jeans.",
+          "formality": "very_low",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoe_lacing_system",
+      "description": "The fundamental construction distinction that determines shoe formality",
+      "values": [
+        {
+          "value": "closed_lacing_balmoral",
+          "definition": "Sides sewn under the vamp, closing over a separate tongue. More formal — feet look more 'dressed.' All Oxfords have closed lacing. Called 'Balmorals' or 'Bals' in America.",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "open_lacing_blucher_derby",
+          "definition": "Sides sewn on top of the vamp, which extends backward to form the tongue. Less formal — more give over the instep, making them slightly more comfortable. Called 'Bluchers' in America, 'Derbys' in England/Europe.",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        }
+      ],
+      "notes": "Closed lacing is always more formal than open lacing in the same shoe style.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoe_leather_type",
+      "description": "The leather material used for shoe uppers, affecting formality, texture, and care",
+      "values": [
+        {
+          "value": "calfskin",
+          "definition": "Standard material for quality men's shoes. Fine grain, takes a high polish. Brown calfskin acquires an antiqued patina over time — changing highlights like light placed on a polished mahogany tabletop. Black calfskin is the formal standard.",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "suede_reverse_calf",
+          "definition": "Brushed/napped leather with soft matte texture. First appeared at the 1924 International Polo match. Initially considered a breach of good taste by many. Brown suede can be worn year-round and suits well with tweeds and country combinations. Shifts any shoe shape toward casual.",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "cordovan",
+          "definition": "Shell leather from the hindquarters of a horse. Very rare and expensive. Distinctive deep, rich color with a waxy luster. Exceptionally durable. Well-established in the USA for many years. Only recently gaining awareness in Europe.",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "patent_leather",
+          "definition": "Highly polished, glossy finish leather. Required for formal evening wear (white tie). Also appropriate for black tie. Pumps or Oxfords in patent are the most formal shoe option.",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "exotic_crocodile",
+          "definition": "Crocodile or alligator leather. In a dark honey tone, affords the normally meek-shod man a rare opportunity to express himself in sybaritic sheen. Whether in a monk-strap for the weekend or plain cap-toe for the office, exotic leather elevates any shoe model.",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoe_color_rule",
+      "description": "Rules for matching shoe color to outfit, one of the most fundamental dressing principles",
+      "values": [
+        {
+          "value": "black_formal",
+          "definition": "Black shoes for formal and business formal wear. De rigueur with dark navy or charcoal suits. Required for all evening formal wear. Black will always lack the antiqued brown's patina and changing highlights.",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "dark_brown_versatile",
+          "definition": "Dark antique brown accepted with dark blue suits since the 1930s. Esquire in 1936: 'At the present time, dark brown shoes are considered correct and satisfactory for wear with a dark blue suit.' Brown shoes invest any dressier surroundings with a patina of antiqued charm.",
+          "sources": [
+            "Flusser Ch10"
+          ]
+        },
+        {
+          "value": "brown_country_casual",
+          "definition": "Lighter browns suitable for tweed, country, and casual wear. Light tan shoes not considered appropriate with dark business suits. Shaded for light-colored spring clothing, and rich in tone for darker worsteds.",
+          "sources": [
+            "Flusser Ch10",
+            "Roetzel Shoes"
+          ]
+        },
+        {
+          "value": "burgundy_oxblood",
+          "definition": "Rich wine tones. Versatile — works with both dark formal and casual ensembles. Bass Weejuns in burgundy are a classic. Cordovan shoes often come in this distinctive shade.",
+          "sources": [
+            "Roetzel Shoes"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "hosiery_type",
+      "description": "Types of socks and their role in connecting the trouser to the shoe",
+      "values": [
+        {
+          "value": "dress_hose",
+          "definition": "Fine gauge, over-the-calf. Should match the trouser rather than the shoe — creating an unbroken vertical line from trouser to footwear. Navy socks appear richer than black with a dark suit. Patterned hose help integrate the top and bottom halves of the ensemble. Silk dress hosiery for formal evening wear.",
+          "sources": [
+            "Flusser Ch9"
+          ]
+        },
+        {
+          "value": "patterned_hose",
+          "definition": "Argyle, clocked, striped, or small-patterned socks. The hose's most frequent stage partner is the necktie — it is the next most visible flash of color and pattern. Patterned hose promote harmony between different sectors of an outfit when the necktie motif appears in fine gauge within dress hosiery.",
+          "sources": [
+            "Flusser Ch9"
+          ]
+        },
+        {
+          "value": "casual_sport_sock",
+          "definition": "Heavier gauge. Anklet or half-length. The bulkier the trouser, the heavier the hose. Wool socks with wide chunked flannel trousers. For shorts, the anklet is still the most chic way to maintain bare ankles. Thick argyle socks with tweed jackets for country wear.",
+          "sources": [
+            "Flusser Ch9"
+          ]
+        }
+      ],
+      "notes": "General principle: the sock should match the trouser rather than the shoe. Black sock with a dark navy suit should be avoided — navy or dark gray is richer. Bare ankle (no-show) only with shorts or very casual summer wear.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "pocket_handkerchief_type",
+      "description": "Types of pocket squares and their display methods — one of the few remaining personal expression accessories",
+      "values": [
+        {
+          "value": "white_linen_square",
+          "definition": "The most versatile and essential. Always available as fallback. Points neither too even nor too sharpened with a rolling iron. Best size is about a 16-inch square. Hand-stitched rolled edges. Starched white provides a crisp counterpoint to the dark suit. Most formal pocket square option.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "solid_colored_silk",
+          "definition": "Should echo a color in the necktie, shirt, or jacket — but never exactly match the tie (a sure sign of an unsophisticated dresser). A solid colored handkerchief can only be trusted with a patterned necktie. If the hank color and pattern usually determine its choice.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "patterned_silk_foulard",
+          "definition": "Printed or woven pattern. Should coordinate with but not match the necktie. Ideally a foulard hank contains colors found in both the shirt and tie. Contrast in textures helps keep them from appearing too matched — a silk square with a tweed jacket creates appealing contrast.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "pocket_square_fold",
+      "description": "Methods of displaying the pocket handkerchief, each conveying different levels of formality and personality",
+      "values": [
+        {
+          "value": "tv_fold_rectangle",
+          "definition": "Flat, horizontal fold showing a clean rectangle of fabric above the pocket. The most formal and understated display. Called 'TV fold' because American TV anchors adopted it in the 1960s. Sharp, purposeful appearance but can look too stiff.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "puff_fold",
+          "definition": "Casual, rounded puff of fabric. Most informal display. Cary Cooper and the Duke of Windsor favored this approach — nubbed and happily curled up with casually askew ties. Should rest in the breast pocket at a jaunty angle.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "point_fold",
+          "definition": "One or more points showing above the pocket, angled toward the shoulder. Positioning reinforces the diagonal line of the jacket's lapel and accentuates the chest's V shape and shoulder's breadth. The Duke's points leaned customarily toward one corner.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "notes": "The most important thing is that deployment should appear untutored — casual aplomb. Like the tying of a bow tie, the most important thing is that it should not appear too deliberate.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "belt_type",
+      "description": "Types of belts and their role in the outfit — the transition piece between upper and lower halves",
+      "values": [
+        {
+          "value": "dress_belt",
+          "definition": "Constructed of single-ply fine-grained leather in 1 to 1.25-inch width. Buckle should be simple — silver or gold depending on the color of your jewelry. Smooth calfskin or baby crocodile/alligator. When buckled, the end should finish between the first and second belt loop. Never mix leather colors — brown belt with black shoe is a violation.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "casual_sport_belt",
+          "definition": "Wider, more textured. Suede, woven leather, canvas, or D-ring buckle styles. The Duke of Windsor used a gilded D-ring buckle to dress down into a semi-sport belt that accorded with his patterned ensembles' informality. More contrast between belt and trouser = more casual.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "notes": "Belt color should match shoe color. The less contrast between belt and trouser, the more elegant the effect. Dress belts should be dulled leather with understated buckle. Belts should never be worn with suspenders.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "suspender_brace_type",
+      "description": "Types of braces/suspenders — the superior trouser support system for pleated trousers",
+      "values": [
+        {
+          "value": "button_on_braces",
+          "definition": "The proper type. Attach to buttons on the inside or outside of the trouser waistband. Six buttons total: two rear (centered on back seam), four front (two near center and two just forward of side seam). Suspenders allow the natural pull of gravity to keep the pants' front taut and crease knife-like. Albert Thurston still makes the Rolls-Royce of trouser braces.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "clip_on_braces",
+          "definition": "Attach with metal clips. Probably acceptable for farm work but not under a suit of clothes. Considered the lowest tier of suspender. Can damage fine trouser waistbands.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "notes": "Width should be 1.25 to 1.5 inches — narrower and they bind, wider and they are uncomfortable. Belts and suspenders should never be worn together; belt loops should not appear on suspender-equipped trousers. Braces should be concealed under a jacket — exposed braces are a source of embarrassment per Oscar Wilde.",
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "brace_aesthetics",
+      "description": "How to coordinate suspender colors and patterns with the rest of the outfit",
+      "values": [
+        {
+          "value": "solid_stripe_coordination",
+          "definition": "Since braces share the same vertical plane as the tie, these two are coordinated first. Solid or simple striped ribbon can pick up one of the tie's colors without competing with the tie's design. A solid pair affords more versatility than a patterned pair.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "patterned_brace_coordination",
+          "definition": "Patterned braces coordinate better with solid or striped neckwear. They can either repeat one of the tie's colors or look to the trouser or shirt for companionship. Since suspenders are hidden under vest or jacket, they enjoy freedom to complement all or none of the torso's accessories.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "cufflink_type",
+      "description": "Types of cufflinks for French cuff shirts — one of the few opportunities for a man to display personal jewelry",
+      "values": [
+        {
+          "value": "double_sided_link",
+          "definition": "The most prized type — two decorative faces connected by a chain or link. Both sides bear design and lineage. Wearing cuff links that clip on one side exposes the superstructure and suggests you could afford only the cheapest version.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "silk_knot",
+          "definition": "Fabric knots in various colors. Casual and playful. Good for everyday French cuff wear when formal jewelry would be excessive.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "dress_set",
+          "definition": "A proper dress set includes sided cuff links, two or three matching shirt studs, and no fewer than three waistcoat buttons. Gold for daytime; colored stones for evening. Colored rubies, emeralds, or sapphires are too flashy for day wear and reserved for after-dark elegance.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "tie_accessory_type",
+      "description": "Accessories that interact with the necktie — functional and decorative",
+      "values": [
+        {
+          "value": "tie_bar_clip",
+          "definition": "An American invention. Adds a touch of elan and eccentric charm when canted slightly downward. Prevents the tie from flipping in the breeze or acting as a napkin while dining. Affixing the tie to the shirt front helps maintain the tie's arch and measure of panache. Should be simple and understated.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "collar_pin",
+          "definition": "Pins the shirt collar points under the tie knot, lifting the knot and creating an elegant arch. Adds a 3D sculptural quality to the neckwear presentation. Requires pin-collar or eyelet-collar shirts.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "watch_timepiece_type",
+      "description": "Types of timepieces and their formality implications",
+      "values": [
+        {
+          "value": "dress_wristwatch",
+          "definition": "Thin, elegant case that fits under a shirt cuff. Gold or steel. Leather strap for formal; metal bracelet acceptable for business. Oversize watches impede the closing of the shirt cuff. The slimmer and more discreet, the more formal. Thick diver-style watches are too large for formal wear.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "pocket_watch",
+          "definition": "Required with a waistcoat or formal evening dress (white tie, black tie). A thin dress pocket watch is deemed appropriate for black and white etiquette. The pocket watch achieved peak popularity during the 1930s as the uniform accessory of well-dressed men.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "notes": "Oversized wristwatches do not hide well for the man's overall style and encumber bracelets invariably accelerate the fraying of the shirt's cuff.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "boutonniere_type",
+      "description": "The lapel flower — a small grace note of male refinement",
+      "values": [
+        {
+          "value": "small_carnation",
+          "definition": "The best flowers are those that provide a flat button of color — like the carnation or cornflower. The small carnation's base can sit in the buttonhole without its stem having to be threaded through the lapel guard. Not so large as to overwhelm the average-width lapel. Red carnation for an afternoon wedding is the standard.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "cornflower",
+          "definition": "Small, flat, deeply colored. Traditional gentleman's flower. Like the hidden collar button, the stem should be invisible — concealed behind the lapel.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "notes": "A man can wear both a pocket handkerchief and a boutonniere — this is not gilding the lily. The lapel buttonhole was made to accommodate a flower. The stem should be invisible. Pinning a flower to the outside of the lapel makes you look like an usher at a wedding.",
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "hat_type",
+      "description": "Categories of men's hats, their formality, and appropriate contexts",
+      "values": [
+        {
+          "value": "top_hat",
+          "definition": "The most formal hat. Black silk. Only worn with morning dress or evening dress (tails). Required at Royal Ascot. Takes a certain sense of style to wear properly. Legend has it that it debuted on January 15, 1797 when hat-maker John Hetherington first wore one in the street.",
+          "formality": "highest",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "homburg",
+          "definition": "Named after the German spa town Bad Homburg, discovered by King Edward VII. Second in formality only to the top hat (leaving bowler aside as an English specialty). A dented crown with a stiff brim turned up all around. Goes with formal day wear.",
+          "formality": "high",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "bowler_derby",
+          "definition": "Rigid, dome-shaped hat. Designed in Lock's workshop for gamekeepers — offered little purchase to obstructions. Symbol of London stockbrokers until 1960s. Now worn only by Queen's Guards officers in civilian dress. Called 'derby' in America, 'chapeau melon' in French. More eccentric than practical today.",
+          "formality": "high",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "fedora_snap_brim",
+          "definition": "Classic gentleman's hat with soft brim that can be worn turned up or down. More elegant than trilby thanks to broader brim, but more casual than bowler or Homburg. The hat par excellence for most men. At greatest risk of falling into oblivion — no clear niche left in modern dress.",
+          "formality": "medium",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "trilby",
+          "definition": "Brown trilby is the insignia of the horse-racing fraternity. Crumpled brown felt, narrow hatband with bow on left side. Obligatory at English equestrian events. Also exists as a collapsible hat that fits in a pocket.",
+          "formality": "medium",
+          "sources": [
+            "Roetzel Hat",
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "panama",
+          "definition": "Woven from jipijapa palm leaves in Ecuador (despite the name). Light, lightproof summer hat. The 'optimo crown' (with crest) is the classic original — can be folded without damage. Summer classic since the Panama Canal era. Popular at Wimbledon. Like a good cigar — not everybody's cup of tea but devotees grow extremely fond of it.",
+          "formality": "medium_casual",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "tweed_hat",
+          "definition": "Soft-brimmed hat in tweed fabric. Worn whenever a tweed jacket or suit is appropriate — weekends, traveling, country sports. Favored by men of intellect and science. Goes best with informal but traditional overcoats — duffel coat, British Warm, reversible coats, Barbours.",
+          "formality": "low",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "flat_cap",
+          "definition": "Sporting headgear through and through. Only caps from Great Britain have the authentic flat cut. Mainly worn in the country for shooting, riding, or fishing. Also includes the deerstalker (check pattern) and Tirolean (green, favored by walkers).",
+          "formality": "low",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "boater_straw",
+          "definition": "Round, rigid straw hat. Originally favored headgear of English butchers. In the 1920s became a universal summer hat. Today hardly ever seen except at the Henley rowing regatta.",
+          "formality": "medium_casual",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        },
+        {
+          "value": "baseball_cap",
+          "definition": "Modern classic slowly infiltrating the most elevated circles. Quintessentially American peaked cap that has crept into classic sportswear. May possibly pave the way for a broader comeback of headwear. Casual/athletic only.",
+          "formality": "very_low",
+          "sources": [
+            "Roetzel Hat"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "necktie_type",
+      "description": "Categories of neckties by construction and material — from Roetzel's dedicated chapter",
+      "values": [
+        {
+          "value": "woven_silk",
+          "definition": "The standard. Cut in three sections on the bias (45 degrees to weave) per Jesse Langsdorf's 1924 patent. Most good neckties still made this way. Self-tipping (tips lined with the tie's own fabric) is an Italian hallmark. Charvet of Paris offers the world's largest range of woven silk ties. A Hermes necktie is one of the safest sartorial investments.",
+          "sources": [
+            "Roetzel Necktie"
+          ]
+        },
+        {
+          "value": "seven_fold",
+          "definition": "A square piece of silk folded seven times into necktie shape with no interlining — 100% silk. The non plus ultra of tiemaking and the ultimate in understatement. Volume comes entirely from folded silk. Very expensive. Rare masterpiece of the necktie maker's art.",
+          "sources": [
+            "Roetzel Necktie"
+          ]
+        },
+        {
+          "value": "regimental_club_stripe",
+          "definition": "Diagonal stripes in club, regimental, college, or school colors. In England, wearing the wrong club tie can be a serious faux pas if the Englishman you're meeting belongs to that club. English stripes run left-down-to-right; American 'rep' ties run the opposite direction.",
+          "sources": [
+            "Roetzel Necktie"
+          ]
+        },
+        {
+          "value": "wool_cashmere",
+          "definition": "Made of pure wool, cashmere, or blends. Warmer and softer than silk. Doesn't form the crisp formality of silk but has its place. Particularly appropriate for fall/winter with tweed and flannel. Popular in academic circles. Nicky of Milan makes particularly exquisite versions. Knitted wool varieties for a square-end casual look.",
+          "sources": [
+            "Roetzel Necktie"
+          ]
+        },
+        {
+          "value": "knitted",
+          "definition": "Knitted construction rather than woven. Usually square-ended. The formal version is black or dark blue, same width as ordinary tie, perfectly correct with a dark gray suit. Simplicity calls for a sure hand in combining with the right shirt. Similar following to academics, artists, writers, journalists.",
+          "sources": [
+            "Roetzel Necktie"
+          ]
+        },
+        {
+          "value": "bow_tie",
+          "definition": "Self-tied is the only correct form for both formal wear and everyday wear. Pre-tied bows are instantly recognizable and considered inferior. Required in white for white tie; required in black for black tie. Available in silk, cotton pique (for formal), and novelty fabrics.",
+          "sources": [
+            "Roetzel Formal Dress",
+            "Flusser Ch12"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "ring_type",
+      "description": "Types of finger rings appropriate for men — the most discreet form of personal jewelry",
+      "values": [
+        {
+          "value": "wedding_band",
+          "definition": "Simple platinum or gold band on the ring finger. By mid-twentieth century, nearly 80% of American brides had revived the old-world custom of wearing bands. The simple wedding band or dress ring is normally sufficient — younger men should stick to this.",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        },
+        {
+          "value": "signet_ring",
+          "definition": "Family crest or initials engraved. Can be worn on either hand. The signet ring was historically used to notarize documents with one's own seal. Organizational, class, or fraternity rings can also be worn. Multiple conspicuous rings have been considered gaudy and associated with men who 'make a living by exploiting others.'",
+          "sources": [
+            "Flusser Ch11"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "sneaker_type",
+      "description": "Classification of sneaker by silhouette, construction, purpose, or heritage style",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "athleisure",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "low_top",
+          "definition": "Sneaker with a collar that sits below the ankle, offering maximum versatility. Can be paired with casual or smart-casual outfits. The most common sneaker silhouette.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "high_top",
+          "definition": "Sneaker with a collar extending above the ankle, originally designed for basketball to provide ankle support and cushioned midsole for quick movements and impact protection. Associated with streetwear and statement looks.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "mid_top",
+          "definition": "Sneaker with a collar that sits at the ankle, splitting the difference between low-top and high-top. Offers moderate ankle support with a less dramatic silhouette than a high-top.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "runner_retro",
+          "definition": "Retro-styled running sneaker first popularized by Nike in the 1970s. Simple technical performance silhouette now chosen more for throwback aesthetics than sporting use. Sporty, streamlined, versatile, and casual.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans",
+            "MR PORTER"
+          ]
+        },
+        {
+          "value": "runner_modern",
+          "definition": "Contemporary running sneaker featuring breathable mesh uppers and often thick soles (especially in the heel) for cushioning and forward propulsion. Designed for performance rather than fashion.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto"
+          ]
+        },
+        {
+          "value": "minimalist_white",
+          "definition": "Clean, simple leather sneaker in white (or other neutral) with minimal branding, flat laces, slim profile, and relatively slim soles. A staple of smart-casual wardrobes that bridges casual and dressy. Exemplified by Common Projects Achilles Low.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Bespoke Unit",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "chunky_dad",
+          "definition": "Oversized sneaker with exaggerated chunky soles and retro 1990s aesthetic. Associated with the dad-shoe trend. New Balance 993 is a leading example. Best paired with loose-fitting denim.",
+          "sources": [
+            "The Modest Man",
+            "Clarks",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "canvas_plimsoll",
+          "definition": "Lightweight sneaker with a canvas upper and flat rubber sole. Named after the plimsoll line on ships. Keds and Converse Chuck Taylors are classic examples. Has an athletic, youthful, and beachy tone.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "court_tennis",
+          "definition": "Flat-soled sneaker designed for lateral court movement with specific tread patterns for stops and starts. Evolved into a sleek lifestyle sneaker. Adidas Stan Smith is the archetype. Pairs well with both casual and dressy looks.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans",
+            "MR PORTER"
+          ]
+        },
+        {
+          "value": "skate",
+          "definition": "Sneaker with flat, grippy sole designed for skateboarding. Characterized by durable construction and board-feel. Ranges from slim profiles (Vans Authentic) to bulky models (Adidas Forum Low, Osiris D3). Has crossed over from skatepark to everyday streetwear.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "slip_on",
+          "definition": "Laceless sneaker designed for convenience. Vans made the first slip-ons in the 1970s for the skater community. Now a staple of casual style adopted by fashion brands like Rick Owens.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto"
+          ]
+        },
+        {
+          "value": "knit_sock",
+          "definition": "Sneaker with stretch-knit fabric upper that fits like a sock, offering extreme comfort and a fashion-forward silhouette. Balenciaga Speed Trainer popularized the style. Ranges from everyday wearable to avant-garde.",
+          "sources": [
+            "The Modest Man",
+            "Clarks",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "retro_lifestyle",
+          "definition": "Reissued or retro-inspired sneaker from the 1980s-1990s era, valued for heritage aesthetics and cultural significance rather than performance. Includes styles like Puma Clyde, Puma Suede, and Nike Air Max.",
+          "sources": [
+            "The Modest Man",
+            "Clarks",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "dress_sneaker",
+          "definition": "Minimalist leather sneaker with a low cuff, slim soles, flat laces, slim profile, and simple leather colorway. Designed to bridge formal and casual, suitable for smart-casual settings. Not appropriate for full suits.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "basketball",
+          "definition": "Performance sneaker designed for the basketball court, typically high-top with ankle support, cushioned midsole, and impact protection. Iconic styles like Air Jordan have become cultural fashion staples.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "cross_trainer",
+          "definition": "Versatile athletic sneaker designed for dynamic multi-directional movement in the gym. Features reinforced lacing systems for mid-foot lockdown and breathable mesh. Nike Metcon and Adidas Powerlift are key examples.",
+          "sources": [
+            "The Fashionisto"
+          ]
+        },
+        {
+          "value": "platform",
+          "definition": "Sneaker with an exaggerated elevated sole adding significant height. Part of the chunky sneaker trend that gripped fashion from 2017 onward. Ranges from subtle to garish designs.",
+          "sources": [
+            "FashionBeans",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "boat_sneaker",
+          "definition": "Hybrid sneaker merging boat shoe aesthetics with sneaker construction. Features slip-resistant soles and lightweight designs suited for maritime activities and summer casual wear.",
+          "sources": [
+            "The Fashionisto"
+          ]
+        },
+        {
+          "value": "suede_sneaker",
+          "definition": "Sneaker with suede leather upper, offering a softer, more textured look than smooth leather. A grey suede minimalist sneaker works across an entire wardrobe. Requires suede protector and should be avoided in rain.",
+          "sources": [
+            "FashionBeans",
+            "MR PORTER"
+          ]
+        },
+        {
+          "value": "leather_sneaker",
+          "definition": "Sneaker with full leather upper, tough and easy to clean, that gets more comfortable with age. Can be dressed up or down. Full-grain and top-grain leather versions look finer than cheaper alternatives.",
+          "sources": [
+            "FashionBeans",
+            "The Modest Man",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "sustainable",
+          "definition": "Eco-conscious sneaker made from recycled or sustainable materials. Adidas Parley line (recycled ocean plastic) is a leading example. Growing segment driven by environmentally aware consumers.",
+          "sources": [
+            "The Fashionisto",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "trail_runner",
+          "definition": "Performance sneaker designed for off-road running with aggressive tread patterns, reinforced toe bumpers, and rugged construction for uneven terrain. Increasingly adopted as a lifestyle/fashion sneaker.",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "recovery_therapeutic",
+          "definition": "Sneaker designed for post-workout recovery and foot health, featuring superior cushioning, orthotic-friendly builds, and strain-alleviating design. Asics and New Balance are known for these comfort-centric designs.",
+          "sources": [
+            "The Fashionisto"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sneaker_formality",
+      "description": "How dressy or casual a sneaker type is and the contexts where it is appropriate",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "smart_casual_appropriate",
+          "definition": "Sneakers that can be worn in smart-casual settings: minimalist leather sneakers, clean white sneakers, and dress sneakers. Must be low-top, slim-profiled, monochrome or subtle two-tone, minimal branding, leather or suede, with flat laces. Appropriate with blazers, chinos, and button-downs but not full suits.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Bespoke Unit",
+            "Primer Magazine",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "elevated_casual",
+          "definition": "Sneakers suitable for polished casual looks: clean court sneakers (Stan Smiths), quality suede sneakers, retro runners in neutral tones, and premium canvas sneakers. Work with chinos, dark denim, and casual button-downs.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans",
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "casual_only",
+          "definition": "Sneakers appropriate only for casual settings: chunky dad shoes, high-tops, skate shoes, platform sneakers, bright/loud colorways, and heavily branded designs. Best with jeans, shorts, t-shirts, and streetwear.",
+          "sources": [
+            "The Modest Man",
+            "Clarks",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "athletic_only",
+          "definition": "Performance sneakers meant for sport and exercise only: modern running shoes, cross-trainers, basketball shoes (when worn for sport), and trail runners. Should not be worn as fashion footwear according to traditional style guidance.",
+          "sources": [
+            "Bespoke Unit",
+            "The Fashionisto"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_sandal_type",
+      "description": "Classification of men's casual sandal styles by construction and aesthetic",
+      "style_track": [
+        "casual",
+        "resort",
+        "ethnic"
+      ],
+      "values": [
+        {
+          "value": "leather_sandal",
+          "definition": "Sandal with leather upper and sole construction, offering a more refined casual look. Can range from simple two-strap designs to more complex constructions. Suitable for destination weddings, garden parties, and slightly dressier casual occasions.",
+          "sources": [
+            "Nimble Made",
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "sport_sandal",
+          "definition": "Rugged sandal with adjustable straps, arch support, deep heel cups, and shock-absorbing midsoles. Designed for outdoor activities like hiking and exploring. Brands like Teva and KEEN are leaders. Prioritizes function over fashion.",
+          "sources": [
+            "Nimble Made",
+            "KEEN"
+          ]
+        },
+        {
+          "value": "slide",
+          "definition": "Sandal featuring one wide strap across the top of the foot with no heel strap. Ranges from sporty rubber pool slides to woven leather versions suitable for casual dining. Easy on-off convenience.",
+          "sources": [
+            "Nimble Made",
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "flip_flop",
+          "definition": "The most casual sandal, defined by a Y-shaped strap running between the toes and across the foot. Lightweight and inexpensive. Best relegated to pool, beach, and very relaxed environments. Modern versions available in leather or suede for a slightly elevated look.",
+          "sources": [
+            "Nimble Made",
+            "Bespoke Unit",
+            "Baronton"
+          ]
+        },
+        {
+          "value": "kolhapuri",
+          "definition": "Hand-crafted Indian braided leather T-strap sandal from the Kolhapur region with GI tag, dating to the 13th century. Open-toed with a big-toe loop and ankle-area foot loop. Locally tanned with vegetable dyes and hand-decorated with patterns. Pairs with ethnic wear (kurtas, dhotis) and also works with jeans and linen for Indo-fusion looks. Sub-types include Paytaan, Kachkadi, Pukri, Kapashi, Senapati Kapashi, Maharaja/Shahu, Moja Shape, Kurundwad, and Amdar.",
+          "sources": [
+            "Wikipedia",
+            "Pernia's Pop-Up Shop",
+            "Korakari"
+          ]
+        },
+        {
+          "value": "gladiator",
+          "definition": "Sandal inspired by ancient Roman warriors, defined by multiple horizontal crisscrossing straps that often extend up the ankle. Typically made of leather or vegan leather. Offers a bold, vintage European aesthetic.",
+          "sources": [
+            "Nimble Made",
+            "Dr. Martens"
+          ]
+        },
+        {
+          "value": "fisherman",
+          "definition": "Closed-toe sandal with woven leather straps and a buckled ankle strap, offering breathability of a sandal with coverage of a shoe. Classic vintage European design that can be dressed up or down with shorts or khaki pants.",
+          "sources": [
+            "Nimble Made",
+            "Rockport"
+          ]
+        },
+        {
+          "value": "espadrille_sandal",
+          "definition": "Sandal or slip-on with canvas upper and esparto jute rope sole, originating from the Pyrenees region of Spain and France. Ultra-casual summertime footwear suited for beach, resort, and relaxed warm-weather occasions. Can be worn with casual trousers, shorts, and bathing trunks.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_boot_type",
+      "description": "Classification of men's casual boot styles by construction, heritage, and intended use",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "rugged"
+      ],
+      "values": [
+        {
+          "value": "chelsea",
+          "definition": "Laceless ankle boot with elastic gore panels at the sides, close-to-the-foot fit, and pull tabs. Popularized by the 1960s British Mod scene. Extremely versatile, can be dressed up (dark brown/black leather) or worn casually. Sleek silhouette works with jeans to smart trousers.",
+          "sources": [
+            "Baronton",
+            "Bespoke Unit",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "chukka",
+          "definition": "Low-ankle lace-up boot with 2-3 eyelets, open-laced construction. Common materials include suede and soft calfskin with crepe rubber or leather soles. Versatile from business casual to weekend wear. Pairs well with flannels, corduroys, jeans, and can even work with suits in dressier calfskin versions.",
+          "sources": [
+            "Bespoke Unit",
+            "Baronton",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "desert",
+          "definition": "Specific type of chukka boot with crepe rubber sole, suede upper, and rounded toe. Originated from UK military use in the 1940s, became fashionable in the 1950s. All desert boots are chukkas, but not all chukkas are desert boots. Clark's Desert Boot is the archetype.",
+          "sources": [
+            "Bespoke Unit",
+            "Stridewise",
+            "Blundstone"
+          ]
+        },
+        {
+          "value": "hiking",
+          "definition": "Boot designed for outdoor trekking with aggressive lugged soles, ankle support, and durable materials. Modern versions update vintage hiking boot aesthetics for both trail and pavement wear. Can serve dual duty in casual wardrobes.",
+          "sources": [
+            "The Modest Man",
+            "Baronton"
+          ]
+        },
+        {
+          "value": "combat",
+          "definition": "Military-heritage boot with lace-up front, typically mid-calf height, and rugged construction. Dr. Martens is the iconic civilian brand. Has crossed over into casual streetwear and punk/alternative fashion subcultures.",
+          "sources": [
+            "The Modest Man",
+            "Journeys"
+          ]
+        },
+        {
+          "value": "work",
+          "definition": "Heritage workwear boot with lugged rubber or anti-slip outsoles, reinforced leather uppers, and sometimes safety toes. Red Wing is the quintessential brand. Borrows from vintage American workwear aesthetic and pairs naturally with denim.",
+          "sources": [
+            "The Modest Man",
+            "Baronton"
+          ]
+        },
+        {
+          "value": "moc_toe",
+          "definition": "Boot with a hand-sewn moccasin-style toe seam, considered the ultimate casual boot. Very difficult to dress up but pairs effortlessly with t-shirts and jeans. Red Wing Classic Moc is the definitive example.",
+          "sources": [
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "duck",
+          "definition": "Waterproof boot combining a rubber lower with a leather or fabric upper, designed for rain and snow. L.L. Bean Boot is the classic. Functional wet-weather footwear that has become a casual style staple.",
+          "sources": [
+            "The Modest Man",
+            "Journeys"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_shoe_formality_hierarchy",
+      "description": "Ranking of casual footwear types from most dressy/formal to most casual/informal, establishing where each type sits on the formality spectrum",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "tier_1_smart_casual_bridge",
+          "definition": "Most dressy casual footwear that can bridge into smart-casual and business-casual contexts. Includes: (1) Venetian/penny/bit loafers in leather with dress soles, (2) minimalist white leather dress sneakers, (3) clean suede or leather court sneakers (Stan Smith-type). These can be worn with blazers, sport coats, and chinos.",
+          "sources": [
+            "Bespoke Unit",
+            "The Modest Man",
+            "Primer Magazine",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "tier_2_elevated_casual",
+          "definition": "Polished casual footwear suitable for dates, casual dining, and weekend outfits. Includes: (1) Chelsea boots, (2) chukka/desert boots, (3) driving shoes/moccasins, (4) boat shoes, (5) quality leather sneakers in neutral tones, (6) clean retro runners. Pairs with dark denim, chinos, and casual button-downs.",
+          "sources": [
+            "Bespoke Unit",
+            "Baronton",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "tier_3_everyday_casual",
+          "definition": "Standard casual footwear for daily wear. Includes: (1) canvas sneakers/plimsolls, (2) skate shoes, (3) retro lifestyle sneakers, (4) work boots, (5) hiking boots, (6) combat boots, (7) fisherman sandals, (8) leather sandals. Suitable with jeans, t-shirts, and casual weekend wear.",
+          "sources": [
+            "Bespoke Unit",
+            "The Modest Man",
+            "Baronton"
+          ]
+        },
+        {
+          "value": "tier_4_ultra_casual",
+          "definition": "Most informal footwear reserved for very relaxed settings. Includes: (1) chunky dad sneakers, (2) high-top sneakers, (3) knit/sock sneakers, (4) platform sneakers, (5) espadrilles, (6) sport sandals, (7) slide sandals, (8) flip flops. Best for beach, pool, lounging, errands, and very casual social occasions.",
+          "sources": [
+            "Bespoke Unit",
+            "The Modest Man",
+            "Nimble Made"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sneaker_material",
+      "description": "Primary upper material of a sneaker, which significantly affects formality, durability, and styling versatility",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "full_grain_leather",
+          "definition": "Highest quality leather sneaker material. Tough, easy to clean, develops a patina with age, and gets more comfortable over time. Looks finer than cheaper alternatives and enables a sneaker to work in smart-casual settings.",
+          "sources": [
+            "FashionBeans",
+            "The Modest Man",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "top_grain_leather",
+          "definition": "Second-tier leather quality, slightly corrected and more uniform than full-grain. Still appropriate for dress sneakers and smart-casual wear. More affordable entry point for leather sneakers.",
+          "sources": [
+            "FashionBeans",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "suede",
+          "definition": "The nappy underside of cow's skin (also called reverse calf). Softer and more pliable than smooth leather, with a casual texture. Looks great but requires protector spray and should be avoided in rain. A grey suede minimalist sneaker works across an entire wardrobe.",
+          "sources": [
+            "Bespoke Unit",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "nubuck",
+          "definition": "Buffed top-grain leather with a velvety surface similar to suede but more durable. Offers a refined casual texture. Available in Clarks and other brands as a premium sneaker material option.",
+          "sources": [
+            "Clarks"
+          ]
+        },
+        {
+          "value": "canvas",
+          "definition": "Lightweight woven cotton or synthetic fabric. The original sneaker upper material. Breathable and casual, associated with plimsolls and skate shoes. Less formal than leather but highly versatile in casual settings.",
+          "sources": [
+            "The Modest Man",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "knit_mesh",
+          "definition": "Stretch-knit or mesh fabric providing sock-like fit and maximum breathability. Used in modern runners, sock sneakers, and athleisure styles. Fashion-forward but firmly casual.",
+          "sources": [
+            "Clarks",
+            "The Modest Man",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "synthetic",
+          "definition": "Man-made materials including recycled plastics and vegan leather alternatives. Growing segment driven by sustainability concerns. Adidas Parley line uses recycled ocean plastic.",
+          "sources": [
+            "The Fashionisto",
+            "Clarks"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kolhapuri_subtype",
+      "description": "Specific traditional subtypes of the Kolhapuri chappal, an Indian hand-crafted leather sandal with geographical indication (GI) tag from the Kolhapur region",
+      "style_track": [
+        "ethnic",
+        "casual"
+      ],
+      "values": [
+        {
+          "value": "paytaan",
+          "definition": "One of the most popular and traditional Kolhapuri chappal types, named after its construction pattern. Features the classic T-strap open-toe design with distinctive braided leather work.",
+          "sources": [
+            "Wikipedia",
+            "Pernia's Pop-Up Shop"
+          ]
+        },
+        {
+          "value": "kachkadi",
+          "definition": "Traditional Kolhapuri chappal variant with a specific regional braiding pattern. Part of the classic repertoire of Kolhapuri designs.",
+          "sources": [
+            "Wikipedia",
+            "Pernia's Pop-Up Shop"
+          ]
+        },
+        {
+          "value": "pukri",
+          "definition": "Traditional Kolhapuri chappal style, one of the historically recognized patterns from the Kolhapur region.",
+          "sources": [
+            "Wikipedia",
+            "Pernia's Pop-Up Shop"
+          ]
+        },
+        {
+          "value": "kapashi",
+          "definition": "Popular Kolhapuri chappal style with distinctive construction. The Senapati Kapashi variant is a prestigious design sometimes featuring a characteristic sound.",
+          "sources": [
+            "Pernia's Pop-Up Shop",
+            "Korakari"
+          ]
+        },
+        {
+          "value": "maharaja_shahu",
+          "definition": "Royal-designed Kolhapuri chappal with antique styling, named after the Maharaja. A premium, heritage design variant.",
+          "sources": [
+            "Pernia's Pop-Up Shop",
+            "Korakari"
+          ]
+        },
+        {
+          "value": "moja_shape",
+          "definition": "T-shaped design Kolhapuri chappal with a distinctive silhouette differing from the standard open-toe construction.",
+          "sources": [
+            "Pernia's Pop-Up Shop"
+          ]
+        },
+        {
+          "value": "kurundwad",
+          "definition": "Regional Kolhapuri chappal design also known as Chor Kaan, originating from the Kurundwad area with a specific construction technique.",
+          "sources": [
+            "Pernia's Pop-Up Shop"
+          ]
+        },
+        {
+          "value": "amdar",
+          "definition": "Kolhapuri chappal variant also known as Paper Kapashi style, featuring a distinctive construction method.",
+          "sources": [
+            "Pernia's Pop-Up Shop"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_shoe_type_other",
+      "description": "Non-sneaker, non-boot, non-sandal casual shoe types for men",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "boat_shoe",
+          "definition": "American summertime classic slip-on with slip-resistant soles (won't scratch fiberglass), water-resistant leather upper, and 360-degree lacing. Also called topsiders (Sperry brand). Nautical chic, worn with shorts, rolled-up casual trousers, and chinos. Available in wide range of colors.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "driving_moccasin",
+          "definition": "Italian-origin moccasin with rubber nubs on the sole for gripping car pedals. Extremely comfortable but not ideal for extensive walking. Popularized by Tod's in the mid-1950s. Pairs with casual trousers, denim, and shorts.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "camp_moc",
+          "definition": "Traditional moccasin construction with a one-piece leather wrap, handsewn seams, and a casual rubber sole. Derived from North American indigenous footwear. A subset of the broader moccasin family alongside boat shoes and driving shoes.",
+          "sources": [
+            "Bespoke Unit",
+            "Quoddy"
+          ]
+        },
+        {
+          "value": "penny_loafer",
+          "definition": "Slip-on shoe with a strap across the vamp featuring a diamond-shaped cutout (originally for holding a penny). Ivy League classic popularized by G.H. Bass Weejun in the 1950s. Bridges casual and smart-casual contexts.",
+          "sources": [
+            "Bespoke Unit",
+            "Baronton"
+          ]
+        },
+        {
+          "value": "bit_loafer",
+          "definition": "Slip-on shoe characterized by a metal horsebit decoration across the vamp, popularized by Gucci in the 1950s. Great for business casual and evening wear.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "venetian_loafer",
+          "definition": "Unadorned slip-on free of broguing, straps, bits, or decoration. The most formal of all slip-on shoes when paired with a dress sole and heel. In black patent leather, suitable for black-tie events.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        },
+        {
+          "value": "espadrille",
+          "definition": "Slip-on with canvas upper and jute esparto rope sole from the Pyrenees region of Spain and France. Originally a dock worker's shoe, now ultra-casual summertime footwear. Worn with casual trousers, shorts, and bathing trunks.",
+          "sources": [
+            "Bespoke Unit"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "essential_casual_footwear_rotation",
+      "description": "Recommended core footwear rotation for a men's casual wardrobe, organized by priority of acquisition",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "everyday_sneaker",
+          "definition": "First priority purchase. A versatile, comfortable sneaker for daily wear. Should be a clean design in a neutral color that works with most casual outfits.",
+          "sources": [
+            "Baronton"
+          ]
+        },
+        {
+          "value": "smart_casual_sneaker",
+          "definition": "Second priority. A minimalist leather or premium sneaker that can bridge casual to smart-casual occasions. White leather low-top is the most versatile choice.",
+          "sources": [
+            "Baronton",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "dress_shoe",
+          "definition": "Third priority. One pair of core dress shoes: Oxfords for most formal needs, Derbies for more relaxed professional settings, or loafers for warm weather and semi-formal events.",
+          "sources": [
+            "Baronton"
+          ]
+        },
+        {
+          "value": "casual_boot",
+          "definition": "Fourth priority. Chelsea boots for something sleek, lace-up boots for rugged appeal, or chukka boots for a laid-back yet intentional look. Boots outperform sneakers in rough weather and develop character with wear as leather softens and molds to the foot.",
+          "sources": [
+            "Baronton"
+          ]
+        },
+        {
+          "value": "training_shoe",
+          "definition": "Fifth priority. Dedicated athletic shoe for gym and sports, kept separate from fashion sneakers. Cross-trainers or running shoes depending on primary activity.",
+          "sources": [
+            "Baronton"
+          ]
+        },
+        {
+          "value": "seasonal_sandal",
+          "definition": "Sixth priority. Warm-weather backup footwear. Not for office, nice restaurants, or events requiring closed-toe shoes. Think of sandals as casual warm-weather backup, not main footwear.",
+          "sources": [
+            "Baronton"
+          ]
+        },
+        {
+          "value": "winter_boot",
+          "definition": "Conditional priority for cold climates. Dedicated design with insulation, waterproofing, and tough sole for harsh winter conditions. Separate from fashion boots.",
+          "sources": [
+            "Baronton"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sneaker_style_era",
+      "description": "The era or cultural movement a sneaker style is associated with, affecting how it reads in an outfit",
+      "style_track": [
+        "casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "heritage_70s",
+          "definition": "Sneakers originating from the 1970s including early running shoes (Nike Cortez), first slip-ons (Vans), and early court shoes. Simple construction, clean lines, now valued for retro authenticity.",
+          "sources": [
+            "The Modest Man",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "classic_80s",
+          "definition": "Sneakers from the 1980s basketball and hip-hop era including Air Jordan, Adidas Superstar, and Puma Suede. Represent the merging of basketball, hip hop, street fashion, and high fashion.",
+          "sources": [
+            "The Modest Man",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "retro_90s",
+          "definition": "1990s era chunky sneakers and early dad shoes. Currently experiencing a strong revival. Includes bulky skate shoes (Osiris D3) and early chunky runners.",
+          "sources": [
+            "The Modest Man",
+            "Clarks"
+          ]
+        },
+        {
+          "value": "minimalist_modern",
+          "definition": "Contemporary minimalist sneakers emphasizing clean design, quality materials, and versatility. Common Projects-led movement toward sneakers as smart-casual footwear. Current dominant trend alongside the retro revival.",
+          "sources": [
+            "The Modest Man",
+            "The Fashionisto",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "tech_contemporary",
+          "definition": "Current-era sneakers featuring advanced materials (knit, 3D-printed elements), innovative cushioning (Boost, React, ZoomX), and futuristic silhouettes. Includes sock sneakers and hybrid athletic-fashion designs.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_watch_type",
+      "description": "Type/style classification of a casual men's wristwatch, based on its heritage, design language, and intended use context",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear",
+        "outdoor"
+      ],
+      "values": [
+        {
+          "value": "field",
+          "definition": "Military-heritage watch emphasizing legibility, durability, and ruggedness. Clean dial layout with large Arabic numeral markers, typically 38-42mm case, canvas or leather NATO strap, 100m water resistance. Born in WWI/WWII trench use.",
+          "design_cues": [
+            "arabic_numerals",
+            "clean_dial",
+            "canvas_or_nato_strap",
+            "24hr_markers"
+          ],
+          "formality": "casual_to_smart_casual",
+          "pair_with": [
+            "chinos_and_henley",
+            "field_jacket",
+            "jeans_and_oxford",
+            "cargo_pants"
+          ],
+          "sources": [
+            "Vaer Watches Blog",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "diver",
+          "definition": "Water-sport watch with unidirectional rotating bezel for tracking dive time, screw-down crown, and minimum 200m water resistance (ISO 6425). Bold, legible dial with luminous markers. The most versatile casual watch type.",
+          "design_cues": [
+            "rotating_bezel",
+            "screw_down_crown",
+            "luminous_indices",
+            "bracelet_or_rubber_strap"
+          ],
+          "formality": "casual_to_smart_casual",
+          "pair_with": [
+            "t_shirt_and_jeans",
+            "polo_and_chinos",
+            "swim_shorts",
+            "casual_blazer_look"
+          ],
+          "sources": [
+            "Vaer Watches Blog",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "chronograph",
+          "definition": "Timing-instrument watch with stopwatch subdials, originally designed for aviation and motorsport. Features 2-3 subdials for elapsed seconds, minutes, and hours. Evolved from pure tool to style statement piece.",
+          "design_cues": [
+            "subdials",
+            "pushers",
+            "tachymeter_bezel",
+            "busy_dial"
+          ],
+          "formality": "casual_to_business_casual",
+          "pair_with": [
+            "leather_jacket",
+            "blazer_and_jeans",
+            "smart_casual_layers",
+            "weekend_brunch"
+          ],
+          "sources": [
+            "Vaer Watches Blog",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "sport",
+          "definition": "General-purpose active watch designed for athletic and outdoor use. Often features shock resistance, rubber or silicone strap, and digital or ana-digi display. Bridges the gap between tool watch and fashion piece.",
+          "design_cues": [
+            "rubber_strap",
+            "shock_resistant",
+            "backlight",
+            "stopwatch_function"
+          ],
+          "formality": "casual_only",
+          "pair_with": [
+            "athletic_wear",
+            "joggers_and_hoodie",
+            "streetwear",
+            "outdoor_gear"
+          ],
+          "sources": [
+            "Real Men Real Style",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "smart",
+          "definition": "Connected digital watch with fitness tracking, notifications, and app integration. Health metrics (heart rate, SpO2, steps) plus smartphone connectivity. Modern tech-forward casual accessory.",
+          "design_cues": [
+            "digital_display",
+            "touchscreen",
+            "interchangeable_bands",
+            "sensor_array"
+          ],
+          "formality": "casual_only",
+          "pair_with": [
+            "athleisure",
+            "tech_casual",
+            "streetwear",
+            "smart_casual_minimal"
+          ],
+          "sources": [
+            "Real Men Real Style",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "minimalist",
+          "definition": "Clean-dial watch with stripped-back design aesthetic — thin case, no numerals or few indices, plain dial, and slim leather or mesh strap. Derived from dress watch heritage but adapted for everyday casual elegance.",
+          "design_cues": [
+            "thin_case",
+            "plain_dial",
+            "mesh_or_leather_strap",
+            "no_numerals_or_batons_only"
+          ],
+          "formality": "casual_to_smart_casual",
+          "pair_with": [
+            "monochrome_outfit",
+            "smart_casual_knitwear",
+            "minimalist_streetwear",
+            "date_night"
+          ],
+          "sources": [
+            "Real Men Real Style",
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "digital",
+          "definition": "LCD or LED display watch with numeric time readout, often with retro or utilitarian aesthetic. Includes stopwatch, alarm, and backlight. Ranges from retro Casio-style to rugged G-Shock builds.",
+          "design_cues": [
+            "lcd_display",
+            "resin_case",
+            "multi_function_buttons",
+            "backlight"
+          ],
+          "formality": "casual_only",
+          "pair_with": [
+            "streetwear",
+            "retro_casual",
+            "workwear",
+            "90s_inspired"
+          ],
+          "sources": [
+            "Real Men Real Style",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "pilot",
+          "definition": "Aviation-heritage watch with oversized case (42-47mm), highly legible dial, large crown for gloved operation, and often a slide-rule bezel. Meets DIN 8330 or TESTAF standards in certified versions.",
+          "design_cues": [
+            "oversized_crown",
+            "large_case",
+            "triangle_12_marker",
+            "leather_riveted_strap"
+          ],
+          "formality": "casual_to_smart_casual",
+          "pair_with": [
+            "bomber_jacket",
+            "field_jacket_and_jeans",
+            "aviator_sunglasses",
+            "rugged_casual"
+          ],
+          "sources": [
+            "Real Men Real Style",
+            "Vaer Watches Blog"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sunglasses_frame",
+      "description": "Frame shape/style classification for men's sunglasses, defining the silhouette and design heritage of the eyewear",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "aviator",
+          "definition": "Teardrop-shaped metal-frame sunglasses with thin wire construction and distinctive double bridge (brow bar). Originated as 1930s military pilot eyewear. Universally versatile frame that conveys effortless, adventurous cool.",
+          "key_features": [
+            "teardrop_lens",
+            "metal_frame",
+            "brow_bar",
+            "nose_pads"
+          ],
+          "vibe": "effortless_adventurous",
+          "sources": [
+            "Carrera Eyewear",
+            "LensDirect",
+            "Treehut"
+          ]
+        },
+        {
+          "value": "wayfarer",
+          "definition": "Bold acetate trapezoidal frame introduced in 1952 (Ray-Ban). Thick plastic frame with slight upward angle at temples. Cultural icon associated with confidence and structure. Works across casual to smart-casual contexts.",
+          "key_features": [
+            "acetate_frame",
+            "trapezoidal_shape",
+            "thick_temples",
+            "keyhole_bridge"
+          ],
+          "vibe": "bold_confident",
+          "sources": [
+            "Carrera Eyewear",
+            "LensDirect",
+            "Treehut"
+          ]
+        },
+        {
+          "value": "round",
+          "definition": "Perfectly circular or near-circular lenses, often with thin metal frame. Artistic, expressive, and vintage-inspired. Associated with intellectual and creative aesthetics from John Lennon to modern minimalism.",
+          "key_features": [
+            "circular_lens",
+            "thin_frame",
+            "vintage_aesthetic",
+            "adjustable_nose_pads"
+          ],
+          "vibe": "artistic_expressive",
+          "sources": [
+            "Carrera Eyewear",
+            "LensDirect"
+          ]
+        },
+        {
+          "value": "clubmaster",
+          "definition": "Semi-rimless browline frame with thick acetate upper and thin metal lower rim. Retro-intellectual style inspired by 1950s-60s culture. Balances boldness with refinement; bridges casual and smart-casual well.",
+          "key_features": [
+            "browline_acetate_top",
+            "metal_lower_rim",
+            "semi_rimless",
+            "retro_profile"
+          ],
+          "vibe": "retro_intellectual",
+          "sources": [
+            "Carrera Eyewear",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "rectangle",
+          "definition": "Angular, horizontally-oriented frames with defined corners. Sharp, modern silhouette that adds structure to softer face shapes. Available in acetate or metal; works well in professional-casual settings.",
+          "key_features": [
+            "angular_corners",
+            "horizontal_emphasis",
+            "structured_shape",
+            "versatile_material"
+          ],
+          "vibe": "sharp_modern",
+          "sources": [
+            "Carrera Eyewear",
+            "Quay"
+          ]
+        },
+        {
+          "value": "wraparound",
+          "definition": "Curved, contoured frame that wraps around the face for maximum coverage and peripheral protection. Sport-oriented design with rubberized grip and impact-resistant lenses. Functional performance eyewear.",
+          "key_features": [
+            "curved_lens",
+            "full_coverage",
+            "rubberized_grip",
+            "sport_oriented"
+          ],
+          "vibe": "athletic_functional",
+          "sources": [
+            "Carrera Eyewear",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "navigator",
+          "definition": "Aviator-adjacent frame with a flatter, more squared-off teardrop shape and often a thicker bridge. Slightly more angular than classic aviators, giving a more assertive, structured look while retaining the pilot heritage.",
+          "key_features": [
+            "flat_teardrop",
+            "thicker_bridge",
+            "angular_aviator_variant",
+            "metal_frame"
+          ],
+          "vibe": "assertive_polished",
+          "sources": [
+            "Carrera Eyewear"
+          ]
+        },
+        {
+          "value": "square",
+          "definition": "Equal-proportion angular frame with defined corners and strong geometric lines. Modern and masculine aesthetic that provides significant facial definition. Works well for minimalist outfits.",
+          "key_features": [
+            "equal_proportions",
+            "sharp_angles",
+            "geometric_lines",
+            "bold_presence"
+          ],
+          "vibe": "modern_masculine",
+          "sources": [
+            "Carrera Eyewear",
+            "Quay"
+          ]
+        },
+        {
+          "value": "shield",
+          "definition": "Single continuous lens across both eyes, often with sporty or futuristic aesthetic. Maximum field of vision with minimal frame obstruction. Statement piece for bold casual or streetwear contexts.",
+          "key_features": [
+            "single_lens",
+            "minimal_frame",
+            "futuristic_profile",
+            "full_coverage"
+          ],
+          "vibe": "futuristic_bold",
+          "sources": [
+            "Carrera Eyewear"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sunglasses_face_shape_mapping",
+      "description": "Mapping of which sunglasses frame shapes are recommended for each face shape, based on the principle of contrast (curved faces benefit from angular frames and vice versa)",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "oval",
+          "definition": "Balanced proportions with slightly wider cheekbones and a gently narrowing forehead and jaw. Considered the most versatile face shape — most frame styles work well.",
+          "recommended_frames": [
+            "aviator",
+            "wayfarer",
+            "round",
+            "rectangle",
+            "clubmaster",
+            "navigator"
+          ],
+          "avoid_frames": [],
+          "styling_note": "Almost any frame works; choose based on personal style preference rather than corrective fit.",
+          "sources": [
+            "LensDirect",
+            "Quay",
+            "Zenni Optical"
+          ]
+        },
+        {
+          "value": "round",
+          "definition": "Roughly equal width and length with full cheeks and a rounded jawline. Soft features without prominent angles.",
+          "recommended_frames": [
+            "wayfarer",
+            "rectangle",
+            "clubmaster",
+            "square",
+            "navigator"
+          ],
+          "avoid_frames": [
+            "round",
+            "oversized_circular"
+          ],
+          "styling_note": "Angular frames add definition and create the illusion of a longer, thinner face. Avoid round frames that echo facial softness.",
+          "sources": [
+            "LensDirect",
+            "Quay",
+            "Treehut",
+            "Feel Good Contacts"
+          ]
+        },
+        {
+          "value": "square",
+          "definition": "Broad forehead and strong, angular jawline with roughly equal proportions. Prominent, defined bone structure.",
+          "recommended_frames": [
+            "aviator",
+            "round",
+            "wayfarer_soft_edge",
+            "navigator"
+          ],
+          "avoid_frames": [
+            "rectangle",
+            "square",
+            "sharp_angular"
+          ],
+          "styling_note": "Rounded and curved frames soften the strong jawline and angular features. Aviators work especially well as the teardrop shape balances the jaw.",
+          "sources": [
+            "LensDirect",
+            "Quay",
+            "Zenni Optical",
+            "Treehut"
+          ]
+        },
+        {
+          "value": "heart",
+          "definition": "Widest at the forehead, narrowing through cheekbones to a pointed chin. Also called inverted triangle.",
+          "recommended_frames": [
+            "aviator",
+            "clubmaster",
+            "round",
+            "wayfarer_light"
+          ],
+          "avoid_frames": [
+            "oversized_top_heavy",
+            "shield"
+          ],
+          "styling_note": "Frames with wider bottom edges (like aviators) add visual width below the cheekbones, balancing the broader forehead.",
+          "sources": [
+            "LensDirect",
+            "Zenni Optical",
+            "Treehut"
+          ]
+        },
+        {
+          "value": "oblong",
+          "definition": "Face is notably longer than it is wide, with a long straight cheek line. Forehead, cheekbones, and jaw are similar width.",
+          "recommended_frames": [
+            "wayfarer_oversized",
+            "aviator_large",
+            "round",
+            "shield"
+          ],
+          "avoid_frames": [
+            "narrow_rectangle",
+            "small_frames"
+          ],
+          "styling_note": "Larger, wider frames visually shorten the face. Oversized wayfarers and deep aviators work best. Avoid narrow frames that elongate further.",
+          "sources": [
+            "LensDirect",
+            "Quay"
+          ]
+        },
+        {
+          "value": "diamond",
+          "definition": "Widest at the cheekbones with a narrow forehead and jawline. Angular yet delicate structure.",
+          "recommended_frames": [
+            "aviator_soft",
+            "round",
+            "clubmaster",
+            "oval"
+          ],
+          "avoid_frames": [
+            "narrow_rectangle",
+            "sharp_geometric"
+          ],
+          "styling_note": "Soft, elongated frames highlight the eyes and reduce visual cheekbone width. Oval and rounded aviator shapes create harmony.",
+          "sources": [
+            "LensDirect",
+            "Quay"
+          ]
+        },
+        {
+          "value": "triangle",
+          "definition": "Wider jawline tapering to a narrower forehead. Strong lower face with less width above.",
+          "recommended_frames": [
+            "clubmaster",
+            "aviator",
+            "browline",
+            "round"
+          ],
+          "avoid_frames": [
+            "narrow_bottom_frames",
+            "wraparound"
+          ],
+          "styling_note": "Top-heavy frames (browline, clubmaster) add width to the forehead area, balancing the wider jaw. Avoid frames that emphasize the jawline.",
+          "sources": [
+            "Quay",
+            "Zenni Optical"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_bag_type",
+      "description": "Type classification for men's casual bags based on carry style, structure, and use context",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "backpack",
+          "definition": "Two-strap over-shoulder bag with main compartment and exterior pockets. Casual versions use clean, minimal design in leather, waxed canvas, or technical nylon. Suitable for daily carry, commuting, and travel.",
+          "materials": [
+            "leather",
+            "waxed_canvas",
+            "technical_nylon",
+            "recycled_polyester"
+          ],
+          "pair_with": [
+            "streetwear",
+            "smart_casual_layers",
+            "casual_friday",
+            "travel"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "messenger",
+          "definition": "Single-strap crossbody bag with front flap closure, originally used by bicycle couriers. Well-organized interior with laptop sleeve. Bridges casual and professional contexts.",
+          "materials": [
+            "leather",
+            "canvas",
+            "waxed_cotton",
+            "ballistic_nylon"
+          ],
+          "pair_with": [
+            "smart_casual",
+            "business_casual",
+            "weekend_errands",
+            "commuting"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "tote",
+          "definition": "Open-top structured or unstructured carry bag with two parallel handles. Clean silhouette in leather or canvas. Increasingly popular in men's fashion for its minimalist, utilitarian aesthetic.",
+          "materials": [
+            "leather",
+            "heavy_canvas",
+            "suede",
+            "coated_cotton"
+          ],
+          "pair_with": [
+            "smart_casual",
+            "minimalist_casual",
+            "market_errands",
+            "beach"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "crossbody",
+          "definition": "Compact single-strap bag worn diagonally across the torso. Hands-free carrying of essentials (phone, wallet, keys). Key trend piece in contemporary men's streetwear and casual fashion.",
+          "materials": [
+            "leather",
+            "nylon",
+            "technical_fabric",
+            "canvas"
+          ],
+          "pair_with": [
+            "streetwear",
+            "athleisure",
+            "festival_casual",
+            "urban_casual"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "weekender",
+          "definition": "Large soft-structured duffel-style bag designed for 1-3 day trips. Wide opening, interior pockets, detachable shoulder strap. Often in leather or canvas with refined hardware.",
+          "materials": [
+            "full_grain_leather",
+            "waxed_canvas",
+            "ballistic_nylon",
+            "cotton_twill"
+          ],
+          "pair_with": [
+            "travel_casual",
+            "smart_casual_travel",
+            "road_trip",
+            "weekend_getaway"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "gym_duffel",
+          "definition": "Cylindrical or barrel-shaped sports bag with ventilated shoe compartment and water-resistant lining. Functional design for gym and athletic use with separate wet/dry sections.",
+          "materials": [
+            "polyester",
+            "nylon",
+            "recycled_fabric",
+            "rubber_base"
+          ],
+          "pair_with": [
+            "athleisure",
+            "gym_wear",
+            "post_workout_casual"
+          ],
+          "sources": [
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "sling_bag",
+          "definition": "Compact single-strap bag worn across the chest or back, smaller than a traditional crossbody. Minimalist design carrying only absolute essentials. Popular in streetwear and urban casual.",
+          "materials": [
+            "technical_nylon",
+            "leather",
+            "cordura",
+            "ripstop"
+          ],
+          "pair_with": [
+            "streetwear",
+            "tech_casual",
+            "urban_commute",
+            "festival"
+          ],
+          "sources": [
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "briefcase_casual",
+          "definition": "Structured bag with top handle and often a shoulder strap, in softer materials or relaxed constructions compared to formal briefcases. Bridges professional and casual contexts.",
+          "materials": [
+            "soft_leather",
+            "canvas_leather_combo",
+            "suede",
+            "nubuck"
+          ],
+          "pair_with": [
+            "smart_casual",
+            "business_casual",
+            "creative_professional"
+          ],
+          "sources": [
+            "Modern Gentleman Magazine"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_belt_style",
+      "description": "Belt style classification for casual menswear contexts, defined by material, buckle type, and formality level",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "woven",
+          "definition": "Braided or woven belt (often elastic or leather strips) that allows micro-adjustment without fixed holes. Relaxed, textured aesthetic. Classic summer and resort casual accessory.",
+          "buckle_type": "slide_or_pin",
+          "materials": [
+            "braided_leather",
+            "elastic_woven",
+            "cotton_webbing"
+          ],
+          "pair_with": [
+            "chinos_and_polo",
+            "linen_trousers",
+            "resort_wear",
+            "smart_casual_summer"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "canvas",
+          "definition": "Fabric belt in cotton canvas or nylon webbing, typically with a D-ring or military-style buckle. Casual utility aesthetic. Available in solid colors and patterns (stripes, regimental).",
+          "buckle_type": "d_ring_or_military_slide",
+          "materials": [
+            "cotton_canvas",
+            "nylon_webbing",
+            "grosgrain"
+          ],
+          "pair_with": [
+            "jeans_and_tee",
+            "shorts",
+            "workwear",
+            "outdoor_casual"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "leather_casual",
+          "definition": "Leather belt in a wider width (35-40mm) with distressed, matte, or pull-up finish and a brushed or antique buckle. Distinguished from formal leather belts by its relaxed finish and wider cut.",
+          "buckle_type": "pin_buckle_brushed_or_antique",
+          "materials": [
+            "full_grain_leather",
+            "pull_up_leather",
+            "distressed_leather",
+            "suede"
+          ],
+          "pair_with": [
+            "jeans_and_boots",
+            "chinos_casual",
+            "flannel_and_denim",
+            "smart_casual"
+          ],
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "reversible",
+          "definition": "Dual-sided belt with a rotating buckle mechanism allowing two color/finish options (typically black/brown or leather/suede). Practical versatility for travel and mixed wardrobes.",
+          "buckle_type": "rotating_pin_or_plate",
+          "materials": [
+            "bonded_leather",
+            "full_grain_leather",
+            "saffiano"
+          ],
+          "pair_with": [
+            "versatile_casual",
+            "travel_wardrobe",
+            "business_casual_flex"
+          ],
+          "sources": [
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "no_belt",
+          "definition": "Intentional absence of a belt as a style choice, relying on well-fitted trousers, side adjusters, or drawstring waists. Common in relaxed-fit casual and minimalist aesthetics.",
+          "buckle_type": "none",
+          "materials": [],
+          "pair_with": [
+            "relaxed_fit_trousers",
+            "drawstring_pants",
+            "elastic_waist",
+            "tucked_in_minimal"
+          ],
+          "sources": [
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "rope",
+          "definition": "Nautical-inspired belt made from braided rope or cord with a metal or leather closure. Distinctly casual, often associated with coastal, preppy, or resort aesthetics.",
+          "buckle_type": "hook_or_leather_closure",
+          "materials": [
+            "braided_rope",
+            "cotton_cord",
+            "paracord"
+          ],
+          "pair_with": [
+            "boat_shoes_and_shorts",
+            "resort_casual",
+            "preppy_summer"
+          ],
+          "sources": [
+            "Trendhim"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_jewelry",
+      "description": "Jewelry and small accessory classification for casual menswear, covering items worn on the body for decorative/personal expression purposes",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "minimal_bracelet",
+          "definition": "Simple, understated wrist accessory in leather, cord, or thin metal. Designed to complement a watch without competing. Stackable; current trend favors matte metals (stainless steel, titanium, tungsten) or natural materials.",
+          "subtypes": [
+            "leather_wrap",
+            "metal_cuff_thin",
+            "cord_bracelet",
+            "chain_link_minimal"
+          ],
+          "styling_rule": "Wear on opposite wrist from watch, or stack 1-2 beside watch. One metal tone throughout.",
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "beaded_bracelet",
+          "definition": "Bracelet made of strung natural stone, wood, lava, or glass beads. Casual and bohemian-leaning aesthetic. Popular for stacking and adding texture to relaxed outfits.",
+          "subtypes": [
+            "matte_stone",
+            "wood_bead",
+            "lava_bead",
+            "glass_bead"
+          ],
+          "styling_rule": "Best with casual and weekend outfits. Stack 2-3 max. Avoid with formal or strict business dress.",
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "chain_necklace",
+          "definition": "Thin metal chain worn around the neck, typically in silver, gold, or gunmetal. Clean, minimal profile visible at open collar. Lengths vary from choker (16in) to mid-chest (22in).",
+          "subtypes": [
+            "curb_chain",
+            "box_chain",
+            "rope_chain",
+            "figaro_chain"
+          ],
+          "styling_rule": "One chain at a time for clean look. Thin gauge (2-3mm) for subtle style. Match metal to watch and other accessories.",
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "pendant_necklace",
+          "definition": "Chain necklace with a single decorative element — disc, tag, symbolic charm, or personal talisman. Adds focal point and personal meaning to neckwear.",
+          "subtypes": [
+            "disc_pendant",
+            "dog_tag",
+            "symbolic_charm",
+            "religious_medal"
+          ],
+          "styling_rule": "Keep pendant proportional to chain weight. One pendant necklace at a time. Works with open-collar shirts and crew-neck tees.",
+          "sources": [
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "signet_ring",
+          "definition": "Flat-topped ring traditionally bearing an engraved crest, initials, or symbol. Worn on the pinky or ring finger. Historically a mark of heritage, now worn as a subtle personal style signature.",
+          "subtypes": [
+            "engraved_crest",
+            "plain_polished",
+            "matte_finish",
+            "monogrammed"
+          ],
+          "styling_rule": "Worn alone on pinky finger (traditionally non-dominant hand). One ring statement piece is sufficient for casual wear.",
+          "sources": [
+            "Modern Gentleman Magazine",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "band_ring",
+          "definition": "Simple metal band ring without gemstones, worn on any finger. Clean, modern masculine aesthetic. Available in stainless steel, titanium, tungsten, or precious metals.",
+          "subtypes": [
+            "plain_band",
+            "textured_band",
+            "black_finish",
+            "two_tone"
+          ],
+          "styling_rule": "Maximum 2-3 rings total across both hands. Mix textures but keep to one metal family.",
+          "sources": [
+            "Trendhim",
+            "Modern Gentleman Magazine"
+          ]
+        },
+        {
+          "value": "stud_earring",
+          "definition": "Small, close-fitting earring that sits flush against the earlobe. Single stud in one or both ears. Minimal and contemporary. Common in diamond/CZ, black, or metallic finishes.",
+          "subtypes": [
+            "diamond_cz_stud",
+            "black_stud",
+            "metallic_ball",
+            "bar_stud"
+          ],
+          "styling_rule": "Keep small and proportional. One stud per ear maximum for casual-clean aesthetic. Match metal to other jewelry.",
+          "sources": [
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "watch_strap_as_jewelry",
+          "definition": "Decorative or statement watch strap worn as an accessory element in its own right — NATO straps in bold colors/patterns, beaded watch bands, or leather wraps that extend the watch into a jewelry-like wrist stack.",
+          "subtypes": [
+            "nato_patterned",
+            "beaded_strap",
+            "leather_wrap_strap",
+            "perlon_woven"
+          ],
+          "styling_rule": "Coordinate strap color/material with outfit palette. NATO patterns add casual character; leather adds refinement.",
+          "sources": [
+            "Vaer Watches Blog",
+            "Trendhim"
+          ]
+        },
+        {
+          "value": "none",
+          "definition": "Intentional choice to wear no jewelry, relying on watch (if any) and clothing details alone. Valid minimalist approach — especially for utilitarian, workwear, and clean-minimal aesthetics.",
+          "subtypes": [],
+          "styling_rule": "Let the outfit and watch (if worn) carry the visual interest. No jewelry can be a deliberate style choice, not an oversight.",
+          "sources": [
+            "Modern Gentleman Magazine"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "monsoon_footwear_type",
+      "description": "Footwear categories appropriate for Indian monsoon season prioritizing water resistance, grip, and quick drying",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "waterproof_sneakers",
+          "definition": "Sneakers with waterproof uppers and good rubber grip soles; sporty and functional for daily monsoon commuting. Anti-slip soles essential for wet surfaces. Versatile enough for casual office environments",
+          "sources": [
+            "Entimessi",
+            "The Hub",
+            "Nobero"
+          ]
+        },
+        {
+          "value": "rubber_loafers",
+          "definition": "Rubber or synthetic loafers that handle water exposure without damage; more polished look than sandals while remaining monsoon-practical. Easy to clean and dry quickly",
+          "sources": [
+            "Entimessi",
+            "Urbano Fashion"
+          ]
+        },
+        {
+          "value": "sport_sandals_floaters",
+          "definition": "Open sandals and floaters that allow water to drain freely; most practical for heavy rain. Include branded sport sandals and flip-flops for casual outings. No moisture trapping or drying concerns",
+          "sources": [
+            "The Hub",
+            "Entimessi",
+            "Nobero"
+          ]
+        },
+        {
+          "value": "gumboots_tall_boots",
+          "definition": "Tall rubber boots or gumboots for extreme monsoon conditions with deep waterlogging; keep feet completely dry and clean. Practical but limited to outdoor/commute use rather than office wear",
+          "sources": [
+            "The Hub"
+          ]
+        },
+        {
+          "value": "avoid_leather_canvas",
+          "definition": "Leather shoes, canvas sneakers, and suede footwear should be avoided during monsoon as water damages the material permanently, causes odor, and leads to deterioration. Save these for dry seasons",
+          "sources": [
+            "The Hub",
+            "Entimessi",
+            "Nobero"
+          ]
+        }
+      ]
+    }
+  ],
+  "garment_taxonomy_principles": [
+    {
+      "name": "shoe_formality_hierarchy",
+      "description": "Patent pump > plain cap-toe Oxford (closed) > half-brogue > full-brogue wingtip > Derby/Blucher > monkstrap > tassel loafer > penny loafer > moccasin. Closed lacing is always more formal than open lacing. Broguing (perforations) always reduces formality. Suede leather always shifts one tier more casual than polished leather in the same style.",
+      "referenced_by": [
+        "D07"
+      ],
+      "sources": [
+        "Flusser Ch10",
+        "Roetzel Shoes"
+      ]
+    },
+    {
+      "name": "sock_matches_trouser_not_shoe",
+      "description": "Hosiery should match the trouser rather than the shoe — perceiving them from the leg bottom as a unit. Stopping the eye at the ankle by blocking it with a clashing sock creates a break in the visual line. Patterned hose help integrate top and bottom halves of the ensemble.",
+      "sources": [
+        "Flusser Ch9"
+      ]
+    },
+    {
+      "name": "pocket_square_never_matches_tie",
+      "description": "A matching handkerchief and necktie is not only a sign of an unsure dresser but also a sure way to lead the eye across the body and away from the face. A solid pocket hank should echo a color in the necktie but never duplicate it in fabric or exact color.",
+      "sources": [
+        "Flusser Ch11"
+      ]
+    },
+    {
+      "name": "accessories_as_personal_expression",
+      "description": "Since Victorian times, well-dressed men have tended to afford all but the most discreet and understated accessories. The money clip, tie clip, collar pin, key chain, wristwatch, and cuff links are utilitarian, not decorative. However, a man can still wear a little bit of gold taste. Accessories are like local cuisine — they hold their own against international standardization.",
+      "sources": [
+        "Flusser Ch11",
+        "Roetzel Accessories"
+      ]
+    },
+    {
+      "name": "hat_formality_hierarchy",
+      "description": "Top hat > Homburg > bowler > fedora > trilby > Panama/boater > tweed hat > flat cap > baseball cap. The hat has largely lost its everyday function but remains required for formal occasions (morning dress, evening dress). In England, hats are still expected at horse racing and equestrian events.",
+      "sources": [
+        "Roetzel Hat"
+      ]
+    },
+    {
+      "name": "three_pairs_minimum",
+      "description": "Three pairs of welted shoes are sufficient as a basic collection: one pair of brown brogues, one of black Oxfords, and one of monkstraps or loafers. Then add light moccasins and boat shoes. Shoes should have at least a day or two to recover after every wearing. But few men who acquire a taste for shoes will make do with the minimum.",
+      "sources": [
+        "Roetzel Shoes"
+      ]
+    }
+  ],
+  "cross_domain_dependencies": [
+    {
+      "from_param": "shoe_type",
+      "to_domain": "D07",
+      "to_param": "occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "shoe_type",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "shoe_leather_type",
+      "to_domain": "D08",
+      "to_param": "fabric_texture_scale",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "shoe_color_rule",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "hosiery_type",
+      "to_domain": "D03",
+      "to_param": "color_combination_scheme",
+      "relationship": "references"
+    },
+    {
+      "from_param": "pocket_handkerchief_type",
+      "to_domain": "D03",
+      "to_param": "facial_color_features",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "belt_type",
+      "to_domain": "D03",
+      "to_param": "metal_compatibility",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "cufflink_type",
+      "to_domain": "D03",
+      "to_param": "metal_compatibility",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "watch_timepiece_type",
+      "to_domain": "D03",
+      "to_param": "metal_compatibility",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "hat_type",
+      "to_domain": "D07",
+      "to_param": "occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "hat_type",
+      "to_domain": "D08",
+      "to_param": "suiting_fabric",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "necktie_type",
+      "to_domain": "D08",
+      "to_param": "tie_fabric",
+      "relationship": "references"
+    },
+    {
+      "from_param": "necktie_type",
+      "to_domain": "D04",
+      "to_param": "tie_knot_type",
+      "relationship": "determines"
+    },
+    {
+      "from_principle": "shoe_formality_hierarchy",
+      "to_domain": "D06",
+      "to_principle": "formality_consistency",
+      "relationship": "operationalizes"
+    },
+    {
+      "from_param": "sneaker_type",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "sneaker_formality",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "casual_sandal_type",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "casual_boot_type",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "sunglasses_face_shape_mapping",
+      "to_domain": "D01",
+      "to_param": "face_shape",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "casual_watch_type",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "casual_bag_type",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "monsoon_footwear_type",
+      "to_domain": "D05",
+      "to_param": "indian_season_type",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "kolhapuri_subtype",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "sneaker_material",
+      "to_domain": "D08",
+      "to_param": "casual_fabric_type",
+      "relationship": "references"
+    }
+  ],
+  "status": "production"
+}

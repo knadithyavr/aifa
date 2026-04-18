@@ -1,0 +1,805 @@
+{
+  "version": "1.0",
+  "description": "Garment pairing compatibility matrix. Scores 1-10 for how well style A pairs with style B. Organized by: top×bottom, bottom×footwear, top×footwear, and optional layers.",
+  "scoring_labels": {
+    "9-10": "perfect_pair",
+    "7-8": "great_pair",
+    "5-6": "works",
+    "3-4": "mismatch",
+    "1-2": "clash"
+  },
+  "top_x_bottom": {
+    "description": "How well top garment styles pair with bottom garment styles",
+    "tshirt_regular_crew": {
+      "jeans_straight": 9,
+      "jeans_tapered": 9,
+      "jeans_slim": 8,
+      "jeans_regular": 8,
+      "jeans_relaxed": 6,
+      "chinos_tapered": 8,
+      "chinos_slim": 7,
+      "chinos_straight": 8,
+      "chinos_regular": 7,
+      "shorts_chino": 8,
+      "shorts_athletic": 7,
+      "shorts_cargo": 7,
+      "joggers": 7
+    },
+    "tshirt_slim_vneck": {
+      "jeans_slim": 9,
+      "jeans_tapered": 9,
+      "jeans_straight": 7,
+      "jeans_regular": 6,
+      "jeans_relaxed": 4,
+      "chinos_slim": 9,
+      "chinos_tapered": 9,
+      "chinos_straight": 6,
+      "shorts_chino": 7,
+      "shorts_athletic": 5,
+      "joggers": 5
+    },
+    "tshirt_oversized": {
+      "jeans_slim": 8,
+      "jeans_tapered": 8,
+      "jeans_skinny": 7,
+      "jeans_straight": 5,
+      "jeans_relaxed": 4,
+      "chinos_slim": 7,
+      "chinos_tapered": 7,
+      "shorts_chino": 6,
+      "shorts_athletic": 5,
+      "joggers": 7
+    },
+    "tshirt_henley": {
+      "jeans_straight": 9,
+      "jeans_tapered": 9,
+      "jeans_slim": 8,
+      "jeans_regular": 7,
+      "chinos_tapered": 8,
+      "chinos_slim": 7,
+      "chinos_straight": 8,
+      "shorts_chino": 7,
+      "joggers": 5
+    },
+    "polo_classic": {
+      "jeans_straight": 8,
+      "jeans_tapered": 9,
+      "jeans_slim": 7,
+      "jeans_regular": 7,
+      "jeans_relaxed": 4,
+      "chinos_tapered": 10,
+      "chinos_slim": 9,
+      "chinos_straight": 8,
+      "chinos_regular": 8,
+      "shorts_chino": 9,
+      "shorts_linen": 7,
+      "joggers": 3
+    },
+    "polo_slim": {
+      "jeans_slim": 9,
+      "jeans_tapered": 9,
+      "jeans_straight": 6,
+      "chinos_slim": 10,
+      "chinos_tapered": 9,
+      "shorts_chino": 8,
+      "joggers": 3
+    },
+    "casual_shirt_ocbd": {
+      "jeans_straight": 9,
+      "jeans_tapered": 9,
+      "jeans_slim": 8,
+      "jeans_regular": 7,
+      "chinos_tapered": 10,
+      "chinos_slim": 9,
+      "chinos_straight": 9,
+      "chinos_regular": 8,
+      "shorts_chino": 7,
+      "joggers": 2
+    },
+    "casual_shirt_camp_collar": {
+      "jeans_tapered": 9,
+      "jeans_slim": 9,
+      "jeans_straight": 7,
+      "jeans_regular": 6,
+      "chinos_tapered": 8,
+      "chinos_slim": 8,
+      "shorts_chino": 9,
+      "shorts_linen": 8,
+      "joggers": 3
+    },
+    "casual_shirt_linen": {
+      "jeans_tapered": 7,
+      "jeans_slim": 7,
+      "jeans_straight": 6,
+      "chinos_tapered": 9,
+      "chinos_slim": 9,
+      "chinos_straight": 8,
+      "shorts_chino": 9,
+      "shorts_linen": 10,
+      "joggers": 2
+    },
+    "casual_shirt_mandarin": {
+      "jeans_tapered": 8,
+      "jeans_slim": 8,
+      "jeans_straight": 7,
+      "chinos_tapered": 9,
+      "chinos_slim": 9,
+      "chinos_straight": 8,
+      "shorts_chino": 6,
+      "joggers": 2
+    },
+    "casual_shirt_denim": {
+      "chinos_tapered": 9,
+      "chinos_slim": 8,
+      "chinos_straight": 8,
+      "jeans_straight": 3,
+      "jeans_tapered": 3,
+      "jeans_slim": 3,
+      "shorts_chino": 7,
+      "note": "Denim shirt + denim jeans = Canadian tuxedo. Avoid unless deliberate and different washes."
+    },
+    "casual_shirt_flannel": {
+      "jeans_straight": 9,
+      "jeans_tapered": 8,
+      "jeans_regular": 8,
+      "chinos_straight": 7,
+      "chinos_regular": 7,
+      "joggers": 4
+    },
+    "casual_shirt_chambray": {
+      "jeans_tapered": 8,
+      "jeans_straight": 8,
+      "jeans_slim": 7,
+      "chinos_tapered": 9,
+      "chinos_slim": 8,
+      "chinos_straight": 8,
+      "shorts_chino": 8
+    },
+    "tshirt_muscle": {
+      "jeans_slim": 8,
+      "jeans_tapered": 8,
+      "jeans_skinny": 7,
+      "jeans_straight": 5,
+      "chinos_slim": 7,
+      "chinos_tapered": 7,
+      "shorts_chino": 7,
+      "shorts_athletic": 8,
+      "joggers": 7
+    },
+    "tshirt_longline": {
+      "jeans_slim": 9,
+      "jeans_skinny": 8,
+      "jeans_tapered": 8,
+      "jeans_straight": 5,
+      "chinos_slim": 7,
+      "chinos_tapered": 7,
+      "shorts_chino": 4,
+      "joggers": 8
+    },
+    "casual_shirt_overshirt": {
+      "jeans_straight": 9,
+      "jeans_tapered": 8,
+      "jeans_regular": 8,
+      "chinos_straight": 8,
+      "chinos_regular": 7,
+      "joggers": 4,
+      "note": "Overshirt is a layering piece — works best over tee/henley with straight/regular bottoms"
+    },
+    "casual_shirt_cuban_collar": {
+      "jeans_tapered": 9,
+      "jeans_slim": 9,
+      "jeans_straight": 7,
+      "chinos_tapered": 9,
+      "chinos_slim": 9,
+      "shorts_chino": 10,
+      "shorts_linen": 9,
+      "joggers": 3
+    },
+    "casual_shirt_henley": {
+      "jeans_straight": 9,
+      "jeans_tapered": 8,
+      "jeans_slim": 8,
+      "jeans_regular": 7,
+      "chinos_tapered": 7,
+      "chinos_straight": 7,
+      "shorts_chino": 6,
+      "joggers": 5
+    },
+    "polo_athletic": {
+      "jeans_tapered": 9,
+      "jeans_slim": 7,
+      "jeans_straight": 7,
+      "chinos_tapered": 9,
+      "chinos_slim": 8,
+      "shorts_chino": 8,
+      "shorts_athletic": 7,
+      "joggers": 5
+    },
+    "tshirt_graphic": {
+      "jeans_slim": 8,
+      "jeans_tapered": 8,
+      "jeans_straight": 7,
+      "jeans_relaxed": 6,
+      "chinos_tapered": 5,
+      "chinos_slim": 5,
+      "shorts_chino": 6,
+      "shorts_cargo": 7,
+      "joggers": 7,
+      "note": "Graphic tees pair best with simple, neutral bottoms. Don't compete with the graphic."
+    }
+  },
+  "bottom_x_footwear": {
+    "description": "How well bottom garment styles pair with footwear",
+    "jeans_slim": {
+      "minimalist_white": 10,
+      "court_tennis": 9,
+      "retro_lifestyle": 8,
+      "canvas_plimsoll": 8,
+      "chelsea_boot": 9,
+      "chukka_desert": 8,
+      "penny_loafer": 7,
+      "derby_casual": 7,
+      "runner_modern": 6,
+      "high_top": 6,
+      "chunky_dad": 5,
+      "flip_flop": 2,
+      "sport_sandal": 2
+    },
+    "jeans_straight": {
+      "minimalist_white": 9,
+      "court_tennis": 8,
+      "retro_lifestyle": 8,
+      "canvas_plimsoll": 7,
+      "chelsea_boot": 8,
+      "chukka_desert": 9,
+      "penny_loafer": 7,
+      "derby_casual": 8,
+      "runner_modern": 6,
+      "high_top": 6,
+      "flip_flop": 3,
+      "sport_sandal": 3
+    },
+    "jeans_tapered": {
+      "minimalist_white": 10,
+      "court_tennis": 9,
+      "retro_lifestyle": 8,
+      "canvas_plimsoll": 8,
+      "chelsea_boot": 10,
+      "chukka_desert": 8,
+      "penny_loafer": 8,
+      "derby_casual": 7,
+      "runner_modern": 7,
+      "high_top": 7,
+      "flip_flop": 2,
+      "sport_sandal": 3
+    },
+    "jeans_relaxed": {
+      "retro_lifestyle": 7,
+      "runner_retro": 7,
+      "canvas_plimsoll": 6,
+      "chukka_desert": 7,
+      "derby_casual": 6,
+      "minimalist_white": 6,
+      "chelsea_boot": 5,
+      "flip_flop": 4,
+      "sport_sandal": 4
+    },
+    "chinos_slim": {
+      "minimalist_white": 9,
+      "penny_loafer": 10,
+      "tassel_loafer": 9,
+      "derby_casual": 9,
+      "chelsea_boot": 9,
+      "court_tennis": 8,
+      "chukka_desert": 8,
+      "canvas_plimsoll": 7,
+      "boat_shoe": 7,
+      "espadrille": 6,
+      "flip_flop": 1,
+      "sport_sandal": 2
+    },
+    "chinos_tapered": {
+      "minimalist_white": 10,
+      "penny_loafer": 10,
+      "tassel_loafer": 9,
+      "derby_casual": 9,
+      "chelsea_boot": 9,
+      "court_tennis": 8,
+      "chukka_desert": 9,
+      "canvas_plimsoll": 7,
+      "boat_shoe": 7,
+      "flip_flop": 1,
+      "sport_sandal": 2
+    },
+    "chinos_straight": {
+      "penny_loafer": 9,
+      "derby_casual": 9,
+      "chukka_desert": 9,
+      "minimalist_white": 8,
+      "chelsea_boot": 8,
+      "court_tennis": 7,
+      "boat_shoe": 7,
+      "flip_flop": 2
+    },
+    "shorts_chino": {
+      "minimalist_white": 9,
+      "canvas_plimsoll": 9,
+      "boat_shoe": 8,
+      "espadrille": 8,
+      "penny_loafer": 7,
+      "leather_sandal": 7,
+      "kolhapuri": 6,
+      "slide": 6,
+      "flip_flop": 5,
+      "sport_sandal": 5,
+      "chelsea_boot": 2,
+      "high_top": 2
+    },
+    "shorts_athletic": {
+      "runner_modern": 9,
+      "runner_retro": 8,
+      "slip_on": 7,
+      "minimalist_white": 6,
+      "sport_sandal": 7,
+      "slide": 7,
+      "flip_flop": 6,
+      "penny_loafer": 2,
+      "chelsea_boot": 1
+    },
+    "joggers": {
+      "runner_modern": 9,
+      "runner_retro": 8,
+      "minimalist_white": 7,
+      "slip_on": 7,
+      "retro_lifestyle": 7,
+      "canvas_plimsoll": 5,
+      "penny_loafer": 2,
+      "chelsea_boot": 2,
+      "chukka_desert": 2
+    },
+    "jeans_regular": {
+      "minimalist_white": 8,
+      "court_tennis": 7,
+      "retro_lifestyle": 8,
+      "canvas_plimsoll": 7,
+      "chelsea_boot": 7,
+      "chukka_desert": 8,
+      "penny_loafer": 6,
+      "derby_casual": 7,
+      "runner_modern": 7,
+      "flip_flop": 3,
+      "sport_sandal": 3
+    },
+    "jeans_skinny": {
+      "minimalist_white": 9,
+      "chelsea_boot": 10,
+      "court_tennis": 8,
+      "canvas_plimsoll": 8,
+      "chukka_desert": 7,
+      "chunky_dad": 7,
+      "high_top": 7,
+      "flip_flop": 2,
+      "penny_loafer": 6
+    },
+    "chinos_regular": {
+      "penny_loafer": 9,
+      "derby_casual": 9,
+      "chukka_desert": 8,
+      "minimalist_white": 7,
+      "chelsea_boot": 8,
+      "boat_shoe": 7,
+      "court_tennis": 6,
+      "flip_flop": 1,
+      "sport_sandal": 2
+    },
+    "shorts_linen": {
+      "espadrille": 10,
+      "leather_sandal": 8,
+      "boat_shoe": 8,
+      "canvas_plimsoll": 8,
+      "minimalist_white": 7,
+      "kolhapuri": 7,
+      "slide": 6,
+      "flip_flop": 5,
+      "chelsea_boot": 1,
+      "high_top": 1
+    },
+    "shorts_cargo": {
+      "runner_modern": 8,
+      "retro_lifestyle": 7,
+      "sport_sandal": 7,
+      "canvas_plimsoll": 7,
+      "minimalist_white": 6,
+      "slide": 6,
+      "flip_flop": 5,
+      "penny_loafer": 2,
+      "chelsea_boot": 1
+    }
+  },
+  "top_x_footwear": {
+    "description": "Key top-footwear pairings (less critical than top×bottom and bottom×footwear but adds coherence)",
+    "tshirt_any": {
+      "minimalist_white": 9,
+      "canvas_plimsoll": 8,
+      "retro_lifestyle": 7,
+      "runner_modern": 6,
+      "chelsea_boot": 6,
+      "penny_loafer": 5,
+      "flip_flop": 5,
+      "slide": 5
+    },
+    "polo_any": {
+      "minimalist_white": 9,
+      "penny_loafer": 9,
+      "court_tennis": 8,
+      "boat_shoe": 7,
+      "chelsea_boot": 7,
+      "chukka_desert": 7,
+      "flip_flop": 2,
+      "chunky_dad": 3
+    },
+    "casual_shirt_ocbd": {
+      "penny_loafer": 10,
+      "chelsea_boot": 9,
+      "chukka_desert": 9,
+      "derby_casual": 9,
+      "minimalist_white": 8,
+      "court_tennis": 7,
+      "flip_flop": 1,
+      "sport_sandal": 1
+    },
+    "casual_shirt_camp_collar": {
+      "minimalist_white": 9,
+      "espadrille": 8,
+      "canvas_plimsoll": 8,
+      "penny_loafer": 7,
+      "boat_shoe": 7,
+      "leather_sandal": 6,
+      "chelsea_boot": 5,
+      "high_top": 3
+    },
+    "casual_shirt_linen": {
+      "espadrille": 9,
+      "penny_loafer": 9,
+      "leather_sandal": 7,
+      "boat_shoe": 7,
+      "minimalist_white": 7,
+      "canvas_plimsoll": 7,
+      "chelsea_boot": 4,
+      "high_top": 2
+    },
+    "tshirt_henley": {
+      "minimalist_white": 9,
+      "chukka_desert": 8,
+      "chelsea_boot": 7,
+      "canvas_plimsoll": 8,
+      "retro_lifestyle": 7,
+      "penny_loafer": 5,
+      "flip_flop": 4
+    },
+    "casual_shirt_flannel": {
+      "chukka_desert": 10,
+      "chelsea_boot": 9,
+      "retro_lifestyle": 7,
+      "minimalist_white": 6,
+      "canvas_plimsoll": 5,
+      "espadrille": 2,
+      "flip_flop": 1
+    },
+    "casual_shirt_denim": {
+      "chelsea_boot": 9,
+      "chukka_desert": 9,
+      "minimalist_white": 7,
+      "penny_loafer": 6,
+      "retro_lifestyle": 7,
+      "espadrille": 3,
+      "flip_flop": 2
+    },
+    "casual_shirt_mandarin": {
+      "minimalist_white": 8,
+      "penny_loafer": 9,
+      "chelsea_boot": 8,
+      "derby_casual": 8,
+      "kolhapuri": 7,
+      "canvas_plimsoll": 6,
+      "flip_flop": 1
+    },
+    "hoodie_any": {
+      "minimalist_white": 8,
+      "runner_modern": 8,
+      "retro_lifestyle": 7,
+      "high_top": 7,
+      "canvas_plimsoll": 6,
+      "penny_loafer": 2,
+      "chelsea_boot": 3,
+      "flip_flop": 3
+    }
+  },
+  "optional_layers": {
+    "description": "Jackets/outerwear as optional additions. Always optional — score indicates how well the layer enhances the base outfit.",
+    "is_always_optional": true,
+    "bomber": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_slim": 9,
+        "tshirt_crew + jeans_tapered": 9,
+        "tshirt_henley + jeans_straight": 8,
+        "polo + chinos": 6,
+        "casual_shirt_ocbd + chinos": 5
+      },
+      "climate_note": "Fall/winter/cool evenings only. Not for Indian summer."
+    },
+    "denim_trucker": {
+      "pairs_best_with": {
+        "tshirt_crew + chinos": 9,
+        "tshirt_vneck + chinos": 8,
+        "tshirt_henley + jeans_straight": 8,
+        "casual_shirt_chambray + chinos": 3
+      },
+      "note": "Avoid denim-on-denim unless washes are clearly different. Light jacket + dark jeans or vice versa."
+    },
+    "harrington": {
+      "pairs_best_with": {
+        "polo + chinos": 10,
+        "tshirt_crew + jeans_tapered": 8,
+        "casual_shirt_ocbd + chinos": 8,
+        "tshirt_crew + chinos": 8
+      },
+      "climate_note": "Light enough for Indian evenings. The classiest casual jacket."
+    },
+    "hoodie_zip": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_any": 8,
+        "tshirt_crew + joggers": 8,
+        "tshirt_crew + chinos": 5
+      },
+      "climate_note": "North India winter, AC environments. Keep it fitted, not baggy."
+    },
+    "unstructured_blazer": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_dark": 8,
+        "polo + chinos": 9,
+        "casual_shirt_ocbd + chinos": 10,
+        "casual_shirt_ocbd + jeans_dark": 9,
+        "casual_shirt_mandarin + chinos": 8
+      },
+      "note": "The instant elevation piece. Takes any outfit one formality level up. Keep in office or bag.",
+      "style_track": "smart_casual"
+    },
+    "nehru_jacket": {
+      "pairs_best_with": {
+        "kurta + churidar": 10,
+        "casual_shirt_mandarin + chinos": 9,
+        "plain_tshirt + jeans_dark": 6,
+        "dress_shirt + trousers": 9
+      },
+      "note": "Indian formal elevaton. The Indian equivalent of a blazer. Wedding receptions, formal events.",
+      "style_track": "smart_casual_to_formal"
+    },
+    "shacket": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_straight": 9,
+        "tshirt_crew + chinos_regular": 8,
+        "tshirt_henley + jeans_tapered": 8,
+        "polo + chinos": 5
+      },
+      "climate_note": "Fall/winter layering. Too heavy for Indian summer. Think of it as a shirt-jacket hybrid.",
+      "note": "Works best over simple base layers. The shacket IS the statement piece."
+    },
+    "windbreaker": {
+      "pairs_best_with": {
+        "tshirt_crew + joggers": 8,
+        "tshirt_crew + shorts_athletic": 7,
+        "polo + chinos": 5,
+        "tshirt_crew + jeans_tapered": 7
+      },
+      "climate_note": "Monsoon-friendly, lightweight. Good for Indian rainy season over any casual outfit."
+    },
+    "field_jacket": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_straight": 9,
+        "tshirt_henley + chinos_straight": 8,
+        "casual_shirt_chambray + jeans_tapered": 8,
+        "polo + chinos": 6
+      },
+      "climate_note": "Cool weather. Multiple pockets add utility. Works well for weekend trips."
+    },
+    "puffer_light": {
+      "pairs_best_with": {
+        "tshirt_crew + jeans_any": 7,
+        "hoodie + jeans_any": 8,
+        "polo + chinos": 4
+      },
+      "climate_note": "North India winter only. Packable light puffers for Delhi/Chandigarh winters.",
+      "body_note": "Adds visual bulk — heavy builds should prefer field jacket or quilted jacket instead."
+    }
+  },
+  "anti_pairings": {
+    "description": "Combinations that should NEVER be recommended regardless of scores",
+    "rules": [
+      {
+        "combo": "denim_shirt + denim_jeans_same_wash",
+        "score": 1,
+        "reason": "Canadian tuxedo — different washes can work but same wash is a faux pas"
+      },
+      {
+        "combo": "suit_jacket + jeans_distressed",
+        "score": 1,
+        "reason": "Formality clash — suit structure vs distressed casualness"
+      },
+      {
+        "combo": "hoodie + dress_trousers",
+        "score": 1,
+        "reason": "Formality mismatch — structured bottom + unstructured casual top"
+      },
+      {
+        "combo": "flip_flop + any_long_trouser",
+        "score": 2,
+        "reason": "Trousers drag over flip-flops, looks sloppy"
+      },
+      {
+        "combo": "tshirt_graphic + chinos_dressy",
+        "score": 3,
+        "reason": "Graphic tee casualizes the chinos too much"
+      },
+      {
+        "combo": "sport_sandal + polo_chinos",
+        "score": 3,
+        "reason": "Sport sandals are too athletic for smart casual"
+      },
+      {
+        "combo": "high_top + shorts",
+        "score": 2,
+        "reason": "High-tops with shorts creates awkward ankle-to-knee proportion"
+      },
+      {
+        "combo": "puffer_jacket + shorts",
+        "score": 1,
+        "reason": "Winter top + summer bottom = confused outfit"
+      },
+      {
+        "combo": "linen_shirt + joggers",
+        "score": 2,
+        "reason": "Elevated top + athletic bottom — formality mismatch"
+      },
+      {
+        "combo": "polo_slim + jeans_relaxed",
+        "score": 3,
+        "reason": "Fitted top + baggy bottom — silhouette clash"
+      },
+      {
+        "combo": "oversized_tee + relaxed_jeans",
+        "score": 3,
+        "reason": "Everything oversized = shapeless. One loose + one fitted."
+      },
+      {
+        "combo": "flannel_shirt + shorts",
+        "score": 2,
+        "reason": "Winter top + summer bottom = confused season"
+      },
+      {
+        "combo": "chelsea_boot + shorts",
+        "score": 2,
+        "reason": "Boots with shorts creates awkward ankle-to-knee gap"
+      },
+      {
+        "combo": "espadrille + jeans_bootcut",
+        "score": 2,
+        "reason": "Bootcut covers the espadrille — defeats the purpose"
+      },
+      {
+        "combo": "kolhapuri + formal_trousers",
+        "score": 3,
+        "reason": "Traditional sandal + Western formal — cultural style mismatch"
+      }
+    ]
+  },
+  "color_pairing_guidance": {
+    "description": "General color compatibility between garment zones. Complements color-rules.json undertone guidance.",
+    "safe_combinations": [
+      {
+        "top": "white",
+        "bottom": "navy",
+        "footwear": "white_sneaker",
+        "score": 10,
+        "note": "The universal safe combo"
+      },
+      {
+        "top": "white",
+        "bottom": "dark_denim",
+        "footwear": "white_sneaker",
+        "score": 10,
+        "note": "Clean and classic"
+      },
+      {
+        "top": "navy",
+        "bottom": "khaki",
+        "footwear": "brown_leather",
+        "score": 9,
+        "note": "Smart casual gold standard"
+      },
+      {
+        "top": "light_blue",
+        "bottom": "navy",
+        "footwear": "white_sneaker",
+        "score": 9,
+        "note": "Tonal blue — sophisticated"
+      },
+      {
+        "top": "grey",
+        "bottom": "dark_denim",
+        "footwear": "white_sneaker",
+        "score": 9,
+        "note": "Understated and versatile"
+      },
+      {
+        "top": "black",
+        "bottom": "black_jeans",
+        "footwear": "black_sneaker",
+        "score": 8,
+        "note": "All-black — sleek evening look"
+      },
+      {
+        "top": "olive",
+        "bottom": "khaki",
+        "footwear": "brown_leather",
+        "score": 8,
+        "note": "Earth tones — warm and grounded"
+      },
+      {
+        "top": "burgundy",
+        "bottom": "navy",
+        "footwear": "brown_leather",
+        "score": 8,
+        "note": "Rich contrast without being loud"
+      },
+      {
+        "top": "cream",
+        "bottom": "olive",
+        "footwear": "brown_leather",
+        "score": 8,
+        "note": "Summer smart casual"
+      },
+      {
+        "top": "charcoal",
+        "bottom": "charcoal",
+        "footwear": "white_sneaker",
+        "score": 8,
+        "note": "Monochrome with clean sneaker contrast"
+      }
+    ],
+    "avoid_combinations": [
+      {
+        "top": "brown",
+        "bottom": "black",
+        "reason": "Brown and black compete — choose one warm or one cool"
+      },
+      {
+        "top": "navy",
+        "bottom": "black",
+        "reason": "Too close but not matching — looks like a mistake"
+      },
+      {
+        "top": "red",
+        "bottom": "green",
+        "reason": "Christmas effect — too on-the-nose complementary"
+      },
+      {
+        "top": "neon_any",
+        "bottom": "neon_any",
+        "reason": "Double neon overwhelms — one neon piece max"
+      },
+      {
+        "top": "graphic_loud",
+        "bottom": "pattern_loud",
+        "reason": "Two loud pieces compete for attention"
+      }
+    ],
+    "rules": [
+      "One neutral (white/grey/navy/black) in every outfit anchors the look",
+      "Maximum one statement/bright color piece per outfit",
+      "Dark bottoms are always safe — they ground any top",
+      "Match belt to shoes if wearing a belt (brown+brown or black+black)",
+      "Monochrome (same color family top+bottom) always elongates and looks intentional"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "version": "1.0",
+  "description": "Output report schema for AIFA style consultation. Single source of truth — prompt and frontend both reference this file. Defines exact sections the LLM must produce.",
+
+  "report_sections": [
+    {
+      "id": "profile_summary",
+      "title": "Your Style Profile",
+      "required": true,
+      "content": "2-3 sentence summary of user's body type, key features, and what this means for their style. Written in second person ('You have...'). Mention the 1-2 most impactful body traits.",
+      "example": "You have a heavy build at 5'5\" with a wide face and short neck. This means your best looks will focus on creating vertical lines and keeping things streamlined — no clutter, no tight fits, just clean and confident."
+    },
+    {
+      "id": "key_rules",
+      "title": "Your Golden Rules",
+      "required": true,
+      "content": "3-5 most impactful style principles specific to this user's body. Not generic advice — derived from their specific conflicts and top-scoring patterns. Numbered list.",
+      "example_rules": [
+        "V-necklines always — they elongate your torso and open up your neck",
+        "Regular fit is your sweet spot — room without drowning in fabric",
+        "Dark colors from waist down — slimming and elongating"
+      ]
+    },
+    {
+      "id": "garment_tshirts",
+      "title": "T-Shirts",
+      "required": true,
+      "content": "Best fit + neckline + sleeve + fabric weight. Top 2-3 picks with brief reason. What to avoid with brief reason. Written conversationally.",
+      "subsections": ["fit", "neckline", "sleeve_length", "fabric_weight", "style_type"],
+      "format": "For each subsection: top picks (score 7+) with one-line reason, then 'avoid' items (score 1-4) with one-line reason. Skip items scored 5-6 unless relevant."
+    },
+    {
+      "id": "garment_polos",
+      "title": "Polos",
+      "required": true,
+      "content": "Best fit + collar + fabric. Same format as tshirts.",
+      "subsections": ["fit", "collar_type", "fabric", "placket"]
+    },
+    {
+      "id": "garment_casual_shirts",
+      "title": "Casual Shirts",
+      "required": true,
+      "content": "Best types + fit + collar + fabric. Same format.",
+      "subsections": ["type", "fit", "collar", "fabric"]
+    },
+    {
+      "id": "garment_jeans",
+      "title": "Jeans",
+      "required": true,
+      "content": "Best fit + wash + rise + stretch + leg shape. Critical category — most users wear jeans daily.",
+      "subsections": ["fit", "wash", "rise", "stretch", "leg_shape"]
+    },
+    {
+      "id": "garment_chinos",
+      "title": "Chinos & Trousers",
+      "required": true,
+      "content": "Best fit + color + type + rise.",
+      "subsections": ["fit", "color", "trouser_type", "rise"]
+    },
+    {
+      "id": "garment_shorts",
+      "title": "Shorts",
+      "required": true,
+      "content": "Best length + type + fit.",
+      "subsections": ["length", "type", "fit"]
+    },
+    {
+      "id": "garment_jackets",
+      "title": "Jackets & Layers",
+      "required": false,
+      "content": "OPTIONAL section. Only include if style_track warrants it. Mark as 'optional add-ons'. Best jacket types + hoodie subtypes + weight guidance.",
+      "subsections": ["type", "hoodie_subtype", "weight"],
+      "note": "Always frame as optional: 'When you need a layer...' not 'You should wear...'"
+    },
+    {
+      "id": "garment_sneakers",
+      "title": "Sneakers",
+      "required": true,
+      "content": "Best sneaker types + material.",
+      "subsections": ["type", "material"]
+    },
+    {
+      "id": "garment_casual_shoes",
+      "title": "Casual Shoes",
+      "required": true,
+      "content": "Best casual shoe types + boot types (if applicable). Include formality level guidance.",
+      "subsections": ["type", "boot_type", "formality_level"]
+    },
+    {
+      "id": "garment_sandals",
+      "title": "Sandals",
+      "required": true,
+      "content": "Best sandal types + when to wear them.",
+      "subsections": ["type", "occasion_appropriateness"]
+    },
+    {
+      "id": "fabric_texture_strategy",
+      "title": "Your Fabric & Texture Strategy",
+      "required": true,
+      "content": "Body-type-specific fabric and texture advice. Covers: which fabric weights suit this build, which textures work (slim → textured fabrics add bulk; heavy → smooth structured fabrics minimize), specific fabric picks per garment type (GSM for tees, pique vs jersey for polos, etc.).",
+      "subsections": ["fabric_weight", "texture_strategy", "specific_picks"]
+    },
+    {
+      "id": "color_playbook",
+      "title": "Your Color Playbook",
+      "required": true,
+      "content": "3 subsections: (1) Colors that make you look great (near face), (2) Safe bottom/footwear colors, (3) Colors to avoid. Include metal recommendation (gold/silver). Based on undertone + contrast + Indian skin profile.",
+      "subsections": ["best_near_face", "safe_bottoms", "avoid_colors", "metal"]
+    },
+    {
+      "id": "avoid_list",
+      "title": "What to Avoid",
+      "required": true,
+      "content": "Consolidated list of items scored 1-4 across all categories. Grouped by garment type. Each with one-line reason. This is the 'never do this' section.",
+      "format": "Bullet list. Keep it punchy: 'Skinny jeans — accentuates width contrast, creates stuffed look'"
+    },
+    {
+      "id": "outfit_ideas",
+      "title": "Outfit Ideas That Work for You",
+      "required": true,
+      "content": "6-8 complete outfit combinations personalized for this user. Each outfit has: name, all pieces (top + bottom + footwear + optional layer), color suggestion, and 1-sentence 'why it works for you'. Derived from templates + pairings + body scores. Every piece must be scored 7+ for this user.",
+      "outfit_format": {
+        "name": "Descriptive name (e.g., 'Weekend Errand Run')",
+        "top": "Specific garment + fit + color",
+        "bottom": "Specific garment + fit + wash/color",
+        "footwear": "Specific type + color",
+        "layer": "Optional — only if relevant",
+        "color_combo": "Specific colors from their palette",
+        "why": "One sentence connecting to their body type advantage"
+      }
+    },
+    {
+      "id": "tailoring_tips",
+      "title": "Tailoring Tips",
+      "required": true,
+      "content": "Practical Indian-specific tailoring advice. What to get tailored (taper jeans, shorten sleeves, take in shirt waist), what NOT to tailor (shoulders, overall size). Reference local darzi culture and Rs 50-200 cost. Highest-ROI style advice for Indian men on any budget.",
+      "subsections": ["what_to_tailor", "what_not_to_tailor", "cost_and_where"]
+    },
+    {
+      "id": "starter_kit",
+      "title": "Your Shopping Starter Kit",
+      "required": true,
+      "content": "Top 10 items to buy first, in priority order. Each item is specific with garment type, fit, color, and fabric: 'Navy V-neck regular fit tee in midweight cotton' not just 'a tee'. Based on highest scores + most versatile pairings. No brands, no stores, no prices.",
+      "format": "Numbered 1-10. Each: item name (type + fit + color + fabric) + why it's priority"
+    }
+  ],
+
+  "formatting_rules": {
+    "output_format": "markdown",
+    "use_headers": "## for section titles",
+    "use_icons": "✓ for recommended, ✗ for avoid",
+    "max_words_per_garment_section": 150,
+    "max_words_per_outfit": 80,
+    "max_total_words": 3500,
+    "tone": "friendly, practical, like a knowledgeable friend — not a textbook"
+  },
+
+  "score_to_language_mapping": {
+    "9-10": {"label": "best", "language": "your best bet, go for this confidently, this is made for you"},
+    "7-8": {"label": "great", "language": "works great, solid choice, can't go wrong with this"},
+    "5-6": {"label": "okay", "language": "acceptable but not ideal, works in a pinch, not your strongest look"},
+    "3-4": {"label": "caution", "language": "generally avoid, not your best look, proceed with caution"},
+    "1-2": {"label": "avoid", "language": "DO NOT mention as recommendation. Only list in 'avoid' section with reason."}
+  },
+
+  "priority_hierarchy": [
+    "1. Body scores (build, height, face, neck) — highest authority",
+    "2. Conflict resolutions — must be reflected in all recommendations",
+    "3. Color palette — determines color suggestions in outfits",
+    "4. Pairing scores — validates outfit combinations",
+    "5. Template guidance — starting points for outfit ideas",
+    "6. RAG knowledge — provides reasoning for explanations"
+  ]
+}

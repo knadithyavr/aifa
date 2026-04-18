@@ -1,0 +1,154 @@
+{
+  "version": "1.0",
+  "description": "Garment type → correct brand+model mapping for Indian market. LLM reads from this, never guesses. Prices in INR as of 2025.",
+
+  "tshirt": {
+    "budget": [
+      {"brand": "Bewakoof", "models": ["plain crew/V-neck tees"], "price_range": "₹300-600", "where": "bewakoof.com, Myntra"},
+      {"brand": "The Souled Store", "models": ["plain and graphic tees"], "price_range": "₹400-700", "where": "thesouledstore.com, Myntra"},
+      {"brand": "Urbano Fashion", "models": ["basic solid tees"], "price_range": "₹250-500", "where": "Myntra, Ajio"}
+    ],
+    "mid_range": [
+      {"brand": "The Bear House", "models": ["premium solid tees", "henleys"], "price_range": "₹500-900", "where": "Myntra"},
+      {"brand": "Snitch", "models": ["oversized tees", "drop-shoulder tees"], "price_range": "₹500-1000", "where": "snitch.co.in, Myntra"},
+      {"brand": "Mufti", "models": ["solid and striped tees"], "price_range": "₹600-1000", "where": "Myntra, Ajio"}
+    ],
+    "premium": [
+      {"brand": "Uniqlo India", "models": ["Supima cotton crew/V-neck", "AIRism tees"], "price_range": "₹990-1500", "where": "Uniqlo stores, uniqlo.com"},
+      {"brand": "H&M", "models": ["premium cotton tees", "regular fit basics"], "price_range": "₹500-1000", "where": "H&M stores, hm.com"}
+    ]
+  },
+
+  "polo": {
+    "budget": [
+      {"brand": "U.S. Polo Assn.", "models": ["classic pique polo"], "price_range": "₹700-1200", "where": "Myntra, Ajio"},
+      {"brand": "Allen Solly", "models": ["regular fit polo"], "price_range": "₹800-1300", "where": "Myntra, Ajio"}
+    ],
+    "mid_range": [
+      {"brand": "The Bear House", "models": ["pique polo", "tipped collar polo"], "price_range": "₹600-1000", "where": "Myntra"},
+      {"brand": "Jack & Jones", "models": ["slim fit polo", "contrast polo"], "price_range": "₹800-1400", "where": "Myntra, Ajio"}
+    ],
+    "premium": [
+      {"brand": "Lacoste", "models": ["L.12.12 classic pique"], "price_range": "₹5000-8000", "where": "Lacoste stores, Myntra"},
+      {"brand": "Ralph Lauren", "models": ["custom slim fit polo"], "price_range": "₹5000-9000", "where": "Ralph Lauren India"}
+    ]
+  },
+
+  "casual_shirt": {
+    "budget": [
+      {"brand": "Roadster", "models": ["casual checked shirts", "solid shirts"], "price_range": "₹500-900", "where": "Myntra"},
+      {"brand": "HERE&NOW", "models": ["camp collar", "Cuban collar shirts"], "price_range": "₹400-800", "where": "Myntra"}
+    ],
+    "mid_range": [
+      {"brand": "Mufti", "models": ["slim fit shirts", "linen shirts", "denim shirts"], "price_range": "₹800-1500", "where": "Myntra, Ajio"},
+      {"brand": "Snitch", "models": ["camp collar shirts", "Cuban collar shirts", "oversized shirts"], "price_range": "₹700-1300", "where": "snitch.co.in, Myntra"},
+      {"brand": "Linen Trail", "models": ["pure linen shirts", "linen-cotton blend shirts"], "price_range": "₹1000-2000", "where": "linentrail.com"}
+    ],
+    "premium": [
+      {"brand": "Uniqlo India", "models": ["premium linen shirt", "Oxford cloth BD shirt", "flannel shirt"], "price_range": "₹1490-2490", "where": "Uniqlo stores"},
+      {"brand": "Marks & Spencer", "models": ["linen blend shirts", "OCBD"], "price_range": "₹1500-2500", "where": "M&S stores, Myntra"}
+    ]
+  },
+
+  "jeans": {
+    "budget": [
+      {"brand": "Roadster", "models": ["straight fit", "slim fit", "tapered"], "price_range": "₹600-1200", "where": "Myntra"},
+      {"brand": "HRX by Hrithik Roshan", "models": ["slim fit jeans"], "price_range": "₹700-1300", "where": "Myntra"}
+    ],
+    "mid_range": [
+      {"brand": "Jack & Jones", "models": ["Tim slim", "Mike comfort", "Glenn slim tapered"], "price_range": "₹1200-2500", "where": "Myntra, Ajio"},
+      {"brand": "Mufti", "models": ["straight fit", "slim tapered"], "price_range": "₹1000-2000", "where": "Myntra, Ajio"},
+      {"brand": "Pepe Jeans", "models": ["Hatch slim", "Kingston straight"], "price_range": "₹1500-2500", "where": "Myntra, Ajio"}
+    ],
+    "premium": [
+      {"brand": "Levi's", "models": ["501 Original straight", "512 slim taper", "511 slim"], "price_range": "₹2500-5000", "where": "Levi's stores, Myntra"},
+      {"brand": "Lee", "models": ["Brooklyn straight", "Luke slim tapered"], "price_range": "₹2000-4000", "where": "Myntra, Ajio"}
+    ]
+  },
+
+  "chinos": {
+    "budget": [
+      {"brand": "Allen Solly", "models": ["regular fit chinos"], "price_range": "₹800-1500", "where": "Myntra, Ajio"},
+      {"brand": "Roadster", "models": ["slim fit chinos"], "price_range": "₹600-1000", "where": "Myntra"}
+    ],
+    "mid_range": [
+      {"brand": "Mufti", "models": ["slim fit chinos", "tapered chinos"], "price_range": "₹1000-2000", "where": "Myntra"},
+      {"brand": "Pant Project", "models": ["custom fit chinos", "stretch chinos"], "price_range": "₹1500-2500", "where": "pantproject.com"},
+      {"brand": "Jack & Jones", "models": ["Marco slim chinos"], "price_range": "₹1200-2000", "where": "Myntra"}
+    ],
+    "premium": [
+      {"brand": "Uniqlo India", "models": ["smart ankle pants", "stretch chinos"], "price_range": "₹1490-1990", "where": "Uniqlo stores"},
+      {"brand": "Marks & Spencer", "models": ["regular fit chinos", "slim chinos"], "price_range": "₹1500-2500", "where": "M&S stores"}
+    ]
+  },
+
+  "sneakers": {
+    "minimalist_white": [
+      {"brand": "Stan Smith (Adidas)", "type": "minimalist_white", "price_range": "₹5000-8000", "where": "Adidas stores, Myntra"},
+      {"brand": "Uniqlo India", "type": "minimalist_white", "models": ["knit sneakers"], "price_range": "₹1990-2990", "where": "Uniqlo stores"},
+      {"brand": "Shoe Garage", "type": "minimalist_white", "price_range": "₹1000-2000", "where": "Myntra, Amazon"}
+    ],
+    "court_tennis": [
+      {"brand": "Nike Court Vision", "type": "court_tennis", "price_range": "₹4000-6000", "where": "Nike stores, Myntra"},
+      {"brand": "Puma Shuffle", "type": "court_tennis", "price_range": "₹2500-4000", "where": "Puma stores, Myntra"}
+    ],
+    "retro_lifestyle": [
+      {"brand": "New Balance 574", "type": "retro_lifestyle", "price_range": "₹5000-9000", "where": "New Balance India, Myntra"},
+      {"brand": "Nike Air Force 1", "type": "retro_lifestyle", "price_range": "₹6000-9000", "where": "Nike stores"},
+      {"brand": "Adidas Gazelle", "type": "retro_lifestyle", "price_range": "₹5000-8000", "where": "Adidas stores, Myntra"}
+    ],
+    "canvas_plimsoll": [
+      {"brand": "Converse Chuck Taylor", "type": "canvas_plimsoll", "price_range": "₹2500-4000", "where": "Myntra, Ajio"},
+      {"brand": "Roadster canvas sneakers", "type": "canvas_plimsoll", "price_range": "₹500-1000", "where": "Myntra"}
+    ],
+    "runner_modern": [
+      {"brand": "Nike Revolution", "type": "runner_modern", "price_range": "₹3000-5000", "where": "Nike stores, Myntra"},
+      {"brand": "Adidas Ultraboost", "type": "runner_modern", "price_range": "₹8000-15000", "where": "Adidas stores"}
+    ],
+    "chunky_dad": [
+      {"brand": "New Balance 530", "type": "chunky_dad", "price_range": "₹7000-10000", "where": "New Balance India"},
+      {"brand": "Nike Air Max 90", "type": "chunky_dad", "price_range": "₹8000-12000", "where": "Nike stores"}
+    ]
+  },
+
+  "casual_shoes": {
+    "penny_loafer": [
+      {"brand": "Hush Puppies", "models": ["classic penny loafer"], "price_range": "₹3000-5000", "where": "Myntra, Ajio"},
+      {"brand": "Red Tape", "models": ["suede loafer"], "price_range": "₹1500-3000", "where": "Myntra, Amazon"}
+    ],
+    "chelsea_boot": [
+      {"brand": "Clarks", "models": ["Desert Chelsea", "Clarkdale"], "price_range": "₹5000-9000", "where": "Clarks stores, Myntra"},
+      {"brand": "Red Tape", "models": ["Chelsea boot"], "price_range": "₹2000-3500", "where": "Myntra, Amazon"}
+    ],
+    "chukka_desert": [
+      {"brand": "Clarks Desert Boot", "type": "chukka_desert", "price_range": "₹5000-8000", "where": "Clarks stores, Myntra"},
+      {"brand": "Woodland", "models": ["suede chukka"], "price_range": "₹2500-4000", "where": "Woodland stores, Myntra"}
+    ]
+  },
+
+  "casual_jacket": {
+    "bomber": [
+      {"brand": "H&M", "models": ["nylon bomber"], "price_range": "₹1500-2500", "where": "H&M stores"},
+      {"brand": "Roadster", "models": ["bomber jacket"], "price_range": "₹800-1500", "where": "Myntra"}
+    ],
+    "denim_trucker": [
+      {"brand": "Levi's Trucker Jacket", "type": "denim_trucker", "price_range": "₹3000-6000", "where": "Levi's stores, Myntra"},
+      {"brand": "Mufti", "models": ["denim jacket"], "price_range": "₹1500-2500", "where": "Myntra"}
+    ],
+    "harrington": [
+      {"brand": "Marks & Spencer", "models": ["Harrington jacket"], "price_range": "₹2500-4000", "where": "M&S stores"},
+      {"brand": "H&M", "models": ["cotton Harrington"], "price_range": "₹1500-2500", "where": "H&M stores"}
+    ]
+  },
+
+  "sandals": {
+    "kolhapuri": [
+      {"brand": "Kolhapuri chappal (artisan)", "price_range": "₹300-800", "where": "Local markets, Amazon India"},
+      {"brand": "Metro Shoes", "models": ["Kolhapuri collection"], "price_range": "₹800-1500", "where": "Metro stores, Myntra"}
+    ],
+    "sport_sandal": [
+      {"brand": "Sparx", "models": ["sport sandals"], "price_range": "₹500-1000", "where": "Amazon, Flipkart"},
+      {"brand": "Adidas Adilette", "models": ["comfort slides"], "price_range": "₹2000-3000", "where": "Adidas stores, Myntra"}
+    ]
+  }
+}

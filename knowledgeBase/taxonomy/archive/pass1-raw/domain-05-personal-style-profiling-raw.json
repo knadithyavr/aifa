@@ -1,0 +1,299 @@
+{
+  "domain": "personal_style_profiling_logic",
+  "version": "0.1",
+  "extraction_sources": [
+    "Masculine Style (Tanner Guzy) - Rugged, Refined, and Rakish series",
+    "Effortless Gent - Style Archetypes",
+    "The VOU - Style Personality Quiz for Men",
+    "StreetFashioner - Men's Style Quiz",
+    "Beth Divine Style - Men's Style Quiz",
+    "Beyond Ages - How to Dress Well for Men (3 Masculine Archetypes)"
+  ],
+  "parameters": [
+    {
+      "name": "primary_style_archetype",
+      "description": "The foundational style identity based on Tanner Guzy's three masculine archetypes. Most men are a blend of two or three, not purely one.",
+      "values": [
+        {
+          "value": "rugged",
+          "definition": "Physically engaged with the world. Practical, hard-wearing, masculine clothing. Functional — designed to stand up to manual labor. The sportsman, athlete, blue-collar worker, soldier. Values durability and utility over aesthetics.",
+          "clothing_associations": ["denim", "flannel shirts", "work boots", "leather jackets", "heavy knits", "canvas", "field jackets"],
+          "sources": ["Masculine Style", "Beyond Ages", "Effortless Gent"]
+        },
+        {
+          "value": "refined",
+          "definition": "Masters the world through social and financial means. Corporate success-oriented with domain authority. The businessman, politician, tribe leader. Clothing projects competence, status, and polish. Values tradition, quality, and propriety.",
+          "clothing_associations": ["tailored suits", "dress shirts", "blazers", "polished shoes", "quality accessories", "classic patterns"],
+          "sources": ["Masculine Style", "Beyond Ages", "Effortless Gent"]
+        },
+        {
+          "value": "rakish",
+          "definition": "Rebellious and risk-taking. Power comes from coloring outside the lines. Clothing may sacrifice function for form because form has a function in itself. The musician, artist, entertainer. Values self-expression, attention, and peacocking.",
+          "clothing_associations": ["bold colors", "statement pieces", "unconventional combinations", "edgy accessories", "impeccable but rule-breaking tailoring"],
+          "sources": ["Masculine Style", "Beyond Ages", "Effortless Gent"]
+        }
+      ],
+      "notes": "These are not rigid categories — they are a spectrum. Most men have a primary and secondary archetype. The trade-off: too refined = boring/standoffish, too rugged = square, too rakish = outlawed from your culture. The blend creates authentic personal style."
+    },
+    {
+      "name": "style_sub_archetype",
+      "description": "More granular style identity that combines or refines the three primary archetypes into recognizable style tribes",
+      "values": [
+        {
+          "value": "classic_gentleman",
+          "definition": "Timeless, elegant pieces. Well-tailored suits, crisp dress shirts, quality materials. Simplicity and sophistication. Think James Bond.",
+          "archetype_blend": "refined_dominant",
+          "sources": ["The VOU", "StreetFashioner"]
+        },
+        {
+          "value": "modern_minimalist",
+          "definition": "Affinity for dark, somber tones and pared-down aesthetics. Clean lines, neutral palette, fewer but better pieces. Quality over quantity.",
+          "archetype_blend": "refined_with_restraint",
+          "sources": ["The VOU", "Effortless Gent", "StreetFashioner"]
+        },
+        {
+          "value": "casual_sophisticate",
+          "definition": "Comfort and versatility first but still put-together. Can throw on clothes without much thought and look good. T-shirts, jeans, and sneakers done well.",
+          "archetype_blend": "rugged_refined_mix",
+          "sources": ["The VOU", "StreetFashioner"]
+        },
+        {
+          "value": "rugged_refined",
+          "definition": "Blends durability with polish. Denim with a blazer, boots with a sport coat. Americana aesthetic — workwear elevated with quality and fit.",
+          "archetype_blend": "rugged_refined_mix",
+          "sources": ["The VOU", "Effortless Gent"]
+        },
+        {
+          "value": "creative_individualist",
+          "definition": "Experiments with fashion, bold prints, unique cuts, statement accessories. Wardrobe is always evolving. Not afraid to push boundaries and stand out.",
+          "archetype_blend": "rakish_dominant",
+          "sources": ["The VOU", "StreetFashioner"]
+        },
+        {
+          "value": "collegiate_prep",
+          "definition": "Pressed khakis, tweed, OCBDs, penny loafers, navy blazers. Traditional American or prep school style. The Trad, The Ivy Leaguer, The WASP.",
+          "archetype_blend": "refined_traditional",
+          "sources": ["Effortless Gent"]
+        },
+        {
+          "value": "outdoorsman",
+          "definition": "Function over form. Durable products and fabrics: rigid denim, thick flannels, heavy wool sweaters. The Woodsman. Appreciates craft and heritage.",
+          "archetype_blend": "rugged_dominant",
+          "sources": ["Effortless Gent"]
+        },
+        {
+          "value": "rocker_edgy",
+          "definition": "Leather jackets, bold colors, daring accessories. All black and skinny everything. Worn t-shirts, stovepipe denim, sneakers or black boots. The Musician, The Punk.",
+          "archetype_blend": "rakish_rugged_mix",
+          "sources": ["Effortless Gent", "StreetFashioner"]
+        }
+      ]
+    },
+    {
+      "name": "archetype_blend_ratio",
+      "description": "The proportional mix of the three primary archetypes that defines a man's unique style identity",
+      "values": [
+        {
+          "value": "single_dominant",
+          "definition": "One archetype strongly dominates (e.g., 70-20-10 split). Rare but creates very clear style identity."
+        },
+        {
+          "value": "dual_blend",
+          "definition": "Two archetypes roughly equal with the third minor (e.g., 45-40-15). Most common configuration."
+        },
+        {
+          "value": "balanced_mix",
+          "definition": "All three roughly equal (e.g., 35-35-30). Highly versatile but can lack a clear signature."
+        }
+      ],
+      "sources": ["Masculine Style"]
+    },
+    {
+      "name": "lifestyle_environment",
+      "description": "The primary professional and social environment that shapes wardrobe needs",
+      "values": [
+        {
+          "value": "corporate_formal",
+          "definition": "Business professional environment requiring suits, dress shirts, ties daily."
+        },
+        {
+          "value": "business_casual",
+          "definition": "Office environment with relaxed dress code. Blazers, chinos, dress shirts without ties."
+        },
+        {
+          "value": "creative_industry",
+          "definition": "Design, media, arts, tech. Creativity encouraged in dress. More freedom for self-expression."
+        },
+        {
+          "value": "active_outdoor",
+          "definition": "Physical work or outdoor lifestyle. Functional, durable clothing prioritized."
+        },
+        {
+          "value": "casual_flexible",
+          "definition": "Remote work, freelance, or environments with no dress code. Maximum freedom."
+        }
+      ],
+      "sources": ["Beth Divine Style Quiz", "StreetFashioner"]
+    },
+    {
+      "name": "style_priority",
+      "description": "What the man values most in his clothing, which drives recommendation weighting",
+      "values": [
+        {
+          "value": "comfort_first",
+          "definition": "Prioritizes ease of wear, softness, freedom of movement. Willing to sacrifice some visual impact for physical comfort."
+        },
+        {
+          "value": "impression_first",
+          "definition": "Prioritizes how clothing makes him appear to others. Willing to sacrifice some comfort for visual impact and status signaling."
+        },
+        {
+          "value": "expression_first",
+          "definition": "Prioritizes self-expression and individuality. Clothing as creative outlet and communication."
+        },
+        {
+          "value": "practicality_first",
+          "definition": "Prioritizes function, durability, and versatility. Wants pieces that work hard across many situations."
+        }
+      ],
+      "sources": ["StreetFashioner", "Beth Divine Style Quiz"]
+    },
+    {
+      "name": "pattern_comfort_level",
+      "description": "How comfortable the man is with patterns and visual complexity in his clothing",
+      "values": [
+        {
+          "value": "solids_only",
+          "definition": "Prefers plain, solid-colored clothing. Avoids patterns entirely."
+        },
+        {
+          "value": "subtle_patterns",
+          "definition": "Comfortable with understated patterns like micro-checks, tonal stripes, pin dots."
+        },
+        {
+          "value": "moderate_patterns",
+          "definition": "Wears standard patterns like stripes, checks, plaids comfortably but not bold ones."
+        },
+        {
+          "value": "bold_patterns",
+          "definition": "Loves patterns. Comfortable with bold prints, large plaids, statement patterns."
+        }
+      ],
+      "sources": ["Beth Divine Style Quiz"]
+    },
+    {
+      "name": "color_comfort_level",
+      "description": "How adventurous the man is with color in his wardrobe",
+      "values": [
+        {
+          "value": "neutrals_only",
+          "definition": "Sticks to black, white, gray, navy, khaki. Minimal color."
+        },
+        {
+          "value": "muted_colors",
+          "definition": "Comfortable with subdued, earthy tones. Olive, burgundy, forest green, rust."
+        },
+        {
+          "value": "moderate_color",
+          "definition": "Wears standard colors confidently. Blue, green, red in restrained shades."
+        },
+        {
+          "value": "bold_color",
+          "definition": "Embraces bright and saturated colors. Not afraid of attention-getting hues."
+        }
+      ],
+      "sources": ["Beth Divine Style Quiz", "StreetFashioner"]
+    },
+    {
+      "name": "formality_preference",
+      "description": "The man's natural comfort level on the formality spectrum, independent of work requirements",
+      "values": [
+        {
+          "value": "very_casual",
+          "definition": "Most comfortable in t-shirts, jeans, sneakers. Dressing up feels unnatural."
+        },
+        {
+          "value": "smart_casual",
+          "definition": "Comfortable in the middle ground. Chinos, polos, loafers, unstructured jackets."
+        },
+        {
+          "value": "business_casual",
+          "definition": "Natural in dress shirts, blazers, dress shoes. Ties optional."
+        },
+        {
+          "value": "formal_leaning",
+          "definition": "Enjoys wearing suits, ties, pocket squares. Feels most himself when dressed up."
+        }
+      ],
+      "sources": ["StreetFashioner", "Beth Divine Style Quiz"]
+    },
+    {
+      "name": "style_confidence_level",
+      "description": "How confident and knowledgeable the man currently is about personal style, affecting recommendation complexity",
+      "values": [
+        {
+          "value": "beginner",
+          "definition": "Little awareness of style principles. Needs foundational guidance. Simple, safe recommendations."
+        },
+        {
+          "value": "developing",
+          "definition": "Some awareness but inconsistent application. Needs structured guidance with room for growth."
+        },
+        {
+          "value": "intermediate",
+          "definition": "Good grasp of basics, looking to refine. Can handle nuanced recommendations."
+        },
+        {
+          "value": "advanced",
+          "definition": "Strong style sense. Looking for fine-tuning and inspiration rather than basics."
+        }
+      ],
+      "sources": ["StreetFashioner", "Masculine Style"]
+    },
+    {
+      "name": "budget_tier",
+      "description": "The man's clothing budget level, which constrains fabric, construction, and brand recommendations",
+      "values": [
+        {
+          "value": "budget",
+          "definition": "Limited spending. Prioritizes value and versatility. Fast fashion and entry-level brands."
+        },
+        {
+          "value": "moderate",
+          "definition": "Can invest in key pieces. Mid-range brands. Selective quality spending."
+        },
+        {
+          "value": "premium",
+          "definition": "Willing to spend for quality. Designer brands, better fabrics, good construction."
+        },
+        {
+          "value": "luxury",
+          "definition": "No meaningful budget constraints. Custom/bespoke, luxury brands, finest materials."
+        }
+      ],
+      "sources": ["general profiling logic"]
+    }
+  ],
+  "profiling_principles": [
+    {
+      "name": "archetype_as_palette",
+      "description": "Style archetypes are like colors on a painter's palette. They can be used separately, but when mixed together they create new colors. Most people's wardrobe choices are informed by two or more archetypes.",
+      "sources": ["Effortless Gent"]
+    },
+    {
+      "name": "context_shifting",
+      "description": "A man may shift archetype emphasis based on context — more refined for business meetings, more rugged on weekends, more rakish on dates. The profile captures the natural baseline, not every situational variation.",
+      "sources": ["Beyond Ages", "Masculine Style"]
+    },
+    {
+      "name": "authenticity_principle",
+      "description": "When you dress in a manner that expresses who you truly are, you will feel more comfortable in your clothing. Knowing your personal style stops you from filling your wardrobe with clothes you will never wear.",
+      "sources": ["StreetFashioner"]
+    },
+    {
+      "name": "progressive_complexity",
+      "description": "Recommendations should match confidence level. Beginners get safe, foundational guidance. Advanced users get nuanced, boundary-pushing suggestions.",
+      "sources": ["general profiling logic"]
+    }
+  ]
+}

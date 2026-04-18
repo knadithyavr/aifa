@@ -1,0 +1,693 @@
+{
+  "domain": "fabric_and_texture_behavior",
+  "version": "0.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 4: Pattern Mixing / Texture",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Smart Casual (fabric references)",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Sporting Life (fabric references)",
+    "Permanent Style (permanentstyle.com) - Guides to Worsted Suitings, Cloth Weaves, Jacketings, Shirting Weaves, High-Twist, Linen, Mohair, Cavalry Twill, Formality Scale",
+    "Gentleman's Gazette (gentlemansgazette.com) - Guides to Worsted Wool, Flannel, Tweed, Summer Fabrics, Corduroy, Grenadine, Linen, Wool Explained",
+    "Proper Cloth (propercloth.com) - Dress Shirt Fabrics Reference",
+    "He Spoke Style (hespokestyle.com) - Fall Fabrics, Wool Suits in Summer"
+  ],
+  "parameters": [
+    {
+      "name": "fiber_type",
+      "description": "The base fiber material of the fabric, which fundamentally determines its properties and behavior",
+      "values": [
+        {
+          "value": "wool_worsted",
+          "definition": "Combed long-staple wool fibers spun into fine, sleek yarn. Short fibers discarded. The standard for quality suiting. Smooth, resilient, drapes well. Super numbers indicate fiber fineness (Super 100s = 18.75 microns through Super 250s = 11.25 microns). Higher super ≠ necessarily better performance.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "wool_woolen",
+          "definition": "Carded wool using both short and long fibers. Creates a hairy, softer, loftier fabric. Flannel and most tweeds are woolen. Warmer but less sleek than worsted. Matte finish with melange color effect.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "cashmere",
+          "definition": "From cashmere goat undercoat. Grade A = 14-16 microns. Extremely soft but poor durability for suiting — pills and bags, especially in trousers. Best in blends (5-10% with worsted adds softness without sacrificing performance) or as standalone jacketings/knitwear.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "mohair",
+          "definition": "Hair from Angora goat. Distinctive two-tone luster. Naturally crease-resistant and elastic. Primary summer application — alternative to high-twist wools. Especially valued for dinner jackets (crispness + lightness + glamorous sheen). Modern blends: 5-15% in commercial, 40-70% in British mohairs.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "merino",
+          "definition": "From Merino sheep. Highly crimped fibers (up to 100 crimps per inch). The base fiber for most quality worsted suiting at Super 100s and above. Excellent moisture-wicking. Also used in softer Saxony tweeds.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "cotton",
+          "definition": "Versatile plant fiber. Used across the formality spectrum from fine dress shirt broadcloth to casual denim. Breathable, comfortable. Less resilient than wool — wrinkles more easily in lighter weaves. Quality measured by staple length and thread count.",
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "linen",
+          "definition": "From flax fibers. Strongest natural fiber. Fiber length 18-30 inches. Excellent breathability and heat conductivity — cool to touch. Very poor wrinkle resistance (considered part of its charm). Natural luster. The quintessential warm-weather fabric.",
+          "sources": ["Gentleman's Gazette", "Permanent Style"]
+        },
+        {
+          "value": "silk",
+          "definition": "Protein fiber from silkworm cocoons. Strongest natural fiber by weight. Takes dye exceptionally well. Wide range from matte (shantung, raw silk) to high sheen (charmeuse). Used primarily for ties, pocket squares, linings, and formal shirt fronts (pique).",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Natural fibers are universally preferred in classic menswear. Blends can combine the best properties of multiple fibers (e.g., wool-silk-linen for summer, wool-cashmere for luxury)."
+    },
+    {
+      "name": "weave_type",
+      "description": "The construction method used to interlace yarns, which determines texture, drape, and durability",
+      "values": [
+        {
+          "value": "plain_weave",
+          "definition": "Simple over-under interlacing. Broadcloth, poplin, tropical wool, hopsack (double plain), fresco. Tightest possible interlacing. Good breathability when open. Most versatile weave.",
+          "sources": ["Permanent Style", "Proper Cloth"]
+        },
+        {
+          "value": "twill_weave",
+          "definition": "Diagonal pattern where weft passes over two or more warp yarns. Creates characteristic diagonal lines. Serge (2x2 twill), gabardine (steep warp-face twill), cavalry twill (double twill). More drape than plain weave. Slightly more wrinkle-resistant.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "satin_weave",
+          "definition": "Long float yarns on face creating smooth, lustrous surface. Charmeuse, moleskin (cotton satin weave then shorn). Maximum sheen. Less durable than plain or twill due to exposed floats.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "basket_weave",
+          "definition": "Groups of warp and weft threads interlace as units. Oxford cloth (1x2 basket), hopsack (2x2 basket). More textured than plain weave. Less formal. Good breathability.",
+          "sources": ["Permanent Style", "Proper Cloth"]
+        },
+        {
+          "value": "herringbone",
+          "definition": "Twill weave where the diagonal reverses at regular intervals, creating a V or zigzag pattern. Classic for tweeds and sport coats. Adds visual interest while remaining subtle. Named for resemblance to fish skeleton.",
+          "sources": ["Flusser Ch4", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "leno_weave",
+          "definition": "Two warp yarns twist around each weft yarn creating an open, stable mesh. Used for grenadine ties. Woven exclusively in Lake Como, Italy on historic wooden looms. Open structure with distinctive honeycomb/brick-like pattern.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "pile_weave",
+          "definition": "Extra set of yarns creates raised surface — loops (terry) or cut (velvet, corduroy). Corduroy has ridged pile (wales). Velvet has uniform pile. Moleskin has shorn pile. Rich texture, often plush and soft.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "pique_weave",
+          "definition": "Complex weave with raised parallel cords creating a waffle or honeycomb texture. Used for polo shirts and formal Marcella evening shirt fronts. Bridges casual (polo) and very formal (white tie) applications.",
+          "sources": ["Permanent Style"]
+        }
+      ]
+    },
+    {
+      "name": "suiting_fabric",
+      "description": "Fabric types specifically used for suits and sport jackets, with their key characteristics",
+      "values": [
+        {
+          "value": "worsted_wool",
+          "definition": "The benchmark suit fabric. Weight range: 180-300g/m (6-10oz). Practical minimum ~210g/7oz. Benchmark 3-season weight ~260g/9oz. Smooth, resilient, drapes well. Clean, sleek appearance. Most formal of common suitings.",
+          "properties": {"texture": "smooth", "sheen": "subtle_luster", "season": "year_round", "formality": "high"},
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "flannel",
+          "definition": "Carded or worsted wool with brushed, hairy surface. Soft, matte, warm. Charcoal flannel is office-appropriate. Weight: 10-14oz. Melange color effect from Vigoureux printing process.",
+          "properties": {"texture": "soft_brushed", "sheen": "matte", "season": "fall_winter", "formality": "medium_high"},
+          "sources": ["Gentleman's Gazette", "Permanent Style"]
+        },
+        {
+          "value": "fresco_tropical",
+          "definition": "High-twist wool in open plain weave. Fresco core: 9-10oz. Dry, rough hand. Matte. Excellent breathability and wrinkle resistance from high-twist yarns that snap back. Summer specialist — too sharp for a sport coat alone, best as full suit.",
+          "properties": {"texture": "dry_rough", "sheen": "matte", "season": "summer", "formality": "high"},
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "mohair_blend",
+          "definition": "Wool-mohair blend (5-70% mohair). Distinctive two-tone luster. Crease-resistant. Lighter than equivalent wool. Especially valued for dinner jackets and summer business suits. Glamorous sheen.",
+          "properties": {"texture": "sleek", "sheen": "high_two_tone", "season": "summer_evening", "formality": "high"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "serge",
+          "definition": "2x2 twill weave with identical warp and weft. Weight: 200-300g/m2. Classic for navy blazers and DB suits. Military heritage. Good drape and wrinkle resistance.",
+          "properties": {"texture": "smooth_moderate", "sheen": "subtle", "season": "year_round", "formality": "high"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "gabardine",
+          "definition": "Tight twill with warp double the density of weft. Visible diagonal ridges on face. Excellent wrinkle resistance and shape retention. Low breathability (very tight weave). Formal trousers and suits.",
+          "properties": {"texture": "smooth_diagonal", "sheen": "moderate", "season": "spring_fall", "formality": "high"},
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "hopsack",
+          "definition": "Double plain weave (2x2 basket) creating small cube appearance. Less formal than smooth worsted. Open construction for breathability. Versatile blazer fabric — less shiny than traditional blazers. Easy to wear as separates.",
+          "properties": {"texture": "basket_visible", "sheen": "low_matte", "season": "year_round_esp_summer", "formality": "medium"},
+          "sources": ["Permanent Style", "He Spoke Style"]
+        },
+        {
+          "value": "birdseye",
+          "definition": "Creates circular eye patterns through specific color sequencing. Reads as near-solid from distance. Subtle texture up close. Standard worsted weight and hand.",
+          "properties": {"texture": "subtly_dotted", "sheen": "moderate", "season": "year_round", "formality": "high"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "harris_tweed",
+          "definition": "Hand-woven in Outer Hebrides, 100% virgin wool. Legally protected by Harris Tweed Act 1993 (Orb trademark). Rough, thick, coarse. Water-resistant, windproof. Sport coats and country wear only.",
+          "properties": {"texture": "rough_coarse", "sheen": "none_matte", "season": "fall_winter", "formality": "low"},
+          "sources": ["Gentleman's Gazette", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "donegal_tweed",
+          "definition": "County Donegal, Ireland. Distinctive colorful slubs (thick spots) woven into fabric creating a speckled/flecked effect. Slightly softer than Harris. Sport coats and country wear.",
+          "properties": {"texture": "flecked_moderate", "sheen": "none_matte", "season": "fall_winter", "formality": "low"},
+          "sources": ["Gentleman's Gazette", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "cheviot_tweed",
+          "definition": "From Cheviot sheep (England-Scotland border). Harder finish than other tweeds. More structured. Durable, weather-resistant.",
+          "properties": {"texture": "hard_structured", "sheen": "none_matte", "season": "fall_winter", "formality": "low"},
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "linen",
+          "definition": "Flax fiber in plain weave. Weight: 8-9oz (European) to 10-13oz (Irish). Excellent breathability. Very poor wrinkle resistance. Irish linen is denser, wrinkles less, drapes better. Natural slubs and luster.",
+          "properties": {"texture": "slubby_dry", "sheen": "natural_luster", "season": "summer", "formality": "low_moderate"},
+          "sources": ["Gentleman's Gazette", "Permanent Style"]
+        },
+        {
+          "value": "seersucker",
+          "definition": "Puckered plain weave cotton. Two different shrinking fibers create wavy texture. Promotes airflow. Blue-white stripes classic. Hides wrinkles inherently. Summer only.",
+          "properties": {"texture": "puckered", "sheen": "low", "season": "summer", "formality": "low"},
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Pile weave with vertical ridges (wales). Soft, plush. Wales range from narrow/dense to wide-spaced. Earth tones classic. English = stiffer/firmer; Italian = more fluid. Country, casual, sporting wear.",
+          "properties": {"texture": "ridged_plush", "sheen": "low", "season": "fall_winter", "formality": "low"},
+          "sources": ["Gentleman's Gazette", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "velvet",
+          "definition": "Uniform pile without ridges (unlike corduroy). Luxurious, plush nap. Rich luster. Used for evening jackets and smoking jackets. More formal than corduroy. Dark colors (green, burgundy, navy) for evening.",
+          "properties": {"texture": "plush_uniform", "sheen": "rich_luster", "season": "fall_winter_evening", "formality": "medium_high"},
+          "sources": ["Roetzel Formal Dress", "Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "shirting_fabric",
+      "description": "Fabric types specifically used for dress and sport shirts",
+      "values": [
+        {
+          "value": "broadcloth_poplin",
+          "definition": "Plain weave, tightly woven. Smoothest of all shirt weaves. Very little sheen. Most prone to wrinkling. Thread counts from 50s singles to 140s+ doubles. Most formal — ideal for business, formal events, weddings.",
+          "properties": {"texture": "very_smooth", "wrinkle_resistance": "poor", "formality": "high"},
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "cotton_twill",
+          "definition": "Diagonal weave. Softer than broadcloth. More wrinkle-resistant and easier to iron. Almost always has a bit of shine — high thread counts may be mistaken for silk. Formal dress shirts appropriate with suits.",
+          "properties": {"texture": "diagonal_soft", "wrinkle_resistance": "good", "formality": "high"},
+          "sources": ["Proper Cloth"]
+        },
+        {
+          "value": "pinpoint_oxford",
+          "definition": "Same weave as oxford but finer yarn, tighter weave, higher thread count. Slightly heavier than broadcloth, lighter than oxford. Matte, crisp. Great everyday work shirts — middle formality.",
+          "properties": {"texture": "matte_crisp", "wrinkle_resistance": "good", "formality": "medium"},
+          "sources": ["Proper Cloth"]
+        },
+        {
+          "value": "oxford_cloth",
+          "definition": "Symmetrical basketweave (1x2). Much heavier/thicker than average shirt fabric. Slightly rough with visible white dot effect. Can be worn slightly wrinkled. Originally developed for sportswear. American button-down staple. Casual/sporty.",
+          "properties": {"texture": "slightly_rough", "wrinkle_resistance": "good", "formality": "low"},
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "chambray",
+          "definition": "Plain weave with colored warp and white weft. Heavier than broadcloth. Soft, casual, varied texture. Sometimes slubby yarns for additional character. Casual/workwear heritage.",
+          "properties": {"texture": "casual_varied", "wrinkle_resistance": "moderate", "formality": "low"},
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "linen_shirting",
+          "definition": "Flax fiber plain weave. Excellent breathability and cool hand. Wrinkles heavily but considered characterful. Natural slubs. Summer specialist. Casual.",
+          "properties": {"texture": "slubby_dry", "wrinkle_resistance": "very_poor", "formality": "low_moderate"},
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "denim_shirting",
+          "definition": "Twill weave, usually indigo warp with natural weft. Much softer and lighter than jeans-weight denim. Characteristic indigo fading with wear. Most casual shirt fabric.",
+          "properties": {"texture": "coarse_to_soft", "wrinkle_resistance": "good", "formality": "very_low"},
+          "sources": ["Proper Cloth"]
+        }
+      ]
+    },
+    {
+      "name": "trouser_fabric",
+      "description": "Fabric types specifically used for trousers, including their formality and seasonal use",
+      "values": [
+        {
+          "value": "worsted_wool",
+          "definition": "Standard for dress trousers. Holds crease well. Smooth, resilient. Year-round in appropriate weights.",
+          "properties": {"formality": "high", "season": "year_round"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "flannel",
+          "definition": "Gray flannel trousers are the 'blue blazer of cool-weather slacks' per Flusser. Soft, warm, slightly casual. Charcoal most versatile; mid-gray more advanced.",
+          "properties": {"formality": "medium_high", "season": "fall_winter"},
+          "sources": ["Flusser Ch6", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "cavalry_twill",
+          "definition": "Double-twill weave with parallel diagonal lines. Less shiny than gabardine. Excellent drape and body. More casual versatility than gabardine. Primarily for trousers and overcoats.",
+          "properties": {"formality": "medium_high", "season": "fall_winter_spring"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "gabardine",
+          "definition": "Tight twill. Excellent wrinkle resistance. Smooth with visible ridges. Moderate shine. Formal trouser fabric. Cotton gabardine variant for warmer months.",
+          "properties": {"formality": "high", "season": "spring_fall"},
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "cotton_chino",
+          "definition": "Twill weave cotton. Originally military-grade. The standard business casual trouser. Less formal than wool, more formal than denim.",
+          "properties": {"formality": "medium_low", "season": "spring_summer_fall"},
+          "sources": ["Flusser Ch6", "Flusser Ch13"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Pile weave with vertical ridges. Soft, warm. The gentleman's version of jeans per Roetzel. Wide wale more casual; narrow wale slightly dressier. Earth tones classic. Often paired with rough tweed jackets.",
+          "properties": {"formality": "low_moderate", "season": "fall_winter"},
+          "sources": ["Roetzel Smart Casual", "Gentleman's Gazette"]
+        },
+        {
+          "value": "moleskin",
+          "definition": "Dense cotton satin weave, surface shorn for suede-like finish. Weight: 400+ g/m2. Exceptionally wind-resistant and durable. Not as relaxed as jeans but not dressy. Country and business casual wear.",
+          "properties": {"formality": "low_moderate", "season": "fall_winter"},
+          "sources": ["Roetzel Smart Casual"]
+        },
+        {
+          "value": "linen",
+          "definition": "Flax fiber. Cool, breathable. Wrinkles heavily. Best for summer business casual. Irish linen heavier, wrinkles less. European linen lighter, softer.",
+          "properties": {"formality": "low_moderate", "season": "summer"},
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "denim",
+          "definition": "Cotton twill, usually indigo. Heaviest jeans-weight to lighter stretch varieties. Most casual trouser fabric. Dark wash dressier than faded.",
+          "properties": {"formality": "very_low", "season": "year_round"},
+          "sources": ["Flusser Ch6"]
+        }
+      ]
+    },
+    {
+      "name": "tie_fabric",
+      "description": "Fabric types used for neckties, affecting texture, knot behavior, and formality",
+      "values": [
+        {
+          "value": "silk_twill",
+          "definition": "The standard tie fabric. Smooth with subtle diagonal structure. Holds knot well. Takes dye richly. Moderate to high sheen. Most versatile and formal tie fabric.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "silk_grenadine",
+          "definition": "Leno weave with open honeycomb structure. Woven exclusively in Lake Como, Italy. Garza fina (smoother) and garza grossa (more visible texture). Uniquely versatile — equally at home with business suits and tweed sport coats. Year-round; unlined for summer.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "silk_shantung",
+          "definition": "From wild Tussah silk. Matte finish with small slubs. Less formal than smooth silk twill. More textural. Popular for pocket squares as well. Good with less formal jacketings.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "wool_knit",
+          "definition": "Knitted construction rather than woven. Square or pointed end. Casual texture. Pairs best with tweeds, flannels, and casual sport coats. Not appropriate with smooth business worsted.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "wool_challis",
+          "definition": "Soft, slightly brushed wool in plain weave. Matte surface. Often in paisley or neat patterns. Fall/winter tie. Pairs well with flannel and tweed.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "cotton",
+          "definition": "Various constructions. Casual. Summer-appropriate. Matte finish. Pairs with linen suits, cotton sport coats, casual ensembles.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "linen",
+          "definition": "Dry hand, natural slubs. Summer specialist. Casual. Wrinkles in the knot. Pairs with linen and cotton jackets.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "fabric_texture_scale",
+      "description": "Where a fabric falls on the smooth-to-rough spectrum, which directly maps to formality and combining rules",
+      "values": [
+        {
+          "value": "very_smooth",
+          "definition": "Superfine worsted, broadcloth, silk charmeuse, gabardine. Highest formality. Minimal visible surface texture. Clean, sleek appearance.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "smooth",
+          "definition": "Standard worsted, cotton twill, serge, birdseye. Business-formal range. Subtle texture visible only up close.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "moderate_texture",
+          "definition": "Flannel, hopsack, cavalry twill, pinpoint oxford, grenadine. The bridge zone between formal and casual. Visible but not dominant texture.",
+          "sources": ["Permanent Style", "Proper Cloth"]
+        },
+        {
+          "value": "textured",
+          "definition": "Fresco, Donegal tweed, corduroy (narrow wale), oxford cloth, linen, shantung. Clearly casual texture. Visible pattern in the weave or surface.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "rough_coarse",
+          "definition": "Harris tweed, heavy corduroy (wide wale), denim, heavy linen. Most casual. Country and sporting contexts. Robust, utilitarian feel.",
+          "sources": ["Gentleman's Gazette", "Roetzel Smart Casual"]
+        }
+      ],
+      "notes": "Smoother = more formal. Rougher = more casual. This is one of the most reliable formality indicators. When combining garments, textures should relate — smooth jacket demands smooth tie; textured jacket accepts (even prefers) textured tie."
+    },
+    {
+      "name": "fabric_sheen_level",
+      "description": "The degree of light reflection on the fabric surface, which affects formality and occasion suitability",
+      "values": [
+        {
+          "value": "high_sheen",
+          "definition": "Mohair, silk charmeuse, high-super worsted. Evening wear territory. Dinner jackets, formal accessories. Glamorous under artificial light.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "moderate_sheen",
+          "definition": "Standard worsted, gabardine, cotton twill. Business-appropriate luster. Professional without being flashy.",
+          "sources": ["Permanent Style", "Proper Cloth"]
+        },
+        {
+          "value": "subtle_luster",
+          "definition": "Good quality worsted, serge, silk shantung, linen. Natural glow that indicates quality without overt shine.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "matte",
+          "definition": "Flannel, tweed, oxford cloth, fresco, chambray, cotton knit. No shine. Casual, understated. Country and informal contexts.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "More sheen = more formal. Mohair and superfine wools have the most sheen. Matte fabrics read as casual. Evening wear demands some degree of sheen."
+    },
+    {
+      "name": "fabric_weight_class",
+      "description": "The weight category of the fabric, affecting seasonality, drape, and comfort",
+      "values": [
+        {
+          "value": "lightweight",
+          "definition": "Under 220g/m (under ~7.5oz). Tropical wool, light linen, seersucker, lightweight cotton. Summer use. May lack body for heavy structured tailoring. Requires skill to tailor well.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "mid_weight",
+          "definition": "220-300g/m (~7.5-10oz). Standard worsted, serge, hopsack, cavalry twill. The 3-season sweet spot. ~260g/9oz is the benchmark versatile suiting weight. Drapes well, holds shape.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "Over 300g/m (over 10oz). Heavy flannel, tweeds (12-16oz), moleskin (400+g), heavy fresco 3-ply (14-15oz). Fall/winter. Excellent insulation. Stiffer drape. Country and cold-weather wear.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Weight alone does not determine coolness or warmth — weave openness matters more. A heavy open-weave fresco feels cooler than a lightweight tight-weave super 150s."
+    },
+    {
+      "name": "fabric_drape_behavior",
+      "description": "How the fabric falls and moves on the body, affecting silhouette and visual impression",
+      "values": [
+        {
+          "value": "crisp_structured",
+          "definition": "Fresco, mohair, gabardine, Irish linen, dupioni silk. Holds shape away from the body. Creates clean lines and sharp silhouette. Better for structured tailoring.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "flowing_soft",
+          "definition": "Cashmere, soft flannel, silk charmeuse, lightweight worsted. Drapes close to the body contours. Creates a softer, more relaxed silhouette. Italian tailoring tradition favors this.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "stiff_rigid",
+          "definition": "Heavy tweed, denim, waxed cotton, moleskin. Holds its own shape regardless of the body. Creates boxy or structured forms. Country and workwear heritage.",
+          "sources": ["Roetzel Smart Casual", "Roetzel Sporting Life"]
+        }
+      ]
+    },
+    {
+      "name": "fabric_breathability",
+      "description": "How well the fabric allows air circulation, determining comfort in warm conditions",
+      "values": [
+        {
+          "value": "excellent",
+          "definition": "Fresco/tropical wool (open plain weave), linen, seersucker, hopsack. Open weave is paramount — gaps between yarns allow air circulation. These are true hot-weather performers.",
+          "sources": ["Gentleman's Gazette", "Permanent Style"]
+        },
+        {
+          "value": "good",
+          "definition": "Mid-weight worsted, cotton broadcloth, oxford cloth, mohair. Adequate for moderate temperatures. Comfortable in climate-controlled environments.",
+          "sources": ["Permanent Style", "Proper Cloth"]
+        },
+        {
+          "value": "low",
+          "definition": "Gabardine (very tight weave), flannel, corduroy, moleskin, heavy tweed. Dense construction traps warmth. Suited to cool and cold conditions.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Open weave > low weight for breathability. A heavy open-weave fresco is cooler than a lightweight tightly-woven Super 150s."
+    },
+    {
+      "name": "wrinkle_behavior",
+      "description": "How the fabric responds to compression and wear, affecting maintenance demands and appropriate contexts",
+      "values": [
+        {
+          "value": "wrinkle_resistant",
+          "definition": "High-twist wools (fresco, tropical), mohair, gabardine, denim. Yarns snap back into shape. Ideal for travel and long-wear days. Fresco and tropical wools excel here.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "moderate_wrinkling",
+          "definition": "Standard worsted, flannel, cotton twill, pinpoint oxford, oxford cloth. Normal wrinkling with wear. Can be managed with proper pressing. Acceptable in business contexts.",
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "wrinkle_prone",
+          "definition": "Linen, broadcloth/poplin, cashmere, lightweight cotton. Wrinkles easily and visibly. Linen wrinkling is considered characterful; broadcloth wrinkling is not. Context determines acceptability.",
+          "sources": ["Gentleman's Gazette", "Proper Cloth"]
+        }
+      ]
+    },
+    {
+      "name": "seasonal_fabric_assignment",
+      "description": "Which fabrics are appropriate for each season, based on weight, weave, and thermal properties",
+      "values": [
+        {
+          "value": "summer",
+          "definition": "Tropical/fresco wool, linen, seersucker, cotton (poplin, chambray), hopsack, mohair blends, silk-wool-linen blends. Key: open weave for airflow, lighter colors to reflect heat. Weight secondary to weave openness.",
+          "sources": ["Gentleman's Gazette", "Permanent Style", "He Spoke Style"]
+        },
+        {
+          "value": "fall_spring",
+          "definition": "Mid-weight worsted, lighter flannel, cavalry twill, hopsack, cotton gabardine, lighter tweeds, cotton-linen blends. Transitional weight range. Can layer.",
+          "sources": ["He Spoke Style"]
+        },
+        {
+          "value": "winter",
+          "definition": "Heavy flannel, Harris/Donegal/Cheviot tweed, cashmere, heavy worsted, moleskin, corduroy, velvet. Dense construction for insulation. Heavier weights. Layering with knitwear.",
+          "sources": ["Gentleman's Gazette", "Roetzel Sporting Life"]
+        },
+        {
+          "value": "year_round",
+          "definition": "Mid-weight worsted wool (~260g/9oz) is the benchmark. Serge adaptable across weights. Cotton shirting (broadcloth, twill) perennial. Grenadine ties. These form the core of a versatile wardrobe.",
+          "sources": ["Permanent Style"]
+        }
+      ]
+    },
+    {
+      "name": "fabric_formality_hierarchy",
+      "description": "The ranking of suiting/jacketing fabrics from most formal to most casual, which guides occasion-appropriate selection",
+      "values": [
+        {
+          "value": "tier_1_most_formal",
+          "definition": "Superfine worsted wool, mohair, mohair blends. Smooth, lustrous, sharp. Evening wear and high business. Clean, sleek surface with natural sheen.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "tier_2_business_formal",
+          "definition": "Standard worsted (birdseye, nailhead, pick-and-pick), serge, gabardine. Smooth, professional. The business suit staples. Subtle texture that reads as solid from a distance.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "tier_3_bridge",
+          "definition": "Flannel, cavalry twill, hopsack, high-twist wools. Visible texture begins to casualize. Can still function in business settings. The sport jacket zone.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "tier_4_casual",
+          "definition": "Linen, smooth cotton, seersucker, lightweight tweeds. Wrinkles, slubs, or puckering make formality impossible. Smart casual and summer occasions.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "tier_5_most_casual",
+          "definition": "Heavy tweed (Harris, Donegal), corduroy, denim, moleskin. Country, sporting, and weekend wear. Rough textures, matte surfaces, robust construction.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Formality hierarchy follows three key axes: smoothness (smoother = more formal), sheen (more shine = more formal), and color (darker = more formal). Pattern adds a fourth: solid > subtle pattern > bold pattern."
+    },
+    {
+      "name": "shirt_fabric_formality_hierarchy",
+      "description": "The ranking of shirt fabrics from most formal to most casual",
+      "values": [
+        {
+          "value": "tier_1_most_formal",
+          "definition": "Superfine cotton (high thread count), silk. Smoothest and finest. Formal occasions and executive business.",
+          "sources": ["Proper Cloth"]
+        },
+        {
+          "value": "tier_2_business",
+          "definition": "Broadcloth/poplin, cotton twill. Smooth plain or diagonal weave. Standard business dress shirt fabrics.",
+          "sources": ["Proper Cloth"]
+        },
+        {
+          "value": "tier_3_everyday",
+          "definition": "Pinpoint oxford, cotton-linen blends. Refined but with casual heritage. Great everyday work shirts.",
+          "sources": ["Proper Cloth"]
+        },
+        {
+          "value": "tier_4_casual",
+          "definition": "Oxford cloth, linen, brushed cotton. Visible texture. Sporty or relaxed. Button-down territory.",
+          "sources": ["Proper Cloth", "Permanent Style"]
+        },
+        {
+          "value": "tier_5_most_casual",
+          "definition": "Chambray, denim, heavy flannel cotton. Most textured and casual. Weekend wear.",
+          "sources": ["Proper Cloth"]
+        }
+      ]
+    },
+    {
+      "name": "fabric_blend_behavior",
+      "description": "How blending different fibers modifies fabric properties — used to optimize performance",
+      "values": [
+        {
+          "value": "wool_cashmere",
+          "definition": "5-10% cashmere in worsted wool. Adds softness and luxury hand feel without sacrificing the wool's resilience and durability. Best-of-both-worlds blend for jacketing.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "wool_silk_linen",
+          "definition": "Standard Italian mill offering for summer. Lighter weight than pure wool. Linen adds breathability, silk adds luster and drape, wool adds resilience. Less wrinkling than pure linen.",
+          "sources": ["Permanent Style", "Gentleman's Gazette"]
+        },
+        {
+          "value": "wool_mohair",
+          "definition": "Adds crease resistance and distinctive two-tone luster to wool. 5-15% mohair in commercial blends; 40-70% in premium. Summer suiting and evening wear.",
+          "sources": ["Permanent Style"]
+        },
+        {
+          "value": "cotton_linen",
+          "definition": "Softens linen's hand feel and reduces wrinkling while retaining coolness. Good for summer shirts and casual trousers. Coolness of linen without the heavy wrinkling.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "texture_combination_principle",
+      "description": "Rules for combining different fabric textures across garments in an outfit",
+      "values": [
+        {
+          "value": "match_texture_bands",
+          "definition": "Smooth jacket demands smooth tie and smooth-to-moderate shirt. Textured tweed jacket accepts (and benefits from) wool knit tie, flannel trousers, and oxford shirt. Keep all elements within the same texture band for coherence.",
+          "sources": ["Flusser Ch4", "Permanent Style"]
+        },
+        {
+          "value": "contrast_within_reason",
+          "definition": "Some texture contrast adds visual interest — a silk grenadine tie with both smooth worsted and rough tweed works because grenadine bridges the texture spectrum. But silk charmeuse with Harris tweed clashes.",
+          "sources": ["Flusser Ch4", "Gentleman's Gazette"]
+        },
+        {
+          "value": "scale_principle_applies",
+          "definition": "Flusser's pattern mixing scale rules extend to texture: the scale of texture should relate to the garment's visual weight. Large-framed men can carry coarser textures; smaller-framed men look better in finer textures.",
+          "sources": ["Flusser Ch4"]
+        }
+      ]
+    }
+  ],
+  "fabric_behavior_principles": [
+    {
+      "name": "smoothness_formality_correlation",
+      "description": "The single most reliable predictor of formality is surface smoothness. Smoother fabrics are always more formal than rougher ones of the same fiber. This holds across all garment types — suits, shirts, trousers, ties. A smooth worsted is more formal than a textured flannel; broadcloth is more formal than oxford cloth.",
+      "sources": ["Permanent Style", "Gentleman's Gazette"]
+    },
+    {
+      "name": "weave_trumps_weight",
+      "description": "For breathability and summer comfort, the openness of the weave matters more than the weight of the fabric. A heavy (9-10oz) open-weave fresco feels cooler than a lightweight (6oz) tightly woven super 150s. This is counterintuitive but critical for summer fabric selection.",
+      "sources": ["Permanent Style", "Gentleman's Gazette"]
+    },
+    {
+      "name": "texture_coherence_in_ensembles",
+      "description": "All elements of an outfit should inhabit a compatible texture zone. A smooth worsted suit pairs with broadcloth shirt and silk twill tie. A rough tweed jacket pairs with oxford shirt and wool knit tie. Mixing across extreme texture zones (silk charmeuse tie with Harris tweed) creates dissonance.",
+      "sources": ["Flusser Ch4"]
+    },
+    {
+      "name": "pattern_is_texture",
+      "description": "Flusser's Ch4 insight: pattern mixing and texture mixing follow the same principles. Both are visual stimuli that must be harmonized through scale and contrast. A boldly patterned fabric adds visual 'weight' similar to a coarse texture. The more patterns/textures in an ensemble, the more skill required.",
+      "sources": ["Flusser Ch4"]
+    },
+    {
+      "name": "natural_fiber_supremacy",
+      "description": "In classic menswear, natural fibers (wool, cotton, linen, silk) are universally preferred over synthetics. Natural fibers breathe better, drape more naturally, age more gracefully, and take dye more richly. Quality is expressed through fiber choice — cashmere, mohair, Sea Island cotton, Irish linen signal refinement.",
+      "sources": ["Roetzel Smart Casual", "Permanent Style"]
+    },
+    {
+      "name": "fabric_as_formality_lever",
+      "description": "Fabric choice is one of the most powerful tools for shifting formality without changing garment type. The same blazer silhouette in mohair reads as evening wear, in worsted as business, in hopsack as smart casual, and in corduroy as country casual. Fabric transforms context more efficiently than cut.",
+      "sources": ["Permanent Style", "Gentleman's Gazette"]
+    }
+  ],
+  "cross_domain_intersections": [
+    {
+      "name": "fabric_x_body_proportion",
+      "description": "Fabric texture scale should relate to body frame. Larger-framed men can carry coarser, heavier textures (heavy tweeds, wide-wale corduroy). Smaller-framed men look better in finer textures (smooth worsted, narrow-wale corduroy, fine flannel). Flusser's scale principle for patterns extends to texture.",
+      "sources": ["Flusser Ch4"]
+    },
+    {
+      "name": "fabric_x_visual_balance",
+      "description": "Fabric sheen and texture affect visual weight. Shiny fabrics draw the eye and add visual mass. Matte fabrics recede. This interacts with color (dark + matte = slimming; light + shiny = expanding) and can be used strategically for body proportion correction.",
+      "sources": ["Flusser Ch4"]
+    },
+    {
+      "name": "fabric_x_occasion",
+      "description": "Fabric formality hierarchy must align with occasion requirements from Domain 7. White tie demands the finest worsteds and mohair. Business formal needs smooth worsteds. Business casual opens up flannels and hopsacks. Country occasions welcome tweeds. Mismatching fabric to occasion is a primary dressing error.",
+      "sources": ["Permanent Style", "Flusser Ch12", "Flusser Ch13"]
+    },
+    {
+      "name": "fabric_x_color",
+      "description": "Fabric texture affects how color appears. The same dye on flannel (matte, muted) vs worsted (clear, defined) produces different color impressions. Rough textures soften and mute colors. Smooth textures render colors more vividly. This matters when coordinating across different fabric types.",
+      "sources": ["Flusser Ch4"]
+    },
+    {
+      "name": "fabric_x_season_climate",
+      "description": "Geographic and seasonal context determines appropriate fabric selection. Tropical climates demand fresco/linen/cotton year-round. Northern climates cycle through full fabric range. Mediterranean summers suit linen and lightweight cotton. British winters demand tweeds and heavy flannels.",
+      "sources": ["Permanent Style", "Roetzel Sporting Life"]
+    }
+  ]
+}

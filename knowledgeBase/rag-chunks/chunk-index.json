@@ -1,0 +1,157 @@
+{
+  "version": "1.0",
+  "created": "2026-04-02",
+  "total_chunks": 15,
+  "chunks": [
+    {
+      "id": "chunk-01",
+      "file": "body-type-dressing.md",
+      "title": "How to Dress for Your Body Type",
+      "summary": "Practical garment recommendations for slim, heavy, athletic, short, and tall body types using visual balance tricks.",
+      "retrieval_tags": ["body type", "build", "height", "slim", "heavy", "athletic", "short", "tall", "fit", "rectangle", "oval", "inverted triangle", "proportions", "silhouette", "flattering"],
+      "style_tracks": ["casual", "smart_casual", "business_casual", "business_formal"],
+      "source_domains": ["D01", "D02"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-02",
+      "file": "fit-guide-casual.md",
+      "title": "How Casual Clothes Should Fit: T-Shirts, Jeans, and Chinos",
+      "summary": "Visual guide to correct vs wrong fit for t-shirts, jeans, and chinos with fit-type explanations and body-type matching.",
+      "retrieval_tags": ["fit", "t-shirt fit", "jeans fit", "chinos fit", "too tight", "too loose", "slim fit", "regular fit", "tapered", "how should it fit", "sizing", "length", "shoulders"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D04", "D02"],
+      "word_count_approx": 1300
+    },
+    {
+      "id": "chunk-03",
+      "file": "face-shape-accessories.md",
+      "title": "Collar Types, Necklines, and Sunglasses for Your Face Shape",
+      "summary": "How to choose necklines, collars, and eyewear that frame round, oval, square, long, wide, and narrow face shapes.",
+      "retrieval_tags": ["face shape", "collar", "neckline", "sunglasses", "glasses", "round face", "oval face", "square face", "long face", "narrow face", "v-neck", "crew neck", "spread collar", "point collar", "eyewear", "frames"],
+      "style_tracks": ["casual", "smart_casual", "business_casual"],
+      "source_domains": ["D01", "D04", "D09"],
+      "word_count_approx": 1200
+    },
+    {
+      "id": "chunk-04",
+      "file": "color-for-indian-skin.md",
+      "title": "Color Guide for Indian Skin Tones",
+      "summary": "How to find your undertone using the gold/silver test, understand contrast levels, and pick clothing colours for different Indian skin depths.",
+      "retrieval_tags": ["color", "colour", "skin tone", "Indian skin", "undertone", "warm", "cool", "neutral", "gold test", "silver test", "metal test", "dark skin", "fair skin", "medium skin", "contrast", "complexion", "what colors suit me"],
+      "style_tracks": ["casual", "smart_casual", "business_casual", "business_formal"],
+      "source_domains": ["D03"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-05",
+      "file": "outfit-color-coordination.md",
+      "title": "How to Match Colours in an Outfit",
+      "summary": "Practical rules for monochrome dressing, neutral + accent colour strategy, contrast pairing, and colour repetition in outfits.",
+      "retrieval_tags": ["color matching", "colour coordination", "outfit colors", "monochrome", "contrast", "neutral", "accent", "colour wheel", "complementary", "analogous", "belt shoe match", "what goes with navy", "what goes with black"],
+      "style_tracks": ["casual", "smart_casual", "business_casual"],
+      "source_domains": ["D02", "D03"],
+      "word_count_approx": 1300
+    },
+    {
+      "id": "chunk-06",
+      "file": "tshirt-guide.md",
+      "title": "The Complete T-Shirt Guide for Men",
+      "summary": "Complete guide to t-shirt necklines (crew, V-neck, henley, polo), fits, fabric weights (GSM), and when to wear each type.",
+      "retrieval_tags": ["t-shirt", "tee", "crew neck", "v-neck", "henley", "polo", "neckline", "GSM", "fabric weight", "cotton", "slim fit", "regular fit", "oversized", "t-shirt wardrobe", "basic tees"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D04", "D08"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-07",
+      "file": "jeans-guide.md",
+      "title": "The Complete Jeans Guide for Men",
+      "summary": "Jeans fits (slim, tapered, straight, relaxed), washes (dark, medium, distressed), raw vs pre-washed denim, and body type matching.",
+      "retrieval_tags": ["jeans", "denim", "slim jeans", "tapered jeans", "straight jeans", "dark wash", "raw denim", "distressed", "stretch denim", "which jeans for my body", "jeans fit", "indigo", "black denim"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D04", "D08"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-08",
+      "file": "sneaker-guide.md",
+      "title": "The Sneaker Guide for Men",
+      "summary": "Sneaker types (white minimalist, court, retro runner, canvas, high-top), formality levels, and the three-sneaker wardrobe.",
+      "retrieval_tags": ["sneakers", "shoes", "white sneakers", "casual shoes", "court sneakers", "runners", "high tops", "Stan Smith", "minimalist sneaker", "canvas", "slip-on", "sneaker care", "what sneakers to buy"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D09"],
+      "word_count_approx": 1300
+    },
+    {
+      "id": "chunk-09",
+      "file": "casual-jacket-guide.md",
+      "title": "Casual Jackets: Bombers, Denim, Harringtons, and Hoodies",
+      "summary": "When to wear each casual jacket type, how to layer them, body type tips, and which works for Indian weather conditions.",
+      "retrieval_tags": ["jacket", "bomber", "denim jacket", "harrington", "hoodie", "layering", "casual outerwear", "winter jacket", "AC jacket", "what jacket to wear", "bomber jacket", "trucker jacket"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D04", "D08"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-10",
+      "file": "indian-office-dressing.md",
+      "title": "Indian Office Dressing: Tech Casual to Corporate",
+      "summary": "What Indian tech workers and corporate employees actually wear, summer office hacks, monsoon survival, and the wardrobe checklist.",
+      "retrieval_tags": ["office", "work", "tech office", "corporate", "startup", "business casual", "Indian office", "what to wear to office", "summer office", "AC office", "dress code", "client meeting", "work from home"],
+      "style_tracks": ["casual", "smart_casual", "business_casual", "business_formal"],
+      "source_domains": ["D07", "D05", "D08"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-11",
+      "file": "indian-wedding-guest.md",
+      "title": "What to Wear to an Indian Wedding (Guest Guide)",
+      "summary": "Function-by-function guide for haldi, mehendi, sangeet, pheras, and reception with colour rules and Western/traditional options.",
+      "retrieval_tags": ["wedding", "Indian wedding", "haldi", "mehendi", "sangeet", "reception", "pheras", "sherwani", "bandhgala", "kurta", "wedding guest", "what to wear to wedding", "wedding colours", "Nehru jacket"],
+      "style_tracks": ["smart_casual", "ethnic", "formal"],
+      "source_domains": ["D07"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-12",
+      "file": "date-outfit-guide.md",
+      "title": "Date Outfit Guide for Indian Men",
+      "summary": "Outfit formulas for first dates, dinner dates, and casual dates with specific examples and the golden rule of venue-matching.",
+      "retrieval_tags": ["date", "date outfit", "first date", "dinner date", "casual date", "what to wear on a date", "date night", "impress", "restaurant outfit", "coffee date"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D07"],
+      "word_count_approx": 1300
+    },
+    {
+      "id": "chunk-13",
+      "file": "smart-casual-explained.md",
+      "title": "Smart Casual Explained: What It Actually Means",
+      "summary": "What smart casual is and is not, outfit formulas, the blazer-as-bridge-piece concept, and the 'Am I Smart Casual?' test.",
+      "retrieval_tags": ["smart casual", "dress code", "blazer", "bridge piece", "outfit formula", "what is smart casual", "chinos and blazer", "loafers", "polo chinos", "elevated casual", "semi formal"],
+      "style_tracks": ["smart_casual", "business_casual"],
+      "source_domains": ["D07", "D06"],
+      "word_count_approx": 1300
+    },
+    {
+      "id": "chunk-14",
+      "file": "dressing-for-indian-weather.md",
+      "title": "Dressing for Indian Weather: Season-by-Season Guide",
+      "summary": "Season-by-season fabric and style guide covering summer, monsoon, post-monsoon, winter (north and south), and spring for Indian men.",
+      "retrieval_tags": ["weather", "Indian weather", "summer", "monsoon", "winter", "rain", "humidity", "hot weather", "cold weather", "AC office", "layering", "season", "what to wear in summer", "what to wear in monsoon", "Delhi winter"],
+      "style_tracks": ["casual", "smart_casual", "business_casual"],
+      "source_domains": ["D05", "D08"],
+      "word_count_approx": 1400
+    },
+    {
+      "id": "chunk-15",
+      "file": "fabric-basics-casual.md",
+      "title": "Fabric Basics for Casual Wear",
+      "summary": "Cotton vs linen vs polyester vs blends explained, GSM guide for t-shirts, fabric recommendations by garment type, and red flags when buying.",
+      "retrieval_tags": ["fabric", "cotton", "linen", "polyester", "blend", "GSM", "fabric weight", "material", "breathable", "wrinkle", "what fabric", "quality", "pique", "jersey", "oxford cloth", "denim fabric", "stretch"],
+      "style_tracks": ["casual", "smart_casual"],
+      "source_domains": ["D08"],
+      "word_count_approx": 1400
+    }
+  ]
+}

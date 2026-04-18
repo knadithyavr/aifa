@@ -1,0 +1,453 @@
+{
+  "version": "1.0",
+  "description": "Pre-built outfit formulas for Indian men covering casual to formal spectrum. 40 templates organized by occasion category.",
+  "templates": [
+
+    {"id": "T001", "name": "Weekend Casual - Hot Weather", "style_track": "casual", "occasion": "weekend_outing", "climate": ["tropical", "warm_temperate", "peak_summer"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck", "v_neck"], "fit": ["regular", "relaxed"], "fabric": ["jersey_cotton", "bamboo"]},
+       "bottom": {"garment": "chino_shorts", "fit": ["slim", "regular"], "length": "above_knee"},
+       "footwear": {"type": ["canvas_plimsoll", "minimalist_white", "slide"], "material": ["canvas", "leather"]},
+       "accessories": ["casual_watch", "sunglasses"]
+     },
+     "body_adaptations": {"heavy": {"top_fit": "regular", "avoid_top_fit": ["slim", "muscle"]}, "slim": {"top_fit": "slim"}, "athletic": {"top_fit": "athletic"}, "short": {"prefer_bottom_length": "above_knee"}},
+     "color_guidance": "Light, breathable colors. White/light blue tee with khaki or olive shorts. Avoid all-black in summer heat.",
+     "indian_note": "Perfect for mall visits, coffee with friends, weekend errands. Keep it simple and cool."},
+
+    {"id": "T002", "name": "Weekend Casual - Cool Weather", "style_track": "casual", "occasion": "weekend_outing", "climate": ["cool_temperate", "winter_north"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck", "henley"], "fit": ["regular"], "fabric": ["midweight_cotton"]},
+       "layer": {"garment": ["denim_trucker", "bomber", "hoodie"], "fit": "regular"},
+       "bottom": {"garment": "jeans", "fit": ["straight", "tapered"], "wash": ["dark", "medium"]},
+       "footwear": {"type": ["low_top_sneaker", "canvas_plimsoll", "chukka"], "material": ["leather", "suede"]}
+     },
+     "body_adaptations": {"heavy": {"avoid_layer": "puffer", "prefer_layer": "denim_trucker"}, "slim": {"layer": "bomber"}, "short": {"prefer_jeans_fit": "tapered"}},
+     "color_guidance": "Layer colors: neutral base (white/grey tee), colored or textured jacket (olive bomber, blue denim). Dark jeans anchor the look.",
+     "indian_note": "Great for North India winters or evening outings. Layering is key — easy to remove jacket indoors."},
+
+    {"id": "T003", "name": "Errand Run / Quick Outing", "style_track": "casual", "occasion": "casual_weekend", "climate": ["tropical", "warm_temperate", "peak_summer"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["henley", "crew_neck"], "fit": ["regular", "relaxed"], "fabric": ["jersey_cotton"]},
+       "bottom": {"garment": "jogger", "fit": ["tapered", "slim"], "fabric": ["cotton_jersey", "tech_fabric"]},
+       "footwear": {"type": ["slip_on", "slide", "minimalist_white"], "material": ["knit_mesh", "rubber"]}
+     },
+     "body_adaptations": {"heavy": {"bottom_fit": "regular"}, "slim": {"bottom_fit": "slim"}, "athletic": {"bottom_fit": "tapered"}},
+     "color_guidance": "Simple and clean. Navy/grey joggers with white or muted tee. Avoid looking like you just woke up — fitted joggers, not sweatpants.",
+     "indian_note": "For grocery runs, pharmacy visits, walking the dog. Effortless but not sloppy."},
+
+    {"id": "T004", "name": "College Daily", "style_track": "casual", "occasion": "college", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck", "v_neck"], "style_type": ["graphic", "typographic", "plain"], "fit": ["regular", "relaxed"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered", "straight"], "wash": ["medium", "light", "distressed"]},
+       "footwear": {"type": ["canvas_plimsoll", "retro_lifestyle", "skate"], "material": ["canvas", "suede"]},
+       "accessories": ["backpack", "casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"top_fit": "regular", "jeans_fit": "straight"}, "slim": {"top_fit": "slim", "jeans_fit": "slim"}, "short": {"jeans_fit": "tapered"}},
+     "color_guidance": "Express yourself. Graphic tees in any color, but balance with neutral jeans. One statement piece max.",
+     "indian_note": "The Indian college uniform. Keep sneakers clean — that's what people notice first."},
+
+    {"id": "T005", "name": "College Smart", "style_track": "smart_casual", "occasion": "college", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "polo", "collar": ["classic_ribbed", "tipped"], "fit": ["slim", "classic"], "fabric": ["pique"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["navy", "khaki", "olive"]},
+       "footwear": {"type": ["minimalist_white", "court_tennis"], "material": ["leather", "canvas"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"polo_fit": "classic", "chino_fit": "regular"}, "slim": {"polo_fit": "slim", "chino_fit": "slim"}, "athletic": {"polo_fit": "athletic"}},
+     "color_guidance": "Navy polo + khaki chinos is the safe classic. White polo + olive chinos for variety. Keep it clean and crisp.",
+     "indian_note": "Presentation day, campus events, when you want to look a notch above. Still comfortable for all-day wear."},
+
+    {"id": "T006", "name": "Casual Hangout - Evening", "style_track": "casual", "occasion": "casual_weekend", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["v_neck", "henley"], "fit": ["slim", "regular"], "fabric": ["jersey_cotton"], "color": ["black", "navy", "charcoal"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered"], "wash": ["dark", "rinse", "black"]},
+       "footwear": {"type": ["minimalist_white", "chelsea", "loafer_casual"], "material": ["leather", "suede"]},
+       "accessories": ["casual_watch", "minimal_bracelet"]
+     },
+     "body_adaptations": {"heavy": {"top_fit": "regular", "jeans_fit": "straight"}, "slim": {"top_fit": "slim"}, "short": {"prefer_monochrome": true}},
+     "color_guidance": "Dark palette works for evening. Black tee + dark jeans + white sneakers is a reliable formula. Monochrome elongates.",
+     "indian_note": "Movies, pub nights, casual dinner with friends. Dark colors look sharper under artificial light."},
+
+    {"id": "T007", "name": "Casual Monsoon Day", "style_track": "casual", "occasion": "casual_weekend", "climate": ["monsoon"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck"], "fit": ["regular"], "fabric": ["performance_blend", "quick_dry"], "color": ["dark_navy", "charcoal", "olive"]},
+       "bottom": {"garment": "quick_dry_trouser", "fit": ["tapered", "regular"], "fabric": ["tech_fabric", "nylon"]},
+       "footwear": {"type": ["sport_sandal", "waterproof_sneaker", "rubber_loafer"], "material": ["synthetic", "rubber"]},
+       "accessories": ["waterproof_bag"]
+     },
+     "body_adaptations": {"heavy": {"top_fit": "regular"}, "slim": {"top_fit": "regular"}},
+     "color_guidance": "DARK COLORS ONLY. Navy, charcoal, olive, black. White shows every splash. Quick-dry fabrics are non-negotiable.",
+     "indian_note": "Mumbai/Kolkata/Chennai monsoon survival kit. Avoid leather, avoid linen, avoid white. Sport sandals are practical and accepted."},
+
+    {"id": "T008", "name": "Home to Store Quick Run", "style_track": "casual", "occasion": "casual_weekend", "climate": ["tropical", "warm_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck"], "fit": ["regular", "relaxed"], "fabric": ["lightweight_cotton"]},
+       "bottom": {"garment": "shorts", "type": ["athletic", "chino_shorts"], "length": "above_knee"},
+       "footwear": {"type": ["flip_flop", "slide"], "material": ["rubber"]}
+     },
+     "body_adaptations": {},
+     "color_guidance": "Anything clean. Just don't wear something stained or torn.",
+     "indian_note": "Kirana store, chai tapri, neighborhood walk. Flip-flops are perfectly acceptable. Keep it simple."},
+
+    {"id": "T009", "name": "Casual Date - Coffee/Lunch", "style_track": "smart_casual", "occasion": "casual_date", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["ocbd", "linen"], "fit": ["slim", "regular"], "collar": ["button_down"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["navy", "khaki", "stone"]},
+       "footwear": {"type": ["penny_loafer", "minimalist_white", "suede_desert"], "material": ["leather", "suede"]},
+       "accessories": ["casual_watch", "sunglasses"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular", "chino_fit": "regular"}, "slim": {"shirt_fit": "slim"}, "short": {"prefer_monochrome": true}},
+     "color_guidance": "Light blue OCBD + navy chinos is foolproof. White linen shirt + khaki chinos for summer dates. Avoid loud patterns.",
+     "indian_note": "Cafe dates, lunch outings. Look like you made an effort without trying too hard. Roll sleeves for casual confidence."},
+
+    {"id": "T010", "name": "Casual Date - Dinner", "style_track": "smart_casual", "occasion": "casual_date", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["camp_collar", "cuban_collar", "mandarin_collar"], "fit": ["slim", "regular"], "fabric": ["linen", "rayon_viscose"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered"], "wash": ["dark", "rinse", "black"]},
+       "footwear": {"type": ["chelsea", "monk_strap", "tassel_loafer"], "material": ["leather", "suede"]},
+       "accessories": ["casual_watch", "minimal_bracelet"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular", "jeans_fit": "straight"}, "slim": {"shirt_fit": "slim", "jeans_fit": "slim"}},
+     "color_guidance": "Dark shirt + dark jeans for evening. Black camp collar + black jeans + brown Chelsea boots. Or navy + dark grey.",
+     "indian_note": "Dinner dates at mid-range restaurants. Camp collar shirts are trending in Indian menswear — relaxed but intentional."},
+
+    {"id": "T011", "name": "House Party", "style_track": "smart_casual", "occasion": "house_party", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "polo", "collar": ["classic_ribbed", "tipped"], "fit": ["slim", "classic"], "fabric": ["pique"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["navy", "olive", "charcoal"]},
+       "footwear": {"type": ["minimalist_white", "loafer_casual"], "material": ["leather", "canvas"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"polo_fit": "classic"}, "slim": {"polo_fit": "slim"}, "athletic": {"polo_fit": "athletic"}},
+     "color_guidance": "Polo in a color that suits your undertone + neutral chinos. Keep it relaxed — you'll be sitting, eating, socializing.",
+     "indian_note": "Birthday parties, housewarming, get-togethers. Polo + chinos is the Indian house party uniform. Clean sneakers or loafers."},
+
+    {"id": "T012", "name": "Brunch / Upscale Cafe", "style_track": "smart_casual", "occasion": "weekend_outing", "climate": ["tropical", "warm_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["linen", "camp_collar"], "fit": ["regular", "relaxed"], "fabric": ["linen", "linen_cotton_blend"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["khaki", "stone", "white"]},
+       "footwear": {"type": ["penny_loafer", "espadrille", "suede_loafer"], "material": ["suede", "leather"]},
+       "accessories": ["sunglasses", "casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Summery palette: white/cream/light blue/sage. Linen wrinkles are fine — they're part of the charm at brunch.",
+     "indian_note": "Trendy cafes in Indiranagar, Bandra, Connaught Place. Linen shirts are having a moment in Indian menswear."},
+
+    {"id": "T013", "name": "Art Gallery / Cultural Event", "style_track": "smart_casual", "occasion": "weekend_outing", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["mandarin_collar", "band_collar"], "fit": ["slim", "regular"], "fabric": ["cotton_twill", "linen"]},
+       "bottom": {"garment": "chino", "fit": ["tapered"], "color": ["charcoal", "navy", "black"]},
+       "footwear": {"type": ["minimalist_white", "derby_casual"], "material": ["leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Understated palette: black, charcoal, navy, white. Mandarin collar adds sophistication without being formal.",
+     "indian_note": "Art shows, book launches, poetry readings. Look cultured and intentional. Mandarin collar reads as creative in India."},
+
+    {"id": "T014", "name": "Weekend with Family", "style_track": "smart_casual", "occasion": "family_gathering", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "polo", "collar": ["classic_ribbed"], "fit": ["classic"], "fabric": ["pique"]},
+       "bottom": {"garment": "jeans", "fit": ["straight", "regular"], "wash": ["dark", "medium"]},
+       "footwear": {"type": ["penny_loafer", "low_top_sneaker"], "material": ["leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"polo_fit": "classic", "jeans_fit": "straight"}, "slim": {"polo_fit": "slim", "jeans_fit": "slim"}},
+     "color_guidance": "Clean and respectable. Navy/burgundy polo with medium wash jeans. Conservative colors show respect to elders.",
+     "indian_note": "Sunday family lunch, visiting relatives. Look neat without looking like you're trying too hard. Parents will approve."},
+
+    {"id": "T015", "name": "Shopping Mall - Put Together", "style_track": "smart_casual", "occasion": "weekend_outing", "climate": ["tropical", "warm_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["camp_collar", "cuban_collar"], "fit": ["regular", "relaxed"], "fabric": ["rayon_viscose", "linen"]},
+       "bottom": {"garment": "jeans", "fit": ["tapered", "slim"], "wash": ["dark", "black"]},
+       "footwear": {"type": ["minimalist_white"], "material": ["leather"]},
+       "accessories": ["sunglasses", "casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular", "jeans_fit": "regular"}, "slim": {"shirt_fit": "slim", "jeans_fit": "slim"}},
+     "color_guidance": "One interesting top (printed camp collar or solid color) + simple dark jeans + clean white sneakers. The outfit says 'I have taste.'",
+     "indian_note": "Mall visits, shopping trips. This is where you get noticed — look like you belong in the stores, not just browsing."},
+
+    {"id": "T016", "name": "Night Out - Bar/Club", "style_track": "smart_casual", "occasion": "house_party", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["cuban_collar", "camp_collar"], "fit": ["slim"], "fabric": ["silk_blend", "rayon_viscose"], "color": ["black", "navy", "burgundy"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered"], "wash": ["black", "rinse"]},
+       "footwear": {"type": ["chelsea", "dress_sneaker"], "material": ["leather"]},
+       "accessories": ["casual_watch", "chain_necklace"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}, "athletic": {"shirt_fit": "slim"}},
+     "color_guidance": "All dark: black shirt + black jeans + black Chelsea boots. Or add one color pop. Night lighting favors dark, rich colors.",
+     "indian_note": "Bangalore brewery nights, Mumbai lounge bars. Dark palette, slightly edgy. Chelsea boots elevate the whole look."},
+
+    {"id": "T017", "name": "Tech/Startup Office - Daily", "style_track": "smart_casual", "occasion": "tech_office", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "polo", "collar": ["classic_ribbed"], "fit": ["classic", "slim"], "fabric": ["pique"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["navy", "khaki", "grey"]},
+       "footwear": {"type": ["minimalist_white", "low_top_sneaker"], "material": ["leather", "knit_mesh"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"polo_fit": "classic", "chino_fit": "regular"}, "slim": {"polo_fit": "slim", "chino_fit": "slim"}},
+     "color_guidance": "Neutral rotation: navy polo + khaki chinos Monday, grey polo + navy chinos Tuesday. 3-4 polos cover the week.",
+     "indian_note": "90% of Indian startups have ditched formals. Polo + chinos + clean sneakers is the new office uniform."},
+
+    {"id": "T018", "name": "Tech Office - Meeting Day", "style_track": "smart_casual", "occasion": "tech_office", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["ocbd"], "fit": ["slim", "regular"], "collar": ["button_down"]},
+       "bottom": {"garment": "chino", "fit": ["slim", "tapered"], "color": ["navy", "charcoal"]},
+       "footwear": {"type": ["penny_loafer", "minimalist_white"], "material": ["leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Light blue OCBD + navy chinos is the meeting-day default. Looks intentional without overdressing.",
+     "indian_note": "Client visits, team leads meeting, investor pitch at a startup. One step above daily but still comfortable."},
+
+    {"id": "T019", "name": "Corporate Casual Office", "style_track": "business_casual", "occasion": "corporate_casual_office", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "business_casual",
+     "components": {
+       "top": {"garment": "dress_shirt", "collar": ["spread", "button_down"], "fit": ["slim", "regular"], "fabric": ["broadcloth", "cotton_twill"]},
+       "bottom": {"garment": "dress_trouser", "fit": ["slim", "regular"], "fabric": ["worsted_wool", "cotton_chino"], "color": ["charcoal", "navy", "grey"]},
+       "footwear": {"type": ["derby_blucher", "monk_strap", "penny_loafer"], "material": ["calfskin"]},
+       "accessories": ["dress_watch", "leather_belt"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular", "trouser_fit": "regular"}, "slim": {"shirt_fit": "slim", "trouser_fit": "slim"}},
+     "color_guidance": "Safe rotation: white/light blue/pale pink shirts with charcoal/navy trousers. Brown leather shoes and belt.",
+     "indian_note": "Banks, consulting firms, MNC offices that still expect business casual. No tie needed in most Indian offices."},
+
+    {"id": "T020", "name": "Corporate Formal Office", "style_track": "business_formal", "occasion": "corporate_office", "climate": ["cool_temperate", "cold"], "formality_level": "business_formal",
+     "components": {
+       "top": {"garment": "suit", "silhouette": ["british_structured", "italian_soft"], "fabric": ["worsted_wool"]},
+       "shirt": {"collar": ["spread", "straight_point"], "fabric": ["broadcloth"], "color": ["white", "light_blue"]},
+       "tie": {"fabric": ["silk_twill", "silk_grenadine"], "width": "standard"},
+       "bottom": {"garment": "suit_trouser", "matched": true},
+       "footwear": {"type": ["oxford_plain_cap_toe", "half_brogue"], "material": ["calfskin"], "color": "black"},
+       "accessories": ["dress_watch", "pocket_handkerchief", "dress_belt"]
+     },
+     "body_adaptations": {"heavy": {"silhouette": "american_natural", "avoid": "slim_fit"}, "slim": {"silhouette": "british_structured"}, "athletic": {"silhouette": "italian_soft"}},
+     "color_guidance": "Navy or charcoal suit. White shirt is safest. Tie adds personality within limits. Black shoes with dark suits.",
+     "indian_note": "Board meetings, client presentations at formal firms. Rare in most Indian companies but required in finance/law."},
+
+    {"id": "T021", "name": "Indian Summer Office", "style_track": "business_casual", "occasion": "corporate_casual_office", "climate": ["tropical", "peak_summer"], "formality_level": "business_casual",
+     "components": {
+       "top": {"garment": "dress_shirt", "fabric": ["linen", "linen_cotton_blend", "cotton_poplin"], "fit": ["regular"], "collar": ["spread", "button_down"]},
+       "bottom": {"garment": "dress_trouser", "fabric": ["cotton_chino", "light_worsted"], "color": ["khaki", "stone", "light_grey"]},
+       "footwear": {"type": ["penny_loafer", "monk_strap"], "material": ["calfskin"], "color": "brown"},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Lighter palette for summer heat: light blue, white, pale pink. Linen wrinkles are accepted in Indian summers.",
+     "indian_note": "AC office to auto-rickshaw survival. Breathable fabrics are non-negotiable May-September. Roll sleeves when commuting."},
+
+    {"id": "T022", "name": "Office to After-Work", "style_track": "smart_casual", "occasion": "tech_office", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["ocbd"], "fit": ["slim"], "collar": ["button_down"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered"], "wash": ["dark", "rinse"]},
+       "footwear": {"type": ["chelsea", "minimalist_white"], "material": ["leather", "suede"]},
+       "accessories": ["casual_watch"],
+       "transition_piece": "Add unstructured blazer for after-work dinner, remove for office"
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Versatile base: white/blue OCBD + dark jeans + Chelsea boots works all day. Add blazer for evening elevation.",
+     "indian_note": "Desk to drinks seamlessly. Keep a blazer at the office or in your bag. Dark jeans pass as both office and going-out."},
+
+    {"id": "T023", "name": "Haldi Ceremony", "style_track": "casual", "occasion": "indian_wedding_guest_haldi", "climate": ["tropical", "warm_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "kurta", "type": "bright_casual", "fabric": ["cotton", "linen"], "color": ["yellow", "orange", "bright_blue", "lime_green"]},
+       "bottom": {"garment": ["white_jeans", "white_churidar", "white_pyjama"], "color": "white"},
+       "footwear": {"type": ["kolhapuri", "mojari", "leather_sandal"]},
+       "accessories": []
+     },
+     "body_adaptations": {"heavy": {"kurta_fit": "regular_length"}, "slim": {"kurta_fit": "fitted"}},
+     "color_guidance": "BRIGHT colors mandatory. Yellow/orange are traditional for haldi. White bottoms are standard. You WILL get turmeric on you — dress accordingly.",
+     "indian_note": "The fun, messy event. Wear something you don't mind getting stained. Old kurta + white pyjama is the classic combo."},
+
+    {"id": "T024", "name": "Mehendi/Sangeet - Festive", "style_track": "smart_casual", "occasion": "indian_wedding_guest_sangeet", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "kurta", "type": "embroidered", "fabric": ["silk_blend", "chanderi", "brocade"], "color": ["teal", "maroon", "royal_blue", "emerald"]},
+       "bottom": {"garment": ["dhoti_pants", "churidar", "fitted_pyjama"]},
+       "footwear": {"type": ["mojari", "kolhapuri", "ethnic_jootis"]},
+       "accessories": ["stole", "brooch"]
+     },
+     "body_adaptations": {"heavy": {"kurta_length": "knee_length", "bottom": "fitted_pyjama"}, "slim": {"kurta_fit": "fitted", "bottom": "churidar"}},
+     "color_guidance": "Rich, festive colors: jewel tones. Embroidery or texture adds celebration. Avoid black (too somber) and white (mourning).",
+     "indian_note": "Dance floor ready. Go bold — sangeet is the time to show off. Heavy embroidery and rich fabrics are expected."},
+
+    {"id": "T025", "name": "Wedding Reception - Formal Indian", "style_track": "business_formal", "occasion": "indian_wedding_guest_reception", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "business_formal",
+     "components": {
+       "top": {"garment": "nehru_jacket", "over": "kurta", "fabric": ["brocade", "raw_silk", "jacquard"], "color": ["navy", "black", "charcoal", "maroon"]},
+       "bottom": {"garment": ["fitted_trouser", "churidar"], "color": ["matching", "contrasting_neutral"]},
+       "footwear": {"type": ["oxford_plain_cap_toe", "monk_strap", "mojari_formal"]},
+       "accessories": ["pocket_square", "brooch", "dress_watch"]
+     },
+     "body_adaptations": {"heavy": {"nehru_jacket": "longer_length"}, "slim": {"nehru_jacket": "fitted"}, "athletic": {"nehru_jacket": "structured"}},
+     "color_guidance": "Dark Nehru jacket over a contrasting kurta. Navy jacket + gold/cream kurta. Black jacket + ivory kurta. Regal and authoritative.",
+     "indian_note": "THE Indian wedding look. Nehru jacket elevates any outfit to wedding-formal. Every Indian man should own one."},
+
+    {"id": "T026", "name": "Wedding Reception - Western", "style_track": "business_formal", "occasion": "indian_wedding_guest_reception", "climate": ["cool_temperate", "cold"], "formality_level": "business_formal",
+     "components": {
+       "top": {"garment": "blazer", "fabric": ["worsted_wool", "velvet_evening"], "color": ["navy", "charcoal", "black"]},
+       "shirt": {"collar": ["spread"], "fabric": ["broadcloth"], "color": ["white", "light_blue"]},
+       "bottom": {"garment": "dress_trouser", "color": ["matching", "charcoal"]},
+       "footwear": {"type": ["oxford_plain_cap_toe", "monk_strap"], "material": ["calfskin"], "color": ["black", "dark_brown"]},
+       "accessories": ["pocket_square", "dress_watch", "cufflinks"]
+     },
+     "body_adaptations": {"heavy": {"blazer_fit": "regular"}, "slim": {"blazer_fit": "slim"}, "athletic": {"blazer_fit": "tailored"}},
+     "color_guidance": "Dark suit or blazer + dress trousers. Pocket square adds personality. Western formal is accepted at urban Indian receptions.",
+     "indian_note": "Perfectly acceptable at metro-city receptions. Some guests go Indian, some go Western — both are fine."},
+
+    {"id": "T027", "name": "Cocktail/Ring Ceremony", "style_track": "business_formal", "occasion": "indian_wedding_guest_reception", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "business_formal",
+     "components": {
+       "top": {"garment": "bandhgala", "fabric": ["silk_blend", "jacquard", "textured_wool"], "color": ["black", "navy", "wine", "ivory"]},
+       "bottom": {"garment": "fitted_trouser", "color": "matching"},
+       "footwear": {"type": ["oxford_plain_cap_toe", "half_brogue"], "material": ["patent_leather", "calfskin"]},
+       "accessories": ["pocket_square", "dress_watch", "brooch"]
+     },
+     "body_adaptations": {"heavy": {"bandhgala": "standard_fit"}, "slim": {"bandhgala": "slim_fit"}},
+     "color_guidance": "Black or navy bandhgala is the power move. Wine/ivory for the fashion-forward. Pocket square in contrasting color.",
+     "indian_note": "Bandhgala is the Indian tuxedo equivalent. Most formal Indo-Western option. Instant authority."},
+
+    {"id": "T028", "name": "Wedding - Casual Guest Daytime", "style_track": "smart_casual", "occasion": "indian_wedding_guest_haldi", "climate": ["tropical", "warm_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "kurta", "type": "printed_casual", "fabric": ["cotton", "linen"], "color": ["pastel_colors", "light_prints"]},
+       "bottom": {"garment": ["chinos", "jeans_dark"], "color": ["khaki", "navy", "white"]},
+       "footwear": {"type": ["kolhapuri", "leather_sandal", "loafer_casual"]},
+       "accessories": ["sunglasses"]
+     },
+     "body_adaptations": {"heavy": {"kurta_fit": "regular"}, "slim": {"kurta_fit": "fitted"}},
+     "color_guidance": "Light, festive but not over-the-top. Printed kurta + chinos is the modern Indo-Western formula for daytime events.",
+     "indian_note": "Pre-wedding functions, day events. Kurta + chinos + kolhapuri bridges traditional and modern perfectly."},
+
+    {"id": "T029", "name": "First Date - Casual", "style_track": "smart_casual", "occasion": "casual_date", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck", "henley"], "fit": ["slim", "regular"], "fabric": ["midweight_cotton"], "color": ["white", "navy", "black"]},
+       "bottom": {"garment": "jeans", "fit": ["slim", "tapered"], "wash": ["dark", "rinse"]},
+       "footwear": {"type": ["minimalist_white"], "material": ["leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"top_fit": "regular", "jeans_fit": "straight"}, "slim": {"top_fit": "slim", "jeans_fit": "slim"}},
+     "color_guidance": "Simple and clean beats trying too hard. White tee + dark jeans + white sneakers. Classic for a reason. Ensure everything is clean and well-fitted.",
+     "indian_note": "First impression matters. Clean, well-fitted basics > overdressed in a blazer. Confidence comes from comfort."},
+
+    {"id": "T030", "name": "Anniversary Dinner", "style_track": "business_casual", "occasion": "casual_date", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "business_casual",
+     "components": {
+       "top": {"garment": "blazer", "fabric": ["hopsack", "cotton_twill"], "color": ["navy", "charcoal"]},
+       "shirt": {"garment": "casual_shirt", "type": ["ocbd", "spread_casual"], "color": ["white", "light_blue"]},
+       "bottom": {"garment": "dress_trouser", "fabric": ["worsted_wool", "cotton_chino"], "color": ["charcoal", "navy"]},
+       "footwear": {"type": ["monk_strap", "tassel_loafer"], "material": ["calfskin", "suede"]},
+       "accessories": ["dress_watch", "pocket_square"]
+     },
+     "body_adaptations": {"heavy": {"blazer_fit": "regular"}, "slim": {"blazer_fit": "slim"}, "athletic": {"blazer_fit": "tailored"}},
+     "color_guidance": "Navy blazer + white shirt + charcoal trousers. Pocket square adds the special-occasion touch. Suede shoes soften the formality.",
+     "indian_note": "Fine dining, anniversary, special celebration. The blazer says effort. Pocket square says intention."},
+
+    {"id": "T031", "name": "Partner's Family Visit", "style_track": "smart_casual", "occasion": "family_gathering", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["ocbd", "linen"], "fit": ["regular"], "collar": ["button_down"]},
+       "bottom": {"garment": "chino", "fit": ["regular", "slim"], "color": ["navy", "khaki"]},
+       "footwear": {"type": ["penny_loafer", "derby_casual"], "material": ["leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Conservative and respectful. Light blue shirt + khaki chinos. No graphics, no ripped jeans, no flashy accessories.",
+     "indian_note": "Meeting the in-laws. Look responsible, well-groomed, and conservative. This is not the time for fashion experiments."},
+
+    {"id": "T032", "name": "Birthday Party - Casual Venue", "style_track": "smart_casual", "occasion": "house_party", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["camp_collar", "cuban_collar"], "fit": ["regular", "relaxed"], "fabric": ["rayon_viscose", "linen"]},
+       "bottom": {"garment": "jeans", "fit": ["tapered", "slim"], "wash": ["dark", "medium"]},
+       "footwear": {"type": ["suede_loafer", "minimalist_white", "chelsea"], "material": ["suede", "leather"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "One fun piece — printed camp collar or a bold color shirt. Keep everything else neutral. You want to look festive but not costume-y.",
+     "indian_note": "Friend's birthday at a restaurant or rooftop. Camp collar shirts are the sweet spot between casual and dressed-up."},
+
+    {"id": "T033", "name": "Monsoon Day Out", "style_track": "casual", "occasion": "casual_weekend", "climate": ["monsoon"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "polo", "fit": ["classic"], "fabric": ["performance_blend", "quick_dry_pique"], "color": ["navy", "charcoal", "olive"]},
+       "bottom": {"garment": "chino", "fit": ["tapered"], "fabric": ["quick_dry", "tech_fabric"], "color": ["navy", "charcoal"]},
+       "footwear": {"type": ["waterproof_sneaker", "sport_sandal", "rubber_loafer"]},
+       "accessories": ["waterproof_bag"]
+     },
+     "body_adaptations": {"heavy": {"polo_fit": "classic"}, "slim": {"polo_fit": "slim"}},
+     "color_guidance": "ALL DARK. Navy, charcoal, olive, black. Water splashes are invisible on dark colors. Quick-dry everything.",
+     "indian_note": "June-September survival mode. Accept that you'll get wet. Dress for it. Sport sandals are completely socially acceptable in monsoon."},
+
+    {"id": "T034", "name": "North India Winter", "style_track": "casual", "occasion": "casual_weekend", "climate": ["cold", "winter_north"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt_or_thermal", "neckline": ["crew_neck"], "fit": ["regular"]},
+       "mid_layer": {"garment": ["sweater", "cardigan", "fleece"], "fit": "regular"},
+       "outer_layer": {"garment": ["puffer", "quilted", "leather_jacket", "parka"]},
+       "bottom": {"garment": "jeans", "fit": ["straight", "regular"], "wash": ["dark"], "stretch": "comfort_stretch"},
+       "footwear": {"type": ["chelsea", "chukka", "hiking_boot"], "material": ["leather", "suede"]},
+       "accessories": ["scarf", "beanie"]
+     },
+     "body_adaptations": {"heavy": {"avoid_outer": "puffer", "prefer_outer": "quilted"}, "slim": {"layering": "add_mid_layer_bulk"}},
+     "color_guidance": "Earth tones and darks: brown, olive, navy, charcoal, burgundy. Layering creates visual depth automatically.",
+     "indian_note": "Delhi, Chandigarh, Jaipur winters. Layer game is everything. Invest in one good jacket — it defines your winter look."},
+
+    {"id": "T035", "name": "Peak Summer Outdoor", "style_track": "casual", "occasion": "casual_weekend", "climate": ["tropical", "peak_summer", "arid"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "casual_shirt", "type": ["linen"], "fit": ["relaxed"], "fabric": ["linen", "bamboo"], "color": ["white", "light_blue", "cream"]},
+       "bottom": {"garment": "shorts", "type": ["linen", "chino_shorts"], "length": "above_knee", "color": ["khaki", "white", "light_blue"]},
+       "footwear": {"type": ["espadrille", "canvas_plimsoll", "leather_sandal"]},
+       "accessories": ["sunglasses", "hat_panama"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "relaxed"}},
+     "color_guidance": "Light palette reflects heat: white, cream, light blue, sage. Linen wrinkles add character in casual settings.",
+     "indian_note": "Goa trips, beach towns, Rajasthan visits. Breathability is king. Linen shirt + linen shorts is peak summer comfort."},
+
+    {"id": "T036", "name": "AC Office + Hot Commute", "style_track": "business_casual", "occasion": "corporate_casual_office", "climate": ["tropical", "peak_summer"], "formality_level": "business_casual",
+     "components": {
+       "top": {"garment": "dress_shirt", "fabric": ["cotton_linen_blend", "cotton_poplin"], "fit": ["regular"], "color": ["white", "light_blue", "pale_pink"]},
+       "layerable": {"garment": "unstructured_blazer", "note": "Keep at office desk, wear in AC, remove for commute"},
+       "bottom": {"garment": "dress_trouser", "fabric": ["cotton_chino", "light_worsted"], "color": ["khaki", "grey"]},
+       "footwear": {"type": ["penny_loafer", "monk_strap"], "material": ["calfskin"]},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"shirt_fit": "regular"}, "slim": {"shirt_fit": "slim"}},
+     "color_guidance": "Lighter colors for heat, shirt that looks good with or without the blazer layer.",
+     "indian_note": "The Indian summer office paradox: freezing AC inside, 42C outside. Solution: breathable shirt + desk blazer. Roll sleeves for commute."},
+
+    {"id": "T037", "name": "Gym to Casual Transition", "style_track": "casual", "occasion": "casual_weekend", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["crew_neck"], "fit": ["athletic", "regular"], "fabric": ["performance_blend"]},
+       "bottom": {"garment": "jogger", "fit": ["tapered", "slim"], "fabric": ["tech_fabric"]},
+       "footwear": {"type": ["runner_modern", "cross_trainer"]},
+       "accessories": ["sport_watch", "gym_duffel"]
+     },
+     "body_adaptations": {},
+     "color_guidance": "Keep it monochrome or two-tone max. Black joggers + grey tee. Navy joggers + white tee. Athleisure, not gym clothes.",
+     "indian_note": "Post-gym brunch, running errands after workout. Tapered joggers (not baggy sweatpants) are the key differentiator."},
+
+    {"id": "T038", "name": "Travel / Airport", "style_track": "smart_casual", "occasion": "weekend_outing", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top": {"garment": "tshirt", "neckline": ["henley", "crew_neck"], "fit": ["regular"], "fabric": ["midweight_cotton", "jersey_cotton"]},
+       "layer": {"garment": ["bomber", "harrington", "unstructured_blazer"], "note": "Layer for AC on plane, remove on arrival"},
+       "bottom": {"garment": "chino", "fit": ["tapered", "regular"], "fabric": ["cotton_stretch"], "color": ["navy", "olive", "charcoal"]},
+       "footwear": {"type": ["slip_on", "minimalist_white", "chelsea"], "note": "Easy to remove at security"},
+       "accessories": ["backpack", "casual_watch"]
+     },
+     "body_adaptations": {"heavy": {"bottom_fit": "regular"}, "slim": {"bottom_fit": "slim"}},
+     "color_guidance": "Neutral, wrinkle-resistant palette. Navy/charcoal chinos + grey/navy top. Dark colors hide travel stains.",
+     "indian_note": "Domestic flights, train travel. Comfort + presentable. Slip-on shoes speed up security. Bomber jacket doubles as blanket on AC train."},
+
+    {"id": "T039", "name": "Temple/Religious Visit", "style_track": "casual", "occasion": "temple_visit", "climate": ["tropical", "warm_temperate"], "formality_level": "casual",
+     "components": {
+       "top": {"garment": ["kurta", "full_sleeve_shirt"], "fit": ["regular"], "fabric": ["cotton", "linen"], "color": ["white", "cream", "light_yellow", "light_blue"]},
+       "bottom": {"garment": ["full_length_trouser", "dhoti", "pyjama"], "note": "No shorts allowed at most temples"},
+       "footwear": {"type": ["leather_sandal", "kolhapuri", "slip_on"], "note": "Must be easily removable — shoes left outside"},
+       "accessories": []
+     },
+     "body_adaptations": {},
+     "color_guidance": "Light, modest colors: white, cream, light yellow. Avoid black at temples (considered inauspicious at many Hindu temples).",
+     "indian_note": "Full-length bottoms mandatory. Shoes must be removable. Light colors show respect. Many temples also require covered shoulders — full sleeves safest."},
+
+    {"id": "T040", "name": "Work From Home Video Call", "style_track": "smart_casual", "occasion": "tech_office", "climate": ["tropical", "warm_temperate", "cool_temperate"], "formality_level": "smart_casual",
+     "components": {
+       "top_visible": {"garment": ["polo", "ocbd", "casual_shirt"], "fit": ["slim", "regular"], "color": ["solid_colors"]},
+       "bottom_optional": {"garment": ["shorts", "joggers", "pyjamas"], "note": "Not visible on camera — comfort first"},
+       "footwear": {"note": "Not needed"},
+       "accessories": ["casual_watch"]
+     },
+     "body_adaptations": {},
+     "color_guidance": "Solid colors photograph best on video. Avoid small patterns (cause moiré on camera). Light blue, white, navy, grey are safe. Avoid bright white (overexposes on camera).",
+     "indian_note": "Post-COVID Indian work reality. Camera-ready top half, comfortable bottom half. Polo is the WFH MVP — looks smart, feels casual."}
+  ]
+}

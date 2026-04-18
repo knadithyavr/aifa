@@ -1,0 +1,437 @@
+{
+  "extraction_metadata": {
+    "batch": "b5-casual-accessories",
+    "date": "2026-04-02",
+    "sources": [
+      {
+        "id": "trendhim",
+        "name": "Trendhim",
+        "url": "https://www.trendhim.com/articles/907/the-ultimate-guide-to-accessories-for-men",
+        "status": "fetched_via_search",
+        "note": "Content retrieved via web search results referencing this source"
+      },
+      {
+        "id": "realmenrealstyle",
+        "name": "Real Men Real Style",
+        "url": "https://www.realmenrealstyle.com/watch-styles/",
+        "status": "fetched_via_search",
+        "note": "Content retrieved via web search results referencing watch taxonomy sources"
+      },
+      {
+        "id": "vaer_watches",
+        "name": "Vaer Watches Blog",
+        "url": "https://www.vaerwatches.com/blogs/journal/the-watch-as-wardrobe-a-style-guide-to-field-dive-and-chronograph-watches",
+        "status": "fetched_via_search",
+        "note": "Content retrieved via web search results; field/dive/chrono taxonomy confirmed"
+      },
+      {
+        "id": "carrera",
+        "name": "Carrera Eyewear",
+        "url": "https://us.carreraworld.com/blogs/eyewear/types-of-sunglasses-ultimate-guide",
+        "status": "fetched_via_search",
+        "note": "Content supplemented by LensDirect, Quay, Treehut, and Zenni search results for face-shape mapping"
+      },
+      {
+        "id": "modern_gentleman",
+        "name": "Modern Gentleman Magazine",
+        "url": "https://www.moderngentlemanmagazine.com/mens-accessories-guide/",
+        "status": "fetched_via_search",
+        "note": "Content retrieved via web search results referencing this source"
+      }
+    ]
+  },
+  "parameters": [
+    {
+      "name": "casual_watch_type",
+      "description": "Type/style classification of a casual men's wristwatch, based on its heritage, design language, and intended use context",
+      "style_track": ["casual", "smart_casual", "streetwear", "outdoor"],
+      "values": [
+        {
+          "value": "field",
+          "definition": "Military-heritage watch emphasizing legibility, durability, and ruggedness. Clean dial layout with large Arabic numeral markers, typically 38-42mm case, canvas or leather NATO strap, 100m water resistance. Born in WWI/WWII trench use.",
+          "design_cues": ["arabic_numerals", "clean_dial", "canvas_or_nato_strap", "24hr_markers"],
+          "formality": "casual_to_smart_casual",
+          "pair_with": ["chinos_and_henley", "field_jacket", "jeans_and_oxford", "cargo_pants"],
+          "sources": ["Vaer Watches Blog", "Real Men Real Style"]
+        },
+        {
+          "value": "diver",
+          "definition": "Water-sport watch with unidirectional rotating bezel for tracking dive time, screw-down crown, and minimum 200m water resistance (ISO 6425). Bold, legible dial with luminous markers. The most versatile casual watch type.",
+          "design_cues": ["rotating_bezel", "screw_down_crown", "luminous_indices", "bracelet_or_rubber_strap"],
+          "formality": "casual_to_smart_casual",
+          "pair_with": ["t_shirt_and_jeans", "polo_and_chinos", "swim_shorts", "casual_blazer_look"],
+          "sources": ["Vaer Watches Blog", "Real Men Real Style"]
+        },
+        {
+          "value": "chronograph",
+          "definition": "Timing-instrument watch with stopwatch subdials, originally designed for aviation and motorsport. Features 2-3 subdials for elapsed seconds, minutes, and hours. Evolved from pure tool to style statement piece.",
+          "design_cues": ["subdials", "pushers", "tachymeter_bezel", "busy_dial"],
+          "formality": "casual_to_business_casual",
+          "pair_with": ["leather_jacket", "blazer_and_jeans", "smart_casual_layers", "weekend_brunch"],
+          "sources": ["Vaer Watches Blog", "Real Men Real Style"]
+        },
+        {
+          "value": "sport",
+          "definition": "General-purpose active watch designed for athletic and outdoor use. Often features shock resistance, rubber or silicone strap, and digital or ana-digi display. Bridges the gap between tool watch and fashion piece.",
+          "design_cues": ["rubber_strap", "shock_resistant", "backlight", "stopwatch_function"],
+          "formality": "casual_only",
+          "pair_with": ["athletic_wear", "joggers_and_hoodie", "streetwear", "outdoor_gear"],
+          "sources": ["Real Men Real Style", "Trendhim"]
+        },
+        {
+          "value": "smart",
+          "definition": "Connected digital watch with fitness tracking, notifications, and app integration. Health metrics (heart rate, SpO2, steps) plus smartphone connectivity. Modern tech-forward casual accessory.",
+          "design_cues": ["digital_display", "touchscreen", "interchangeable_bands", "sensor_array"],
+          "formality": "casual_only",
+          "pair_with": ["athleisure", "tech_casual", "streetwear", "smart_casual_minimal"],
+          "sources": ["Real Men Real Style", "Trendhim"]
+        },
+        {
+          "value": "minimalist",
+          "definition": "Clean-dial watch with stripped-back design aesthetic — thin case, no numerals or few indices, plain dial, and slim leather or mesh strap. Derived from dress watch heritage but adapted for everyday casual elegance.",
+          "design_cues": ["thin_case", "plain_dial", "mesh_or_leather_strap", "no_numerals_or_batons_only"],
+          "formality": "casual_to_smart_casual",
+          "pair_with": ["monochrome_outfit", "smart_casual_knitwear", "minimalist_streetwear", "date_night"],
+          "sources": ["Real Men Real Style", "Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "digital",
+          "definition": "LCD or LED display watch with numeric time readout, often with retro or utilitarian aesthetic. Includes stopwatch, alarm, and backlight. Ranges from retro Casio-style to rugged G-Shock builds.",
+          "design_cues": ["lcd_display", "resin_case", "multi_function_buttons", "backlight"],
+          "formality": "casual_only",
+          "pair_with": ["streetwear", "retro_casual", "workwear", "90s_inspired"],
+          "sources": ["Real Men Real Style", "Trendhim"]
+        },
+        {
+          "value": "pilot",
+          "definition": "Aviation-heritage watch with oversized case (42-47mm), highly legible dial, large crown for gloved operation, and often a slide-rule bezel. Meets DIN 8330 or TESTAF standards in certified versions.",
+          "design_cues": ["oversized_crown", "large_case", "triangle_12_marker", "leather_riveted_strap"],
+          "formality": "casual_to_smart_casual",
+          "pair_with": ["bomber_jacket", "field_jacket_and_jeans", "aviator_sunglasses", "rugged_casual"],
+          "sources": ["Real Men Real Style", "Vaer Watches Blog"]
+        }
+      ]
+    },
+    {
+      "name": "sunglasses_frame",
+      "description": "Frame shape/style classification for men's sunglasses, defining the silhouette and design heritage of the eyewear",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "aviator",
+          "definition": "Teardrop-shaped metal-frame sunglasses with thin wire construction and distinctive double bridge (brow bar). Originated as 1930s military pilot eyewear. Universally versatile frame that conveys effortless, adventurous cool.",
+          "key_features": ["teardrop_lens", "metal_frame", "brow_bar", "nose_pads"],
+          "vibe": "effortless_adventurous",
+          "sources": ["Carrera Eyewear", "LensDirect", "Treehut"]
+        },
+        {
+          "value": "wayfarer",
+          "definition": "Bold acetate trapezoidal frame introduced in 1952 (Ray-Ban). Thick plastic frame with slight upward angle at temples. Cultural icon associated with confidence and structure. Works across casual to smart-casual contexts.",
+          "key_features": ["acetate_frame", "trapezoidal_shape", "thick_temples", "keyhole_bridge"],
+          "vibe": "bold_confident",
+          "sources": ["Carrera Eyewear", "LensDirect", "Treehut"]
+        },
+        {
+          "value": "round",
+          "definition": "Perfectly circular or near-circular lenses, often with thin metal frame. Artistic, expressive, and vintage-inspired. Associated with intellectual and creative aesthetics from John Lennon to modern minimalism.",
+          "key_features": ["circular_lens", "thin_frame", "vintage_aesthetic", "adjustable_nose_pads"],
+          "vibe": "artistic_expressive",
+          "sources": ["Carrera Eyewear", "LensDirect"]
+        },
+        {
+          "value": "clubmaster",
+          "definition": "Semi-rimless browline frame with thick acetate upper and thin metal lower rim. Retro-intellectual style inspired by 1950s-60s culture. Balances boldness with refinement; bridges casual and smart-casual well.",
+          "key_features": ["browline_acetate_top", "metal_lower_rim", "semi_rimless", "retro_profile"],
+          "vibe": "retro_intellectual",
+          "sources": ["Carrera Eyewear", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "rectangle",
+          "definition": "Angular, horizontally-oriented frames with defined corners. Sharp, modern silhouette that adds structure to softer face shapes. Available in acetate or metal; works well in professional-casual settings.",
+          "key_features": ["angular_corners", "horizontal_emphasis", "structured_shape", "versatile_material"],
+          "vibe": "sharp_modern",
+          "sources": ["Carrera Eyewear", "Quay"]
+        },
+        {
+          "value": "wraparound",
+          "definition": "Curved, contoured frame that wraps around the face for maximum coverage and peripheral protection. Sport-oriented design with rubberized grip and impact-resistant lenses. Functional performance eyewear.",
+          "key_features": ["curved_lens", "full_coverage", "rubberized_grip", "sport_oriented"],
+          "vibe": "athletic_functional",
+          "sources": ["Carrera Eyewear", "Trendhim"]
+        },
+        {
+          "value": "navigator",
+          "definition": "Aviator-adjacent frame with a flatter, more squared-off teardrop shape and often a thicker bridge. Slightly more angular than classic aviators, giving a more assertive, structured look while retaining the pilot heritage.",
+          "key_features": ["flat_teardrop", "thicker_bridge", "angular_aviator_variant", "metal_frame"],
+          "vibe": "assertive_polished",
+          "sources": ["Carrera Eyewear"]
+        },
+        {
+          "value": "square",
+          "definition": "Equal-proportion angular frame with defined corners and strong geometric lines. Modern and masculine aesthetic that provides significant facial definition. Works well for minimalist outfits.",
+          "key_features": ["equal_proportions", "sharp_angles", "geometric_lines", "bold_presence"],
+          "vibe": "modern_masculine",
+          "sources": ["Carrera Eyewear", "Quay"]
+        },
+        {
+          "value": "shield",
+          "definition": "Single continuous lens across both eyes, often with sporty or futuristic aesthetic. Maximum field of vision with minimal frame obstruction. Statement piece for bold casual or streetwear contexts.",
+          "key_features": ["single_lens", "minimal_frame", "futuristic_profile", "full_coverage"],
+          "vibe": "futuristic_bold",
+          "sources": ["Carrera Eyewear"]
+        }
+      ]
+    },
+    {
+      "name": "sunglasses_face_shape_mapping",
+      "description": "Mapping of which sunglasses frame shapes are recommended for each face shape, based on the principle of contrast (curved faces benefit from angular frames and vice versa)",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "oval",
+          "definition": "Balanced proportions with slightly wider cheekbones and a gently narrowing forehead and jaw. Considered the most versatile face shape — most frame styles work well.",
+          "recommended_frames": ["aviator", "wayfarer", "round", "rectangle", "clubmaster", "navigator"],
+          "avoid_frames": [],
+          "styling_note": "Almost any frame works; choose based on personal style preference rather than corrective fit.",
+          "sources": ["LensDirect", "Quay", "Zenni Optical"]
+        },
+        {
+          "value": "round",
+          "definition": "Roughly equal width and length with full cheeks and a rounded jawline. Soft features without prominent angles.",
+          "recommended_frames": ["wayfarer", "rectangle", "clubmaster", "square", "navigator"],
+          "avoid_frames": ["round", "oversized_circular"],
+          "styling_note": "Angular frames add definition and create the illusion of a longer, thinner face. Avoid round frames that echo facial softness.",
+          "sources": ["LensDirect", "Quay", "Treehut", "Feel Good Contacts"]
+        },
+        {
+          "value": "square",
+          "definition": "Broad forehead and strong, angular jawline with roughly equal proportions. Prominent, defined bone structure.",
+          "recommended_frames": ["aviator", "round", "wayfarer_soft_edge", "navigator"],
+          "avoid_frames": ["rectangle", "square", "sharp_angular"],
+          "styling_note": "Rounded and curved frames soften the strong jawline and angular features. Aviators work especially well as the teardrop shape balances the jaw.",
+          "sources": ["LensDirect", "Quay", "Zenni Optical", "Treehut"]
+        },
+        {
+          "value": "heart",
+          "definition": "Widest at the forehead, narrowing through cheekbones to a pointed chin. Also called inverted triangle.",
+          "recommended_frames": ["aviator", "clubmaster", "round", "wayfarer_light"],
+          "avoid_frames": ["oversized_top_heavy", "shield"],
+          "styling_note": "Frames with wider bottom edges (like aviators) add visual width below the cheekbones, balancing the broader forehead.",
+          "sources": ["LensDirect", "Zenni Optical", "Treehut"]
+        },
+        {
+          "value": "oblong",
+          "definition": "Face is notably longer than it is wide, with a long straight cheek line. Forehead, cheekbones, and jaw are similar width.",
+          "recommended_frames": ["wayfarer_oversized", "aviator_large", "round", "shield"],
+          "avoid_frames": ["narrow_rectangle", "small_frames"],
+          "styling_note": "Larger, wider frames visually shorten the face. Oversized wayfarers and deep aviators work best. Avoid narrow frames that elongate further.",
+          "sources": ["LensDirect", "Quay"]
+        },
+        {
+          "value": "diamond",
+          "definition": "Widest at the cheekbones with a narrow forehead and jawline. Angular yet delicate structure.",
+          "recommended_frames": ["aviator_soft", "round", "clubmaster", "oval"],
+          "avoid_frames": ["narrow_rectangle", "sharp_geometric"],
+          "styling_note": "Soft, elongated frames highlight the eyes and reduce visual cheekbone width. Oval and rounded aviator shapes create harmony.",
+          "sources": ["LensDirect", "Quay"]
+        },
+        {
+          "value": "triangle",
+          "definition": "Wider jawline tapering to a narrower forehead. Strong lower face with less width above.",
+          "recommended_frames": ["clubmaster", "aviator", "browline", "round"],
+          "avoid_frames": ["narrow_bottom_frames", "wraparound"],
+          "styling_note": "Top-heavy frames (browline, clubmaster) add width to the forehead area, balancing the wider jaw. Avoid frames that emphasize the jawline.",
+          "sources": ["Quay", "Zenni Optical"]
+        }
+      ]
+    },
+    {
+      "name": "casual_bag_type",
+      "description": "Type classification for men's casual bags based on carry style, structure, and use context",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "backpack",
+          "definition": "Two-strap over-shoulder bag with main compartment and exterior pockets. Casual versions use clean, minimal design in leather, waxed canvas, or technical nylon. Suitable for daily carry, commuting, and travel.",
+          "materials": ["leather", "waxed_canvas", "technical_nylon", "recycled_polyester"],
+          "pair_with": ["streetwear", "smart_casual_layers", "casual_friday", "travel"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "messenger",
+          "definition": "Single-strap crossbody bag with front flap closure, originally used by bicycle couriers. Well-organized interior with laptop sleeve. Bridges casual and professional contexts.",
+          "materials": ["leather", "canvas", "waxed_cotton", "ballistic_nylon"],
+          "pair_with": ["smart_casual", "business_casual", "weekend_errands", "commuting"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "tote",
+          "definition": "Open-top structured or unstructured carry bag with two parallel handles. Clean silhouette in leather or canvas. Increasingly popular in men's fashion for its minimalist, utilitarian aesthetic.",
+          "materials": ["leather", "heavy_canvas", "suede", "coated_cotton"],
+          "pair_with": ["smart_casual", "minimalist_casual", "market_errands", "beach"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "crossbody",
+          "definition": "Compact single-strap bag worn diagonally across the torso. Hands-free carrying of essentials (phone, wallet, keys). Key trend piece in contemporary men's streetwear and casual fashion.",
+          "materials": ["leather", "nylon", "technical_fabric", "canvas"],
+          "pair_with": ["streetwear", "athleisure", "festival_casual", "urban_casual"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "weekender",
+          "definition": "Large soft-structured duffel-style bag designed for 1-3 day trips. Wide opening, interior pockets, detachable shoulder strap. Often in leather or canvas with refined hardware.",
+          "materials": ["full_grain_leather", "waxed_canvas", "ballistic_nylon", "cotton_twill"],
+          "pair_with": ["travel_casual", "smart_casual_travel", "road_trip", "weekend_getaway"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "gym_duffel",
+          "definition": "Cylindrical or barrel-shaped sports bag with ventilated shoe compartment and water-resistant lining. Functional design for gym and athletic use with separate wet/dry sections.",
+          "materials": ["polyester", "nylon", "recycled_fabric", "rubber_base"],
+          "pair_with": ["athleisure", "gym_wear", "post_workout_casual"],
+          "sources": ["Trendhim"]
+        },
+        {
+          "value": "sling_bag",
+          "definition": "Compact single-strap bag worn across the chest or back, smaller than a traditional crossbody. Minimalist design carrying only absolute essentials. Popular in streetwear and urban casual.",
+          "materials": ["technical_nylon", "leather", "cordura", "ripstop"],
+          "pair_with": ["streetwear", "tech_casual", "urban_commute", "festival"],
+          "sources": ["Trendhim"]
+        },
+        {
+          "value": "briefcase_casual",
+          "definition": "Structured bag with top handle and often a shoulder strap, in softer materials or relaxed constructions compared to formal briefcases. Bridges professional and casual contexts.",
+          "materials": ["soft_leather", "canvas_leather_combo", "suede", "nubuck"],
+          "pair_with": ["smart_casual", "business_casual", "creative_professional"],
+          "sources": ["Modern Gentleman Magazine"]
+        }
+      ]
+    },
+    {
+      "name": "casual_belt_style",
+      "description": "Belt style classification for casual menswear contexts, defined by material, buckle type, and formality level",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "woven",
+          "definition": "Braided or woven belt (often elastic or leather strips) that allows micro-adjustment without fixed holes. Relaxed, textured aesthetic. Classic summer and resort casual accessory.",
+          "buckle_type": "slide_or_pin",
+          "materials": ["braided_leather", "elastic_woven", "cotton_webbing"],
+          "pair_with": ["chinos_and_polo", "linen_trousers", "resort_wear", "smart_casual_summer"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "canvas",
+          "definition": "Fabric belt in cotton canvas or nylon webbing, typically with a D-ring or military-style buckle. Casual utility aesthetic. Available in solid colors and patterns (stripes, regimental).",
+          "buckle_type": "d_ring_or_military_slide",
+          "materials": ["cotton_canvas", "nylon_webbing", "grosgrain"],
+          "pair_with": ["jeans_and_tee", "shorts", "workwear", "outdoor_casual"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "leather_casual",
+          "definition": "Leather belt in a wider width (35-40mm) with distressed, matte, or pull-up finish and a brushed or antique buckle. Distinguished from formal leather belts by its relaxed finish and wider cut.",
+          "buckle_type": "pin_buckle_brushed_or_antique",
+          "materials": ["full_grain_leather", "pull_up_leather", "distressed_leather", "suede"],
+          "pair_with": ["jeans_and_boots", "chinos_casual", "flannel_and_denim", "smart_casual"],
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "reversible",
+          "definition": "Dual-sided belt with a rotating buckle mechanism allowing two color/finish options (typically black/brown or leather/suede). Practical versatility for travel and mixed wardrobes.",
+          "buckle_type": "rotating_pin_or_plate",
+          "materials": ["bonded_leather", "full_grain_leather", "saffiano"],
+          "pair_with": ["versatile_casual", "travel_wardrobe", "business_casual_flex"],
+          "sources": ["Trendhim"]
+        },
+        {
+          "value": "no_belt",
+          "definition": "Intentional absence of a belt as a style choice, relying on well-fitted trousers, side adjusters, or drawstring waists. Common in relaxed-fit casual and minimalist aesthetics.",
+          "buckle_type": "none",
+          "materials": [],
+          "pair_with": ["relaxed_fit_trousers", "drawstring_pants", "elastic_waist", "tucked_in_minimal"],
+          "sources": ["Modern Gentleman Magazine"]
+        },
+        {
+          "value": "rope",
+          "definition": "Nautical-inspired belt made from braided rope or cord with a metal or leather closure. Distinctly casual, often associated with coastal, preppy, or resort aesthetics.",
+          "buckle_type": "hook_or_leather_closure",
+          "materials": ["braided_rope", "cotton_cord", "paracord"],
+          "pair_with": ["boat_shoes_and_shorts", "resort_casual", "preppy_summer"],
+          "sources": ["Trendhim"]
+        }
+      ]
+    },
+    {
+      "name": "casual_jewelry",
+      "description": "Jewelry and small accessory classification for casual menswear, covering items worn on the body for decorative/personal expression purposes",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "minimal_bracelet",
+          "definition": "Simple, understated wrist accessory in leather, cord, or thin metal. Designed to complement a watch without competing. Stackable; current trend favors matte metals (stainless steel, titanium, tungsten) or natural materials.",
+          "subtypes": ["leather_wrap", "metal_cuff_thin", "cord_bracelet", "chain_link_minimal"],
+          "styling_rule": "Wear on opposite wrist from watch, or stack 1-2 beside watch. One metal tone throughout.",
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "beaded_bracelet",
+          "definition": "Bracelet made of strung natural stone, wood, lava, or glass beads. Casual and bohemian-leaning aesthetic. Popular for stacking and adding texture to relaxed outfits.",
+          "subtypes": ["matte_stone", "wood_bead", "lava_bead", "glass_bead"],
+          "styling_rule": "Best with casual and weekend outfits. Stack 2-3 max. Avoid with formal or strict business dress.",
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "chain_necklace",
+          "definition": "Thin metal chain worn around the neck, typically in silver, gold, or gunmetal. Clean, minimal profile visible at open collar. Lengths vary from choker (16in) to mid-chest (22in).",
+          "subtypes": ["curb_chain", "box_chain", "rope_chain", "figaro_chain"],
+          "styling_rule": "One chain at a time for clean look. Thin gauge (2-3mm) for subtle style. Match metal to watch and other accessories.",
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "pendant_necklace",
+          "definition": "Chain necklace with a single decorative element — disc, tag, symbolic charm, or personal talisman. Adds focal point and personal meaning to neckwear.",
+          "subtypes": ["disc_pendant", "dog_tag", "symbolic_charm", "religious_medal"],
+          "styling_rule": "Keep pendant proportional to chain weight. One pendant necklace at a time. Works with open-collar shirts and crew-neck tees.",
+          "sources": ["Trendhim"]
+        },
+        {
+          "value": "signet_ring",
+          "definition": "Flat-topped ring traditionally bearing an engraved crest, initials, or symbol. Worn on the pinky or ring finger. Historically a mark of heritage, now worn as a subtle personal style signature.",
+          "subtypes": ["engraved_crest", "plain_polished", "matte_finish", "monogrammed"],
+          "styling_rule": "Worn alone on pinky finger (traditionally non-dominant hand). One ring statement piece is sufficient for casual wear.",
+          "sources": ["Modern Gentleman Magazine", "Trendhim"]
+        },
+        {
+          "value": "band_ring",
+          "definition": "Simple metal band ring without gemstones, worn on any finger. Clean, modern masculine aesthetic. Available in stainless steel, titanium, tungsten, or precious metals.",
+          "subtypes": ["plain_band", "textured_band", "black_finish", "two_tone"],
+          "styling_rule": "Maximum 2-3 rings total across both hands. Mix textures but keep to one metal family.",
+          "sources": ["Trendhim", "Modern Gentleman Magazine"]
+        },
+        {
+          "value": "stud_earring",
+          "definition": "Small, close-fitting earring that sits flush against the earlobe. Single stud in one or both ears. Minimal and contemporary. Common in diamond/CZ, black, or metallic finishes.",
+          "subtypes": ["diamond_cz_stud", "black_stud", "metallic_ball", "bar_stud"],
+          "styling_rule": "Keep small and proportional. One stud per ear maximum for casual-clean aesthetic. Match metal to other jewelry.",
+          "sources": ["Trendhim"]
+        },
+        {
+          "value": "watch_strap_as_jewelry",
+          "definition": "Decorative or statement watch strap worn as an accessory element in its own right — NATO straps in bold colors/patterns, beaded watch bands, or leather wraps that extend the watch into a jewelry-like wrist stack.",
+          "subtypes": ["nato_patterned", "beaded_strap", "leather_wrap_strap", "perlon_woven"],
+          "styling_rule": "Coordinate strap color/material with outfit palette. NATO patterns add casual character; leather adds refinement.",
+          "sources": ["Vaer Watches Blog", "Trendhim"]
+        },
+        {
+          "value": "none",
+          "definition": "Intentional choice to wear no jewelry, relying on watch (if any) and clothing details alone. Valid minimalist approach — especially for utilitarian, workwear, and clean-minimal aesthetics.",
+          "subtypes": [],
+          "styling_rule": "Let the outfit and watch (if worn) carry the visual interest. No jewelry can be a deliberate style choice, not an oversight.",
+          "sources": ["Modern Gentleman Magazine"]
+        }
+      ]
+    }
+  ]
+}

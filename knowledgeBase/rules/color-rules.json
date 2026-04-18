@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "description": "Simplified color recommendation rules. Maps skin undertone + contrast level to recommended and avoid color palettes per garment zone (near face vs lower body).",
+
+  "undertone_palettes": {
+    "warm": {
+      "description": "Yellow/golden/peachy undertones. Gold jewelry flatters. Veins appear green.",
+      "best_colors": ["olive", "rust", "warm_brown", "camel", "terracotta", "warm_navy", "burgundy", "coral", "golden_yellow", "forest_green", "cream", "warm_white"],
+      "good_colors": ["khaki", "tan", "warm_grey", "teal", "burnt_orange", "chocolate", "sage"],
+      "avoid_colors": ["cool_grey", "icy_blue", "lavender", "fuchsia", "silver_grey", "pure_white"],
+      "metal": "gold",
+      "avoid_metal": "silver",
+      "near_face_priority": "Warm tones near face bring out healthy glow. Earthy and golden hues."
+    },
+    "cool": {
+      "description": "Blue/pink/red undertones. Silver jewelry flatters. Veins appear blue/purple.",
+      "best_colors": ["navy", "charcoal", "cool_grey", "burgundy", "plum", "cobalt_blue", "emerald", "lavender", "cool_white", "slate_blue", "wine"],
+      "good_colors": ["icy_blue", "teal", "forest_green", "dusty_rose", "steel_grey", "true_black"],
+      "avoid_colors": ["warm_brown", "camel", "rust", "orange", "golden_yellow", "warm_beige", "olive", "terracotta", "cream"],
+      "metal": "silver",
+      "avoid_metal": "gold",
+      "near_face_priority": "Cool tones near face create even, healthy complexion. Blue and grey bases."
+    },
+    "neutral": {
+      "description": "Mix of warm and cool. Both gold and silver work. Most flexible palette.",
+      "best_colors": ["navy", "charcoal", "olive", "burgundy", "teal", "medium_grey", "cream", "forest_green", "slate_blue", "warm_brown"],
+      "good_colors": ["virtually_any_muted_to_medium_tone"],
+      "avoid_colors": ["extremely_bright_neon", "heavily_saturated_warm_or_cool_extremes"],
+      "metal": "both",
+      "near_face_priority": "Widest flexibility. Focus on contrast level rather than temperature."
+    }
+  },
+
+  "contrast_palettes": {
+    "high_contrast": {
+      "description": "Light skin + dark hair (or dark skin + grey/white hair). Features in powerful counterpoint.",
+      "outfit_approach": "CAN wear bold color contrasts. Dark jacket + white shirt works. Black and white combinations enhance natural drama.",
+      "recommended_combinations": [
+        "navy_jacket + white_shirt",
+        "black_tee + light_chinos",
+        "charcoal_trousers + white_polo",
+        "dark_jeans + light_blue_ocbd"
+      ],
+      "avoid": "All-muted/tonal dressing dampens natural drama. Don't dress too safe."
+    },
+    "medium_contrast": {
+      "description": "Moderate difference between skin and hair. Most common type.",
+      "outfit_approach": "Most flexibility. Can wear true hues with slight shading/tinting. Medium contrast in clothing matches well.",
+      "recommended_combinations": [
+        "navy_chinos + blue_polo",
+        "grey_tee + dark_jeans",
+        "olive_shirt + khaki_chinos",
+        "burgundy_polo + charcoal_chinos"
+      ],
+      "avoid": "Extremely high contrast outfits (stark black+white) may overpower."
+    },
+    "low_contrast": {
+      "description": "Features similarly light (fair+blonde) or similarly dark (dark skin+dark hair). Features blend together.",
+      "outfit_approach": "MUST keep clothing contrast low — tonal dressing. Monochrome or analogous color schemes. Bold contrasts draw attention away from face.",
+      "recommended_combinations": [
+        "tonal_navy_outfit",
+        "cream_tee + khaki_chinos",
+        "olive_shirt + dark_green_chinos",
+        "grey_tee + charcoal_jeans"
+      ],
+      "avoid": "Stark black+white, bright contrasting colors. These bully the face into submission (Flusser)."
+    }
+  },
+
+  "indian_skin_specific": {
+    "description": "Most Indian men fall in the medium to dark skin depth range with warm to neutral-warm undertones. These are specific recommendations for common Indian coloring.",
+    "common_profiles": [
+      {
+        "profile": "Medium brown skin + dark hair (most common)",
+        "undertone": "typically warm or neutral-warm",
+        "contrast": "medium to medium-high",
+        "best_near_face": ["navy", "olive", "burgundy", "teal", "cream", "warm_white"],
+        "best_bottoms": ["navy", "charcoal", "dark_denim", "olive"],
+        "avoid_near_face": ["pale_pastels", "washed_out_grey", "neon"],
+        "note": "Rich, medium-depth colors work best. Avoid anything that washes out or makes skin look ashy."
+      },
+      {
+        "profile": "Darker skin + dark hair",
+        "undertone": "warm or neutral",
+        "contrast": "low to medium",
+        "best_near_face": ["jewel_tones", "royal_blue", "emerald", "burgundy", "white", "cream", "coral"],
+        "best_bottoms": ["navy", "charcoal", "black", "dark_olive"],
+        "avoid_near_face": ["dull_brown", "murky_olive", "washed_pastels"],
+        "note": "Can wear bold, saturated colors confidently. White and jewel tones pop beautifully against dark skin."
+      },
+      {
+        "profile": "Fair/light skin + dark hair",
+        "undertone": "cool or neutral-cool",
+        "contrast": "high",
+        "best_near_face": ["navy", "charcoal", "white", "cool_blue", "burgundy", "forest_green"],
+        "best_bottoms": ["charcoal", "navy", "dark_denim", "black"],
+        "avoid_near_face": ["warm_beige", "camel", "warm_brown", "pale_yellow"],
+        "note": "High contrast coloring — can handle bold clothing contrast. Navy and white is a power combo."
+      },
+      {
+        "profile": "Wheatish/olive skin + dark hair",
+        "undertone": "neutral-warm",
+        "contrast": "medium",
+        "best_near_face": ["olive", "teal", "rust", "navy", "burgundy", "off_white"],
+        "best_bottoms": ["navy", "olive", "charcoal", "khaki"],
+        "avoid_near_face": ["neon", "icy_pastels", "pure_orange"],
+        "note": "The most versatile Indian coloring. Earthy tones and jewel tones both work. Lucky you."
+      }
+    ]
+  },
+
+  "garment_zone_priority": {
+    "near_face": {
+      "garments": ["tshirt", "polo", "casual_shirt"],
+      "rule": "Colors from your recommended palette have MAXIMUM effect near the face. This is where undertone matching matters most. Wrong color here = washed out or sickly appearance.",
+      "source": "D03 face_health_is_primary_objective + Flusser color_echoing technique"
+    },
+    "lower_body": {
+      "garments": ["jeans", "chinos", "shorts"],
+      "rule": "Lower body can be more neutral. Navy, charcoal, and dark denim work for almost everyone. Color precision matters less below the waist.",
+      "universal_safe": ["navy", "charcoal", "dark_denim", "black", "olive"]
+    },
+    "footwear": {
+      "garments": ["sneakers", "casual_shoes", "sandals"],
+      "rule": "White, black, brown, and navy are universal. Match belt to shoes if wearing a belt.",
+      "universal_safe": ["white", "black", "brown", "navy", "grey"]
+    }
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "extraction_batch": "b7-indian-climate-fabrics",
+  "extraction_date": "2026-04-02",
+  "sources": [
+    {
+      "id": "blnkstore",
+      "name": "BLNK Store - Best Fabrics for Indian Weather",
+      "url": "https://blnkstore.in/blogs/style-files/best-fabrics-for-indian-weather",
+      "status": "extracted_via_search",
+      "focus": "Fabrics for Indian weather with science"
+    },
+    {
+      "id": "lmstreet",
+      "name": "LM Street - Fashion Tips for Summer Men's Edition",
+      "url": "https://www.lmstreet.com/fashion-tips-for-summer-mens-edition/",
+      "status": "extracted_via_search",
+      "focus": "Hot & humid dressing, AC transition"
+    },
+    {
+      "id": "thebearhouse",
+      "name": "The Bear House - Summer Outfits for Men",
+      "url": "https://thebearhouse.com/blogs/blog/summer-outfits-for-men",
+      "status": "extracted_via_search",
+      "focus": "Indian summer style, fabric choices"
+    },
+    {
+      "id": "entimessi",
+      "name": "Entimessi - Monsoon Outfit Ideas India",
+      "url": "https://entimessi.com/blogs/entimessi-magazine/monsoon-outfit-ideas-india",
+      "status": "extracted_via_search",
+      "focus": "Monsoon dressing, quick-dry fabrics"
+    },
+    {
+      "id": "indiaobservers",
+      "name": "India Observers - Office Wear for Indian Summers 2025",
+      "url": "https://indiaobservers.com/office-wear-for-indian-summers-2025/",
+      "status": "extracted_via_search",
+      "focus": "AC-to-outdoor transition dressing"
+    },
+    {
+      "id": "mansworldindia",
+      "name": "Man's World India - Indian Summer Officewear Survival Guide",
+      "url": "https://www.mansworldindia.com/fashion/the-indian-summer-officewear-survival-guide",
+      "status": "extracted_via_search",
+      "focus": "Indian summer office solutions"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "indian_season_type",
+      "description": "The distinct Indian climate seasons that drive menswear fabric and style choices, accounting for regional variation between north and south India",
+      "style_track": ["casual", "smart_casual", "business_casual", "formal"],
+      "values": [
+        {
+          "value": "peak_summer",
+          "definition": "Intense dry heat period (March-June) with temperatures 38-48C across most of India; demands maximum breathability, ultralight fabrics, light colors that reflect sunlight, and minimal layering",
+          "sources": ["BLNK Store", "LM Street", "The Bear House", "India Observers", "Man's World India"]
+        },
+        {
+          "value": "monsoon",
+          "definition": "Rainy season (June-September) bringing high humidity and frequent downpours; demands quick-dry fabrics, dark colors to hide splashes, waterproof outerwear, and avoidance of fabrics that cling when wet or take long to dry",
+          "sources": ["Entimessi", "BLNK Store", "The Hub", "Kingdom of White", "Global Republic"]
+        },
+        {
+          "value": "post_monsoon",
+          "definition": "Transitional autumn period (October-November) with receding humidity and moderating temperatures; allows transitional layering with light jackets, full sleeves, and muted earthy tones",
+          "sources": ["Nihal Fashions", "Hatkay", "Lotus Boutique"]
+        },
+        {
+          "value": "winter_north",
+          "definition": "Cold winter in northern India (December-February) with temperatures dropping to 2-10C in Delhi, Punjab, Rajasthan; demands heavy knits, wool, pashmina shawls, layered outfits, and structured outerwear like wool coats and puffer jackets",
+          "sources": ["Nihal Fashions", "Hatkay", "Lotus Boutique"]
+        },
+        {
+          "value": "winter_south",
+          "definition": "Mild winter in southern India (December-February) with temperatures 18-28C; lighter fabrics still appropriate with optional light layering; cotton and linen remain viable year-round in Kerala, Tamil Nadu, Karnataka",
+          "sources": ["Nihal Fashions", "Hatkay"]
+        },
+        {
+          "value": "spring",
+          "definition": "Brief pleasant period (February-March) with mild temperatures before peak summer sets in; allows breathable cotton kurta-pajamas and light casual wear without heavy layering concerns",
+          "sources": ["Nihal Fashions", "Mwish Store"]
+        }
+      ]
+    },
+    {
+      "name": "indian_climate_fabric_preference",
+      "description": "Fabric types best suited for each Indian season, mapped by their climate-responsive properties including breathability, moisture management, drying speed, and thermal regulation",
+      "style_track": ["casual", "smart_casual", "business_casual"],
+      "values": [
+        {
+          "value": "cotton",
+          "definition": "Most preferred fabric for Indian summers; super absorbent, breathable, gentle on skin; pulls sweat away from body; handloom cotton has superior breathability due to unique texture enhancing airflow. Suitable for peak summer and monsoon (tightly woven varieties). GSM range 120-200 for summer shirts",
+          "sources": ["BLNK Store", "The Bear House", "India Observers", "Hatkay"]
+        },
+        {
+          "value": "linen",
+          "definition": "MVP of Indian summer dressing; extremely lightweight and breathable with hollow-core fibers exceptional at wicking and drying. Natural flax fiber that circulates air keeping body cool. Charming crumple adds casual elegance. Best for peak summer; debated for monsoon as some sources warn it shrinks in water while others praise its moisture-wicking",
+          "sources": ["BLNK Store", "Man's World India", "India Observers", "LM Street"]
+        },
+        {
+          "value": "khadi",
+          "definition": "India's iconic handspun and handwoven fabric; lightweight with maximum airflow through characteristic gaps between fibers from handloom process. Adapts to weather - stays cool in summer, warm in winter making it year-round essential. Mesh-like texture lets air pass through, comfortable during monsoons. Excellent moisture absorption and quick-drying despite being handmade",
+          "sources": ["BLNK Store", "Hatkay", "Nihal Fashions"]
+        },
+        {
+          "value": "bamboo",
+          "definition": "Gaining popularity for Indian climate; softer than cotton, breathable with built-in odor resistance and natural UV protection. Temperature regulating - cool in summer, warm in winter. Naturally hypoallergenic and excellent moisture-wicking. Best for activewear and casual summer clothing. Biodegradable and wrinkle-resistant",
+          "sources": ["BLNK Store", "Underrated Club"]
+        },
+        {
+          "value": "cotton_linen_blend",
+          "definition": "Superior blend for Indian office heat combining linen's exceptional wicking with cotton's softness; reduces linen's tendency to wrinkle badly while maintaining breathability. Adds a touch of polish appropriate for office environments. Ideal for AC-to-outdoor transition scenarios",
+          "sources": ["Man's World India", "India Observers"]
+        },
+        {
+          "value": "moisture_wicking_synthetic",
+          "definition": "Performance polyester and nylon blends designed to wick moisture away and dry quickly; particularly beneficial during monsoon season when natural fibers may stay damp. Cotton-polyester blends offer a practical middle ground. Best for athleisure monsoon wear and active commuting",
+          "sources": ["Entimessi", "Hatkay", "Global Republic", "Nobero"]
+        },
+        {
+          "value": "quick_dry_blend",
+          "definition": "Fabrics specifically engineered for rapid drying during monsoon season; includes polyester-cotton blends, nylon blends, and performance knits. Essential for monsoon commuting and travel. Should be lightweight, breathable, and wrinkle-resistant",
+          "sources": ["Entimessi", "Nobero", "American Eagle India"]
+        },
+        {
+          "value": "lyocell_tencel",
+          "definition": "Modern eco-friendly fabric from wood pulp (eucalyptus); wicks moisture 40% faster than regular cotton with naturally cool hand feel. Non-transparent despite being lightweight, exceptionally soft and cooling. Micro-vent channel technology emerging for 2025. Excellent for Indian summer office and casual wear",
+          "sources": ["BLNK Store", "India Observers", "Earthy Route"]
+        },
+        {
+          "value": "hemp",
+          "definition": "Strong, sustainable, and as breathable as linen; growing global fashion trend in 2025. Suitable for Indian summer casual and office wear. Natural fiber with excellent durability and environmental credentials",
+          "sources": ["BLNK Store", "Man's World India"]
+        },
+        {
+          "value": "seersucker",
+          "definition": "Puckered texture keeps fabric off skin, creating natural air circulation channels. Excellent for summer blazers and office wear in Indian climate. Adds visual depth and texture without weight",
+          "sources": ["Man's World India", "India Observers"]
+        },
+        {
+          "value": "hopsack",
+          "definition": "Open-weave fabric ideal for summer blazers; lightweight and breathable enough for Indian heat. Adds texture and visual interest suitable for business casual office environments",
+          "sources": ["Man's World India", "India Observers"]
+        },
+        {
+          "value": "poplin",
+          "definition": "Cotton-made fabric with slightly denser weave than standard cotton; medium-weight with excellent drape and smoother feel. Super soft with above-average airiness and breathability. Good for casual and office wear in Indian summers",
+          "sources": ["India Observers"]
+        }
+      ]
+    },
+    {
+      "name": "ac_outdoor_transition_strategy",
+      "description": "Layering and fabric strategies for managing the temperature shock between air-conditioned Indian offices (often set to 18-22C) and outdoor heat (35-45C) during summer commutes",
+      "style_track": ["smart_casual", "business_casual"],
+      "values": [
+        {
+          "value": "breathable_base_plus_light_midlayer",
+          "definition": "Core strategy: start with a breathable natural-fiber base layer (cotton or linen shirt/tee), add a light mid-layer (gilet, unstructured blazer, or light cardigan) for AC-chilled office, shed the top layer when stepping outdoors. Base layer handles heat; mid-layer handles cold AC",
+          "sources": ["Man's World India", "India Observers", "LM Street"]
+        },
+        {
+          "value": "linen_shirt_over_tank",
+          "definition": "Layer a light-hued linen shirt over a simple tank top or tee; the linen provides warmth in AC environments while remaining breathable. Remove the outer linen layer when transitioning to hot outdoor areas. Timeless and practical approach",
+          "sources": ["Man's World India", "LM Street"]
+        },
+        {
+          "value": "unstructured_blazer_layer",
+          "definition": "Lightweight unstructured jacket with minimal lining in linen, cotton, hopsack, seersucker, or tropical wool; provides office formality and AC warmth without overheating. Relaxed fit allows air circulation. Can be draped over arm during outdoor commute",
+          "sources": ["Man's World India", "India Observers"]
+        },
+        {
+          "value": "packable_pocket_garment",
+          "definition": "Garments that fold into their own pockets for easy carry during indoor-outdoor transitions. Essential for fluctuating temperature environments. Can be a light windbreaker, packable vest, or compressible jacket that takes minimal space when not needed",
+          "sources": ["India Observers"]
+        },
+        {
+          "value": "rayon_gilet_layer",
+          "definition": "Rayon-based gilets or vests as transitional layers for freezing AC offices or cooler evenings; lightweight enough to not add bulk, provides targeted core warmth without full-sleeve coverage",
+          "sources": ["India Observers"]
+        },
+        {
+          "value": "relaxed_fit_airflow_strategy",
+          "definition": "Choose boxier fits with room at sleeves and torso for maximum air circulation between skin and fabric. Cuban collars and band collars offer extra ventilation. Pleated tapered trousers with relaxed upper leg replace tight fits. Cropped or ankle-length styles allow skin to breathe. The more air between skin and shirt, the cooler you feel",
+          "sources": ["Man's World India"]
+        },
+        {
+          "value": "texture_over_layers",
+          "definition": "When layering is impractical in extreme heat, add visual interest through fabric texture rather than additional garments. Linen, seersucker, hopsack, and matte cottons add depth without weight. Subtle pinstripes, micro-checks, or soft florals do what layering usually does for visual interest",
+          "sources": ["Man's World India"]
+        },
+        {
+          "value": "minimal_accessories",
+          "definition": "Reduce accessory weight and coverage to manage heat; avoid heavy watches, layered chains, thick belts that add unnecessary warmth. Opt for woven belts, textured loafers, minimalist watches. Light suede or canvas loafers replace heavier leather shoes",
+          "sources": ["Man's World India"]
+        }
+      ]
+    },
+    {
+      "name": "monsoon_dressing_rules",
+      "description": "Specific rules and guidelines for dressing during India's monsoon season (June-September) addressing rain, humidity, puddles, and unpredictable weather shifts",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "prefer_dark_colors",
+          "definition": "Dark-colored fabrics hide rain splashes, water marks, and mud stains better than light colors. They don't become transparent when wet. Navy, charcoal, olive, dark grey, and black are preferred monsoon colors. Reduces visible damage from unexpected downpours",
+          "sources": ["Entimessi", "The Hub", "Urbano Fashion"]
+        },
+        {
+          "value": "quick_dry_fabric_priority",
+          "definition": "Prioritize fabrics that dry rapidly after getting wet: nylon, polyester, poly-cotton blends, and performance knits. Avoid fabrics that stay damp and heavy. Quick-dry is the single most important monsoon fabric property after breathability",
+          "sources": ["Entimessi", "Global Republic", "Nobero", "XYXX Apparels"]
+        },
+        {
+          "value": "avoid_heavy_denim",
+          "definition": "Heavy denim becomes cumbersome when wet, takes very long to dry, and becomes uncomfortable with chafing. Substitute with lightweight denim or other breathable quick-dry pants. If denim is desired, choose lighter washes and thinner weights",
+          "sources": ["The Hub", "Kingdom of White", "American Eagle India"]
+        },
+        {
+          "value": "linen_caution",
+          "definition": "Linen is debated for monsoon: praised by some for breathability and moisture-wicking, but warned against by others as it tends to shrink in water, wrinkles excessively when wet, and can look disheveled. If worn, choose pre-washed or blended linen",
+          "sources": ["Entimessi", "Kingdom of White", "BLNK Store"]
+        },
+        {
+          "value": "waterproof_outer_layer",
+          "definition": "A lightweight waterproof windbreaker or rain jacket is essential monsoon outerwear. Should be breathable to prevent internal moisture buildup. Best if packable for carrying during dry spells. Shields from sudden showers without feeling stuffy",
+          "sources": ["Entimessi", "Nobero", "American Eagle India"]
+        },
+        {
+          "value": "waterproof_footwear",
+          "definition": "Replace leather shoes with waterproof or water-resistant alternatives: rubber loafers, Crocs, waterproof sneakers with good rubber grip soles, sandals, or floaters. Avoid leather shoes, canvas shoes, and suede which get ruined by water. Anti-slip soles essential for wet surfaces",
+          "sources": ["Entimessi", "The Hub", "Urbano Fashion", "Nobero"]
+        },
+        {
+          "value": "lightweight_layering",
+          "definition": "Monsoon layering uses light layers for flexibility: moisture-wicking base layer to keep sweat away, lightweight breathable shirt, and waterproof outer layer. Layers can be added or removed as rain starts and stops throughout the day",
+          "sources": ["The Hub", "Kingdom of White", "Entimessi"]
+        },
+        {
+          "value": "avoid_white_fabrics",
+          "definition": "White fabrics become transparent when wet from rain, show dirt and mud stains prominently, and require frequent washing during monsoon. Cream and off-white share similar problems. Reserve white garments for dry seasons",
+          "sources": ["The Hub", "Entimessi", "Vestirio"]
+        },
+        {
+          "value": "wrinkle_resistant_preference",
+          "definition": "Humidity causes excessive wrinkling in many natural fabrics during monsoon. Prefer wrinkle-resistant fabrics or blends that maintain appearance despite moisture exposure. Performance blends and synthetic-natural mixes handle monsoon humidity better",
+          "sources": ["Entimessi", "Urbano Fashion"]
+        },
+        {
+          "value": "waterproof_bags",
+          "definition": "Replace leather bags with nylon or PVC backpacks and totes during monsoon. Protects electronics and documents from sudden rain. Waterproof messenger bags or cross-body bags with sealed zippers are practical choices",
+          "sources": ["Entimessi", "Nobero"]
+        }
+      ]
+    },
+    {
+      "name": "casual_fabric_type",
+      "description": "Specific fabric types used in casual menswear, categorized by construction method, fiber content, and suitability for Indian climate conditions",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "jersey_cotton",
+          "definition": "Single-knit fabric from one continuous set of yarns forming interlocking loops; smooth on outside, slightly open texture inside for breathability without compromising structure. Lightweight and flexible, making it ideal for everyday casual T-shirts in Indian heat. Soft hand feel with good drape",
+          "sources": ["The Bear House", "Rene Bassett", "Sanvt"]
+        },
+        {
+          "value": "pique_cotton",
+          "definition": "Raised weave fabric with waffle, honeycomb, or corded texture that provides depth and visual richness. Open knit structure allows superior airflow, making it one of the most breathable premium cotton fabrics for Indian hot and humid conditions. Typical weight 220-260 GSM. Standard fabric for quality polo shirts",
+          "sources": ["The Bear House", "Tapered Menswear", "TENHEM", "Bairons Fashion"]
+        },
+        {
+          "value": "french_terry",
+          "definition": "Cotton knit with characteristic loops on inside and smooth jersey-like outside. Super soft, breathable, flexible, absorbent, and durable. Slightly heavier than jersey with internal loops that capture moisture and trap air. Can handle serious GSM (up to 480gsm for premium). Best for joggers, sweatshirts, and loungewear. The terry cloth texture is practical for monsoon as it dries quickly",
+          "sources": ["Rene Bassett", "The Classic T-Shirt", "Underrated Club", "Entimessi"]
+        },
+        {
+          "value": "fleece",
+          "definition": "Soft, insulating knit fabric best suited for Indian winter (north) and post-monsoon chill. Not appropriate for summer or monsoon due to heat retention. Used in hoodies, jackets, and layering pieces for cold weather. Synthetic fleece dries faster than natural alternatives",
+          "sources": ["Lotus Boutique", "Nihal Fashions"]
+        },
+        {
+          "value": "performance_blend",
+          "definition": "Engineered poly-cotton or poly-nylon blends with moisture-wicking technology; designed for active wear and monsoon conditions. Combines natural fiber comfort with synthetic quick-dry properties. Used in athleisure polo shirts, joggers, and activewear. Ideal for humid Indian conditions where pure cotton stays damp",
+          "sources": ["Entimessi", "Nobero", "Global Republic"]
+        },
+        {
+          "value": "bamboo",
+          "definition": "Softer than cotton with natural antimicrobial, UV-protective, and temperature-regulating properties. Excellent moisture-wicking that keeps skin dry in Indian humidity. Hypoallergenic and wrinkle-resistant. Used in casual T-shirts, base layers, joggers, and undergarments. Biodegradable and sustainable",
+          "sources": ["BLNK Store", "Underrated Club", "Ettitude"]
+        },
+        {
+          "value": "modal",
+          "definition": "Semi-synthetic fabric from beech tree pulp with exceptional softness and tighter weave than bamboo. More absorbent than cotton, making it good for hot and humid Indian days. Greater consistency, durability, and performance over time compared to bamboo. Popular for undergarments, base layers, and body-contact casual wear",
+          "sources": ["Wear Numi", "Sivana Spirit"]
+        },
+        {
+          "value": "lyocell",
+          "definition": "Eco-friendly cellulose fabric from wood pulp (commonly eucalyptus, branded as Tencel). Wicks moisture 40% faster than regular cotton. Lightweight but non-transparent, exceptionally soft with silk-like feel and natural cooling effect. Produced via closed-loop sustainable process. Excellent for summer T-shirts and casual shirts in Indian heat. Works well blended with cotton",
+          "sources": ["BLNK Store", "Yardblox Fabrics", "India Observers", "Earthy Route"]
+        },
+        {
+          "value": "khadi",
+          "definition": "India's heritage handspun and handwoven fabric; characteristic irregular texture from manual techniques. Gaps between hand-woven fibers create natural airflow channels. Adapts to climate - cool in summer, warm in winter. Usually slightly thicker than machine-made fabrics but still highly breathable. Cultural significance adds style dimension beyond mere function",
+          "sources": ["BLNK Store", "Hatkay", "Nihal Fashions"]
+        },
+        {
+          "value": "chambray",
+          "definition": "Lightweight plain-weave cotton fabric resembling denim but much lighter and more breathable. Suitable for casual monsoon shirts as it handles moisture better than heavy denim. Provides structured casual look without weight penalty in Indian heat",
+          "sources": ["Entimessi", "BLNK Store"]
+        },
+        {
+          "value": "terry_cloth",
+          "definition": "Towel-like looped fabric used in casual shorts and loungewear; on-trend for monsoon season as it absorbs moisture and dries quickly. Relaxed aesthetic suited for casual outings during rain. Heavier than jersey but with superior moisture handling",
+          "sources": ["Entimessi"]
+        }
+      ]
+    },
+    {
+      "name": "casual_fabric_weight",
+      "description": "Weight classification of casual fabrics measured in GSM (grams per square meter), affecting comfort, drape, breathability, and seasonal appropriateness in Indian climate",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "ultralight",
+          "definition": "Under 150 GSM; fabrics like voile, lightweight linen, and sheer cotton. Maximum breathability for peak Indian summer (40C+). May sacrifice opacity and structure. Best for layered looks where transparency is managed. Ideal for base layers and undershirts in extreme heat",
+          "sources": ["BLNK Store", "Earthy Route", "Sanvt"]
+        },
+        {
+          "value": "light",
+          "definition": "150-200 GSM; standard range for summer T-shirts, casual shirts, and polos in Indian climate. Includes jersey cotton tees, lightweight bamboo, lyocell, and modal garments. Balances breathability with adequate coverage and structure. The sweet spot for everyday Indian summer casual wear",
+          "sources": ["BLNK Store", "The Bear House", "Sanvt", "Underrated Club"]
+        },
+        {
+          "value": "medium",
+          "definition": "200-300 GSM; includes pique cotton polos (220-260 GSM), standard french terry, cotton poplin, and structured casual shirts. Provides more body and texture while remaining manageable in Indian heat. Suitable for smart casual office wear and AC environments. Works for monsoon season where slightly heavier fabrics resist rain better",
+          "sources": ["The Bear House", "TENHEM", "Rene Bassett", "India Observers"]
+        },
+        {
+          "value": "heavy",
+          "definition": "Over 300 GSM; includes premium french terry (400-480 GSM), fleece, heavyweight cotton, and dense knits. Too warm for Indian summer outdoor wear but appropriate for north Indian winter, post-monsoon evenings, and heavily air-conditioned environments. Used in joggers, hoodies, and sweatshirts for layering",
+          "sources": ["Rene Bassett", "The Classic T-Shirt", "Lotus Boutique"]
+        }
+      ]
+    },
+    {
+      "name": "casual_fabric_breathability",
+      "description": "Breathability rating of casual fabrics specifically mapped to Indian climate needs, where high humidity demands both air permeability and moisture management to prevent discomfort",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "high",
+          "definition": "Maximum air circulation and moisture management; essential for Indian peak summer and monsoon humidity. Includes: linen (hollow-core fibers exceptional at wicking), khadi (hand-woven gaps create natural airflow), bamboo (temperature-regulating with natural wicking), lyocell/Tencel (wicks 40% faster than cotton), lightweight cotton, and seersucker (puckered texture lifts fabric off skin). These fabrics actively cool the body through evaporative mechanisms",
+          "sources": ["BLNK Store", "Man's World India", "India Observers", "Earthy Route"]
+        },
+        {
+          "value": "moderate",
+          "definition": "Good air circulation suitable for Indian transitional seasons, AC environments, and moderate humidity. Includes: pique cotton (open knit aids airflow but denser than plain weave), french terry (loops add insulation reducing breathability vs jersey), modal (tight weave is absorbent but less airy), cotton-polyester blends (synthetic component slightly reduces airflow), poplin (denser weave than standard cotton). Adequate for office wear where AC moderates temperature",
+          "sources": ["The Bear House", "TENHEM", "Rene Bassett", "India Observers"]
+        },
+        {
+          "value": "low",
+          "definition": "Limited air circulation; inappropriate for Indian summer outdoor wear. Includes: polyester (traps heat, retains moisture), heavy fleece, dense synthetics, heavy denim, and unlined synthetic jackets. These fabrics cause discomfort in Indian heat and humidity by trapping body heat and moisture against skin. Only appropriate for north Indian deep winter or specific rain-protection layers worn briefly",
+          "sources": ["BLNK Store", "Damensch", "Entimessi", "India Observers"]
+        }
+      ]
+    },
+    {
+      "name": "indian_summer_color_strategy",
+      "description": "Color selection principles for Indian menswear driven by heat management, sweat visibility, and seasonal appropriateness",
+      "style_track": ["casual", "smart_casual", "business_casual"],
+      "values": [
+        {
+          "value": "light_reflective_summer",
+          "definition": "White, beige, pastels, and earthy tones that reflect sunlight and reduce heat absorption for peak summer wear. Keeps the wearer visually and physically cooler. Includes off-white, cream, sky blue, mint, lavender, sand, and stone tones",
+          "sources": ["BLNK Store", "The Bear House", "Hatkay", "LM Street"]
+        },
+        {
+          "value": "dark_monsoon_practical",
+          "definition": "Navy, charcoal, olive, dark grey, and black preferred during monsoon to hide water splashes, mud stains, and wet-fabric transparency. Practical choice that maintains appearance despite rain exposure throughout the day",
+          "sources": ["Entimessi", "The Hub", "Urbano Fashion"]
+        },
+        {
+          "value": "muted_transitional",
+          "definition": "Muted earthy tones for post-monsoon and autumn transitional dressing; olive, burgundy, rust, tan, and forest green. Signals seasonal shift while working with layered outfits appropriate for variable temperatures",
+          "sources": ["Nihal Fashions", "Lotus Boutique"]
+        },
+        {
+          "value": "rich_winter",
+          "definition": "Deeper, richer tones for north Indian winter including deep maroon, navy, forest green, charcoal, and burgundy. Pairs with heavier fabrics like wool, velvet, and heavy knits that naturally come in saturated colors",
+          "sources": ["Nihal Fashions", "Hatkay"]
+        }
+      ]
+    },
+    {
+      "name": "indian_office_summer_fit",
+      "description": "Fit and silhouette guidelines for men's office wear optimized for Indian summer heat while maintaining professional appearance",
+      "style_track": ["smart_casual", "business_casual"],
+      "values": [
+        {
+          "value": "relaxed_boxy_shirt",
+          "definition": "Boxier shirt fits with room at sleeves and torso maximize air circulation between skin and fabric. The more air gap, the cooler the wearer feels. Cuban collars and band collars offer extra ventilation and style without losing office formality",
+          "sources": ["Man's World India"]
+        },
+        {
+          "value": "pleated_tapered_trouser",
+          "definition": "Pleated trousers with relaxed upper leg replace tight cigarette pants for Indian summer office wear. Taper provides polish while pleats allow air circulation. Cropped or ankle-length styles expose skin for additional breathability",
+          "sources": ["Man's World India"]
+        },
+        {
+          "value": "unstructured_minimal_blazer",
+          "definition": "Unstructured jackets with minimal or no lining in lightweight fabrics (linen, hopsack, tropical wool, seersucker) for office formality without overheating. Relaxed construction reduces trapped heat compared to fully structured blazers",
+          "sources": ["Man's World India", "India Observers"]
+        },
+        {
+          "value": "oversized_casual_tee",
+          "definition": "Oversized T-shirts and wide silhouettes allow maximum air circulation for casual and relaxed office environments. Boxy cuts in breathable fabrics are the standard Indian summer casual uniform",
+          "sources": ["BLNK Store", "The Bear House", "Entimessi"]
+        }
+      ]
+    },
+    {
+      "name": "monsoon_footwear_type",
+      "description": "Footwear categories appropriate for Indian monsoon season prioritizing water resistance, grip, and quick drying",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "waterproof_sneakers",
+          "definition": "Sneakers with waterproof uppers and good rubber grip soles; sporty and functional for daily monsoon commuting. Anti-slip soles essential for wet surfaces. Versatile enough for casual office environments",
+          "sources": ["Entimessi", "The Hub", "Nobero"]
+        },
+        {
+          "value": "rubber_loafers",
+          "definition": "Rubber or synthetic loafers that handle water exposure without damage; more polished look than sandals while remaining monsoon-practical. Easy to clean and dry quickly",
+          "sources": ["Entimessi", "Urbano Fashion"]
+        },
+        {
+          "value": "sport_sandals_floaters",
+          "definition": "Open sandals and floaters that allow water to drain freely; most practical for heavy rain. Include branded sport sandals and flip-flops for casual outings. No moisture trapping or drying concerns",
+          "sources": ["The Hub", "Entimessi", "Nobero"]
+        },
+        {
+          "value": "gumboots_tall_boots",
+          "definition": "Tall rubber boots or gumboots for extreme monsoon conditions with deep waterlogging; keep feet completely dry and clean. Practical but limited to outdoor/commute use rather than office wear",
+          "sources": ["The Hub"]
+        },
+        {
+          "value": "avoid_leather_canvas",
+          "definition": "Leather shoes, canvas sneakers, and suede footwear should be avoided during monsoon as water damages the material permanently, causes odor, and leads to deterioration. Save these for dry seasons",
+          "sources": ["The Hub", "Entimessi", "Nobero"]
+        }
+      ]
+    }
+  ]
+}

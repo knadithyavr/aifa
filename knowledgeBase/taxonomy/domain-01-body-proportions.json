@@ -1,0 +1,1032 @@
+{
+  "domain": "body_proportions_and_optical_correction",
+  "version": "1.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 3: Proportion",
+    "FashionBeans - How to Dress for Your Body Shape",
+    "The Modest Man - How to Dress for Your Body Type",
+    "The VOU - Men's Body Shapes ALL 7"
+  ],
+  "parameters": [
+    {
+      "name": "body_shape",
+      "description": "Primary geometric classification of male body silhouette based on relative proportions of shoulders, chest, waist, and hips",
+      "values": [
+        {
+          "value": "trapezoid",
+          "definition": "Broad shoulders and chest with gentle taper through waist, hips, and legs. Well-proportioned. The 'ideal' or 'Vitruvian' male shape — most clothing is designed for this.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "inverted_triangle",
+          "definition": "Chest and shoulders significantly broader than waist and hips. Narrow lower body relative to upper. Top-heavy V-shaped torso. Chest measures 8+ inches more than waist.",
+          "build_mapping": "Corresponds to D01 build=athletic",
+          "sources": [
+            "FashionBeans",
+            "The VOU",
+            "Flusser (athletic build)"
+          ]
+        },
+        {
+          "value": "rectangle",
+          "definition": "Shoulders roughly same width as waist and hips. Minimal natural taper. Usually lean/slim. Straight up-and-down silhouette.",
+          "build_mapping": "Corresponds to D01 build=slim",
+          "sources": [
+            "FashionBeans",
+            "The VOU",
+            "Flusser (short/slim man)"
+          ]
+        },
+        {
+          "value": "triangle",
+          "definition": "Larger around the waist and hips than shoulders. Sloping shoulders. Weight carried in midsection. Narrower up top, wider below.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "oval",
+          "definition": "Round at the centre of the body. Prominent middle. Shoulders and lower legs appear slimmer by comparison. Weight concentrated in torso/belly.",
+          "build_mapping": "Corresponds to D01 build=heavy",
+          "sources": [
+            "FashionBeans",
+            "The VOU",
+            "Flusser (short/heavy man, prominent middle)"
+          ]
+        },
+        {
+          "value": "rhomboid",
+          "definition": "Well-developed midsection with average shoulders. Similar to oval but with more defined shoulders. Common in middle-aged men.",
+          "sources": [
+            "The VOU"
+          ]
+        },
+        {
+          "value": "trapezium",
+          "definition": "Narrow shoulders that slope down, with wider hips. Pear-shaped. Less common in men.",
+          "sources": [
+            "The VOU"
+          ]
+        }
+      ],
+      "notes": "Flusser does not use geometric shape names. He categorizes by height + build combinations (short/heavy, short/slim, tall, athletic). The geometric taxonomy from FashionBeans and The VOU is more systematic for a recommendation engine. Both systems map to each other.",
+      "build_shape_mapping": {
+        "description": "Explicit mapping between build (mass) and body_shape (geometry). They capture different axes.",
+        "mappings": [
+          {
+            "build": "athletic",
+            "shape": "inverted_triangle",
+            "note": "Both describe V-shaped torso with broad shoulders, narrow waist"
+          },
+          {
+            "build": "heavy",
+            "shape": "oval",
+            "note": "Both describe prominent midsection, weight concentrated in torso"
+          },
+          {
+            "build": "slim",
+            "shape": "rectangle",
+            "note": "Both describe lean, straight frame with minimal taper"
+          },
+          {
+            "build": "stocky",
+            "shape": "rhomboid",
+            "note": "Both describe broad, solid frame with developed midsection"
+          }
+        ]
+      },
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "height",
+      "description": "Overall vertical stature of the man",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Below 5'7\" (170cm). Legs proportionally short relative to torso. Primary goal: create illusion of greater height.",
+          "sources": [
+            "Flusser",
+            "The Modest Man",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "5'7\" to 6'0\" (170-183cm). Standard proportions. Most clothing designed for this range.",
+          "sources": [
+            "FashionBeans",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "tall",
+          "definition": "Above 6'0\" (183cm). Needs full-proportioned clothing. Goal: produce more horizontal lines to counterbalance vertical dominance.",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The Modest Man"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "build",
+      "description": "Overall mass and musculature of the frame",
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Lean, narrow frame. Closely fitted clothes accentuate narrowness. Should dress 'large' — add visual breadth and structure.",
+          "sources": [
+            "Flusser",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Moderate frame. Neither notably thin nor heavy. Standard fit clothing works well.",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "Chest measures 8+ inches more than waist. Exaggerated V-shaped torso. Broad shoulders and chest, narrow waist. Goal: balance upper and lower halves.",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "stocky",
+          "definition": "Broad and solid but not necessarily overweight. Short and wide frame. Compact.",
+          "sources": [
+            "FashionBeans",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "heavy",
+          "definition": "Prominent middle, significant girth. Should dress 'large' with straight-hanging lines. Close-fitting clothes reveal more than they conceal.",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "torso_vs_leg_ratio",
+      "description": "Relative length of torso compared to legs. Flusser notes most short men are short because their legs are proportionally short relative to their torso.",
+      "values": [
+        {
+          "value": "long_torso",
+          "definition": "Torso is proportionally long relative to legs. Common in shorter men. Jacket length must be kept short to create illusion of longer legs.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "balanced",
+          "definition": "Torso and legs are proportionally balanced. Standard clothing proportions work.",
+          "sources": [
+            "FashionBeans",
+            "The Modest Man"
+          ]
+        },
+        {
+          "value": "long_legs",
+          "definition": "Legs are proportionally long relative to torso. Common in tall men. Can wear longer jackets.",
+          "sources": [
+            "Flusser",
+            "The Modest Man"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoulder_width",
+      "description": "Width of the shoulders relative to the frame. Flusser: 'As its widest dimension, the shoulder sets the mood for the rest of the jacket.'",
+      "values": [
+        {
+          "value": "narrow",
+          "definition": "Shoulders narrower than hips or proportionally small. Requires building out with padding or structured jackets.",
+          "sources": [
+            "Flusser",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Shoulders proportional to the frame. Standard jacket shoulders work.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "broad",
+          "definition": "Shoulders significantly wider than waist. Dominant feature. Jacket shoulders should be soft and natural-looking to avoid exaggerating width.",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoulder_slope",
+      "description": "Angle of the shoulders from neck to arm",
+      "values": [
+        {
+          "value": "sloped",
+          "definition": "Shoulders angle downward noticeably. May need slight padding to square up. Flusser: unless extremely slope-shouldered, avoid built-up shoulders.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "natural",
+          "definition": "Standard slight downward slope. Natural-shoulder jacket works well (e.g., Brooks Brothers).",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "square",
+          "definition": "Shoulders form near-right angles. Avoid additional padding. 90-degree angles bracketing the head emphasize shortness.",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "face_shape",
+      "description": "Shape of the face — determines collar and neckwear choices. Flusser: 'Think of the face as a picture and the collar as its frame.'",
+      "values": [
+        {
+          "value": "small_delicate",
+          "definition": "Smaller face with fine features. Requires collar of restrained dimensions. Smaller-scale accessories.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Standard proportions. Standard collar widths and scales work.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "wide_broad",
+          "definition": "Broader, larger face. Wider head. Requires correspondingly larger collar. Jacket shoulders may need building up to offset wider head.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "thin_narrow",
+          "definition": "Narrow, elongated face. Narrower collar. Sloped, narrow shoulders harmonize with thinner face.",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "garment_implication": "Defines face-shape requirements. D04 collar_face_matching defines how collar styles achieve the needed visual effects. Wide face → needs widening collar (spread). Narrow face → needs narrowing collar (point).",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "neck",
+      "description": "Neck height/length and thickness — affects collar choices",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Short neck. Lower collar heights. Avoid high collars that crowd the neck.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Standard neck length. Standard collar heights work.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "long",
+          "definition": "Long neck. Can accommodate taller collars. More room for collar-tie interplay.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "thick",
+          "definition": "Thick, broad neck. Often accompanies athletic build. Vertical-pointing collars (tabs, straight points) help elongate.",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "arm_length",
+      "description": "Relative arm length — affects jacket sleeve and shirt cuff proportions",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Short arms relative to torso. Half inch of shirt cuff showing is sufficient.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Standard arm length. Jacket sleeve finishes at wrist bone.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "long",
+          "definition": "Long arms. 3/4 to 1 inch of shirt cuff should show below jacket for better proportion. (Flusser cites Gary Cooper as example.)",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "waist_definition",
+      "description": "How defined or prominent the waist/midsection is",
+      "values": [
+        {
+          "value": "defined",
+          "definition": "Clear waist taper. Can wear more fitted, waist-suppressed clothing.",
+          "sources": [
+            "Flusser",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "moderate",
+          "definition": "Some waist definition. Standard fit works.",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "undefined",
+          "definition": "Minimal waist indentation — straight from chest to hip. Rectangle body. Needs clothing that creates waist illusion.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "prominent",
+          "definition": "Midsection is widest point. Oval/triangle body. Needs straight-hanging clothes, trousers on natural waist. Close-fitting clothes 'create the look of a stuffed sausage' (Flusser).",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "chest_to_waist_drop",
+      "description": "Difference between chest and waist measurements. Key indicator for body shape classification.",
+      "values": [
+        {
+          "value": "minimal",
+          "definition": "Less than 4 inches difference. Rectangle or oval body. Straight silhouette.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "moderate",
+          "definition": "4-7 inches difference. Trapezoid body. Natural taper.",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "high",
+          "definition": "8+ inches difference. Athletic/inverted triangle. Flusser defines athletic as 'chest measures eight inches or more than waist.'",
+          "sources": [
+            "Flusser",
+            "FashionBeans",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "foot_size",
+      "description": "Size of feet relative to frame — affects trouser bottom width and shoe choices",
+      "values": [
+        {
+          "value": "small",
+          "definition": "Smaller feet relative to frame. Wide trouser bottoms make small feet appear even smaller. Need proportional shoe/trouser balance.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "average",
+          "definition": "Proportional to the frame. Standard trouser-to-shoe proportions work.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "large",
+          "definition": "Large feet relative to frame. Narrow trouser bottoms make large feet loom even larger. Heavier men need larger footwear to counterpoint volume above.",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "posture",
+      "description": "Natural standing posture — affects how jackets hang and sleeves fall",
+      "values": [
+        {
+          "value": "forward_lean",
+          "definition": "Carries arms or body forward. Sleeves may not lie smoothly — need rotation. Collar may stand away from neck.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "neutral",
+          "definition": "Standard upright posture. Clothing hangs as designed.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "upright",
+          "definition": "Very erect posture. May cause collar to sit differently. Stand naturally during fitting, 'not as if you had just graduated West Point' (Flusser).",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shoulder_vs_hip_ratio",
+      "description": "Relative width of shoulders to hips — primary determinant of body shape",
+      "values": [
+        {
+          "value": "shoulders_wider",
+          "definition": "Shoulders significantly wider than hips. V-shape or inverted triangle. Upper body dominant.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "balanced",
+          "definition": "Shoulders and hips roughly equal width. Rectangle or trapezoid.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        },
+        {
+          "value": "hips_wider",
+          "definition": "Hips wider than shoulders. Triangle or trapezium shape. Less common in men.",
+          "sources": [
+            "FashionBeans",
+            "The VOU"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "head_size",
+      "description": "Size of head relative to shoulders — affects jacket shoulder proportions",
+      "values": [
+        {
+          "value": "small",
+          "definition": "Smaller head. Overly wide shoulders will make head appear disproportionately small.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "proportional",
+          "definition": "Head proportional to frame. Standard shoulder width works.",
+          "sources": [
+            "Flusser"
+          ]
+        },
+        {
+          "value": "large",
+          "definition": "Wider/larger head. Too-narrow shoulders make head appear larger. May need slightly built-up shoulders to offset.",
+          "sources": [
+            "Flusser"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "facial_hair",
+      "description": "Type and length of facial hair — affects neckline choice, collar style, and overall outfit coordination. Facial hair acts as a visual frame around the lower face and neck area, influencing how collars and necklines interact with the face.",
+      "values": [
+        {
+          "value": "clean_shaven",
+          "definition": "No facial hair. Clean jawline is fully visible. Opens up neckline options — V-necks showcase the jawline well. Spread collars complement the clean look. Ties sit cleanly without beard interference.",
+          "style_implications": "V-necks and scoop necks show off clean jawline. Spread collars work well. No collar interference — all collar types viable. Clean look pairs well with minimalist, polished outfits.",
+          "sources": [
+            "Baldmate - Dress to Impress: Clothing Tips for Bearded Men",
+            "Bossman - Beard Savvy Attire",
+            "EPIC FITS - V Neck vs Crew Neck for Big Men"
+          ]
+        },
+        {
+          "value": "stubble",
+          "definition": "Designer stubble or 5 o'clock shadow, maintained at 2-5mm. Intentional, groomed short facial hair. Adds texture and ruggedness to the face without bulk.",
+          "style_implications": "Henley necklines complement the rugged-yet-refined aesthetic. Works with all collar types. Adds visual interest near the neckline without competing with collar details. Pairs well with smart casual looks.",
+          "sources": [
+            "Baldmate - Dress to Impress: Clothing Tips for Bearded Men",
+            "Manhattan Barbershop NYC - Beard Styles Guide"
+          ]
+        },
+        {
+          "value": "short_beard",
+          "definition": "Neatly trimmed beard kept at 5-15mm. Well-defined borders along cheeks and neck. The corporate or professional beard style.",
+          "style_implications": "Oxford button-down collars frame the beard nicely. Crew necks work well to frame without competing. Structured outfits (blazers, sport coats) pair well. Cardigan V-necks create good framing.",
+          "sources": [
+            "Baldmate - Dress to Impress: Clothing Tips for Bearded Men",
+            "Bossman - Beard Savvy Attire",
+            "Manhattan Barbershop NYC - Beard Styles Guide"
+          ]
+        },
+        {
+          "value": "full_beard",
+          "definition": "Substantial beard growth covering cheeks, chin, and connecting to sideburns. Requires defined neckline and shaped cheek lines. Creates significant visual mass around the lower face.",
+          "style_implications": "Crew necks frame the beard well, creating a clean border. V-necks can expose too much skin combined with beard mass. Camp collars work well with the open relaxed shape. Mandarin collars get crowded by the beard. Oxford shirts are staple items — button collars keep collar standing and frame beard. Sport coats offset dressy look without needing a tie (beards and ties are a nuisance together).",
+          "sources": [
+            "Baldmate - Dress to Impress: Clothing Tips for Bearded Men",
+            "Bossman - Beard Savvy Attire",
+            "Beardbrand - Best Beard Styles"
+          ]
+        },
+        {
+          "value": "long_beard",
+          "definition": "Extended beard growth past the chin by several inches. A bold style statement that requires wardrobe coordination. Creates the most visual mass around the face and upper chest area.",
+          "style_implications": "Simpler necklines prevent visual clutter — crew necks are safe. Avoid mandarin and high collars that compete with the beard. Structured outerwear (blazers, cardigans) helps frame the beard. Avoid busy patterns near the neckline. Layering adds dimension without clashing.",
+          "sources": [
+            "Baldmate - Dress to Impress: Clothing Tips for Bearded Men",
+            "Bossman - Beard Savvy Attire",
+            "Beardbrand - Best Beard Styles"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "hair_style",
+      "description": "Hair length and style on the head — affects hat choice, neckline framing, overall outfit proportions, and visual weight distribution. Hair acts as the topmost frame of the face and influences how balanced the overall silhouette appears.",
+      "values": [
+        {
+          "value": "buzz_short",
+          "definition": "Very short clipper-cut hair (buzz cut, crew cut, fade, or similar). Clean and minimal. Military-inspired simplicity. Exposes the full shape of the head.",
+          "style_implications": "V-necks and Henleys create a balanced frame for the exposed head shape. Fitted, intentional clothing pairs well with the clean simplicity. All hat styles work but structured hats (fedora, newsboy) add formality. Baseball caps keep it casual. Adds opportunity for bold accessories (watches, glasses) since hair does not compete for attention.",
+          "sources": [
+            "Perk Clothing - Men's Fashion and Hair: How to Match Your Haircut with Your Style",
+            "Manhattan Barbershop NYC - Buzz Cut Guide",
+            "Freebird - Fashion for Bald Men"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Standard length hair with styling options (side part, textured crop, pompadour, quiff). The most versatile hair length for pairing with outfits.",
+          "style_implications": "Most versatile for outfit coordination — works with all necklines and collar types. Pompadour pairs with leather jackets and rock-inspired looks. Side part pairs with tailored suits and smart casual. Textured styles work with streetwear and casual. Hat choice is open but avoid hats that crush styled hair.",
+          "sources": [
+            "Perk Clothing - Men's Fashion and Hair: How to Match Your Haircut with Your Style",
+            "Real Men Real Style - 10 Most Attractive Men's Hairstyles"
+          ]
+        },
+        {
+          "value": "long",
+          "definition": "Hair past the ears, potentially to shoulders or beyond. Curtain bangs, man bun, or flowing styles. Creates significant visual frame around the face.",
+          "style_implications": "Simpler necklines (crew, V) avoid visual clutter near the face. Avoid high collars that compete with the hair volume. Layered outfits work well for a bohemian or relaxed aesthetic. Beanies and wide-brim hats complement the length. Hair volume adds visual width — avoid oversized tops that compound the bulk.",
+          "sources": [
+            "Perk Clothing - Men's Fashion and Hair: How to Match Your Haircut with Your Style",
+            "Stylist - Does how you style your hair affect how the rest of your outfit comes together?"
+          ]
+        },
+        {
+          "value": "bald_balding",
+          "definition": "No hair or thinning hair on top. Fully shaved head or natural balding. The head shape is the dominant visual element.",
+          "style_implications": "V-necks, Henleys, and quarter-zips create a longer, more balanced look — avoid round crew necks that shorten the neck and exaggerate head roundness. Turtlenecks frame the face and balance proportions especially for round faces. Fitted clothing is critical — not too baggy, not too tight. Chunky shoes (dad sneakers) add visual weight at the bottom to balance the bare head. Hats are functional and stylish — fedoras, baseball caps, beanies, Panama hats all work. Glasses and sunglasses add visual interest to the face area. Growing a beard restores face definition lost from hair loss.",
+          "sources": [
+            "Freebird - Fashion for Bald Men: The Ultimate 2026 Guide",
+            "Gentleman's Gazette - 8 Style Hacks For Bald Men",
+            "The Versatile Man - 15 Ways To Crush Bald Men Fashion",
+            "Bows-N-Ties - Six Essential Tips for Bald Men"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "glasses_style",
+      "description": "Type of eyeglasses worn — interacts with face shape for collar and neckline recommendations. Glasses are a prominent facial accessory that influences how collars, necklines, and other accessories should be balanced.",
+      "values": [
+        {
+          "value": "none",
+          "definition": "No glasses worn. All styling decisions are based purely on face shape and other body proportions without eyewear considerations.",
+          "style_implications": "No eyewear constraints. Full freedom in neckline and collar choices based on face shape alone. Can use more accessories near the face (scarves, necklaces) without visual competition.",
+          "sources": [
+            "Real Men Real Style - How To Buy The Right Eyeglasses Based On Your Face Shape"
+          ]
+        },
+        {
+          "value": "thin_frame",
+          "definition": "Lightweight, minimalist frames — wire, semi-rimless, or thin acetate. Subtle presence on the face. 'Barely there' aesthetic.",
+          "style_implications": "All necklines and collar types work — thin frames do not compete for visual attention. Can layer bold accessories (necklaces, statement collars) since the frames are subtle. Works with both casual and formal outfits seamlessly. Neutral metals (silver, gunmetal) are the most versatile frame colors.",
+          "sources": [
+            "Art & Eyes - From Frames to Fashion: Coordinating Outfits with Your Glasses",
+            "The Male Edit - Best Glass Frames for Men Style",
+            "Real Men Real Style - How To Buy The Right Eyeglasses Based On Your Face Shape"
+          ]
+        },
+        {
+          "value": "bold_thick_frame",
+          "definition": "Thick acetate or heavy frames that make a strong visual statement. Chunky, prominent presence on the face. The frames themselves are a style element.",
+          "style_implications": "Crew necks and simple necklines work best — they frame the face without competing with bold glasses. V-necks can create too much visual activity between the frames and exposed chest. Simpler collar styles are better — camp collars and classic ribbed polos complement without clashing. Pair with structured outfits (blazers, overcoats) that match the bold aesthetic. Keep accessories near the face minimal — let the frames be the statement piece.",
+          "sources": [
+            "Art & Eyes - From Frames to Fashion: Coordinating Outfits with Your Glasses",
+            "Kraywoods - 10 Best Thick Frame Glasses Styles & Trends",
+            "Ask Andy About Clothes - Bold glasses forum"
+          ]
+        },
+        {
+          "value": "round",
+          "definition": "Circular or oval lens shapes. Vintage-inspired aesthetic. Adds softness and curves to the face — works best to contrast angular faces.",
+          "style_implications": "Pair with modern, structured outfits to balance the vintage softness — sharp blazers, slim-fit trousers. Works well with angular collar styles (spread, point) to contrast the round frames. Avoid too many rounded elements in the outfit (boat necks, rounded collars) that compound the circular shape. Tortoiseshell is a classic pairing for round frames with warm-toned outfits.",
+          "sources": [
+            "Art & Eyes - From Frames to Fashion: Coordinating Outfits with Your Glasses",
+            "Joseph Abboud - How to Style Round Sunglasses",
+            "Warby Parker - Best Glasses for Different Face Shapes"
+          ]
+        },
+        {
+          "value": "rectangular",
+          "definition": "Straight-edged, angular lens shapes. Modern and professional aesthetic. Adds definition and sharpness to the face — works best on rounder or softer face shapes.",
+          "style_implications": "The most versatile frame shape — works with nearly all collar types and necklines. Pairs well with structured and tailored clothing. Complements spread collars and button-down collars. Safe choice for both casual and professional settings. Dapper and contemporary look that enhances most outfits.",
+          "sources": [
+            "Eyebuydirect - Men's Glasses Frames and Face Shapes",
+            "Real Men Real Style - How To Buy The Right Eyeglasses Based On Your Face Shape",
+            "Banton Frameworks - Glasses for Men's Face Shape"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    }
+  ],
+  "optical_correction_principles": [
+    {
+      "principle": "details_break_verticality",
+      "description": "Pocket flaps, ticket pockets, turn-back sleeve cuffs inject 'stylish clutter' that impedes long vertical sweeps. Useful for tall men.",
+      "sources": [
+        "Flusser"
+      ]
+    }
+  ],
+  "principle_cross_references": [
+    {
+      "principle": "vertical_horizontal_diagonal_line_effects",
+      "canonical_domain": "D02",
+      "canonical_param": "line_direction",
+      "note": "North-south lines elongate/narrow; east-west lines broaden/shorten; diagonal lines slim. See D02 for full definitions."
+    },
+    {
+      "principle": "dark_minimizes_light_expands",
+      "canonical_domain": "D03",
+      "canonical_principle": "color_value_body_effect",
+      "note": "Dark colors recede and minimize; light colors advance and expand. See D03 for canonical definition."
+    },
+    {
+      "principle": "monochrome_elongates",
+      "canonical_domain": "D02",
+      "canonical_param": "top_bottom_contrast",
+      "note": "One color top to bottom creates unbroken vertical line. See D02 top_bottom_contrast=monochrome."
+    },
+    {
+      "principle": "pattern_scale_matches_body",
+      "canonical_domain": "D02",
+      "canonical_param": "pattern_scale",
+      "canonical_framework": "inverse_scale_principle",
+      "note": "Pattern scale should harmonize with body type. See D02 pattern_scale + inverse_scale_principle."
+    },
+    {
+      "principle": "smooth_fabrics_minimize_textured_add_bulk",
+      "canonical_domain": "D08",
+      "canonical_principle": "smoothness_formality_correlation",
+      "note": "Smooth fabrics minimize bulk; textured fabrics add visual weight. See D08 for canonical definition."
+    },
+    {
+      "principle": "frame_principle",
+      "canonical_domain": "D02",
+      "canonical_framework": "flusser_frame_principle",
+      "note": "Face is a picture, collar is its frame. See D02 for canonical definition."
+    },
+    {
+      "principle": "fulcrum_principle",
+      "canonical_domain": "D02",
+      "canonical_framework": "flusser_fulcrum_principle",
+      "note": "Waist button is the fulcrum of the jacket. See D02 for canonical definition."
+    }
+  ],
+  "flusser_five_intersections": {
+    "description": "Flusser identifies five major body intersections where proportion rules apply. Each contains a network of lines and curves that, when correctly connected, enhance the overall aesthetic.",
+    "intersections": [
+      {
+        "name": "neck",
+        "key_elements": [
+          "collar shape relative to face shape",
+          "collar height relative to neck length",
+          "tie knot size relative to collar spread"
+        ],
+        "flusser_rule": "Face is a picture, collar is its frame. Small face = restrained collar. Larger face = correspondingly larger collar."
+      },
+      {
+        "name": "shoulder",
+        "key_elements": [
+          "shoulder width relative to head size",
+          "shoulder padding/slope",
+          "lapel width relative to shoulder breadth"
+        ],
+        "flusser_rule": "Shoulders frame the head. Too narrow = head appears larger. Too wide = head appears smaller. Broad shoulders need fuller lapels for balance."
+      },
+      {
+        "name": "waist",
+        "key_elements": [
+          "waist button placement",
+          "jacket length",
+          "trouser rise",
+          "belt vs suspenders"
+        ],
+        "flusser_rule": "Waist button is the fulcrum — should sit 1/2 inch below natural waist. Must divide body so torso and legs appear at maximum length."
+      },
+      {
+        "name": "wrist",
+        "key_elements": [
+          "jacket sleeve length",
+          "shirt cuff exposure",
+          "sleeve taper"
+        ],
+        "flusser_rule": "Jacket sleeve should finish at wrist bone. 1/2 to 1 inch of shirt cuff must show. Sleeves should taper from shoulder to wrist — no flapping."
+      },
+      {
+        "name": "ankle",
+        "key_elements": [
+          "trouser bottom width",
+          "trouser break",
+          "shoe scale",
+          "cuff width"
+        ],
+        "flusser_rule": "Trouser bottom should cover about two-thirds of the shoe. Width must harmonize with shoe scale. Narrow bottoms + large feet = feet loom larger."
+      }
+    ]
+  },
+  "cross_domain_dependencies": [
+    {
+      "from_param": "shoulder_width",
+      "to_domain": "D04",
+      "to_param": "jacket_shoulder_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "shoulder_slope",
+      "to_domain": "D04",
+      "to_param": "jacket_shoulder_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "face_shape",
+      "to_domain": "D04",
+      "to_param": "shirt_collar_style",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "neck",
+      "to_domain": "D04",
+      "to_param": "shirt_collar_height",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "head_size",
+      "to_domain": "D04",
+      "to_param": "jacket_shoulder_type",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "torso_vs_leg_ratio",
+      "to_domain": "D04",
+      "to_param": "trouser_rise",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "build",
+      "to_domain": "D04",
+      "to_param": "jacket_silhouette",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "build",
+      "to_domain": "D08",
+      "to_param": "fabric_texture_scale",
+      "relationship": "determines",
+      "note": "Larger frames carry coarser textures; smaller frames need finer textures"
+    },
+    {
+      "from_param": "foot_size",
+      "to_domain": "D04",
+      "to_param": "trouser_width",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "foot_size",
+      "to_domain": "D09",
+      "to_param": "shoe_type",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "height",
+      "to_domain": "D02",
+      "to_param": "line_direction",
+      "relationship": "influences",
+      "note": "Short men need vertical emphasis; tall men can use horizontal"
+    },
+    {
+      "from_param": "build",
+      "to_domain": "D02",
+      "to_param": "top_bottom_contrast",
+      "relationship": "influences",
+      "note": "Heavy build needs monochrome/low contrast; slim build can use high contrast"
+    },
+    {
+      "from_param": "body_shape",
+      "to_domain": "D02",
+      "to_param": "pattern_scale",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "arm_length",
+      "to_domain": "D04",
+      "to_param": "shirt_cuff_style",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "waist_definition",
+      "to_domain": "D04",
+      "to_param": "trouser_front",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "waist_definition",
+      "to_domain": "D04",
+      "to_param": "jacket_silhouette",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "chest_to_waist_drop",
+      "to_domain": "D04",
+      "to_param": "jacket_closure",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "posture",
+      "to_domain": "D04",
+      "to_param": "jacket_construction",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "shoulder_vs_hip_ratio",
+      "to_domain": "D02",
+      "to_param": "visual_weight_distribution",
+      "relationship": "determines"
+    }
+  ],
+  "status": "production"
+}

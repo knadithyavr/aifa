@@ -1,0 +1,465 @@
+{
+  "domain": "aesthetics_and_style_systems",
+  "domain_id": "D06",
+  "version": "1.0",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 1: Permanent Fashion",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Formal Dress",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Smart Casual",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Sporting Life"
+  ],
+  "removed_parameters_log": [
+    {
+      "name": "fabric_formality_system",
+      "moved_to": "D08",
+      "canonical_param": "fabric_formality_hierarchy",
+      "reason": "Fabric formality ranking consolidated in D08 with comprehensive 5-tier hierarchy"
+    },
+    {
+      "name": "tailoring_tradition",
+      "moved_to": "D04",
+      "canonical_param": "jacket_silhouette",
+      "reason": "Tailoring tradition merged into D04 jacket_silhouette with national+abstract naming (british_structured, american_natural, italian_soft)"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "dress_code_level",
+      "description": "The formality tier of the occasion or environment, dictating the entire clothing selection",
+      "values": [
+        {
+          "value": "white_tie",
+          "definition": "Highest formality. Full evening dress with tails, white bow tie, wing collar, white waistcoat, patent shoes. State banquets, opera balls, very formal galas. The most elegant way for a man to dress — elongates the figure because the white vest does not divide it into two halves.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "black_tie",
+          "definition": "Formal evening wear. Tuxedo/dinner jacket (single or double breasted), black bow tie, silk-faced peaked or shawl lapels, dress shirt with French cuffs. Black or midnight blue. A dash of color (red silk handkerchief) is effective against the black. Just a suit — though an awe-inspiring one.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "morning_dress",
+          "definition": "Formal daytime dress. Morning coat (cutaway) in black or gray, striped trousers, waistcoat (light gray or buff), gray top hat. Weddings, Royal Ascot, formal daytime ceremonies. Only groom and bride's father wear gray; if in doubt, black is never wrong.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "business_formal",
+          "definition": "Dark suit (navy, charcoal), dress shirt, necktie, polished shoes. Traditional corporate environment. The suit is still obligatory in conservative fields — banking, insurance, management level.",
+          "sources": [
+            "Roetzel Smart Casual",
+            "Flusser Ch1"
+          ]
+        },
+        {
+          "value": "business_casual",
+          "definition": "Sports jacket or blazer with trousers of different material. Dress shirt optional, necktie optional. The sports jacket occupies a position between the suit and genuine leisurewear. Continental Europe accepts sports jacket + flannels as formal office wear.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "smart_casual",
+          "definition": "Polished casual wear. Quality knitwear, chinos, loafers, unstructured jackets. No tie required. Well-put-together without formal structure.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "country_sporting",
+          "definition": "Clothing derived from hunting, riding, fishing traditions. Tweeds, moleskins, corduroys, Barbour jackets, field boots. Practical yet stylish. These clothes have spread beyond their original sphere and become general property in everyday wardrobes.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "casual",
+          "definition": "Everyday informal wear. Jeans, t-shirts, sneakers, casual jackets. No tailored structure required.",
+          "sources": [
+            "general"
+          ]
+        }
+      ],
+      "notes": "Formality decreases from white tie to casual. Each level has specific garment, fabric, and accessory requirements. Regional variation is significant — what counts as business wear in Italy (sports jacket + flannels) requires a suit in London.",
+      "formality_tier_mapping": {
+        "maps_to": "D08.fabric_formality_hierarchy",
+        "mapping": {
+          "white_tie": "tier_1_most_formal",
+          "black_tie": "tier_1_most_formal",
+          "morning_dress": "tier_1_most_formal",
+          "business_formal": "tier_2_business_formal",
+          "business_casual": "tier_3_bridge",
+          "smart_casual": "tier_3_bridge",
+          "country_sporting": "tier_4_casual",
+          "casual": "tier_5_most_casual"
+        },
+        "shirt_mapping": {
+          "maps_to": "D08.shirt_fabric_formality_hierarchy",
+          "mapping": {
+            "white_tie": "tier_1_most_formal",
+            "black_tie": "tier_1_most_formal",
+            "morning_dress": "tier_2_business",
+            "business_formal": "tier_2_business",
+            "business_casual": "tier_3_everyday",
+            "smart_casual": "tier_4_casual",
+            "country_sporting": "tier_4_casual",
+            "casual": "tier_5_most_casual"
+          }
+        },
+        "note": "This mapping shows which D08 fabric formality tier is appropriate for each D06 dress code level. White tie/black tie/morning dress demand the finest fabrics (tier 1). Business formal uses standard smooth worsteds (tier 2). Business casual opens up textured fabrics (tier 3). Country/casual permit rough textures (tier 4-5)."
+      },
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "style_philosophy",
+      "description": "The overarching approach to building a wardrobe and making clothing decisions",
+      "values": [
+        {
+          "value": "permanent_fashion",
+          "definition": "Flusser's core concept. Dressing well rests on two pillars — color and proportion. Once you learn which colors enhance your complexion and which proportions flatter your physique, you are home. Fashion should be accountable to a specific set of physical trademarks, not seasonally served-up fashion flashes. Like golf, stylish dressing is an acquired skill honed with correct practice.",
+          "sources": [
+            "Flusser Ch1"
+          ]
+        },
+        {
+          "value": "trend_following",
+          "definition": "Basing dressing style on the shifting sands of fashion and designer brands. When style winds change, the trend-captive man finds himself on shaky ground. Without the proper fundamentals, all the practice in the world will not enable the most dedicated dresser to fulfill his potential.",
+          "sources": [
+            "Flusser Ch1"
+          ]
+        },
+        {
+          "value": "form_follows_function",
+          "definition": "Clothing designed for a particular purpose. The Norfolk jacket was a real 'designer jacket' — designed for shooting with belt, pleats for movement, large pockets for cartridges. Many popular wardrobe elements originated as functional sporting wear.",
+          "sources": [
+            "Roetzel Smart Casual",
+            "Roetzel Sporting Life"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "two_pillars",
+      "description": "Flusser's two fundamental aesthetics that underpin all dressing decisions",
+      "values": [
+        {
+          "value": "color",
+          "definition": "Which colors enhance your complexion. The classic male tuxedo confers instant elation on all comers with just two colors — black and white. If such a simple color scenario can help any man appear debonair, you don't need to be some kind of Kandinsky to look your best.",
+          "sources": [
+            "Flusser Ch1"
+          ]
+        },
+        {
+          "value": "proportion",
+          "definition": "Why specific proportions flatter your physique. The width of a man's necktie should relate to his jacket's lapels, which are governed by the size of the coat's shoulders. Broad-shouldered men need slightly wider neckties; small-shouldered men need narrower ones. Fashion should be accountable to individual physical architecture.",
+          "sources": [
+            "Flusser Ch1"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "quality_markers",
+      "description": "Indicators of garment quality that affect both aesthetics and longevity",
+      "values": [
+        {
+          "value": "hand_stitching",
+          "definition": "Irregularity of distance between tiny stitches is a sign of handwork. Machine stitches are perfectly regular. The best buttonholes are stitched around by hand. In Italian ready-to-wear like Kiton, all sleeve buttons can be undone.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "natural_materials",
+          "definition": "Horn buttons or other natural materials are correct for quality jackets. Also leather or self-fabric covered buttons. Canvas interlining (horsehair, cotton, felt) gives permanently three-dimensional shape.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "pattern_matching",
+          "definition": "In a good quality jacket, the pattern must match neatly at as many seams as possible, particularly around the breast pocket. There should be minimum discontinuity between shoulders and breast.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "lining_quality",
+          "definition": "Bemberg silk (soft cotton) or genuine silk linings. Summer jackets often half-lined. Lining sewn in by hand in quality garments with room to 'give' — compensating for body heat and movement.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "aesthetic_origin",
+      "description": "The historical/cultural origin of a style aesthetic, which carries associations and connotations",
+      "values": [
+        {
+          "value": "aristocratic_country",
+          "definition": "Derived from the landed gentry's rural pursuits — hunting, riding, fishing. Tweeds, moleskins, field jackets, country boots. Represents timelessness, heritage, and relaxed authority. The aspiring bourgeoisie naturally imitated this ideal mode of existence.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "military",
+          "definition": "Adapted from military uniforms. Norfolk jacket, safari/bush jacket, chinos (olive drab), trench coats. Form follows function — designed for specific operational needs then adopted by civilians.",
+          "sources": [
+            "Flusser Ch6",
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "sporting_equestrian",
+          "definition": "From horse riding, shooting, tennis, polo. Riding jacket begat the sport coat. Hacking pockets, side vents, action backs all derive from the saddle. The horse invented male sports clothes per Flusser.",
+          "sources": [
+            "Flusser Ch6",
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "urban_professional",
+          "definition": "City business dress. The suit replaced the morning coat for business wear. Navy blue serge was the first nationally accepted business uniform. The corporate uniform virtually guaranteed the suit a widening audience.",
+          "sources": [
+            "Flusser Ch5",
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "resort_leisure",
+          "definition": "Palm Beach, Riviera, vacation wear origins. Blazers with white trousers, seersucker suits, silk dupioni, linen. Concentration of society's leaders at resorts made them fountainheads for fashion.",
+          "sources": [
+            "Flusser Ch5",
+            "Flusser Ch6"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "regional_dress_norm",
+      "description": "How geographic/cultural context affects what is considered appropriate dress",
+      "values": [
+        {
+          "value": "british",
+          "definition": "The suit is still obligatory in many branches of commerce. Strict dress codes. Savile Row is the fashion papacy. Side vents, structured shoulders, country tweeds for weekends.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "continental_european",
+          "definition": "Sports jacket widely accepted in business. More color freedom. Italian influence dominant in southern Europe. Politicians and captains of industry still wear suits, but other professionals feel comfortable in sports jackets.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "american",
+          "definition": "Sports jacket seen as informal garment. Rather plain models. Business culture varies widely by region and industry. Ivy League tradition strong in prep/traditional segments.",
+          "sources": [
+            "Roetzel Smart Casual"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "evening_wear_component_rules",
+      "description": "Specific rules for formal evening dress that cannot be violated",
+      "values": [
+        {
+          "value": "tuxedo_rules",
+          "definition": "Black or midnight blue. Silk-faced peaked or shawl lapels. Black bow tie (never white — that's for tails). Dress shirt with French cuffs, cufflinks (gold appropriate). Cummerbund with folds pointing upward. Black knee-length socks in wool or silk. No cuffs on trousers. Single silk braid on outside seam.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "white_tie_rules",
+          "definition": "Always black tails, single-breasted (cannot be buttoned). Silk-covered facing lapels. White cotton piqué waistcoat. White bow tie in cotton piqué (must be self-tied). Wing collar, single cuffs with cufflinks. Trousers with double silk braids. Patent shoes (pumps with silk bows or Oxfords). White silk scarf only with overcoat.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "morning_dress_rules",
+          "definition": "Black or gray morning coat (cutaway). Striped trousers (groom/bride's father may wear gray). Waistcoat single or double breasted in light gray or buff. Silver-gray necktie (never a bow tie). Gray buckskin gloves. Gray or black top hat (black for funerals). Black Oxfords (monkstraps and loafers acceptable).",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "smoking_jacket_context",
+      "description": "The smoking jacket as a distinct garment for home entertaining",
+      "values": [
+        {
+          "value": "smoking_jacket",
+          "definition": "Made of colored velvet, generally with a shawl collar (sometimes in contrasting color like black silk). Worn at home parties and country balls in England. Colors: dark green, dark violet, burgundy, blue. Paired with dinner-jacket trousers, dress shirt, black bow tie, and velvet slippers embroidered with motifs or initials. Slightly more relaxed than a tuxedo.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    }
+  ],
+  "aesthetic_principles": [
+    {
+      "name": "flusser_golf_analogy",
+      "description": "Stylish dressing is like golf — an acquired skill that can be honed with correct practice. Without the proper grip, stance, and balance (the fundamentals), all the practice in the world will not fulfill potential. Most men spend inordinate time repeating wrong techniques, furthering the same faults.",
+      "sources": [
+        "Flusser Ch1"
+      ]
+    },
+    {
+      "name": "foundation_before_decoration",
+      "description": "No amount of professional decoration or priceless furnishings will make a difference if the floors and walls they adorn rest on a shaky foundation. The fashion follower based his style on designer brands (shifting sands) rather than personal architecture (terra firma).",
+      "sources": [
+        "Flusser Ch1"
+      ]
+    },
+    {
+      "name": "individual_architecture_primacy",
+      "description": "Tie width should relate to lapel width, which relates to shoulder width. Fashion should be accountable to a specific set of physical trademarks. Broad-shouldered = wider tie; small-shouldered = narrower tie. The answer lies not in fashion but in the realm of personal architecture.",
+      "sources": [
+        "Flusser Ch1"
+      ]
+    },
+    {
+      "name": "clothes_as_communication",
+      "description": "Masculine attire was swept up in the quest for broader social freedoms. Sophisticated men look upon fashion as another means of discourse in an information-driven world. Clothes are badges of communication.",
+      "sources": [
+        "Flusser Ch1"
+      ],
+      "referenced_by": [
+        "D07"
+      ]
+    },
+    {
+      "name": "sporting_origins_principle",
+      "description": "Many classic wardrobe elements originated as functional sporting wear. Clothes designed for hunting, riding, and fishing have spread beyond their original sphere to become general wardrobe property. Understanding these origins helps understand their appropriate modern use.",
+      "sources": [
+        "Roetzel Sporting Life"
+      ]
+    },
+    {
+      "name": "elongation_through_cut",
+      "description": "Fred Astaire's tails looked elegant because of their cut — high waistband, high vest covered by jacket sides. The white of the vest does not divide the figure into two unflattering halves, creating elongation. This principle applies to all formal wear.",
+      "sources": [
+        "Roetzel Formal Dress"
+      ]
+    },
+    {
+      "name": "formality_consistency",
+      "description": "CANONICAL PRINCIPLE (referenced by D04, D08, D09). All elements of an ensemble should be at roughly the same formality level. Formality increments: DB > SB, flap pockets > patch, peaked lapels > notched, side vents > center vent, dark trousers > light, smooth fabric > textured, polished leather > suede, closed lacing > open lacing. Mixing formality levels creates visual dissonance.",
+      "sources": [
+        "Flusser Ch5",
+        "Flusser Ch6",
+        "Permanent Style"
+      ],
+      "referenced_by": [
+        "D04",
+        "D08",
+        "D09"
+      ]
+    }
+  ],
+  "cross_domain_dependencies": [
+    {
+      "from_param": "dress_code_level",
+      "to_domain": "D07",
+      "to_param": "occasion_category",
+      "relationship": "maps_to"
+    },
+    {
+      "from_param": "dress_code_level",
+      "to_domain": "D04",
+      "to_param": "jacket_formality_tier",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "dress_code_level",
+      "to_domain": "D08",
+      "to_param": "fabric_formality_hierarchy",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "dress_code_level",
+      "to_domain": "D09",
+      "to_param": "shoe_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "dress_code_level",
+      "to_domain": "D09",
+      "to_param": "hat_type",
+      "relationship": "determines"
+    },
+    {
+      "from_param": "evening_wear_component_rules",
+      "to_domain": "D07",
+      "to_param": "formal_occasion_component_selection",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "quality_markers",
+      "to_domain": "D04",
+      "to_param": "jacket_construction",
+      "relationship": "references"
+    },
+    {
+      "from_param": "regional_dress_norm",
+      "to_domain": "D07",
+      "to_param": "occasion_category",
+      "relationship": "influences"
+    }
+  ],
+  "status": "production"
+}

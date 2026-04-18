@@ -1,0 +1,2058 @@
+{
+  "domain": "occasion_and_context_mapping",
+  "version": "1.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 12: Formal Wear",
+    "Dressing the Man - Alan Flusser - Chapter 13: Business Casual / Corporate Casual",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Formal Dress",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Sporting Life"
+  ],
+  "parameters": [
+    {
+      "name": "occasion_category",
+      "description": "The broad type of occasion or context the user is dressing for, mapping to the appropriate dress code level",
+      "canonical_formality_scale": "D06.dress_code_level",
+      "note": "The maps_to values in each occasion reference the canonical dress_code_level values defined in D06. D06 owns the definitions of each formality level; D07 owns the mapping from occasion to level.",
+      "values": [
+        {
+          "value": "state_banquet_opera_ball",
+          "maps_to": "white_tie",
+          "definition": "State dinners, formal charity galas, opera balls, debutante balls. The highest ceremonial occasions requiring full evening dress with tails.",
+          "sources": [
+            "Roetzel Formal Dress",
+            "Flusser Ch12"
+          ]
+        },
+        {
+          "value": "formal_evening_event",
+          "maps_to": "black_tie",
+          "definition": "Formal dinners, evening galas, charity events specifying 'black tie', evening weddings, award ceremonies, theater premieres. Semi-formal evening wear with dinner jacket.",
+          "sources": [
+            "Roetzel Formal Dress",
+            "Flusser Ch12"
+          ]
+        },
+        {
+          "value": "formal_daytime_ceremony",
+          "maps_to": "morning_dress",
+          "definition": "Formal weddings (daytime), Royal Ascot, formal funerals, garden parties at Buckingham Palace. Morning coat with striped trousers.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "corporate_office",
+          "maps_to": "business_formal",
+          "definition": "Conservative corporate environments — banking, insurance, law, management meetings, client-facing roles. Traditional suit and tie required.",
+          "sources": [
+            "Flusser Ch13",
+            "Roetzel Smart Casual"
+          ]
+        },
+        {
+          "value": "corporate_casual_office",
+          "maps_to": "business_casual",
+          "definition": "Modern office environments that have relaxed the suit-and-tie requirement. Friday dress-down that became everyday policy. The 'third wardrobe' territory between suits and weekend wear.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "client_meeting_casual_office",
+          "maps_to": "dress_up_business_casual",
+          "definition": "Important meetings or client interactions within a business-casual office. Sport jacket becomes the bridge piece, elevating the look without returning to a full suit.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "job_interview",
+          "maps_to": "context_dependent",
+          "definition": "Job interviews require researching the prospective employer's dress culture. Generally err on the side of formality. First impressions form in 30 seconds. Appropriate interview attire sends the message that here is an applicant who did his homework.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "country_weekend",
+          "maps_to": "country_sporting",
+          "definition": "Weekend in the countryside, visiting country estates, informal outdoor gatherings. Tweeds, moleskins, corduroys, field boots, Barbour jackets.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "sporting_event_spectator",
+          "maps_to": "smart_casual_to_country",
+          "definition": "Attending horse races, equestrian tournaments, polo matches, golf tournaments as a spectator. Brown trilby, tweed suit or jacket, binoculars, Barbour if raining.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "active_sport_participation",
+          "maps_to": "sport_specific",
+          "definition": "Actually playing a sport — golf, riding, sailing, fishing. Each sport has its own dress traditions and practical requirements.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "home_entertaining",
+          "maps_to": "smoking_jacket_context",
+          "definition": "Hosting dinner parties or gatherings at home. Smoking jacket in colored velvet with shawl collar, paired with dinner-jacket trousers and velvet slippers.",
+          "sources": [
+            "Roetzel Formal Dress",
+            "Flusser Ch12"
+          ]
+        },
+        {
+          "value": "casual_weekend",
+          "maps_to": "casual",
+          "definition": "Everyday informal occasions — errands, casual dining, meeting friends. No tailored structure required but coordination principles still apply.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "notes": "The key skill is correctly reading the occasion and mapping it to the right formality level. Err on slightly overdressed rather than underdressed.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "business_casual_approach",
+      "description": "The two fundamental strategies for business casual dressing, as defined by Flusser's 'third wardrobe' concept",
+      "values": [
+        {
+          "value": "dress_up_business_casual",
+          "definition": "Building UP from casual foundations with tailored elements. Sport jacket is the cornerstone — it confers a professional bearing on any man. Dress shirt (with or without tie), wool trousers, leather shoes. This approach minimizes risk and maximizes authority. Flusser's strong recommendation.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "dress_down_business_casual",
+          "definition": "Dressing DOWN from business formal by removing structured elements. Suit without tie, or shirt-and-trouser only. Removes the protective wrapping of tailored refuge. Riskier — demands stronger coordination skills since no jacket frames the ensemble. Built on the sport shirt-and-trouser combination.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "notes": "Flusser views dress-up business casual as superior. The sport jacket provides structure, authority, and easier coordination. Dress-down casual tests the average man's coordination skills and can look sloppy if not managed carefully.",
+      "style_track": [
+        "business_casual"
+      ]
+    },
+    {
+      "name": "business_casual_jacket_role",
+      "description": "How the sport jacket functions as the bridge piece in business casual, and its style variations",
+      "values": [
+        {
+          "value": "navy_blazer",
+          "definition": "The most versatile bridge piece. Can be dressed up with dress trousers or down with khakis/jeans. A dark sport jacket can make any man look more professional. High on the dress-up casual list.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "three_button_soft_shoulder",
+          "definition": "Modern versatile jacket model. Three-button, single-breasted with soft natural shoulders, notch lapels. Can be worn buttoned up (one or two upper buttons) for formality or left open like a cardigan for casual. Its soft underpinnings suit the casual ethos.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "double_breasted_sport",
+          "definition": "Double-breasted jacket as sport coat — because it is always buttoned up, it tends to retain a dressier profile. Harder to make casual but can work with the right trousers.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "contoured_sport_coat",
+          "definition": "The contoured sport coat can be worn incrementally longer than a suit jacket. When paired with a variety of trouser lengths (hip, knee, or lower on the waist), the additional sleeve length lines up better to promote more relaxed body language.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "cardigan_as_jacket",
+          "definition": "The famous cardigan sweater serves as a jacket substitute in smart casual contexts. However, it is less structured and conveys less authority than a sport coat.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "notes": "All jacket models can be styled to convey more casual or more formal bearing. Fabric choice, pocket style, and button configuration shift the formality.",
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "tieless_collar_strategy",
+      "description": "How to frame the face effectively without a necktie — critical for business casual and smart casual contexts",
+      "values": [
+        {
+          "value": "button_down_collar",
+          "definition": "Best collar for jacketless wear. The buttoned-down points help the collar stand up around the neck. When worn under a jacket, its snappy shape dresses up the face more than other sport shirt collars. The go-to collar for business casual.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "one_piece_collar",
+          "definition": "Collars that are cut as one piece or have a collar band help the collar to stand up around the neck, better presenting the face. Preferable for the dressed-down business-casual shirt.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "closed_collar_no_tie",
+          "definition": "Closing the top button without a tie creates a neater image because its relative neatness helps the face appear more important. Camp-style collars should be avoided if the aim is for the shirt collar to add authority.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "open_collar_with_dark_tshirt",
+          "definition": "Layering a dark T-shirt underneath an open collar adds visual interest while helping fill the space left by the open collar. Prevents the disheveled look of an exposed bare neck.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "knit_collar_high_set",
+          "definition": "A knit shirt buttoned at the neck conveys a tidier, less casual look. However, the soft knit collar can be easily overwhelmed by a jacket's sturdier collar. Best with self-supporting knit collars that sit high on the neck — mock turtle or rolled models can lend elegance to casual sophistication.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "notes": "Without the closed shirt collar and necktie to add glamour and frame the face, the collar must still frame the face without distracting from it. This is a key challenge in casual dressing.",
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "business_casual_trouser_choice",
+      "description": "Trouser options for business casual contexts and their relative formality",
+      "values": [
+        {
+          "value": "dark_wool_trousers",
+          "definition": "Most dressy casual trouser. Charcoal flannel, gray worsted. Less contrast between top and bottom = dressier and more elongating effect. Dark colors on the lower half produce a taller, slimmer outline.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "pressed_khakis",
+          "definition": "The bedrock of the dress-down business-casual look. Must be well-pressed to convey professionalism. In spring and summer, linen trousers can serve a similar role with a more casual attitude.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "corduroy_moleskin",
+          "definition": "Textured casual trousers. Flannel or corduroy works well with tweed jackets. In winter, ribbed knits or brushed cotton serve as warm trouser options.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "dark_jeans",
+          "definition": "Lowest tier of business-casual trouser where permitted. Should be well-pressed and dark wash. Work best under a sport jacket with the right shoes to maintain a dressed-up bearing.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "business_casual_shirt_type",
+      "description": "Shirt choices for business casual — the primary face-framing garment when jacket is absent",
+      "values": [
+        {
+          "value": "long_sleeve_dress_shirt",
+          "definition": "The dressed-down business-casual shirt should ideally have long sleeves, since even rolled-up sleeves convey a more professional look than short sleeves. Preferably cut as one piece or with a collar band.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "patterned_woven_sport_shirt",
+          "definition": "One way to inject individuality into business casual. Pattern mixing between shirt and bottom becomes key — the pattern of the woven top should complement the solid or patterned bottom. A patterned shirt over a solid trouser is safest.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "long_sleeve_knit_polo",
+          "definition": "The long-sleeve, collared knit pullover has become an alternative to the conventional woven sport shirt. Mock turtle or rolled model can lend sophistication. Knits become slightly more business-appropriate when paired with dress trousers.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "fine_gauge_knit",
+          "definition": "A fine gauge, long-sleeve, cut-and-sewn knit shirt. As long as fabrics and patterns are appropriate, arriving at a coordinated look should not test the skills of the average man.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "casual_footwear_formality",
+      "description": "Shoe choices for casual contexts — cross-references D09 for shoe type details",
+      "cross_reference": {
+        "canonical_domain": "D09",
+        "canonical_params": [
+          "shoe_type",
+          "shoe_formality_hierarchy"
+        ],
+        "note": "D09 owns all shoe type definitions and the full formality hierarchy. This parameter retains only the casual-context styling guidance."
+      },
+      "casual_styling_guidance": [
+        {
+          "approach": "dress_up_casual",
+          "description": "Brown suede over polished leather promotes more casual vibe. Brown leather belts and brown slip-on shoes raise the style level. Thicker soles shift any shoe toward casual.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "approach": "shoe_material_shift",
+          "description": "Suede finishes on any shoe shape shift it toward casual. A dress-down version of a classic shoe. The thicker the sole, the more casual the proportioned shoe.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "approach": "belt_shoe_coordination",
+          "description": "Belt and shoes in matching leather color and texture. A man's shoes broadcast how he manages details.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "casual_belt_shoe_coordination",
+      "description": "How belts and shoes work together in casual contexts to anchor the outfit",
+      "values": [
+        {
+          "value": "matched_leather",
+          "definition": "Belt and shoes in matching leather color and texture. Black alligator belt with black slip-on shoes, or brown leather belt with brown shoes. This basic coordination is essential in casual contexts where there is no jacket to unify the look.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "hair_color_echo",
+          "definition": "Particularly if hair color is dark, black belt and shoe coordination can create a strong frame. Hair, belt, and shoes in dark accord create intentional visual connection top to bottom.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "casual_belt_style",
+          "definition": "Business-casual trousers need not wear high-formality belts. A leather belt with a simple pin buckle in proximity to shoe color works. Unless the outfit has a strong black motif, sometimes leather is better kept in brown tones.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "casual_color_coordination",
+      "description": "Color coordination principles specific to casual contexts without suit-and-tie structure",
+      "cross_references": [
+        {
+          "principle": "low_contrast_elongation",
+          "canonical_domain": "D02",
+          "canonical_param": "top_bottom_contrast",
+          "note": "The principle that less top-bottom contrast = dressier and more elongating is owned by D02."
+        }
+      ],
+      "casual_specific_values": [
+        {
+          "value": "dark_anchor_bottom",
+          "definition": "Most shirt-and-trouser coordinations acquire increased authority when anchored by a deeper-toned bottom. Sequestering darker colors on the lower half of the body tends to produce a taller, slimmer outline.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "color_repetition",
+          "definition": "Repeating a color from shirt pattern in the trouser or accessories creates cohesion. A third repetition ties the whole image together. Sweaters placed over shirts can become a bridge — picking up colors from both shirt and trouser.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "texture_over_pattern",
+          "definition": "In casual contexts, textural interest (ribbed knits, brushed cotton, corduroy) can substitute for pattern to add visual depth without the complexity of pattern coordination.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ]
+    },
+    {
+      "name": "formal_occasion_component_selection",
+      "description": "Specific garment choices within formal dress codes where options exist",
+      "values": [
+        {
+          "value": "dinner_jacket_single_vs_double",
+          "definition": "Single-breasted dinner jacket is more common and versatile. Double-breasted is dressier and more commanding but must always be buttoned. SB can be worn with cummerbund or waistcoat; DB typically worn without either since it covers the waistband.",
+          "sources": [
+            "Flusser Ch12"
+          ]
+        },
+        {
+          "value": "dinner_jacket_lapel_choice",
+          "definition": "Peaked lapels are more formal and traditional. Shawl collar is elegant and slightly less formal — originated from the smoking jacket heritage. Notch lapels on a dinner jacket are considered less correct by traditionalists.",
+          "sources": [
+            "Flusser Ch12",
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "black_tie_waist_option",
+          "definition": "Cummerbund (folds pointing upward) or low-cut waistcoat. Cummerbund is more common; waistcoat is slightly more formal. Both serve to cover the waistband junction between shirt and trousers. The cummerbund originally served as a pocket for theater tickets.",
+          "sources": [
+            "Flusser Ch12",
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "tuxedo_color",
+          "definition": "Black is standard. Midnight blue is the sophisticated alternative — appears blacker than black under artificial light. White or ivory dinner jackets appropriate for warm weather / tropical formal occasions.",
+          "sources": [
+            "Flusser Ch12",
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "evening_shirt_front",
+          "definition": "Pleated or pique bib front. Pique (marcella) is more formal and traditional — the standard for white tie. Pleated is the common choice for black tie. Shirt must have French cuffs for formal wear.",
+          "sources": [
+            "Flusser Ch12",
+            "Roetzel Formal Dress"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "sporting_occasion_dress",
+      "description": "Dress codes for specific sporting activities and their practical/traditional requirements",
+      "values": [
+        {
+          "value": "hunting",
+          "definition": "English fox-hunting has strict dress codes. Hunting outfits of thick material often worn for several generations. Hunt vest in woolen felt with Tattersall check back. Colors: red, green, canary yellow. Riding breeches, field boots. Practical clothing designed for mounted pursuit across open country.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "riding",
+          "definition": "Hacking jacket (close cut, high waist, long back vent, slanted flapped pockets — original version of the English sports jacket). Jodhpur boots or riding boots. Quilted vests popular. Breeches by specialist tailors. Rubberized riding mac for rain. The slanted pockets are easier to reach when sitting on a horse.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "fishing",
+          "definition": "No precise dress code — determined mainly by practical considerations. Waders for river fishing, rubber boots for bank fishing. Vest with many pockets for equipment storage. Flat tweed cap or tweed hat. Barbour jacket for protection. Fishing clothes difficult to integrate with normal casual wear — hence neckties with fish motifs as the angler's subtle signal.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "golf",
+          "definition": "Polo shirt or collared overshirt standard. T-shirts and sleeveless jerseys unsuitable. Cashmere cardigan or lambswool pullover acceptable — golf is the only sport that can be played in cashmere. Long pants required (often with tartan). Golf shoes with spikes. Can transition from office to course by swapping suit jacket for cardigan. Panama hat or peaked cap.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "sailing_competitive",
+          "definition": "Specialist waterproof clothing for wind, cold, and sea water. Henri Lloyd and similar maritime technology brands. Functional garments that have crossed over to land use — popular among motorcyclists. Guernsey pullover for rough seas.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "sailing_leisure",
+          "definition": "Mediterranean summer sailing style. Blue blazer with white pants — classic combination acceptable on a yacht or on the Promenade des Anglais. Based on clothes worn by fishermen — casual style with maritime accent. Blue and white the classic color combination. Espadrilles or boat shoes (Sperry classics). Avoid caricature when wearing this look on land.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ]
+    },
+    {
+      "name": "spectator_dress_code",
+      "description": "What to wear when attending sporting events as a spectator",
+      "values": [
+        {
+          "value": "horse_racing",
+          "definition": "Classic outfit: brown trilby, tweed suit or tweed jacket, binoculars, Barbour jacket if raining. The brown trilby has traditionally been worn by people who work with horses — tradition from England where it is obligatory for equestrian calendar events.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "formal_racing_royal_ascot",
+          "definition": "Morning dress required in the Royal Enclosure. Gray top hat, morning coat, striped trousers. The most formal spectator dress code in sport.",
+          "sources": [
+            "Roetzel Formal Dress"
+          ]
+        },
+        {
+          "value": "polo_match",
+          "definition": "Smart casual to business casual. Blazer with chinos or light trousers. Can dress up or down depending on the venue — VIP areas expect more polish.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "country_sport_general",
+          "definition": "Tweed jacket, moleskins or corduroys, field boots or brogues. Barbour jacket or similar waxed cotton for weather. Flat cap or trilby. The country look that has become 'general property in everyday wardrobes.'",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "context_transition_technique",
+      "description": "Methods for shifting between formality levels with minimal wardrobe changes",
+      "values": [
+        {
+          "value": "add_sport_jacket",
+          "definition": "The simplest dress-up move. Adding a dark sport jacket over any shirt-and-trouser combination immediately elevates the look. A sport jacket can be dressed up or down — it is the single most versatile bridge piece.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "remove_tie_keep_jacket",
+          "definition": "Dressing down a suit by removing the tie. Learning how to wear a suit without a tie increases the corporate casual options. The suit jacket maintains structure while the open collar relaxes the look.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "swap_jacket_for_knitwear",
+          "definition": "Exchanging a suit jacket for a cardigan or pullover — useful for transitioning from office to golf course or social event. The knitwear maintains layering without the formality of structured tailoring.",
+          "sources": [
+            "Flusser Ch13",
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "shoe_swap",
+          "definition": "Changing shoes is one of the most effective transitions. Polished leather to suede loafers shifts formal to casual. Cap-toe oxfords to boat shoes or golf shoes transitions office to recreation.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "trouser_swap",
+          "definition": "Keeping the same jacket and shirt but changing from dress trousers to khakis, corduroys, or jeans progressively dresses down the look. The less contrast between jacket and trouser, the dressier.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "job_interview_dress_strategy",
+      "description": "How to dress for job interviews — first impressions and occasion-reading skills",
+      "values": [
+        {
+          "value": "research_company_culture",
+          "definition": "Navigating a prospective employer's dress code should be part of preliminary preparation. Familiarize yourself with the company culture — if executives happen to be in polo shirts and turtlenecks, showing up in a three-piece suit would not be putting your best foot forward.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "err_on_formality",
+          "definition": "Although it is always better to err on the side of formality, appropriate interview attire should match the organizational culture. The candidate who shows up wearing the right clothes may gain a competitive advantage.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "first_impression_principle",
+          "definition": "People tend to size you up in the first thirty seconds, which can influence how they interact with you in the process. The interviewer consciously and unconsciously picks up on your visual and verbal cues. Nonverbal indicators — your clothes — are the most powerful tools of communication.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "suit_without_tie_technique",
+      "description": "How to wear a suit without a tie for the corporate casual context — the 'dressing down the suit' approach",
+      "values": [
+        {
+          "value": "button_down_under_suit",
+          "definition": "The button-down collar is the safest choice under a tieless suit. Its collar stands up properly without a tie and frames the face. The collar's buttoned points maintain neatness.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "spread_collar_tieless",
+          "definition": "A moderate spread collar can work without a tie if the collar has enough body to maintain its shape. The opening should not be so wide that it collapses and looks limp.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "pocket_square_compensation",
+          "definition": "Without a tie, the chest area can look bare. A pocket square in the breast pocket adds a touch of intentionality and fills the visual gap left by the missing tie.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual"
+      ]
+    },
+    {
+      "name": "seasonal_occasion_adjustment",
+      "description": "How seasonal weather modifies dress code expectations for various occasions",
+      "values": [
+        {
+          "value": "summer_formal",
+          "definition": "White or ivory dinner jacket appropriate for warm-weather formal events. Lighter weight fabrics (tropical wool, linen blends) in business contexts. Linen trousers for business casual in spring and summer.",
+          "sources": [
+            "Flusser Ch12",
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "winter_casual",
+          "definition": "Heavier textures become appropriate — flannel trousers, corduroy, moleskin. Ribbed knits or brushed cotton. Tweed jackets. Layering with knitwear under jackets for warmth and visual interest.",
+          "sources": [
+            "Flusser Ch13",
+            "Roetzel Sporting Life"
+          ]
+        },
+        {
+          "value": "country_season_specific",
+          "definition": "English fox-hunting season runs November through April, explaining the thick materials in hunting clothes. Golf in Scotland requires windcheaters and Barbour jackets. Seasonal considerations heavily influence sport-appropriate clothing.",
+          "sources": [
+            "Roetzel Sporting Life"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "dress_down_casual_coordination",
+      "description": "Principles for the jacketless dress-down business-casual outfit where no jacket provides structure",
+      "values": [
+        {
+          "value": "shirt_as_authority",
+          "definition": "Without a jacket, the top layer (shirt) takes on the role of primary garment. To command authority, it should be preferably cut as one piece or with a collar band — constructions that help the collar stand around the neck, better presenting the face.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "high_quality_fabric",
+          "definition": "A high-quality fabric in the shirt compensates for the lack of jacket structure. Dress-down business casual ranges from a high-quality dress or sport shirt atop dark wool trousers to well-pressed khakis or jeans below a fine gauge knit.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        },
+        {
+          "value": "minimal_pattern_complexity",
+          "definition": "Without a jacket as organizing frame, pattern coordination between shirt and trouser should not test the coordinating skills of the average fashion-pressed male. Keep it simple — solid bottoms are safest.",
+          "sources": [
+            "Flusser Ch13"
+          ]
+        }
+      ],
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ]
+    },
+    {
+      "name": "indian_occasion_category",
+      "description": "Categorization of everyday and special occasions for Indian urban men, each with distinct dress expectations and social norms",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "ethnic",
+        "formal"
+      ],
+      "values": [
+        {
+          "value": "tech_office",
+          "definition": "Workplace dress code for technology companies and startups with flexible/relaxed policies. 90% of Indian startups have ditched formal wear. Emphasis on comfort with smart-casual polish: clean tees, chinos, sneakers, optional layering with bombers or lightweight jackets",
+          "sources": [
+            "Pant Project",
+            "StyleBuddy Fashion"
+          ]
+        },
+        {
+          "value": "startup_office",
+          "definition": "Even more relaxed than tech_office. Athleisure-adjacent dressing is acceptable. Joggers, co-ord sets, premium tees with clean sneakers. Key constraint is looking intentional rather than sloppy",
+          "sources": [
+            "Pant Project",
+            "StyleBuddy Fashion",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "corporate_office",
+          "definition": "Traditional Indian corporate environment requiring business casual to business formal. Well-fitting dress pants or chinos paired with blazers, crisp white or light blue dress shirts. Nehru jackets or bandhgalas acceptable for semi-formal corporate events",
+          "sources": [
+            "StyleBuddy Fashion",
+            "Pant Project",
+            "Deux Vincente"
+          ]
+        },
+        {
+          "value": "college",
+          "definition": "Indian college campus dressing emphasizing self-expression within budget. Athleisure (joggers, hoodies, designer tees), sweater-vest combos, blue denim essentials, graphic tees with blazers for presentations, streetwear influences, and Indo-western fusion with Nehru jackets over jeans",
+          "sources": [
+            "Bewakoof",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "casual_date",
+          "definition": "Date night or casual dining requiring polished-casual effort. Well-fitted collared shirt with chinos, smart casual blazer for polish, or linen shirt with tailored trousers. Polo with chinos and loafers for daytime dates. Sneakers acceptable if clean and minimal",
+          "sources": [
+            "Meridian Looks",
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "weekend_outing",
+          "definition": "Relaxed weekend socializing including brunches, mall visits, and outings with friends. Oxford shirt or polo with chinos and desert boots, or tee with dark jeans and clean sneakers. Layering with denim or bomber jacket adds visual interest",
+          "sources": [
+            "FashionBeans",
+            "EffortlessGent Casual Style",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "house_party",
+          "definition": "Social gathering at someone's home ranging from casual to semi-dressy. For Indian context: printed Nehru jackets, embroidered kurtas, party-wear shirts in fabrics like art silk or satin, or smart-casual Western wear. Can experiment with bolder styling choices. Add a blazer or jacket layer for crispness",
+          "sources": [
+            "Bewakoof",
+            "StyleBuddy India"
+          ]
+        },
+        {
+          "value": "indian_wedding_guest_haldi",
+          "definition": "Pre-wedding daytime ceremony involving turmeric application. Requires breathable, stain-friendly clothing in vibrant yellows, deep mustard, warm orange, or bright hues. Lightweight cotton kurtas are ideal. Accessorize with Kolhapuri sandals. Skip heavy jewelry. Comfort-first, easygoing charm",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "indian_wedding_guest_mehendi",
+          "definition": "Pre-wedding henna ceremony, relaxed and festive daytime event. Short kurtas with Nehru jackets, printed cotton sets, or casual dhoti styles. Colors: shades of green (traditional for mehendi), rust, mustard, turquoise, pink. Casual yet festive: printed kurtas with jeans or ethnic joggers. Mojris for footwear",
+          "sources": [
+            "Siyaram",
+            "Ethnix by Raymond",
+            "Bharat Reshma"
+          ]
+        },
+        {
+          "value": "indian_wedding_guest_sangeet",
+          "definition": "High-energy evening celebration with dance performances and music. Outfit must allow freedom of movement while reflecting bold personality. Fabrics with luxurious drape, subtle sheen, and wrinkle-resistance. Kurta with pajamas or dhoti, rich jewel tones and metallics. Jodhpuri mojaris or ethnic shoes. Statement accessories welcome",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "indian_wedding_guest_pheras",
+          "definition": "The sacred main wedding ceremony (Saath Phere). Most traditional and formal of all functions. Regal sherwanis, sophisticated bandhgalas, or classic kurta sets. Rich colors: royal blue, emerald green, deep pink. Avoid red (reserved for bride), white, and black. Pair with mojaris or juttis. Formal and respectful attire required",
+          "sources": [
+            "Siyaram",
+            "CBazaar"
+          ]
+        },
+        {
+          "value": "indian_wedding_guest_reception",
+          "definition": "The red-carpet moment of Indian weddings. Most formal Western-influenced function. Tuxedos with satin accents, midnight blue velvet jackets, charcoal dinner suits, double-breasted jackets, or premium bandhgala suits. Oxford shoes, bow ties, metallic lapel pins. Alternatively, heavily embroidered sherwanis. Evening glamour expected",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "temple_visit",
+          "definition": "Religious site visit requiring modest, respectful attire. Full-length trousers mandatory (no shorts; jeans may be refused at some temples). Simple collared shirts covering shoulders. Dhoti or lungi ideal for traditional temples. No tank tops, tight jeans, or casual sportswear. Head covering may be required at certain temples. Footwear removed at entrance",
+          "sources": [
+            "IndusBus",
+            "Hindu Temple of Atlanta"
+          ]
+        },
+        {
+          "value": "family_gathering",
+          "definition": "Meeting extended family for meals, festivals, or celebrations. Ranges from casual kurta-pajama to collared shirts with trousers. For festive family events: kurta with Nehru jacket or bandhgala. For casual family meals: polo or collared shirt with chinos. Shoes removed before entering home. Accept offered refreshments as cultural respect",
+          "sources": [
+            "CBazaar",
+            "StyleBuddy India"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indian_occasion_dress_code",
+      "description": "The actual dress code requirements mapped to each Indian occasion, specifying formality level, acceptable garment categories, and constraints",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "ethnic",
+        "formal"
+      ],
+      "values": [
+        {
+          "value": "tech_casual",
+          "definition": "For tech/startup offices: Clean tee or polo + chinos or dark jeans + clean sneakers. Optional: lightweight jacket or bomber. No formal shoes or ties required. Emphasis on looking intentional. Avoid: flip-flops, distressed jeans, gym wear",
+          "sources": [
+            "Pant Project",
+            "StyleBuddy Fashion"
+          ]
+        },
+        {
+          "value": "indian_business_casual",
+          "definition": "For corporate offices: Well-fitting dress pants or chinos + crisp white/light blue shirt or polo + blazer or sweater. Nehru jacket or bandhgala for semi-formal corporate events. Loafers or brogues. Avoid: t-shirts, distressed jeans, flip-flops. Well-maintained grooming essential",
+          "sources": [
+            "StyleBuddy Fashion",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "campus_casual",
+          "definition": "For college: Athleisure (joggers + hoodies + sneakers), denim-forward looks (jeans + tees + canvas shoes), sweater-vest combos for presentations, graphic tees layered with blazers for semi-formal occasions. Indo-western fusion with Nehru jackets over jeans for cultural events",
+          "sources": [
+            "Bewakoof"
+          ]
+        },
+        {
+          "value": "smart_casual_date",
+          "definition": "For dates and social evenings: Collared shirt or polo + chinos or tailored trousers + loafers or clean sneakers. Optional blazer for polish. Linen shirt with tailored trousers for summer. Dark denim acceptable. One statement accessory (watch). No sportswear or athleisure",
+          "sources": [
+            "Meridian Looks",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "weekend_relaxed",
+          "definition": "For weekend outings: Tee or polo + dark jeans or chinos + sneakers or desert boots. Layering with denim jacket, bomber, or open shirt over tee. Oxford shirt with rolled sleeves for brunch. Relaxed but not sloppy. Clean footwear essential",
+          "sources": [
+            "FashionBeans",
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "festive_ethnic",
+          "definition": "For haldi/mehendi/family festivals: Kurta-pajama in bright or pastel colors + Kolhapuris or mojaris. Optional Nehru jacket for added polish. Lightweight cotton or linen fabrics for Indian climate. Colors occasion-appropriate: yellows for haldi, greens for mehendi, jewel tones for evening events",
+          "sources": [
+            "Siyaram",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "wedding_formal_ethnic",
+          "definition": "For sangeet/pheras: Sherwani, bandhgala, or heavily embroidered kurta set. Rich fabrics: silk, velvet, brocade. Colors: royal blue, emerald, deep pink, gold accents. Mojaris or juttis. Statement accessories: pocket square, brooch, layered necklaces. Avoid red, white, black at pheras",
+          "sources": [
+            "Siyaram",
+            "Ethnix by Raymond"
+          ]
+        },
+        {
+          "value": "reception_formal",
+          "definition": "For receptions: Tuxedo with satin accents, midnight blue velvet jacket, charcoal dinner suit, or premium bandhgala. Oxford shoes, bow tie, metallic lapel pin. Most formal of all Indian wedding functions. Western formal or Indo-western fusion acceptable",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "temple_modest",
+          "definition": "For temple visits: Full-length trousers (no shorts) + collared shirt covering shoulders. Traditional dhoti/lungi preferred at some temples. No tight clothing, sportswear, or revealing attire. Head covering at certain temples/gurudwaras. Footwear removed. Conservative colors preferred",
+          "sources": [
+            "IndusBus",
+            "Hindu Temple of Atlanta"
+          ]
+        },
+        {
+          "value": "house_party_smart",
+          "definition": "For house parties: Printed Nehru jacket or embroidered kurta for ethnic vibe, or party-wear shirt in premium fabric + blazer + fitted trousers for Western look. Statement accessories welcome. Can experiment with bolder colors and patterns. Shoes may need to be removed at entrance",
+          "sources": [
+            "Bewakoof",
+            "CBazaar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_outfit_formula",
+      "description": "Specific, repeatable outfit formulas for casual and smart-casual occasions, expressed as garment combinations that reliably work together",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "tee_jeans_sneakers",
+          "definition": "Foundation casual: well-fitted crew-neck tee (white, black, or grey) + dark wash jeans + clean white court-style sneakers. The universal casual starting point. Can be elevated by swapping tee color or adding a layer",
+          "sources": [
+            "EffortlessGent Lean Wardrobe",
+            "EffortlessGent Casual Style",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "polo_chinos_loafers",
+          "definition": "Smart-casual bridge: minimalist polo in navy/grey/olive + chinos in khaki/beige/navy + brown or black leather loafers. Steps up from pure casual without being formal. Works for casual offices, brunches, and daytime dates",
+          "sources": [
+            "EffortlessGent Casual Style",
+            "Deux Vincente",
+            "Meridian Looks"
+          ]
+        },
+        {
+          "value": "oxford_shirt_jeans_desert_boots",
+          "definition": "Elevated casual: Oxford cloth button-down shirt (white or light blue) + dark denim jeans + suede desert boots. Classic smart-casual formula that balances casual denim with dressier shirt and footwear",
+          "sources": [
+            "FashionBeans",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "linen_shirt_tailored_trousers_loafers",
+          "definition": "Indian summer smart-casual: linen shirt (white, light blue, or pastel) + tailored trousers + leather loafers. Perfect for Indian climate. Works for office-to-party transitions, daytime events, and summer occasions",
+          "sources": [
+            "Meridian Looks",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "chinos_oxford_sweater_desert_boots",
+          "definition": "Layered smart-casual: navy chinos + pale blue Oxford shirt + oatmeal crewneck sweater + desert boots. Clean, fuss-free, trend-immune. The quintessential smart-casual formula per FashionBeans",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "blazer_tee_chinos_sneakers",
+          "definition": "High-low smart-casual: unstructured navy blazer + plain crew-neck tee (white or grey) + chinos + clean minimal sneakers. The blazer elevates the casual base. Works for dates, dinners, and semi-formal events",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman",
+            "Meridian Looks"
+          ]
+        },
+        {
+          "value": "henley_dark_jeans_boots",
+          "definition": "Rugged casual: henley (waffle-knit or thermal) + dark wash jeans + leather boots (Chelsea or lace-up). Masculine, textured, effortless. Great for evening outings and weekend activities",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "kurta_jeans_sneakers",
+          "definition": "Indian fusion casual: traditional kurta + distressed or dark denim jeans + clean sneakers. Blends traditional and contemporary Indian style. Works for casual festive occasions, house parties, and cultural events on campuses",
+          "sources": [
+            "Albatross Clothing",
+            "Bewakoof",
+            "StyleBuddy India"
+          ]
+        },
+        {
+          "value": "polo_blazer_chinos_monk_straps",
+          "definition": "Elevated smart-casual: knitted polo + unstructured blazer + tailored chinos + monk-strap shoes or Derbys. Elevated date night or business dinner formula. Replace dress shirt with polo for modern smart-casual approach",
+          "sources": [
+            "ApeToGentleman",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "graphic_tee_blazer_jeans",
+          "definition": "Creative casual: graphic tee + grey or black blazer + fitted jeans + clean sneakers. For semi-formal creative contexts: college presentations, casual dinners, house parties. The blazer dresses up the casual tee",
+          "sources": [
+            "Bewakoof"
+          ]
+        },
+        {
+          "value": "athleisure_joggers_hoodie_sneakers",
+          "definition": "Modern campus/weekend casual: joggers + oversized hoodie or premium sweatshirt + court-style sneakers + baseball cap. Sporty but intentional. Add headphones and sporty watch as accessories. For campus, casual hangouts, and errand runs",
+          "sources": [
+            "Bewakoof",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "chambray_shirt_chinos_white_sneakers",
+          "definition": "Versatile everyday: chambray shirt + chinos (khaki or olive) + white sneakers. The chambray is the single most versatile casual collared shirt. Can be worn tucked or untucked, sleeves rolled. Works across almost all casual occasions",
+          "sources": [
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "denim_jacket_tee_chinos",
+          "definition": "Layered weekend: denim jacket (medium wash) + plain tee + chinos or joggers + sneakers. The denim jacket serves as a lightweight Indian-weather-appropriate outer layer. Adds texture and visual interest to simple base",
+          "sources": [
+            "Albatross Clothing",
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "nehru_jacket_shirt_trousers",
+          "definition": "Indian smart-casual: Nehru jacket (structured, mandarin collar) + crisp shirt or polo + tailored trousers or chinos + loafers. Indian alternative to Western blazer for semi-formal occasions, corporate events, and family gatherings",
+          "sources": [
+            "Deux Vincente",
+            "StyleBuddy Fashion",
+            "Bewakoof"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "smart_casual_layering",
+      "description": "Three-layer system combinations for smart-casual dressing, specifying base layer, mid layer, and outer layer options that work together",
+      "style_track": [
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "oxford_crewneck_sweater_blazer",
+          "definition": "Base: white or light blue Oxford shirt. Mid: crewneck sweater in grey, navy, or oatmeal (merino wool or cashmere blend). Outer: unstructured navy blazer. The quintessential three-layer smart-casual stack for cooler weather and air-conditioned offices",
+          "sources": [
+            "FashionBeans",
+            "EffortlessGent Casual Style",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "polo_quilted_vest",
+          "definition": "Base: polo shirt in solid color. Mid: quilted vest in navy, black, or army green. No outer layer needed. Vest adds warmth and visual interest without bulk. Works for office casual and weekend outings. The vest transitions between smart and casual contexts",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "tee_flannel_shirt_denim_jacket",
+          "definition": "Base: plain crew-neck tee (white or grey). Mid: flannel or denim shirt worn open as mid-layer. Outer: denim jacket or chore coat. Rugged, textured layering for weekend activities and casual outings. The flannel adds warmth and pattern",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "henley_cardigan_sport_coat",
+          "definition": "Base: henley in neutral color. Mid: shawl-collar cardigan. Outer: sport coat or unstructured blazer. Creates a high-low mix that is casually sophisticated. The henley replaces the dress shirt for a relaxed foundation with smart outer layers",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "dress_shirt_v_neck_sweater_blazer",
+          "definition": "Base: crisp dress shirt (white, light blue, or subtle pattern). Mid: V-neck sweater in complementary neutral. Outer: structured blazer or sport coat. More formal end of smart-casual. Suitable for business casual offices and evening events",
+          "sources": [
+            "ApeToGentleman",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "tee_hoodie_bomber_jacket",
+          "definition": "Base: fitted crew-neck tee. Mid: lightweight hoodie. Outer: bomber jacket or motorcycle jacket. Casual-leaning layer stack for campus, weekends, and relaxed social settings. Modern and youthful",
+          "sources": [
+            "Bewakoof",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "oxford_quarter_zip_chore_coat",
+          "definition": "Base: Oxford sport shirt (checkered or solid). Mid: quarter-zip sweater in coordinating color. Outer: chore coat or field jacket. Modern business-casual to weekend-ready layering. The quarter-zip is a refined mid-layer appropriate for office",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "kurta_nehru_jacket",
+          "definition": "Base: plain or textured kurta in solid neutral color. Outer: structured Nehru jacket in complementary color. Two-layer Indian smart-casual system. No mid-layer needed due to Indian climate. The Nehru jacket elevates the kurta for semi-formal occasions, family functions, and festive events",
+          "sources": [
+            "Deux Vincente",
+            "Siyaram",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "tee_open_shirt_no_outer",
+          "definition": "Base: fitted tee or tank. Mid: open button-down shirt (linen, chambray, or printed) worn unbuttoned as a lightweight layer. No outer. Indian-climate-appropriate two-layer approach. Adds visual interest and pattern without overheating. For casual outings and weekends",
+          "sources": [
+            "Albatross Clothing",
+            "StyleBuddy India"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "capsule_wardrobe_essentials",
+      "description": "The 10-15 core wardrobe pieces recommended for Indian urban men to cover all everyday occasions with minimal items and maximum versatility",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "ethnic"
+      ],
+      "values": [
+        {
+          "value": "white_crew_neck_tee",
+          "definition": "The most versatile piece in any wardrobe. Premium fabric (Supima cotton or equivalent) that holds shape. Worn solo with jeans, layered under open shirts, or paired under blazer for high-low look. Quantity: 2-3",
+          "sources": [
+            "Albatross Clothing",
+            "Deux Vincente",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "neutral_tees_set",
+          "definition": "Set of 3-4 crew-neck tees in neutral colors: white, black, beige/grey, olive. Foundation layer pieces that anchor casual outfits. Well-fitted, quality fabric essential",
+          "sources": [
+            "Albatross Clothing",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "minimalist_polo",
+          "definition": "Polo shirt in solid muted color (navy, grey, or olive). Bridges casual and smart-casual. More sophisticated than a tee, works for office casual, brunches, and daytime dates. Quantity: 1-2",
+          "sources": [
+            "Deux Vincente",
+            "Albatross Clothing",
+            "Meridian Looks"
+          ]
+        },
+        {
+          "value": "oxford_button_down_shirt",
+          "definition": "Oxford cloth button-down in white and/or light blue. The workhorse smart-casual shirt. Works tucked with chinos for office or untucked with jeans for weekend. Essential base-level item",
+          "sources": [
+            "FashionBeans",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "chambray_shirt",
+          "definition": "If you own only one casual collared shirt, make it chambray. Versatile texture between denim and dress shirt. Works with chinos, dark jeans, or layered under blazer. Quantity: 1",
+          "sources": [
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "smart_shirts_pair",
+          "definition": "Two smart shirts: one solid (white or light blue), one in subtle pattern (checks or micro-print). For office, dates, and occasions requiring collar. Crisp cotton or linen for Indian climate",
+          "sources": [
+            "Albatross Clothing",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "dark_wash_denim",
+          "definition": "Dark blue jeans (raw or rigid preferred). The most versatile bottom in menswear. Straddles casual and smart-casual. Pairs with tees, polos, shirts, and blazers. The single most important bottom. Quantity: 1-2",
+          "sources": [
+            "EffortlessGent Lean Wardrobe",
+            "Albatross Clothing",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "chinos_pair",
+          "definition": "Two pairs of chinos: classic khaki/beige and versatile navy blue. More formal than jeans, more relaxed than dress trousers. Perfect for Indian workplace and social gatherings. The essential smart-casual bottom",
+          "sources": [
+            "Deux Vincente",
+            "FashionBeans",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "jogger_or_coord_set",
+          "definition": "One jogger or co-ord set for casual comfort. For campus wear, startup offices, weekend errands. Indian-climate-friendly in breathable fabric. Modern casual essential for younger Indian men",
+          "sources": [
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "navy_blazer_unstructured",
+          "definition": "Single-breasted, two-button unstructured navy blazer in hopsack or twill fabric. The most versatile outer layer. Wears with dress chinos, mismatched trousers, and dark denim. Elevates any outfit from casual to smart-casual",
+          "sources": [
+            "EffortlessGent Lean Wardrobe",
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "layering_jacket",
+          "definition": "One lightweight layering jacket: bomber or denim jacket. Appropriate for Indian weather. Serves as everyday outerwear for casual contexts. Navy, black, or army green",
+          "sources": [
+            "Albatross Clothing",
+            "Deux Vincente"
+          ]
+        },
+        {
+          "value": "crewneck_sweater",
+          "definition": "Medium-weight crewneck sweater in neutral (grey, navy, or oatmeal). Merino wool or cashmere blend. Works as mid-layer in AC environments or as outer layer in mild weather. Year-round use in Indian AC offices",
+          "sources": [
+            "EffortlessGent Lean Wardrobe",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "white_sneakers",
+          "definition": "Clean, low-profile white leather or canvas court-style sneakers. The ultimate versatile footwear. Pairs with jeans, chinos, shorts, and even casual kurtas. Classic shape that never goes out of style. Quantity: 1",
+          "sources": [
+            "Deux Vincente",
+            "Albatross Clothing",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "leather_loafers",
+          "definition": "Brown or black leather loafers. For occasions requiring something smarter than sneakers. Works with chinos, trousers, tailored shorts. Comfortable and stylish. The smart-casual dress shoe. Quantity: 1",
+          "sources": [
+            "Deux Vincente",
+            "Albatross Clothing",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "well_tailored_kurta",
+          "definition": "A well-tailored kurta in solid neutral color (white, beige, or navy). Essential for festive occasions, family functions, religious ceremonies, and cultural events. India-specific capsule piece that blends modern minimalism with tradition. Quantity: 1",
+          "sources": [
+            "Deux Vincente",
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "nehru_jacket",
+          "definition": "Structured Nehru jacket (mandarin collar, hip-length) in navy, black, or earthy tone. Indian alternative to Western blazer. Elevates kurtas for weddings and formal events. Also wears over shirts for smart-casual Indian occasions. Versatile layering piece",
+          "sources": [
+            "Deux Vincente",
+            "StyleBuddy Fashion",
+            "Bewakoof"
+          ]
+        },
+        {
+          "value": "classic_watch",
+          "definition": "One understated classic watch with leather strap or metal bracelet. The only essential accessory. Avoid sport/smart watches for smart-casual contexts. Adds final touch of polish and personality. Tool watch (diver or field) recommended",
+          "sources": [
+            "Deux Vincente",
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "kolhapuri_or_mojari",
+          "definition": "One pair of traditional Indian footwear (Kolhapuri sandals or embroidered mojaris). For festive events, haldi/mehendi ceremonies, temple visits, and family gatherings requiring ethnic dress. India-specific capsule essential",
+          "sources": [
+            "Siyaram",
+            "Albatross Clothing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indian_wedding_guest_dress",
+      "description": "Specific outfit recommendations for male wedding guests at each function of an Indian wedding, including garment type, fabric, color, and accessory guidelines",
+      "style_track": [
+        "ethnic",
+        "formal"
+      ],
+      "values": [
+        {
+          "value": "haldi_outfit",
+          "definition": "Function: Haldi (turmeric ceremony, daytime). Outfit: Lightweight cotton kurta in sunny yellow, deep mustard, or warm orange. Paired with pajama or cotton churidar. Fabric: breathable cotton or cotton blends with rich surface texture. Footwear: simple leather Kolhapuris. Accessories: minimal, skip heavy jewelry. Vibe: easygoing charm, comfort-first. Colors to favor: yellows, oranges, warm tones. Tip: expect turmeric stains, don't wear anything precious",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "mehendi_outfit",
+          "definition": "Function: Mehendi (henna ceremony, daytime/evening). Outfit: Short kurta with Nehru jacket, printed cotton sets, or casual dhoti-style bottom. Indo-western fusion acceptable (Nehru jacket over shirt and trousers). Fabric: cotton, linen. Footwear: Kolhapuris or mojris. Colors to favor: shades of green (traditional for mehendi), also rust, mustard, turquoise, pink. Accessories: pocket square, brooch, or lapel pin for polish. Vibe: relaxed, festive, colorful",
+          "sources": [
+            "Siyaram",
+            "Ethnix by Raymond",
+            "Bharat Reshma"
+          ]
+        },
+        {
+          "value": "sangeet_outfit",
+          "definition": "Function: Sangeet (music and dance night, evening). Outfit: Kurta with pajamas or dhoti in fabrics with luxurious drape and subtle sheen. Alternatively, Indo-western jacket with fitted trousers. Must allow freedom of movement for dancing. Fabric: wrinkle-resistant materials with sheen (silk-blend, art silk). Footwear: Jodhpuri mojaris or formal ethnic shoes. Colors: rich jewel tones (emerald, sapphire blue, deep purple) and metallics. Accessories: statement pieces welcome (layered brooches, pocket squares). Vibe: bold, high-energy, performance-ready",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "pheras_outfit",
+          "definition": "Function: Pheras/Main ceremony (sacred vows, most formal). Outfit: Regal sherwani with intricate embroidery, sophisticated bandhgala suit, or heavily embellished kurta set. This is the most traditional and culturally significant event. Fabric: silk, velvet, brocade, premium wool blends. Footwear: embroidered mojaris or juttis. Colors: royal blue, emerald green, deep pink, ivory and gold. AVOID: red (reserved for bride), white (mourning connotation), black (inauspicious). Accessories: turban/safa (if appropriate to region), pocket square, brooch, cufflinks. Vibe: regal, traditional, respectful",
+          "sources": [
+            "Siyaram",
+            "Ethnix by Raymond",
+            "CBazaar"
+          ]
+        },
+        {
+          "value": "reception_outfit",
+          "definition": "Function: Reception (post-wedding celebration, evening, most Western-influenced). Outfit Option A (Western): Tuxedo with satin lapel accents in black, midnight blue velvet jacket, or charcoal dinner suit. Double-breasted jacket variant. Oxford shoes, bow tie, metallic lapel pin. Outfit Option B (Indo-Western): Premium bandhgala in velvet or fine wool, paired with tailored trousers. Outfit Option C (Traditional): Heavily embroidered sherwani with premium fabric. Fabric: premium wool, satin, velvet. Colors: black, midnight blue, charcoal, deep jewel tones. Accessories: bow tie or cravat, pocket square, cufflinks, refined watch. Vibe: red-carpet, glamorous, camera-ready",
+          "sources": [
+            "Siyaram"
+          ]
+        },
+        {
+          "value": "baraat_outfit",
+          "definition": "Function: Baraat (groom's procession, high energy). Outfit: Silk sherwani in deep shades with intricate embroidery for royal touch, or kurta-pajama with Nehru jacket for comfort while dancing. Must be comfortable enough for extended dancing and movement. Fabric: silk, silk blends. Footwear: comfortable ethnic shoes (mojaris). Colors: deep, rich shades. Accessories: minimal due to physical activity. Vibe: celebratory, energetic, comfortable",
+          "sources": [
+            "Ethnix by Raymond",
+            "CBazaar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "smart_casual_coordination_rules",
+      "description": "Principles and rules for coordinating smart-casual outfits, including balance, texture mixing, color strategy, and formality calibration",
+      "style_track": [
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "swap_up_rule",
+          "definition": "Start with a casual outfit and swap one or two pieces for smarter alternatives to achieve smart-casual. Example: swap graphic tee for Oxford shirt, swap sneakers for loafers. More practical than building from formal and dressing down",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "color_darkness_formality",
+          "definition": "Darker colors skew more formal. Swapping olive bomber for navy one, or stonewashed jeans for indigo, makes outfit feel dressier without changing garment types. Use this to calibrate formality within same outfit framework",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "texture_formality_spectrum",
+          "definition": "Smooth and shiny textures are more formal; matte and textured fabrics are more casual. Swap worsted wool for flannel or tweed to casualize. Swap cotton for linen to add casual warmth. Texture mixing adds visual depth to smart-casual outfits",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "minimize_accessories",
+          "definition": "Modern smart-casual requires minimal accessories. Remove tie, lose belt buckle prominence, skip pocket square. Easier to look sharp with less going on. One statement piece (watch) is sufficient. Sport watches drag down smart outfits",
+          "sources": [
+            "ApeToGentleman",
+            "Deux Vincente"
+          ]
+        },
+        {
+          "value": "footwear_mood_shift",
+          "definition": "Shoes have disproportionate power to alter outfit mood. Loafers or Chelsea boots dress up casual outfits. Clean minimal sneakers dress down smart outfits. Sneakers must be sufficiently smart (no beaters). Derby shoes for maximum smart-casual range",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "warm_neutral_palette_2025",
+          "definition": "2025-2026 palette has shifted from navy/black dominance to warmer, natural tones: browns, clay, sage, soft neutrals. These feel richer when worn tonally (different shades of same color family). Build new purchases in this direction",
+          "sources": [
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "context_calibration",
+          "definition": "Smart-casual means different things by context. Graduation smart-casual differs from date-night smart-casual. Always consider where you're heading and who you're with. This informs how smart or how casual to skew within the smart-casual range",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "light_inside_dark_outside",
+          "definition": "Layering color rule: light colors closest to body, darker colors in outer layers. White tee under grey sweater under navy blazer. Creates natural visual depth and slimming effect. Reliable formula that always works",
+          "sources": [
+            "The Tie Bar",
+            "Bronze Snake"
+          ]
+        },
+        {
+          "value": "rule_of_three_layers",
+          "definition": "Three visible layers is the sweet spot for smart-casual. Two is good, three is optimal, four is overkill creating bulk and clutter. In Indian climate, two layers is often the practical maximum (base + one layer)",
+          "sources": [
+            "The Tie Bar",
+            "Family Britches"
+          ]
+        },
+        {
+          "value": "formality_proximity",
+          "definition": "Items close in formality level on the casual-to-formal spectrum pair well together. Don't mix extremes (tuxedo jacket with gym shorts). Polo with chinos works because they're adjacent in formality. Spectrum thinking prevents awkward mismatches",
+          "sources": [
+            "EffortlessGent Casual Style"
+          ]
+        },
+        {
+          "value": "indian_climate_adaptation",
+          "definition": "Indian smart-casual must account for heat and humidity. Favor breathable fabrics: linen, cotton, lightweight blends. Two-layer maximum in summer. Open-shirt-over-tee as lightweight layering alternative. Nehru jacket as Indian-appropriate structured layer that is lighter than Western blazer",
+          "sources": [
+            "Meridian Looks",
+            "Albatross Clothing",
+            "Pant Project"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indian_capsule_color_palette",
+      "description": "Recommended core color palette for building a versatile Indian men's capsule wardrobe, with neutral base and seasonal accent colors",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "core_neutrals",
+          "definition": "Base palette: white, black, navy, grey, beige/khaki. These are timeless menswear neutrals that pair easily with one another. All capsule wardrobe purchases should primarily come from this group. Build 80% of wardrobe here",
+          "sources": [
+            "Deux Vincente",
+            "Albatross Clothing",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "extended_neutrals",
+          "definition": "Additional neutral tones: olive/military green, brown/tan, light blue, charcoal. Expand the core palette without introducing bold color. These work as secondary wardrobe colors that still pair with everything",
+          "sources": [
+            "EffortlessGent Lean Wardrobe",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "seasonal_accents",
+          "definition": "Introduce 1-2 accent colors per season through tees or accessories: olive green, maroon/burgundy, mustard, rust, sage. 2025-2026 trend favors warmer natural tones (browns, clay, sage) over traditional navy/black dominance",
+          "sources": [
+            "Deux Vincente",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "wedding_event_colors",
+          "definition": "Occasion-specific palette: yellows/oranges for haldi, greens for mehendi, jewel tones (emerald, sapphire, deep pink) for sangeet/pheras, pastels for daytime ceremonies, midnight blue/black for receptions. Avoid: red (bride's color), white, black at pheras",
+          "sources": [
+            "Siyaram",
+            "Ethnix by Raymond"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indian_recommended_brands",
+      "description": "Homegrown Indian brands recommended for building a capsule wardrobe at accessible price points",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "bhaane",
+          "definition": "Urban, clean designs. Good for smart-casual basics and modern Indian menswear. Mid-range pricing",
+          "sources": [
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "march_tee",
+          "definition": "Comfortable, minimal t-shirts and joggers. Strong basics brand for building capsule wardrobe foundation",
+          "sources": [
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "nicobar",
+          "definition": "Modern Indian classics: linen shirts, kurtas, and relaxed tailoring. Good for India-specific smart-casual and ethnic-casual pieces",
+          "sources": [
+            "Albatross Clothing"
+          ]
+        },
+        {
+          "value": "uniqlo_india",
+          "definition": "Excellent for basics and functional layers. Quality-to-price ratio strong for capsule wardrobe foundations. Good for tees, chinos, and layering pieces",
+          "sources": [
+            "Albatross Clothing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "workwear_to_weekend_transition",
+      "description": "Strategies for transitioning office outfits to weekend or after-work social contexts, specific to Indian urban men",
+      "style_track": [
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "shirt_swap",
+          "definition": "Swap dress shirt for knitted polo, fine-gauge sweater, or grandad-collar button-up. Instantly casualizes a smart outfit for after-work drinks or weekend brunch",
+          "sources": [
+            "ApeToGentleman",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "footwear_swap",
+          "definition": "Swap formal Oxfords for clean sneakers or loafers to transition from office to weekend. Shoes have the most power to shift outfit mood. Keep a pair of clean sneakers at desk or in bag",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "remove_structure",
+          "definition": "Remove blazer, untuck shirt, roll up sleeves, lose the belt. Removing structured elements and loosening fit cues signals weekend mode. Works for Indian business-casual-to-evening transitions",
+          "sources": [
+            "FashionBeans",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "linen_versatility",
+          "definition": "Linen shirts and trousers work for Indian office-to-party transitions seamlessly. The fabric reads professional in office context and relaxed in social context. Ideal for Indian climate where same outfit must span both environments",
+          "sources": [
+            "Meridian Looks",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "chinos_bridge",
+          "definition": "Chinos are the bridge garment between workwear and weekendwear. Pair with blazer and shirt for office, swap to tee and sneakers for weekend. The single most versatile Indian office-to-casual bottom",
+          "sources": [
+            "Pant Project",
+            "Deux Vincente"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outfit_elevation_technique",
+      "description": "Specific techniques to elevate a basic casual outfit to smart-casual or semi-formal without changing the entire outfit",
+      "style_track": [
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "add_blazer",
+          "definition": "Adding an unstructured blazer over any casual outfit (tee+jeans, polo+chinos) instantly elevates it to smart-casual. The single most effective elevation technique. Navy blazer is the universal choice",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman",
+            "EffortlessGent Lean Wardrobe"
+          ]
+        },
+        {
+          "value": "add_nehru_jacket",
+          "definition": "Indian alternative to blazer elevation. Adding a Nehru jacket over a shirt, polo, or kurta instantly creates a polished, semi-formal Indian look. Works for both ethnic and Western base outfits",
+          "sources": [
+            "Deux Vincente",
+            "StyleBuddy Fashion"
+          ]
+        },
+        {
+          "value": "upgrade_footwear",
+          "definition": "Swap sneakers for leather loafers, Chelsea boots, or monk straps. Footwear upgrade is the second most effective single-change elevation. Sleek Chelsea boot or Derby shoe upgrades casual to smart-casual",
+          "sources": [
+            "FashionBeans",
+            "ApeToGentleman"
+          ]
+        },
+        {
+          "value": "darken_colors",
+          "definition": "Swap lighter/washed tones for darker equivalents. Stonewashed jeans to indigo, olive jacket to navy, light tee to dark sweater. Darker palette reads more formal without changing garment types",
+          "sources": [
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "add_watch",
+          "definition": "A classic watch (diver or field watch, not smartwatch) is the single accessory that most elevates an outfit. Avoid sport/smart watches that drag down otherwise sharp looks. Leather strap or metal bracelet",
+          "sources": [
+            "FashionBeans",
+            "Deux Vincente"
+          ]
+        },
+        {
+          "value": "tuck_the_shirt",
+          "definition": "Tucking in a shirt with a clean waistline creates a more polished silhouette. Combined with a belt, it signals intentionality. Untucked reads casual, tucked reads smart-casual to formal",
+          "sources": [
+            "Pant Project",
+            "StyleBuddy Fashion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ac_outdoor_transition_strategy",
+      "description": "Layering and fabric strategies for managing the temperature shock between air-conditioned Indian offices (often set to 18-22C) and outdoor heat (35-45C) during summer commutes",
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ],
+      "values": [
+        {
+          "value": "breathable_base_plus_light_midlayer",
+          "definition": "Core strategy: start with a breathable natural-fiber base layer (cotton or linen shirt/tee), add a light mid-layer (gilet, unstructured blazer, or light cardigan) for AC-chilled office, shed the top layer when stepping outdoors. Base layer handles heat; mid-layer handles cold AC",
+          "sources": [
+            "Man's World India",
+            "India Observers",
+            "LM Street"
+          ]
+        },
+        {
+          "value": "linen_shirt_over_tank",
+          "definition": "Layer a light-hued linen shirt over a simple tank top or tee; the linen provides warmth in AC environments while remaining breathable. Remove the outer linen layer when transitioning to hot outdoor areas. Timeless and practical approach",
+          "sources": [
+            "Man's World India",
+            "LM Street"
+          ]
+        },
+        {
+          "value": "unstructured_blazer_layer",
+          "definition": "Lightweight unstructured jacket with minimal lining in linen, cotton, hopsack, seersucker, or tropical wool; provides office formality and AC warmth without overheating. Relaxed fit allows air circulation. Can be draped over arm during outdoor commute",
+          "sources": [
+            "Man's World India",
+            "India Observers"
+          ]
+        },
+        {
+          "value": "packable_pocket_garment",
+          "definition": "Garments that fold into their own pockets for easy carry during indoor-outdoor transitions. Essential for fluctuating temperature environments. Can be a light windbreaker, packable vest, or compressible jacket that takes minimal space when not needed",
+          "sources": [
+            "India Observers"
+          ]
+        },
+        {
+          "value": "rayon_gilet_layer",
+          "definition": "Rayon-based gilets or vests as transitional layers for freezing AC offices or cooler evenings; lightweight enough to not add bulk, provides targeted core warmth without full-sleeve coverage",
+          "sources": [
+            "India Observers"
+          ]
+        },
+        {
+          "value": "relaxed_fit_airflow_strategy",
+          "definition": "Choose boxier fits with room at sleeves and torso for maximum air circulation between skin and fabric. Cuban collars and band collars offer extra ventilation. Pleated tapered trousers with relaxed upper leg replace tight fits. Cropped or ankle-length styles allow skin to breathe. The more air between skin and shirt, the cooler you feel",
+          "sources": [
+            "Man's World India"
+          ]
+        },
+        {
+          "value": "texture_over_layers",
+          "definition": "When layering is impractical in extreme heat, add visual interest through fabric texture rather than additional garments. Linen, seersucker, hopsack, and matte cottons add depth without weight. Subtle pinstripes, micro-checks, or soft florals do what layering usually does for visual interest",
+          "sources": [
+            "Man's World India"
+          ]
+        },
+        {
+          "value": "minimal_accessories",
+          "definition": "Reduce accessory weight and coverage to manage heat; avoid heavy watches, layered chains, thick belts that add unnecessary warmth. Opt for woven belts, textured loafers, minimalist watches. Light suede or canvas loafers replace heavier leather shoes",
+          "sources": [
+            "Man's World India"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "monsoon_dressing_rules",
+      "description": "Specific rules and guidelines for dressing during India's monsoon season (June-September) addressing rain, humidity, puddles, and unpredictable weather shifts",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "prefer_dark_colors",
+          "definition": "Dark-colored fabrics hide rain splashes, water marks, and mud stains better than light colors. They don't become transparent when wet. Navy, charcoal, olive, dark grey, and black are preferred monsoon colors. Reduces visible damage from unexpected downpours",
+          "sources": [
+            "Entimessi",
+            "The Hub",
+            "Urbano Fashion"
+          ]
+        },
+        {
+          "value": "quick_dry_fabric_priority",
+          "definition": "Prioritize fabrics that dry rapidly after getting wet: nylon, polyester, poly-cotton blends, and performance knits. Avoid fabrics that stay damp and heavy. Quick-dry is the single most important monsoon fabric property after breathability",
+          "sources": [
+            "Entimessi",
+            "Global Republic",
+            "Nobero",
+            "XYXX Apparels"
+          ]
+        },
+        {
+          "value": "avoid_heavy_denim",
+          "definition": "Heavy denim becomes cumbersome when wet, takes very long to dry, and becomes uncomfortable with chafing. Substitute with lightweight denim or other breathable quick-dry pants. If denim is desired, choose lighter washes and thinner weights",
+          "sources": [
+            "The Hub",
+            "Kingdom of White",
+            "American Eagle India"
+          ]
+        },
+        {
+          "value": "linen_caution",
+          "definition": "Linen is debated for monsoon: praised by some for breathability and moisture-wicking, but warned against by others as it tends to shrink in water, wrinkles excessively when wet, and can look disheveled. If worn, choose pre-washed or blended linen",
+          "sources": [
+            "Entimessi",
+            "Kingdom of White",
+            "BLNK Store"
+          ]
+        },
+        {
+          "value": "waterproof_outer_layer",
+          "definition": "A lightweight waterproof windbreaker or rain jacket is essential monsoon outerwear. Should be breathable to prevent internal moisture buildup. Best if packable for carrying during dry spells. Shields from sudden showers without feeling stuffy",
+          "sources": [
+            "Entimessi",
+            "Nobero",
+            "American Eagle India"
+          ]
+        },
+        {
+          "value": "waterproof_footwear",
+          "definition": "Replace leather shoes with waterproof or water-resistant alternatives: rubber loafers, Crocs, waterproof sneakers with good rubber grip soles, sandals, or floaters. Avoid leather shoes, canvas shoes, and suede which get ruined by water. Anti-slip soles essential for wet surfaces",
+          "sources": [
+            "Entimessi",
+            "The Hub",
+            "Urbano Fashion",
+            "Nobero"
+          ]
+        },
+        {
+          "value": "lightweight_layering",
+          "definition": "Monsoon layering uses light layers for flexibility: moisture-wicking base layer to keep sweat away, lightweight breathable shirt, and waterproof outer layer. Layers can be added or removed as rain starts and stops throughout the day",
+          "sources": [
+            "The Hub",
+            "Kingdom of White",
+            "Entimessi"
+          ]
+        },
+        {
+          "value": "avoid_white_fabrics",
+          "definition": "White fabrics become transparent when wet from rain, show dirt and mud stains prominently, and require frequent washing during monsoon. Cream and off-white share similar problems. Reserve white garments for dry seasons",
+          "sources": [
+            "The Hub",
+            "Entimessi",
+            "Vestirio"
+          ]
+        },
+        {
+          "value": "wrinkle_resistant_preference",
+          "definition": "Humidity causes excessive wrinkling in many natural fabrics during monsoon. Prefer wrinkle-resistant fabrics or blends that maintain appearance despite moisture exposure. Performance blends and synthetic-natural mixes handle monsoon humidity better",
+          "sources": [
+            "Entimessi",
+            "Urbano Fashion"
+          ]
+        },
+        {
+          "value": "waterproof_bags",
+          "definition": "Replace leather bags with nylon or PVC backpacks and totes during monsoon. Protects electronics and documents from sudden rain. Waterproof messenger bags or cross-body bags with sealed zippers are practical choices",
+          "sources": [
+            "Entimessi",
+            "Nobero"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indian_office_summer_fit",
+      "description": "Fit and silhouette guidelines for men's office wear optimized for Indian summer heat while maintaining professional appearance",
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ],
+      "values": [
+        {
+          "value": "relaxed_boxy_shirt",
+          "definition": "Boxier shirt fits with room at sleeves and torso maximize air circulation between skin and fabric. The more air gap, the cooler the wearer feels. Cuban collars and band collars offer extra ventilation and style without losing office formality",
+          "sources": [
+            "Man's World India"
+          ]
+        },
+        {
+          "value": "pleated_tapered_trouser",
+          "definition": "Pleated trousers with relaxed upper leg replace tight cigarette pants for Indian summer office wear. Taper provides polish while pleats allow air circulation. Cropped or ankle-length styles expose skin for additional breathability",
+          "sources": [
+            "Man's World India"
+          ]
+        },
+        {
+          "value": "unstructured_minimal_blazer",
+          "definition": "Unstructured jackets with minimal or no lining in lightweight fabrics (linen, hopsack, tropical wool, seersucker) for office formality without overheating. Relaxed construction reduces trapped heat compared to fully structured blazers",
+          "sources": [
+            "Man's World India",
+            "India Observers"
+          ]
+        },
+        {
+          "value": "oversized_casual_tee",
+          "definition": "Oversized T-shirts and wide silhouettes allow maximum air circulation for casual and relaxed office environments. Boxy cuts in breathable fabrics are the standard Indian summer casual uniform",
+          "sources": [
+            "BLNK Store",
+            "The Bear House",
+            "Entimessi"
+          ]
+        }
+      ]
+    }
+  ],
+  "occasion_principles": [
+    {
+      "name": "third_wardrobe_concept",
+      "description": "Flusser's concept that business casual represents a 'third wardrobe' distinct from both traditional business suits and weekend casual wear. It is not simply dressing down a suit or dressing up jeans — it is its own category requiring its own rules and skills. The challenges posed by a casual-leaning corporate climate should not distract men from the goal of becoming more literate about what their clothes communicate.",
+      "sources": [
+        "Flusser Ch13"
+      ]
+    },
+    {
+      "name": "dress_up_over_dress_down",
+      "description": "Flusser strongly advocates the dress-up approach to business casual over the dress-down approach. While a dark sport jacket can make any man look more professional, business casual without a jacket removes the protective wrapping of tailored refuge. The dress-down approach demands much stronger personal coordination skills.",
+      "sources": [
+        "Flusser Ch13"
+      ]
+    },
+    {
+      "name": "face_framing_without_tie",
+      "description": "The most critical challenge in casual dressing: without the closed shirt collar and necktie to add glamour and highlight the face, fill up the area under the chin, the collar must still frame the face without distracting from it. Button-down collars, closed collars, and layered necklines all serve this purpose.",
+      "note": "Cross-references D03 face_health_is_primary_objective and D02 flusser_frame_principle.",
+      "sources": [
+        "Flusser Ch13"
+      ]
+    },
+    {
+      "name": "sport_to_wardrobe_crossover",
+      "description": "Many wardrobe staples originated as sporting garments. The hacking jacket became the sport coat. Riding wear became country casual. Polo shirts moved from tennis courts to everyday wear. Boat shoes went from deck to street. Understanding these origins helps place garments in the correct formality context and pair them authentically.",
+      "sources": [
+        "Roetzel Sporting Life"
+      ]
+    },
+    {
+      "name": "occasion_reading_skill",
+      "description": "The ability to correctly read what an occasion demands and dress accordingly. Job interviews require research into company culture. Friday dress-down is not weekend casual. A country weekend is not the same as garden casual. Reading the occasion correctly is as important as knowing the rules.",
+      "sources": [
+        "Flusser Ch13"
+      ]
+    },
+    {
+      "name": "formality_as_gradient_not_binary",
+      "description": "Formality is not either formal or casual — it is a continuous gradient. Within business casual alone there is a spectrum from sport-jacket-with-dress-shirt at the top to fine-knit-over-khakis at the bottom. The modern sport code needs to combine some attraction with boardroom protocol. Understanding the full gradient allows precise calibration to context.",
+      "sources": [
+        "Flusser Ch13",
+        "Roetzel Sporting Life"
+      ]
+    }
+  ],
+  "cross_domain_dependencies": [
+    {
+      "from_param": "occasion_category",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "maps_to"
+    },
+    {
+      "from_param": "formal_occasion_component_selection",
+      "to_domain": "D06",
+      "to_param": "evening_wear_component_rules",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "business_casual_trouser_choice",
+      "to_domain": "D08",
+      "to_param": "fabric_formality_hierarchy",
+      "relationship": "references"
+    },
+    {
+      "from_param": "casual_footwear_formality",
+      "to_domain": "D09",
+      "to_param": "shoe_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "casual_footwear_formality",
+      "to_domain": "D09",
+      "to_principle": "shoe_formality_hierarchy",
+      "relationship": "references"
+    },
+    {
+      "from_param": "business_casual_jacket_role",
+      "to_domain": "D04",
+      "to_param": "jacket_formality_tier",
+      "relationship": "references"
+    },
+    {
+      "from_param": "tieless_collar_strategy",
+      "to_domain": "D04",
+      "to_param": "shirt_collar_style",
+      "relationship": "references"
+    },
+    {
+      "from_param": "casual_color_coordination",
+      "to_domain": "D02",
+      "to_param": "top_bottom_contrast",
+      "relationship": "references"
+    },
+    {
+      "from_param": "casual_color_coordination",
+      "to_domain": "D03",
+      "to_principle": "face_health_is_primary_objective",
+      "relationship": "references"
+    },
+    {
+      "from_param": "context_transition_technique",
+      "to_domain": "D09",
+      "to_param": "shoe_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "spectator_dress_code",
+      "to_domain": "D09",
+      "to_param": "hat_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "sporting_occasion_dress",
+      "to_domain": "D08",
+      "to_param": "suiting_fabric",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "indian_occasion_category",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "maps_to"
+    },
+    {
+      "from_param": "indian_occasion_dress_code",
+      "to_domain": "D04",
+      "to_param": "casual_jacket_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "indian_occasion_dress_code",
+      "to_domain": "D04",
+      "to_param": "jeans_fit",
+      "relationship": "references"
+    },
+    {
+      "from_param": "indian_wedding_guest_dress",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "casual_outfit_formula",
+      "to_domain": "D04",
+      "to_param": "tshirt_fit",
+      "relationship": "references"
+    },
+    {
+      "from_param": "casual_outfit_formula",
+      "to_domain": "D09",
+      "to_param": "sneaker_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "smart_casual_layering",
+      "to_domain": "D04",
+      "to_param": "casual_jacket_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "monsoon_dressing_rules",
+      "to_domain": "D08",
+      "to_param": "casual_fabric_breathability",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "monsoon_dressing_rules",
+      "to_domain": "D09",
+      "to_param": "monsoon_footwear_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "ac_outdoor_transition_strategy",
+      "to_domain": "D08",
+      "to_param": "casual_fabric_type",
+      "relationship": "constrains"
+    },
+    {
+      "from_param": "workwear_to_weekend_transition",
+      "to_domain": "D04",
+      "to_param": "casual_shirt_type",
+      "relationship": "references"
+    }
+  ],
+  "status": "production"
+}

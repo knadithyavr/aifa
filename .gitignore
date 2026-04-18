@@ -1,0 +1,27 @@
+# Environment
+.env
+.env.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Engine artifacts
+knowledgeBase/engine/test_outputs/
+knowledgeBase/engine/sample_output.json
+knowledgeBase/engine/sample_prompt.json
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/

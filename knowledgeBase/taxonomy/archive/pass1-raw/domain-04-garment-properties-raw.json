@@ -1,0 +1,786 @@
+{
+  "domain": "garment_properties_and_visual_effects",
+  "version": "0.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 5: The Suit",
+    "Dressing the Man - Alan Flusser - Chapter 6: The Odd Jacket, Blazer, and Odd Trouser",
+    "Dressing the Man - Alan Flusser - Chapter 7: The Dress Shirt",
+    "Dressing the Man - Alan Flusser - Chapter 8: The Necktie",
+    "Gentleman's Gazette - Suit Jacket Anatomy",
+    "Gentleman's Gazette - Shirt Collar Styles Guide",
+    "Gentleman's Gazette - Trouser Fit & Break Guide",
+    "Gentleman's Gazette - Tie Knot Pairing Guide"
+  ],
+  "parameters": [
+    {
+      "name": "jacket_closure",
+      "description": "Whether the jacket front is single-breasted or double-breasted, affecting formality and visual width",
+      "values": [
+        {
+          "value": "single_breasted",
+          "definition": "Single row of buttons with a narrow overlap. More versatile, can be worn open or closed. Slimmer silhouette.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "double_breasted",
+          "definition": "Two parallel rows of buttons with wide overlap. Incrementally more stylish than single-breasted. Pointed diagonal lapels dress up any worsted. Should be worn buttoned. Projects broader chest.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "DB adds visual width to torso and projects formality. SB is more neutral and versatile."
+    },
+    {
+      "name": "jacket_button_configuration",
+      "description": "Number and arrangement of front buttons on the jacket, affecting the V-opening and visual proportions",
+      "values": [
+        {
+          "value": "one_button",
+          "definition": "Single button, lowest stance. Maximum V-opening exposing furnishings. Most elongating. Typically reserved for formal/dinner jackets.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "two_button",
+          "definition": "Most popular modern configuration. Lower button stance than three-button, showing more shirt and tie. Gives trimmer look with defined waistline via darts.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "three_button",
+          "definition": "Higher button stance, less V-opening. Classic conservative look. Top button optional (often rolled). Shortens perceived torso length.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "three_roll_two",
+          "definition": "Three-button jacket where the top button is hidden under a soft lapel roll. Combines the height of a 3-button with the openness of a 2-button. Neapolitan style.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "db_six_on_two",
+          "definition": "Most common double-breasted: 6 front buttons, 2 that fasten. Broad lapels mark a high waist, straight tails hug hips. Classic DB configuration.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "db_six_on_one",
+          "definition": "6 front buttons, only bottom one fastens. Lapels roll down below waist, giving illusion of height. Known as the 'Kent' style after Duke of Kent.",
+          "sources": ["Flusser Ch5"]
+        },
+        {
+          "value": "db_four_on_two",
+          "definition": "4 front buttons, 2 that fasten. More relaxed, laid-back double-breasted look.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Higher button stance = shorter perceived torso. Lower stance = more elongating. The V-opening frames the shirt/tie and draws the eye upward to the face."
+    },
+    {
+      "name": "lapel_style",
+      "description": "Shape of the jacket lapel, affecting formality and the framing of the face/chest area",
+      "values": [
+        {
+          "value": "notch",
+          "definition": "Standard lapel with a triangular notch where collar meets lapel. Most common on single-breasted jackets. Neutral formality.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "peak",
+          "definition": "Pointed lapels that angle upward toward the shoulders. Standard on double-breasted jackets. On single-breasted, it virtually neutralizes the DB's edge in formality. Spearheaded the popularity of the V-shaped male chest.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "shawl",
+          "definition": "Continuous rounded lapel with no notch or peak. Reserved for dinner jackets and tuxedos. Most formal.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Peak lapels widen the chest visually and direct the eye outward/upward. Notch is neutral. Shawl creates a smooth, formal line."
+    },
+    {
+      "name": "lapel_width",
+      "description": "Width of the jacket lapel measured at its widest point, which should harmonize with tie width and collar spread",
+      "values": [
+        {
+          "value": "narrow",
+          "definition": "Under 3 inches. Slims the chest area. Fashion-forward or casual.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "standard",
+          "definition": "3 to 3.5 inches. Classic proportion. Harmonizes with standard tie width.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "wide",
+          "definition": "Over 3.5 inches. Broadens the chest. More traditional/powerful look.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Wider lapels add visual breadth to the chest. Should match tie width for visual harmony. Rule: lapel width ≈ tie width ≈ collar spread."
+    },
+    {
+      "name": "gorge_height",
+      "description": "Position of the collar-lapel junction (gorge) on the jacket, affecting perceived shoulder line and modernity",
+      "values": [
+        {
+          "value": "low",
+          "definition": "Below the collarbone. Vintage/classic look. Elongates the lapel line.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "standard",
+          "definition": "At or near the collarbone/shoulder line. Timeless positioning.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "high",
+          "definition": "Above the shoulder line. Contemporary Italian style. Creates a more modern, shorter lapel look.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Higher gorge creates a more contemporary look and can make the wearer appear taller. Lower gorge is more classic."
+    },
+    {
+      "name": "jacket_shoulder_type",
+      "description": "Construction and shape of the jacket shoulder, significantly affecting the silhouette and perceived body shape",
+      "values": [
+        {
+          "value": "structured_padded",
+          "definition": "Built-up shoulder with padding. Creates a defined, broad shoulder line. British tradition. Projects authority and width.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "natural_soft",
+          "definition": "Minimal or no padding, following the body's natural shoulder line. American Ivy League/sack suit tradition. Also Neapolitan 'spalla camicia' (shirt shoulder).",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "roped",
+          "definition": "Slightly extended with a raised ridge at the sleevehead (spalla con rollino). Neapolitan tradition. Adds subtle width without bulk.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "extended",
+          "definition": "Shoulder line extends beyond the natural shoulder point. Creates illusion of broader shoulders.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "pagoda",
+          "definition": "Concave/saddle-shaped shoulder (spalla insellata). Dramatic Neapolitan detail.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Structured shoulders broaden a narrow frame. Soft shoulders suit already-broad shoulders. Extended/padded shoulders add visual width."
+    },
+    {
+      "name": "jacket_vent_style",
+      "description": "Slit(s) at the back of the jacket affecting movement, silhouette, and formality",
+      "values": [
+        {
+          "value": "ventless",
+          "definition": "No slit in back. Clean, trim contour. Dressier. But bunches up when sitting or reaching into pockets. Between the wars, most bespoke lounge suits and dinner jackets were ventless.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "center_vent",
+          "definition": "Single slit at center back. American predilection, Ivy League look. Least expensive to manufacture. Pulls open like a garage door when hand reaches for pocket, revealing the derriere. Least stylish option per Flusser.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "side_vents",
+          "definition": "Two slits on either side. Highest union of function and form. Permits pocket access while covering buttocks. Leads the eye up either side, imbuing illusion of greater height. Subtle concert of motion between vents and trousers lends fluidity and grace. British tradition.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Side vents elongate and add grace to movement. Ventless is sleek but restrictive. Center vent is functional but inelegant."
+    },
+    {
+      "name": "jacket_pocket_type",
+      "description": "Style of the jacket's lower pockets, affecting formality and visual bulk",
+      "values": [
+        {
+          "value": "jetted",
+          "definition": "Narrow welted slit pockets with no flap. Most formal. Clean, sleek surface. Used on tuxedos and dressier suits. Double-besom construction is the highest quality.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "flapped",
+          "definition": "Pockets with a fabric flap covering the opening. Standard formality. Flaps add a layer of fabric, making the jacket slightly less sleek. Can be tucked in for a cleaner look.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "patch",
+          "definition": "Pockets sewn onto the jacket's surface. Most casual. Add another layer to the surface. Would be a sartorial oxymoron on a dark pinstriped suit. Appropriate for sport jackets and light-colored suits.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "hacking",
+          "definition": "Diagonally angled flap pockets. Originally from riding/hacking jackets. Chisels breadth away from the hip while adding a line of height. Sporty, slightly Anglicized character.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Ticket/cash pocket: small extra pocket above the lower hip pocket. Flapped version diminishes dressiness; besom version heightens it."
+    },
+    {
+      "name": "jacket_silhouette",
+      "description": "The overall cut tradition of the jacket, determined by the combination of shoulder, waist, and drape characteristics",
+      "values": [
+        {
+          "value": "british_drape",
+          "definition": "Structured shoulders, fuller chest with drape, suppressed waist, close-fitting hip. Side vents. The driving force behind tailored fashion in the 1920s-30s.",
+          "sources": ["Flusser Ch5", "Flusser Ch6", "Gentleman's Gazette"]
+        },
+        {
+          "value": "american_sack",
+          "definition": "Natural/unpadded shoulders, undarted straight-hanging body, minimal waist suppression. Soft rolled lapels, three-button front. Ivy League tradition. Brooks Brothers signature.",
+          "sources": ["Flusser Ch5", "Flusser Ch6", "Gentleman's Gazette"]
+        },
+        {
+          "value": "italian",
+          "definition": "Soft/minimal shoulder padding, low gorge, lightweight construction. Can range from Neapolitan (unstructured, shirt-shoulder) to Milanese (clean, precise). Generally lighter and more body-conscious.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "British drape creates a V-shaped athletic silhouette. American sack is relaxed and straight. Italian is body-conscious and light."
+    },
+    {
+      "name": "jacket_sleeve_buttons",
+      "description": "Number of buttons on the jacket sleeve cuff, a subtle marker of sartorial attention",
+      "values": [
+        {
+          "value": "two",
+          "definition": "Minimal, clean. Acceptable on two-button jackets.",
+          "sources": ["Flusser Ch5"]
+        },
+        {
+          "value": "three",
+          "definition": "Often used on summer/lighter jackets. Harmonizes with three-button front.",
+          "sources": ["Flusser Ch5"]
+        },
+        {
+          "value": "four",
+          "definition": "Standard on suit jackets. Conveys superior sartorial breeding per London tradition. Buttons set close together with edges 'kissing.'",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "notes": "Working/surgeon's cuffs (functional buttonholes) are a bespoke marker. Bottom button should finish no more than 3/4 inch above the sleeve bottom."
+    },
+    {
+      "name": "jacket_construction",
+      "description": "Internal construction method affecting drape, shape retention, and quality",
+      "values": [
+        {
+          "value": "fused",
+          "definition": "Interlining glued to outer fabric. Budget construction. Can bubble over time. Less natural drape.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "half_canvas",
+          "definition": "Canvas interlining in upper chest and lapels only. Good balance of quality and cost. Lapels roll naturally.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "full_canvas",
+          "definition": "Canvas throughout entire front panel. Highest quality. Molds to the wearer's body over time. Best drape and shape retention.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Full canvas creates the most natural, fluid drape. Fused jackets appear stiffer and less organic."
+    },
+    {
+      "name": "jacket_formality_tier",
+      "description": "Hierarchical formality ranking of tailored upper garments",
+      "values": [
+        {
+          "value": "suit_jacket",
+          "definition": "Matched with trousers of same fabric. Highest formality in daily wear. Should not be worn as a standalone piece.",
+          "sources": ["Flusser Ch5"]
+        },
+        {
+          "value": "blazer",
+          "definition": "Ranks between suit and sport jacket in dressiness. Metal buttons (brass/gilt/nickel/mother-of-pearl). Chameleon-like versatility — works with flannels, jeans, shorts. DB blazer is slightly more formal than SB.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "sport_jacket",
+          "definition": "Most casual of tailored jackets. 'Odd' detailing: bellows pleats, action backs, patch pockets, bold patterns. Not meant to be mistaken for a suit jacket.",
+          "sources": ["Flusser Ch6"]
+        }
+      ],
+      "notes": "Within each tier: DB > SB, flap pockets > patch, peaked lapels > notched, side vents > center vent, dark trousers > light trousers — each increments formality."
+    },
+    {
+      "name": "trouser_front",
+      "description": "Whether trousers have pleats and their configuration, affecting comfort, drape, and formality",
+      "values": [
+        {
+          "value": "flat_front",
+          "definition": "No pleats. Clean, slim appearance. Pared-down, uncluttered simplicity. Low rise and form-fitting contour.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "single_pleat",
+          "definition": "One pleat on each side. Moderate fullness.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "double_pleat",
+          "definition": "Two pleats on each side — a deep one near the fly and a shallower one toward the pocket. Classic design. The smaller pleat helps the larger one remain closed. More than two pleats is a fashion gimmick.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "forward_pleat",
+          "definition": "Pleat folds face toward the fly/center. Traditional English style.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "reverse_pleat",
+          "definition": "Pleat folds face toward the pocket/side seam. Most common in ready-to-wear.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Pleats look dressier and provide comfort. Flat-front is slimmer and more modern. Pleats accommodate hip widening when seated."
+    },
+    {
+      "name": "trouser_rise",
+      "description": "Distance from crotch seam to waistband top, determining where trousers sit on the body",
+      "values": [
+        {
+          "value": "high_rise",
+          "definition": "Sits at the natural waist (near navel). Classical positioning. Returned in the 1980s with pleats and suspenders. Creates ideal balance between jacket and trousers.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "mid_rise",
+          "definition": "Sits between natural waist and hip bones. Modern standard for most ready-to-wear.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "low_rise",
+          "definition": "Sits at or below the hip bones. If waistband rests between natural waist and hip, the ideal balance between jacket and trousers is doomed per Flusser.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "High rise elongates the legs visually. Low rise shortens the leg line and can cause jacket-trouser proportion imbalance."
+    },
+    {
+      "name": "trouser_break",
+      "description": "Amount of fabric that folds at the front crease where the trouser meets the shoe",
+      "values": [
+        {
+          "value": "no_break",
+          "definition": "Hem just above the shoe with no horizontal fold. Clean, modern, slightly shorter appearance.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "slight_break",
+          "definition": "Minor horizontal crease/dimple where trouser meets shoe. Most versatile and recommended.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "medium_break",
+          "definition": "Moderate fold of fabric over the shoe. Traditional business standard.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "full_break",
+          "definition": "Significant fabric pooling on the shoe. More casual, can look sloppy if unintentional.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Less break creates a cleaner, more elongating line. Full break can shorten apparent leg length."
+    },
+    {
+      "name": "trouser_cuff",
+      "description": "Whether trouser hems are turned up (cuffed) or left plain, affecting visual weight at the ankle",
+      "values": [
+        {
+          "value": "cuffed",
+          "definition": "Trouser hem turned up, typically 1.5-2 inches. Adds visual weight at the bottom. Helps the trouser hang straight. Cuffed bottoms and crease significantly improve the line of a trouser. Not used on formal trousers.",
+          "sources": ["Flusser Ch5", "Flusser Ch6", "Gentleman's Gazette"]
+        },
+        {
+          "value": "uncuffed",
+          "definition": "Plain hem with no turn-up. Required for formal wear. Creates a slightly longer, uninterrupted leg line.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Cuffs add horizontal line at ankle (shortening effect) but also weight that improves drape. Short men should use narrower cuffs or skip them."
+    },
+    {
+      "name": "trouser_width",
+      "description": "Width of the trouser leg, particularly at the knee and hem",
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Tapered, body-conscious cut. Modern/fashion-forward. Narrower through thigh and hem.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "regular",
+          "definition": "Medium width with gentle taper from thigh to hem. Classic proportion.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "full_cut",
+          "definition": "Generous width allowing natural drape and movement. Full across hip and thigh, tapering to bottom. Classical tailoring tradition. Long, wide trousers supported the columnar, athletic silhouette of the 1920s-30s.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Fuller trousers add volume and can balance a broader upper body. Slim trousers elongate but expose leg shape."
+    },
+    {
+      "name": "trouser_waistband",
+      "description": "Fastening method at the trouser waist, affecting silhouette and formality",
+      "values": [
+        {
+          "value": "belt_loops",
+          "definition": "Standard loops for a belt, 1.25 to 1.5 inch width. Most common modern construction.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "side_adjusters",
+          "definition": "Tab adjusters on either side of the waist. Cleaner waistline without belt bulk. Also known as side tabs.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "suspender_buttons",
+          "definition": "Buttons inside waistband for braces/suspenders. Allows trousers to hang from shoulders. Cleaner drape.",
+          "sources": ["Flusser Ch5", "Gentleman's Gazette"]
+        },
+        {
+          "value": "self_belt",
+          "definition": "Matching fabric belt integrated into the waistband. Removed the bother of a separate belt. Popular for resort and casual wear. Fastened with D-ring.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "daks",
+          "definition": "Self-supporting beltless trouser with internal elastic and side tabs. First self-supporting beltless trouser, invented 1932. Comfort-in-action design.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "hollywood_waistband",
+          "definition": "One-piece front and back with narrow belt loops positioned below the trouser's top. Created in the 1930s. Requires narrow belts.",
+          "sources": ["Flusser Ch6"]
+        }
+      ]
+    },
+    {
+      "name": "shirt_collar_style",
+      "description": "Shape and style of the dress shirt collar, which frames the face and must harmonize with face shape, tie knot, and jacket lapels",
+      "values": [
+        {
+          "value": "straight_point",
+          "definition": "Standard collar with points angled downward. Most stylisticaly neutral. Points should be 2.75 to 3.375 inches long. Narrow opening between points favors a rounder, oval face rather than narrow one.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "spread",
+          "definition": "Collar points spread apart at a wider angle. Keystone of the English bespoke look since the 1920s. Inherently dressy and elegant. Wider spread counters narrow faces. Several models available to flatter any head shape.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "cutaway",
+          "definition": "Extreme spread where points angle almost horizontally or backward. Most formal spread variant. Also called Windsor collar.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "button_down",
+          "definition": "Collar points fastened to shirt front with buttons. American contribution to dress shirt fashion. Quintessential Ivy League. Can be dressed up or down. Less formal than other collar types. Projects casual elegance.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "tab",
+          "definition": "Collar with small fabric tabs that connect behind the tie knot, pushing the knot up and forward. Raises the tie knot higher on the neck. Functions like a pin collar. Adds extra measure of nattiness but demands precision in execution.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "pinned",
+          "definition": "Collar points connected by a decorative pin underneath the tie knot. Raises the knot, creating an elegant arch in the tie. Demands a bit more aplomb. Once worn by half of all American men. Pointed ends work to counterpoint the rounded or oval contour of chin.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "club_round",
+          "definition": "Collar with rounded points instead of sharp ones. Vintage style. Originated in Eton College. Less common today.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "wing",
+          "definition": "Small standing collar with folded-down tips (wings). Reserved for formal evening wear with bow ties.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Collar frames the face like a picture frame. Spread collars widen a narrow face. Point collars narrow a wide face. Collar height must suit neck length — longer necks need higher collars. Small collars make a large head appear larger."
+    },
+    {
+      "name": "shirt_collar_height",
+      "description": "Height of the collar band that sits around the neck, which must relate to the wearer's neck length",
+      "values": [
+        {
+          "value": "low",
+          "definition": "Short collar band sitting lower on the neck. Casual. Can make neck appear longer.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "standard",
+          "definition": "Medium height collar band. Appropriate for most neck lengths.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "tall",
+          "definition": "Higher collar band sitting higher on the neck. More formal. Italian tradition. Long necklines require higher-sitting collars to maintain proper proportion.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Collar height should be proportional to neck length. A long neck is best balanced by a higher collar. A short neck needs a lower collar to avoid looking compressed."
+    },
+    {
+      "name": "shirt_collar_stiffness",
+      "description": "The firmness or softness of the collar fabric, affecting its drape and formality",
+      "values": [
+        {
+          "value": "soft",
+          "definition": "Unfused, natural drape. Casual feel. Pairs with natural-shoulder jackets. Button-down collars are inherently soft.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "medium",
+          "definition": "Light interlining for some structure. Most versatile.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "stiff",
+          "definition": "Heavily fused or starched for crisp, formal appearance. A full face that sags around chin or cheeks demands a stiffer collar to counteract effects of age and gravity.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "shirt_cuff_style",
+      "description": "Style of the shirt sleeve cuff, affecting formality and what accessories are worn",
+      "values": [
+        {
+          "value": "barrel",
+          "definition": "Standard button cuff. Can have 1-3 buttons. Most common and versatile. Less formal.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "french_double",
+          "definition": "Folded-back cuff fastened with cufflinks. More formal. The 'showing linen' — exposing shirt cuff at the wrist — was historically a sign of gentility.",
+          "sources": ["Flusser Ch7", "Gentleman's Gazette"]
+        },
+        {
+          "value": "convertible",
+          "definition": "Can be fastened with either buttons or cufflinks. Versatile.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Shirt cuffs should show 1/2 to 3/4 inch below jacket sleeve. This 'showing linen' at the wrist is one of Flusser's 5 key body intersections."
+    },
+    {
+      "name": "tie_knot_type",
+      "description": "Method used to tie the necktie, producing different knot sizes and shapes that must harmonize with collar spread",
+      "values": [
+        {
+          "value": "four_in_hand",
+          "definition": "Small, slightly asymmetrical knot. Most versatile and classic. Works best with point and button-down collars. Uses least tie length.",
+          "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+        },
+        {
+          "value": "half_windsor",
+          "definition": "Medium, symmetrical triangular knot. Works well with spread and semi-spread collars.",
+          "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+        },
+        {
+          "value": "full_windsor",
+          "definition": "Large, symmetrical triangular knot. Designed for wide spread/cutaway collars. Flusser warns against its bulbous mass forcing truncated collar points farther off the chest.",
+          "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+        },
+        {
+          "value": "pratt_shelby",
+          "definition": "Medium, symmetrical knot tied inside-out. Good alternative to Half-Windsor.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Knot size must fill the collar opening — outer borders of tie knot should correspond with inner borders of the collar. Too-small knot in wide spread looks lost; too-large knot in narrow collar forces points apart."
+    },
+    {
+      "name": "tie_width",
+      "description": "Width of the necktie blade at its widest point, which should harmonize with lapel width",
+      "values": [
+        {
+          "value": "skinny",
+          "definition": "Under 2.5 inches. Fashion-forward, casual. Pairs with narrow lapels.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "slim",
+          "definition": "2.5 to 3 inches. Modern proportion.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "standard",
+          "definition": "3.25 to 3.5 inches. Classic width. Harmonizes with standard lapels.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "wide",
+          "definition": "Over 3.5 inches. Traditional/vintage proportion.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ],
+      "visual_effect": "Tie width should roughly match jacket lapel width for visual harmony. Mismatched widths create visual imbalance."
+    },
+    {
+      "name": "tie_length",
+      "description": "Where the tie blade tip terminates relative to the waistband",
+      "values": [
+        {
+          "value": "at_waistband",
+          "definition": "Tip reaches the trouser waistband or belt buckle center. Ideal length. Both blades should be close in length.",
+          "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+        },
+        {
+          "value": "above_waistband",
+          "definition": "Tip ends above the belt. Too short. Exposes the narrow end behind.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "below_waistband",
+          "definition": "Tip hangs below the belt. Too long. Looks sloppy and shortens the torso visually.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "tie_dimple",
+      "description": "Whether the tie has a pinched crease/dimple just below the knot",
+      "values": [
+        {
+          "value": "with_dimple",
+          "definition": "Pinched crease below the knot creating a small indentation. Adds dimension, texture, and elegance. Sign of sartorial attention.",
+          "sources": ["Gentleman's Gazette"]
+        },
+        {
+          "value": "without_dimple",
+          "definition": "Flat, smooth tie below the knot. Simpler, less fussy.",
+          "sources": ["Gentleman's Gazette"]
+        }
+      ]
+    },
+    {
+      "name": "suit_piece_count",
+      "description": "Number of matched pieces in the suit ensemble",
+      "values": [
+        {
+          "value": "two_piece",
+          "definition": "Jacket and matching trousers. Modern standard.",
+          "sources": ["Flusser Ch5"]
+        },
+        {
+          "value": "three_piece",
+          "definition": "Jacket, matching trousers, and matching waistcoat/vest. The waistcoat adds gravitas, holds tie in place, keeps shirt tidy, lends efficient appearance when in shirtsleeves. Prior to WWII, most suits were three-piece.",
+          "sources": ["Flusser Ch5"]
+        }
+      ],
+      "visual_effect": "Waistcoat adds a layer of formality, covers the trouser waistband, and provides additional opportunity for visual interest via odd waistcoats."
+    },
+    {
+      "name": "blazer_button_material",
+      "description": "Material of blazer buttons, affecting formality and character",
+      "values": [
+        {
+          "value": "brass_gilt",
+          "definition": "Traditional blazer button. Classiest is plain, flat English gilt with shank. Implies gentility and tradition.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "nickel_silver",
+          "definition": "Dulled nickel or pewter shade. Good for men with gray hair or predominantly gray-toned trousers.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "mother_of_pearl",
+          "definition": "Off-white buttons. Option for brighter blue tropical wool or linen blazers.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "horn",
+          "definition": "Dark brown horn. First non-metal alternative considered. But its dullish character lacks personality to offset the dark jacket.",
+          "sources": ["Flusser Ch6"]
+        }
+      ]
+    },
+    {
+      "name": "odd_trouser_fabric_formality",
+      "description": "Hierarchy of odd trouser fabrics from dressy to casual, as paired with blazers or sport jackets",
+      "values": [
+        {
+          "value": "gray_worsted_flannel",
+          "definition": "The blue blazer of odd trousers. Medium gray worsted accommodates a larger variety of sport coats than any other trouser. First alternate to charcoal gray for blazer pairing.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "gabardine",
+          "definition": "Silky smooth worsted offering textural change from rough flannel. One of the most lustrous lengths of worsted ever to grace a male thigh.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "tan_covert",
+          "definition": "Slightly lighter shade of gray or tan family. Produces slightly more contrast than gray under average sport coat, registering a slight drop in relative dressiness.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Ribbed fabric. Step down from covert in dressiness. Works in regular weights and variegated ribs. Cotton cords perfect for campus or outdoor activities.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "chino",
+          "definition": "Olive drab cotton. Became campus uniform after WWII. Classic casual trouser.",
+          "sources": ["Flusser Ch6"]
+        },
+        {
+          "value": "denim",
+          "definition": "Blue jeans. Bottom of the dress-down meter. Most casual pairing with blazer or sport jacket.",
+          "sources": ["Flusser Ch6"]
+        }
+      ],
+      "notes": "Hierarchy for blazer pairing: charcoal gray > medium gray worsted/flannel > tan covert/gabardine > corduroy > chino > jeans."
+    }
+  ],
+  "garment_harmony_principles": [
+    {
+      "name": "width_harmony_rule",
+      "description": "Tie width, lapel width, and collar spread should be approximately equal for visual balance",
+      "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+    },
+    {
+      "name": "collar_face_matching",
+      "description": "Collar style should complement face shape: spread collars widen narrow faces, point collars narrow wide faces. Collar height should match neck length. Small collars make large heads appear larger.",
+      "sources": ["Flusser Ch7"]
+    },
+    {
+      "name": "knot_collar_fill",
+      "description": "The tie knot should fill the collar opening appropriately — outer borders of the knot should correspond with inner borders of the collar points.",
+      "sources": ["Flusser Ch8", "Gentleman's Gazette"]
+    },
+    {
+      "name": "formality_consistency",
+      "description": "All elements should be at roughly the same formality level. Flap pockets > patch, peaked > notched, side vents > center vent, dark trousers > light, DB > SB — each increments or decrements formality.",
+      "sources": ["Flusser Ch5", "Flusser Ch6"]
+    },
+    {
+      "name": "showing_linen_principle",
+      "description": "The shirt collar should sit above the jacket collar (showing 1/2 inch) and shirt cuffs should show 1/2 to 3/4 inch below jacket sleeves. These are two of Flusser's five critical body intersections.",
+      "sources": ["Flusser Ch5", "Flusser Ch7"]
+    },
+    {
+      "name": "trouser_jacket_balance",
+      "description": "Trouser rise must be high enough that the waistband sits at or near the natural waist for ideal visual balance between jacket and trousers. Low-rise trousers doom this balance.",
+      "sources": ["Flusser Ch5"]
+    },
+    {
+      "name": "stripe_elongation_effect",
+      "description": "Vertical elements (stripes, side vents, hacking pockets, peak lapels) create illusion of height. Horizontal elements (cuffs, wide lapels, pocket flaps, double-breasted closure) add visual width.",
+      "sources": ["Flusser Ch5"]
+    }
+  ]
+}

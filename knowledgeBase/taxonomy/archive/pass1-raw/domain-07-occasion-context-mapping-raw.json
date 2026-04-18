@@ -1,0 +1,560 @@
+{
+  "domain": "occasion_and_context_mapping",
+  "version": "0.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 12: Formal Wear",
+    "Dressing the Man - Alan Flusser - Chapter 13: Business Casual / Corporate Casual",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Formal Dress",
+    "Gentleman: A Timeless Fashion - Bernhard Roetzel - Sporting Life"
+  ],
+  "parameters": [
+    {
+      "name": "occasion_category",
+      "description": "The broad type of occasion or context the user is dressing for, mapping to the appropriate dress code level",
+      "values": [
+        {
+          "value": "state_banquet_opera_ball",
+          "maps_to": "white_tie",
+          "definition": "State dinners, formal charity galas, opera balls, debutante balls. The highest ceremonial occasions requiring full evening dress with tails.",
+          "sources": ["Roetzel Formal Dress", "Flusser Ch12"]
+        },
+        {
+          "value": "formal_evening_event",
+          "maps_to": "black_tie",
+          "definition": "Formal dinners, evening galas, charity events specifying 'black tie', evening weddings, award ceremonies, theater premieres. Semi-formal evening wear with dinner jacket.",
+          "sources": ["Roetzel Formal Dress", "Flusser Ch12"]
+        },
+        {
+          "value": "formal_daytime_ceremony",
+          "maps_to": "morning_dress",
+          "definition": "Formal weddings (daytime), Royal Ascot, formal funerals, garden parties at Buckingham Palace. Morning coat with striped trousers.",
+          "sources": ["Roetzel Formal Dress"]
+        },
+        {
+          "value": "corporate_office",
+          "maps_to": "business_formal",
+          "definition": "Conservative corporate environments — banking, insurance, law, management meetings, client-facing roles. Traditional suit and tie required.",
+          "sources": ["Flusser Ch13", "Roetzel Smart Casual"]
+        },
+        {
+          "value": "corporate_casual_office",
+          "maps_to": "business_casual",
+          "definition": "Modern office environments that have relaxed the suit-and-tie requirement. Friday dress-down that became everyday policy. The 'third wardrobe' territory between suits and weekend wear.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "client_meeting_casual_office",
+          "maps_to": "dress_up_business_casual",
+          "definition": "Important meetings or client interactions within a business-casual office. Sport jacket becomes the bridge piece, elevating the look without returning to a full suit.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "job_interview",
+          "maps_to": "context_dependent",
+          "definition": "Job interviews require researching the prospective employer's dress culture. Generally err on the side of formality. First impressions form in 30 seconds. Appropriate interview attire sends the message that here is an applicant who did his homework.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "country_weekend",
+          "maps_to": "country_sporting",
+          "definition": "Weekend in the countryside, visiting country estates, informal outdoor gatherings. Tweeds, moleskins, corduroys, field boots, Barbour jackets.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "sporting_event_spectator",
+          "maps_to": "smart_casual_to_country",
+          "definition": "Attending horse races, equestrian tournaments, polo matches, golf tournaments as a spectator. Brown trilby, tweed suit or jacket, binoculars, Barbour if raining.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "active_sport_participation",
+          "maps_to": "sport_specific",
+          "definition": "Actually playing a sport — golf, riding, sailing, fishing. Each sport has its own dress traditions and practical requirements.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "home_entertaining",
+          "maps_to": "smoking_jacket_context",
+          "definition": "Hosting dinner parties or gatherings at home. Smoking jacket in colored velvet with shawl collar, paired with dinner-jacket trousers and velvet slippers.",
+          "sources": ["Roetzel Formal Dress", "Flusser Ch12"]
+        },
+        {
+          "value": "casual_weekend",
+          "maps_to": "casual",
+          "definition": "Everyday informal occasions — errands, casual dining, meeting friends. No tailored structure required but coordination principles still apply.",
+          "sources": ["Flusser Ch13"]
+        }
+      ],
+      "notes": "The key skill is correctly reading the occasion and mapping it to the right formality level. Err on slightly overdressed rather than underdressed."
+    },
+    {
+      "name": "business_casual_approach",
+      "description": "The two fundamental strategies for business casual dressing, as defined by Flusser's 'third wardrobe' concept",
+      "values": [
+        {
+          "value": "dress_up_business_casual",
+          "definition": "Building UP from casual foundations with tailored elements. Sport jacket is the cornerstone — it confers a professional bearing on any man. Dress shirt (with or without tie), wool trousers, leather shoes. This approach minimizes risk and maximizes authority. Flusser's strong recommendation.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "dress_down_business_casual",
+          "definition": "Dressing DOWN from business formal by removing structured elements. Suit without tie, or shirt-and-trouser only. Removes the protective wrapping of tailored refuge. Riskier — demands stronger coordination skills since no jacket frames the ensemble. Built on the sport shirt-and-trouser combination.",
+          "sources": ["Flusser Ch13"]
+        }
+      ],
+      "notes": "Flusser views dress-up business casual as superior. The sport jacket provides structure, authority, and easier coordination. Dress-down casual tests the average man's coordination skills and can look sloppy if not managed carefully."
+    },
+    {
+      "name": "business_casual_jacket_role",
+      "description": "How the sport jacket functions as the bridge piece in business casual, and its style variations",
+      "values": [
+        {
+          "value": "navy_blazer",
+          "definition": "The most versatile bridge piece. Can be dressed up with dress trousers or down with khakis/jeans. A dark sport jacket can make any man look more professional. High on the dress-up casual list.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "three_button_soft_shoulder",
+          "definition": "Modern versatile jacket model. Three-button, single-breasted with soft natural shoulders, notch lapels. Can be worn buttoned up (one or two upper buttons) for formality or left open like a cardigan for casual. Its soft underpinnings suit the casual ethos.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "double_breasted_sport",
+          "definition": "Double-breasted jacket as sport coat — because it is always buttoned up, it tends to retain a dressier profile. Harder to make casual but can work with the right trousers.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "contoured_sport_coat",
+          "definition": "The contoured sport coat can be worn incrementally longer than a suit jacket. When paired with a variety of trouser lengths (hip, knee, or lower on the waist), the additional sleeve length lines up better to promote more relaxed body language.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "cardigan_as_jacket",
+          "definition": "The famous cardigan sweater serves as a jacket substitute in smart casual contexts. However, it is less structured and conveys less authority than a sport coat.",
+          "sources": ["Flusser Ch13"]
+        }
+      ],
+      "notes": "All jacket models can be styled to convey more casual or more formal bearing. Fabric choice, pocket style, and button configuration shift the formality."
+    },
+    {
+      "name": "tieless_collar_strategy",
+      "description": "How to frame the face effectively without a necktie — critical for business casual and smart casual contexts",
+      "values": [
+        {
+          "value": "button_down_collar",
+          "definition": "Best collar for jacketless wear. The buttoned-down points help the collar stand up around the neck. When worn under a jacket, its snappy shape dresses up the face more than other sport shirt collars. The go-to collar for business casual.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "one_piece_collar",
+          "definition": "Collars that are cut as one piece or have a collar band help the collar to stand up around the neck, better presenting the face. Preferable for the dressed-down business-casual shirt.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "closed_collar_no_tie",
+          "definition": "Closing the top button without a tie creates a neater image because its relative neatness helps the face appear more important. Camp-style collars should be avoided if the aim is for the shirt collar to add authority.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "open_collar_with_dark_tshirt",
+          "definition": "Layering a dark T-shirt underneath an open collar adds visual interest while helping fill the space left by the open collar. Prevents the disheveled look of an exposed bare neck.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "knit_collar_high_set",
+          "definition": "A knit shirt buttoned at the neck conveys a tidier, less casual look. However, the soft knit collar can be easily overwhelmed by a jacket's sturdier collar. Best with self-supporting knit collars that sit high on the neck — mock turtle or rolled models can lend elegance to casual sophistication.",
+          "sources": ["Flusser Ch13"]
+        }
+      ],
+      "notes": "Without the closed shirt collar and necktie to add glamour and frame the face, the collar must still frame the face without distracting from it. This is a key challenge in casual dressing."
+    },
+    {
+      "name": "business_casual_trouser_choice",
+      "description": "Trouser options for business casual contexts and their relative formality",
+      "values": [
+        {
+          "value": "dark_wool_trousers",
+          "definition": "Most dressy casual trouser. Charcoal flannel, gray worsted. Less contrast between top and bottom = dressier and more elongating effect. Dark colors on the lower half produce a taller, slimmer outline.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "pressed_khakis",
+          "definition": "The bedrock of the dress-down business-casual look. Must be well-pressed to convey professionalism. In spring and summer, linen trousers can serve a similar role with a more casual attitude.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "corduroy_moleskin",
+          "definition": "Textured casual trousers. Flannel or corduroy works well with tweed jackets. In winter, ribbed knits or brushed cotton serve as warm trouser options.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "dark_jeans",
+          "definition": "Lowest tier of business-casual trouser where permitted. Should be well-pressed and dark wash. Work best under a sport jacket with the right shoes to maintain a dressed-up bearing.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "business_casual_shirt_type",
+      "description": "Shirt choices for business casual — the primary face-framing garment when jacket is absent",
+      "values": [
+        {
+          "value": "long_sleeve_dress_shirt",
+          "definition": "The dressed-down business-casual shirt should ideally have long sleeves, since even rolled-up sleeves convey a more professional look than short sleeves. Preferably cut as one piece or with a collar band.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "patterned_woven_sport_shirt",
+          "definition": "One way to inject individuality into business casual. Pattern mixing between shirt and bottom becomes key — the pattern of the woven top should complement the solid or patterned bottom. A patterned shirt over a solid trouser is safest.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "long_sleeve_knit_polo",
+          "definition": "The long-sleeve, collared knit pullover has become an alternative to the conventional woven sport shirt. Mock turtle or rolled model can lend sophistication. Knits become slightly more business-appropriate when paired with dress trousers.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "fine_gauge_knit",
+          "definition": "A fine gauge, long-sleeve, cut-and-sewn knit shirt. As long as fabrics and patterns are appropriate, arriving at a coordinated look should not test the skills of the average man.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "casual_footwear_formality",
+      "description": "Shoe choices and how they dress an outfit up or down in casual contexts",
+      "values": [
+        {
+          "value": "dress_up_casual_shoe",
+          "definition": "Cap toe or wing-tip oxford in polished leather. A dressed-down version of a classic. Brown suede over polished leather promotes a more casual vibe. The shoe is another highly visible strategem — brown leather belts and brown slip-on shoes raise the style level.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "loafer_slip_on",
+          "definition": "Loafers bridge business and casual. Can be worn with dress trousers or jeans. When worn with jeans or casual pants, a pair of brown suede loafers promote the opposite of a downtown, modernist mantra. A man's shoes broadcast how he manages details.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "suede_casual",
+          "definition": "Suede finishes on any shoe shape shift it toward casual. A dress-down version of a classic shoe. Chunkier sole changes the tone from dress-up to dress-down. The thicker the sole, the more casual the proportioned shoe.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "sport_shoe",
+          "definition": "Golf shoes, boat shoes (Sperry classics), riding boots. Sport-specific footwear that serves practical purposes. Boat shoes popular with landlubbers as well. White golf shoes are one of the few opportunities for a gentleman to wear white shoes.",
+          "sources": ["Roetzel Sporting Life"]
+        }
+      ],
+      "notes": "Traditional distinction: dress shoes laced up, casual shoes slipped on. But the dress-up casual approach blurs this by putting formal shoe shapes in casual materials (suede). The thicker the sock, the more substantial the shoe should be."
+    },
+    {
+      "name": "casual_belt_shoe_coordination",
+      "description": "How belts and shoes work together in casual contexts to anchor the outfit",
+      "values": [
+        {
+          "value": "matched_leather",
+          "definition": "Belt and shoes in matching leather color and texture. Black alligator belt with black slip-on shoes, or brown leather belt with brown shoes. This basic coordination is essential in casual contexts where there is no jacket to unify the look.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "hair_color_echo",
+          "definition": "Particularly if hair color is dark, black belt and shoe coordination can create a strong frame. Hair, belt, and shoes in dark accord create intentional visual connection top to bottom.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "casual_belt_style",
+          "definition": "Business-casual trousers need not wear high-formality belts. A leather belt with a simple pin buckle in proximity to shoe color works. Unless the outfit has a strong black motif, sometimes leather is better kept in brown tones.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "casual_color_coordination",
+      "description": "Principles for managing color without the anchoring structure of a suit and tie",
+      "values": [
+        {
+          "value": "low_contrast_dressier",
+          "definition": "Less contrast between top and bottom = dressier and more elongating. Dark colors above and below the waistline create a seamless, authoritative look. In general, dark colors worn under the chin tilt the shirt-slack scheme toward the dressier side of the casual spectrum.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "dark_anchor_bottom",
+          "definition": "Most shirt-and-trouser coordinations acquire increased authority when anchored by a deeper-toned bottom. Sequestering darker colors on the lower half of the body tends to produce a taller, slimmer outline.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "color_repetition",
+          "definition": "Repeating a color from shirt pattern in the trouser or accessories creates cohesion. A third repetition ties the whole image together. Sweaters placed over shirts can become a bridge — picking up colors from both shirt and trouser.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "texture_over_pattern",
+          "definition": "In casual contexts, textural interest (ribbed knits, brushed cotton, corduroy) can substitute for pattern to add visual depth without the complexity of pattern coordination.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "formal_occasion_component_selection",
+      "description": "Specific garment choices within formal dress codes where options exist",
+      "values": [
+        {
+          "value": "dinner_jacket_single_vs_double",
+          "definition": "Single-breasted dinner jacket is more common and versatile. Double-breasted is dressier and more commanding but must always be buttoned. SB can be worn with cummerbund or waistcoat; DB typically worn without either since it covers the waistband.",
+          "sources": ["Flusser Ch12"]
+        },
+        {
+          "value": "dinner_jacket_lapel_choice",
+          "definition": "Peaked lapels are more formal and traditional. Shawl collar is elegant and slightly less formal — originated from the smoking jacket heritage. Notch lapels on a dinner jacket are considered less correct by traditionalists.",
+          "sources": ["Flusser Ch12", "Roetzel Formal Dress"]
+        },
+        {
+          "value": "black_tie_waist_option",
+          "definition": "Cummerbund (folds pointing upward) or low-cut waistcoat. Cummerbund is more common; waistcoat is slightly more formal. Both serve to cover the waistband junction between shirt and trousers. The cummerbund originally served as a pocket for theater tickets.",
+          "sources": ["Flusser Ch12", "Roetzel Formal Dress"]
+        },
+        {
+          "value": "tuxedo_color",
+          "definition": "Black is standard. Midnight blue is the sophisticated alternative — appears blacker than black under artificial light. White or ivory dinner jackets appropriate for warm weather / tropical formal occasions.",
+          "sources": ["Flusser Ch12", "Roetzel Formal Dress"]
+        },
+        {
+          "value": "evening_shirt_front",
+          "definition": "Pleated or pique bib front. Pique (marcella) is more formal and traditional — the standard for white tie. Pleated is the common choice for black tie. Shirt must have French cuffs for formal wear.",
+          "sources": ["Flusser Ch12", "Roetzel Formal Dress"]
+        }
+      ]
+    },
+    {
+      "name": "sporting_occasion_dress",
+      "description": "Dress codes for specific sporting activities and their practical/traditional requirements",
+      "values": [
+        {
+          "value": "hunting",
+          "definition": "English fox-hunting has strict dress codes. Hunting outfits of thick material often worn for several generations. Hunt vest in woolen felt with Tattersall check back. Colors: red, green, canary yellow. Riding breeches, field boots. Practical clothing designed for mounted pursuit across open country.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "riding",
+          "definition": "Hacking jacket (close cut, high waist, long back vent, slanted flapped pockets — original version of the English sports jacket). Jodhpur boots or riding boots. Quilted vests popular. Breeches by specialist tailors. Rubberized riding mac for rain. The slanted pockets are easier to reach when sitting on a horse.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "fishing",
+          "definition": "No precise dress code — determined mainly by practical considerations. Waders for river fishing, rubber boots for bank fishing. Vest with many pockets for equipment storage. Flat tweed cap or tweed hat. Barbour jacket for protection. Fishing clothes difficult to integrate with normal casual wear — hence neckties with fish motifs as the angler's subtle signal.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "golf",
+          "definition": "Polo shirt or collared overshirt standard. T-shirts and sleeveless jerseys unsuitable. Cashmere cardigan or lambswool pullover acceptable — golf is the only sport that can be played in cashmere. Long pants required (often with tartan). Golf shoes with spikes. Can transition from office to course by swapping suit jacket for cardigan. Panama hat or peaked cap.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "sailing_competitive",
+          "definition": "Specialist waterproof clothing for wind, cold, and sea water. Henri Lloyd and similar maritime technology brands. Functional garments that have crossed over to land use — popular among motorcyclists. Guernsey pullover for rough seas.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "sailing_leisure",
+          "definition": "Mediterranean summer sailing style. Blue blazer with white pants — classic combination acceptable on a yacht or on the Promenade des Anglais. Based on clothes worn by fishermen — casual style with maritime accent. Blue and white the classic color combination. Espadrilles or boat shoes (Sperry classics). Avoid caricature when wearing this look on land.",
+          "sources": ["Roetzel Sporting Life"]
+        }
+      ]
+    },
+    {
+      "name": "spectator_dress_code",
+      "description": "What to wear when attending sporting events as a spectator",
+      "values": [
+        {
+          "value": "horse_racing",
+          "definition": "Classic outfit: brown trilby, tweed suit or tweed jacket, binoculars, Barbour jacket if raining. The brown trilby has traditionally been worn by people who work with horses — tradition from England where it is obligatory for equestrian calendar events.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "formal_racing_royal_ascot",
+          "definition": "Morning dress required in the Royal Enclosure. Gray top hat, morning coat, striped trousers. The most formal spectator dress code in sport.",
+          "sources": ["Roetzel Formal Dress"]
+        },
+        {
+          "value": "polo_match",
+          "definition": "Smart casual to business casual. Blazer with chinos or light trousers. Can dress up or down depending on the venue — VIP areas expect more polish.",
+          "sources": ["Roetzel Sporting Life"]
+        },
+        {
+          "value": "country_sport_general",
+          "definition": "Tweed jacket, moleskins or corduroys, field boots or brogues. Barbour jacket or similar waxed cotton for weather. Flat cap or trilby. The country look that has become 'general property in everyday wardrobes.'",
+          "sources": ["Roetzel Sporting Life"]
+        }
+      ]
+    },
+    {
+      "name": "context_transition_technique",
+      "description": "Methods for shifting between formality levels with minimal wardrobe changes",
+      "values": [
+        {
+          "value": "add_sport_jacket",
+          "definition": "The simplest dress-up move. Adding a dark sport jacket over any shirt-and-trouser combination immediately elevates the look. A sport jacket can be dressed up or down — it is the single most versatile bridge piece.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "remove_tie_keep_jacket",
+          "definition": "Dressing down a suit by removing the tie. Learning how to wear a suit without a tie increases the corporate casual options. The suit jacket maintains structure while the open collar relaxes the look.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "swap_jacket_for_knitwear",
+          "definition": "Exchanging a suit jacket for a cardigan or pullover — useful for transitioning from office to golf course or social event. The knitwear maintains layering without the formality of structured tailoring.",
+          "sources": ["Flusser Ch13", "Roetzel Sporting Life"]
+        },
+        {
+          "value": "shoe_swap",
+          "definition": "Changing shoes is one of the most effective transitions. Polished leather to suede loafers shifts formal to casual. Cap-toe oxfords to boat shoes or golf shoes transitions office to recreation.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "trouser_swap",
+          "definition": "Keeping the same jacket and shirt but changing from dress trousers to khakis, corduroys, or jeans progressively dresses down the look. The less contrast between jacket and trouser, the dressier.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "job_interview_dress_strategy",
+      "description": "How to dress for job interviews — first impressions and occasion-reading skills",
+      "values": [
+        {
+          "value": "research_company_culture",
+          "definition": "Navigating a prospective employer's dress code should be part of preliminary preparation. Familiarize yourself with the company culture — if executives happen to be in polo shirts and turtlenecks, showing up in a three-piece suit would not be putting your best foot forward.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "err_on_formality",
+          "definition": "Although it is always better to err on the side of formality, appropriate interview attire should match the organizational culture. The candidate who shows up wearing the right clothes may gain a competitive advantage.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "first_impression_principle",
+          "definition": "People tend to size you up in the first thirty seconds, which can influence how they interact with you in the process. The interviewer consciously and unconsciously picks up on your visual and verbal cues. Nonverbal indicators — your clothes — are the most powerful tools of communication.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "suit_without_tie_technique",
+      "description": "How to wear a suit without a tie for the corporate casual context — the 'dressing down the suit' approach",
+      "values": [
+        {
+          "value": "button_down_under_suit",
+          "definition": "The button-down collar is the safest choice under a tieless suit. Its collar stands up properly without a tie and frames the face. The collar's buttoned points maintain neatness.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "spread_collar_tieless",
+          "definition": "A moderate spread collar can work without a tie if the collar has enough body to maintain its shape. The opening should not be so wide that it collapses and looks limp.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "pocket_square_compensation",
+          "definition": "Without a tie, the chest area can look bare. A pocket square in the breast pocket adds a touch of intentionality and fills the visual gap left by the missing tie.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    },
+    {
+      "name": "seasonal_occasion_adjustment",
+      "description": "How seasonal weather modifies dress code expectations for various occasions",
+      "values": [
+        {
+          "value": "summer_formal",
+          "definition": "White or ivory dinner jacket appropriate for warm-weather formal events. Lighter weight fabrics (tropical wool, linen blends) in business contexts. Linen trousers for business casual in spring and summer.",
+          "sources": ["Flusser Ch12", "Flusser Ch13"]
+        },
+        {
+          "value": "winter_casual",
+          "definition": "Heavier textures become appropriate — flannel trousers, corduroy, moleskin. Ribbed knits or brushed cotton. Tweed jackets. Layering with knitwear under jackets for warmth and visual interest.",
+          "sources": ["Flusser Ch13", "Roetzel Sporting Life"]
+        },
+        {
+          "value": "country_season_specific",
+          "definition": "English fox-hunting season runs November through April, explaining the thick materials in hunting clothes. Golf in Scotland requires windcheaters and Barbour jackets. Seasonal considerations heavily influence sport-appropriate clothing.",
+          "sources": ["Roetzel Sporting Life"]
+        }
+      ]
+    },
+    {
+      "name": "dress_down_casual_coordination",
+      "description": "Principles for the jacketless dress-down business-casual outfit where no jacket provides structure",
+      "values": [
+        {
+          "value": "shirt_as_authority",
+          "definition": "Without a jacket, the top layer (shirt) takes on the role of primary garment. To command authority, it should be preferably cut as one piece or with a collar band — constructions that help the collar stand around the neck, better presenting the face.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "high_quality_fabric",
+          "definition": "A high-quality fabric in the shirt compensates for the lack of jacket structure. Dress-down business casual ranges from a high-quality dress or sport shirt atop dark wool trousers to well-pressed khakis or jeans below a fine gauge knit.",
+          "sources": ["Flusser Ch13"]
+        },
+        {
+          "value": "minimal_pattern_complexity",
+          "definition": "Without a jacket as organizing frame, pattern coordination between shirt and trouser should not test the coordinating skills of the average fashion-pressed male. Keep it simple — solid bottoms are safest.",
+          "sources": ["Flusser Ch13"]
+        }
+      ]
+    }
+  ],
+  "occasion_principles": [
+    {
+      "name": "third_wardrobe_concept",
+      "description": "Flusser's concept that business casual represents a 'third wardrobe' distinct from both traditional business suits and weekend casual wear. It is not simply dressing down a suit or dressing up jeans — it is its own category requiring its own rules and skills. The challenges posed by a casual-leaning corporate climate should not distract men from the goal of becoming more literate about what their clothes communicate.",
+      "sources": ["Flusser Ch13"]
+    },
+    {
+      "name": "dress_up_over_dress_down",
+      "description": "Flusser strongly advocates the dress-up approach to business casual over the dress-down approach. While a dark sport jacket can make any man look more professional, business casual without a jacket removes the protective wrapping of tailored refuge. The dress-down approach demands much stronger personal coordination skills.",
+      "sources": ["Flusser Ch13"]
+    },
+    {
+      "name": "face_framing_without_tie",
+      "description": "The most critical challenge in casual dressing: without the closed shirt collar and necktie to add glamour and highlight the face, fill up the area under the chin, the collar must still frame the face without distracting from it. Button-down collars, closed collars, and layered necklines all serve this purpose.",
+      "sources": ["Flusser Ch13"]
+    },
+    {
+      "name": "sport_to_wardrobe_crossover",
+      "description": "Many wardrobe staples originated as sporting garments. The hacking jacket became the sport coat. Riding wear became country casual. Polo shirts moved from tennis courts to everyday wear. Boat shoes went from deck to street. Understanding these origins helps place garments in the correct formality context and pair them authentically.",
+      "sources": ["Roetzel Sporting Life"]
+    },
+    {
+      "name": "occasion_reading_skill",
+      "description": "The ability to correctly read what an occasion demands and dress accordingly. Job interviews require research into company culture. Friday dress-down is not weekend casual. A country weekend is not the same as garden casual. Reading the occasion correctly is as important as knowing the rules.",
+      "sources": ["Flusser Ch13"]
+    },
+    {
+      "name": "formality_as_gradient_not_binary",
+      "description": "Formality is not either formal or casual — it is a continuous gradient. Within business casual alone there is a spectrum from sport-jacket-with-dress-shirt at the top to fine-knit-over-khakis at the bottom. The modern sport code needs to combine some attraction with boardroom protocol. Understanding the full gradient allows precise calibration to context.",
+      "sources": ["Flusser Ch13", "Roetzel Sporting Life"]
+    }
+  ],
+  "cross_domain_intersections": [
+    {
+      "name": "occasion_x_body_proportion",
+      "description": "Formal wear (tailcoat, dinner jacket) must be cut to flatter individual proportions — the tailcoat's tails should fall to about knee level, the waistcoat opening must be cut to not reveal the shirt bib. Body proportion rules from Domain 1 apply even more strictly to formal wear where fit is unforgiving.",
+      "sources": ["Flusser Ch12"]
+    },
+    {
+      "name": "occasion_x_color",
+      "description": "Casual dressing relies heavily on color coordination since there is no suit-and-tie formula. Low contrast = dressier, dark anchor bottom = slimmer. Color principles from Domain 3 become even more important when structure is removed.",
+      "sources": ["Flusser Ch13"]
+    },
+    {
+      "name": "occasion_x_garment_properties",
+      "description": "Formality tier from Domain 4 must match occasion requirements. Black tie demands specific lapel facing, trouser braiding, and shirt front configurations. Business casual modifies which garment properties from Domain 4 are relevant.",
+      "sources": ["Flusser Ch12", "Flusser Ch13"]
+    },
+    {
+      "name": "occasion_x_style_archetype",
+      "description": "A man's primary style archetype (Domain 5) influences how he navigates each occasion. A 'rugged' archetype will lean toward tweeds and suede in business casual; a 'refined' archetype will favor structured blazers and polished leather.",
+      "sources": ["general"]
+    }
+  ]
+}

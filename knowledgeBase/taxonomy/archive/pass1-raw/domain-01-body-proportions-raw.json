@@ -1,0 +1,460 @@
+{
+  "domain": "body_proportions_and_optical_correction",
+  "version": "0.1",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 3: Proportion",
+    "FashionBeans - How to Dress for Your Body Shape",
+    "The Modest Man - How to Dress for Your Body Type",
+    "The VOU - Men's Body Shapes ALL 7"
+  ],
+  "parameters": [
+    {
+      "name": "body_shape",
+      "description": "Primary geometric classification of male body silhouette based on relative proportions of shoulders, chest, waist, and hips",
+      "values": [
+        {
+          "value": "trapezoid",
+          "definition": "Broad shoulders and chest with gentle taper through waist, hips, and legs. Well-proportioned. The 'ideal' or 'Vitruvian' male shape — most clothing is designed for this.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "inverted_triangle",
+          "definition": "Chest and shoulders significantly broader than waist and hips. Narrow lower body relative to upper. Top-heavy V-shaped torso. Chest measures 8+ inches more than waist.",
+          "sources": ["FashionBeans", "The VOU", "Flusser (athletic build)"]
+        },
+        {
+          "value": "rectangle",
+          "definition": "Shoulders roughly same width as waist and hips. Minimal natural taper. Usually lean/slim. Straight up-and-down silhouette.",
+          "sources": ["FashionBeans", "The VOU", "Flusser (short/slim man)"]
+        },
+        {
+          "value": "triangle",
+          "definition": "Larger around the waist and hips than shoulders. Sloping shoulders. Weight carried in midsection. Narrower up top, wider below.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "oval",
+          "definition": "Round at the centre of the body. Prominent middle. Shoulders and lower legs appear slimmer by comparison. Weight concentrated in torso/belly.",
+          "sources": ["FashionBeans", "The VOU", "Flusser (short/heavy man, prominent middle)"]
+        },
+        {
+          "value": "rhomboid",
+          "definition": "Well-developed midsection with average shoulders. Similar to oval but with more defined shoulders. Common in middle-aged men.",
+          "sources": ["The VOU"]
+        },
+        {
+          "value": "trapezium",
+          "definition": "Narrow shoulders that slope down, with wider hips. Pear-shaped. Less common in men.",
+          "sources": ["The VOU"]
+        }
+      ],
+      "notes": "Flusser does not use geometric shape names. He categorizes by height + build combinations (short/heavy, short/slim, tall, athletic). The geometric taxonomy from FashionBeans and The VOU is more systematic for a recommendation engine. Both systems map to each other."
+    },
+    {
+      "name": "height",
+      "description": "Overall vertical stature of the man",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Below 5'7\" (170cm). Legs proportionally short relative to torso. Primary goal: create illusion of greater height.",
+          "sources": ["Flusser", "The Modest Man", "FashionBeans"]
+        },
+        {
+          "value": "average",
+          "definition": "5'7\" to 6'0\" (170-183cm). Standard proportions. Most clothing designed for this range.",
+          "sources": ["FashionBeans", "The Modest Man"]
+        },
+        {
+          "value": "tall",
+          "definition": "Above 6'0\" (183cm). Needs full-proportioned clothing. Goal: produce more horizontal lines to counterbalance vertical dominance.",
+          "sources": ["Flusser", "FashionBeans", "The Modest Man"]
+        }
+      ]
+    },
+    {
+      "name": "build",
+      "description": "Overall mass and musculature of the frame",
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Lean, narrow frame. Closely fitted clothes accentuate narrowness. Should dress 'large' — add visual breadth and structure.",
+          "sources": ["Flusser", "FashionBeans"]
+        },
+        {
+          "value": "average",
+          "definition": "Moderate frame. Neither notably thin nor heavy. Standard fit clothing works well.",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "athletic",
+          "definition": "Chest measures 8+ inches more than waist. Exaggerated V-shaped torso. Broad shoulders and chest, narrow waist. Goal: balance upper and lower halves.",
+          "sources": ["Flusser", "FashionBeans", "The VOU"]
+        },
+        {
+          "value": "stocky",
+          "definition": "Broad and solid but not necessarily overweight. Short and wide frame. Compact.",
+          "sources": ["FashionBeans", "The Modest Man"]
+        },
+        {
+          "value": "heavy",
+          "definition": "Prominent middle, significant girth. Should dress 'large' with straight-hanging lines. Close-fitting clothes reveal more than they conceal.",
+          "sources": ["Flusser", "FashionBeans", "The VOU"]
+        }
+      ]
+    },
+    {
+      "name": "torso_vs_leg_ratio",
+      "description": "Relative length of torso compared to legs. Flusser notes most short men are short because their legs are proportionally short relative to their torso.",
+      "values": [
+        {
+          "value": "long_torso",
+          "definition": "Torso is proportionally long relative to legs. Common in shorter men. Jacket length must be kept short to create illusion of longer legs.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "balanced",
+          "definition": "Torso and legs are proportionally balanced. Standard clothing proportions work.",
+          "sources": ["FashionBeans", "The Modest Man"]
+        },
+        {
+          "value": "long_legs",
+          "definition": "Legs are proportionally long relative to torso. Common in tall men. Can wear longer jackets.",
+          "sources": ["Flusser", "The Modest Man"]
+        }
+      ]
+    },
+    {
+      "name": "shoulder_width",
+      "description": "Width of the shoulders relative to the frame. Flusser: 'As its widest dimension, the shoulder sets the mood for the rest of the jacket.'",
+      "values": [
+        {
+          "value": "narrow",
+          "definition": "Shoulders narrower than hips or proportionally small. Requires building out with padding or structured jackets.",
+          "sources": ["Flusser", "FashionBeans"]
+        },
+        {
+          "value": "average",
+          "definition": "Shoulders proportional to the frame. Standard jacket shoulders work.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "broad",
+          "definition": "Shoulders significantly wider than waist. Dominant feature. Jacket shoulders should be soft and natural-looking to avoid exaggerating width.",
+          "sources": ["Flusser", "FashionBeans", "The VOU"]
+        }
+      ]
+    },
+    {
+      "name": "shoulder_slope",
+      "description": "Angle of the shoulders from neck to arm",
+      "values": [
+        {
+          "value": "sloped",
+          "definition": "Shoulders angle downward noticeably. May need slight padding to square up. Flusser: unless extremely slope-shouldered, avoid built-up shoulders.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "natural",
+          "definition": "Standard slight downward slope. Natural-shoulder jacket works well (e.g., Brooks Brothers).",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "square",
+          "definition": "Shoulders form near-right angles. Avoid additional padding. 90-degree angles bracketing the head emphasize shortness.",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "face_shape",
+      "description": "Shape of the face — determines collar and neckwear choices. Flusser: 'Think of the face as a picture and the collar as its frame.'",
+      "values": [
+        {
+          "value": "small_delicate",
+          "definition": "Smaller face with fine features. Requires collar of restrained dimensions. Smaller-scale accessories.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "average",
+          "definition": "Standard proportions. Standard collar widths and scales work.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "wide_broad",
+          "definition": "Broader, larger face. Wider head. Requires correspondingly larger collar. Jacket shoulders may need building up to offset wider head.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "thin_narrow",
+          "definition": "Narrow, elongated face. Narrower collar. Sloped, narrow shoulders harmonize with thinner face.",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "neck",
+      "description": "Neck height/length and thickness — affects collar choices",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Short neck. Lower collar heights. Avoid high collars that crowd the neck.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "average",
+          "definition": "Standard neck length. Standard collar heights work.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "long",
+          "definition": "Long neck. Can accommodate taller collars. More room for collar-tie interplay.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "thick",
+          "definition": "Thick, broad neck. Often accompanies athletic build. Vertical-pointing collars (tabs, straight points) help elongate.",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "arm_length",
+      "description": "Relative arm length — affects jacket sleeve and shirt cuff proportions",
+      "values": [
+        {
+          "value": "short",
+          "definition": "Short arms relative to torso. Half inch of shirt cuff showing is sufficient.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "average",
+          "definition": "Standard arm length. Jacket sleeve finishes at wrist bone.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "long",
+          "definition": "Long arms. 3/4 to 1 inch of shirt cuff should show below jacket for better proportion. (Flusser cites Gary Cooper as example.)",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "waist_definition",
+      "description": "How defined or prominent the waist/midsection is",
+      "values": [
+        {
+          "value": "defined",
+          "definition": "Clear waist taper. Can wear more fitted, waist-suppressed clothing.",
+          "sources": ["Flusser", "FashionBeans"]
+        },
+        {
+          "value": "moderate",
+          "definition": "Some waist definition. Standard fit works.",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "undefined",
+          "definition": "Minimal waist indentation — straight from chest to hip. Rectangle body. Needs clothing that creates waist illusion.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "prominent",
+          "definition": "Midsection is widest point. Oval/triangle body. Needs straight-hanging clothes, trousers on natural waist. Close-fitting clothes 'create the look of a stuffed sausage' (Flusser).",
+          "sources": ["Flusser", "FashionBeans", "The VOU"]
+        }
+      ]
+    },
+    {
+      "name": "chest_to_waist_drop",
+      "description": "Difference between chest and waist measurements. Key indicator for body shape classification.",
+      "values": [
+        {
+          "value": "minimal",
+          "definition": "Less than 4 inches difference. Rectangle or oval body. Straight silhouette.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "moderate",
+          "definition": "4-7 inches difference. Trapezoid body. Natural taper.",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "high",
+          "definition": "8+ inches difference. Athletic/inverted triangle. Flusser defines athletic as 'chest measures eight inches or more than waist.'",
+          "sources": ["Flusser", "FashionBeans", "The VOU"]
+        }
+      ]
+    },
+    {
+      "name": "foot_size",
+      "description": "Size of feet relative to frame — affects trouser bottom width and shoe choices",
+      "values": [
+        {
+          "value": "small",
+          "definition": "Smaller feet relative to frame. Wide trouser bottoms make small feet appear even smaller. Need proportional shoe/trouser balance.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "average",
+          "definition": "Proportional to the frame. Standard trouser-to-shoe proportions work.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "large",
+          "definition": "Large feet relative to frame. Narrow trouser bottoms make large feet loom even larger. Heavier men need larger footwear to counterpoint volume above.",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "posture",
+      "description": "Natural standing posture — affects how jackets hang and sleeves fall",
+      "values": [
+        {
+          "value": "forward_lean",
+          "definition": "Carries arms or body forward. Sleeves may not lie smoothly — need rotation. Collar may stand away from neck.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "neutral",
+          "definition": "Standard upright posture. Clothing hangs as designed.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "upright",
+          "definition": "Very erect posture. May cause collar to sit differently. Stand naturally during fitting, 'not as if you had just graduated West Point' (Flusser).",
+          "sources": ["Flusser"]
+        }
+      ]
+    },
+    {
+      "name": "shoulder_vs_hip_ratio",
+      "description": "Relative width of shoulders to hips — primary determinant of body shape",
+      "values": [
+        {
+          "value": "shoulders_wider",
+          "definition": "Shoulders significantly wider than hips. V-shape or inverted triangle. Upper body dominant.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "balanced",
+          "definition": "Shoulders and hips roughly equal width. Rectangle or trapezoid.",
+          "sources": ["FashionBeans", "The VOU"]
+        },
+        {
+          "value": "hips_wider",
+          "definition": "Hips wider than shoulders. Triangle or trapezium shape. Less common in men.",
+          "sources": ["FashionBeans", "The VOU"]
+        }
+      ]
+    },
+    {
+      "name": "head_size",
+      "description": "Size of head relative to shoulders — affects jacket shoulder proportions",
+      "values": [
+        {
+          "value": "small",
+          "definition": "Smaller head. Overly wide shoulders will make head appear disproportionately small.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "proportional",
+          "definition": "Head proportional to frame. Standard shoulder width works.",
+          "sources": ["Flusser"]
+        },
+        {
+          "value": "large",
+          "definition": "Wider/larger head. Too-narrow shoulders make head appear larger. May need slightly built-up shoulders to offset.",
+          "sources": ["Flusser"]
+        }
+      ]
+    }
+  ],
+  "optical_correction_principles": [
+    {
+      "principle": "vertical_lines_elongate",
+      "description": "North-and-south lines stretch out and narrow the physique. Stripes, long lapels, creases, and monochrome dressing create vertical emphasis.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "horizontal_lines_broaden",
+      "description": "East-and-west lines add width. Belts, cuffs, contrasting top/bottom, checks, and pocket flaps create horizontal emphasis.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "dark_colors_minimize",
+      "description": "Darker colors recede and make areas appear smaller/thinner. Medium-to-dark register for stout physiques.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "light_colors_expand",
+      "description": "Lighter colors advance and make areas appear larger. Thin men can wear lighter colors to advantage.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "monochrome_elongates",
+      "description": "One color from top to bottom creates an unbroken vertical line, making the figure appear taller and slimmer. 'The suit's ultimate color lesson' for short/heavy men.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "contrast_breaks_line",
+      "description": "Pronounced contrast between upper and lower halves divides the figure, shortening apparent height. Height-challenged men should avoid this.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "pattern_scale_matches_body",
+      "description": "Pattern scale should harmonize with body type. Narrow-to-medium stripes for thin physique; slightly broader, less pronounced lines for fuller figure. Tall men can wear larger-scaled patterns.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "smooth_fabrics_minimize",
+      "description": "Smooth-faced fabrics such as fine worsteds minimize bulk and thickness.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "textured_fabrics_add_bulk",
+      "description": "Heavier, textured fabrics (flannels, cheviots, tweeds) add visual weight. Good for thin frames, avoid for heavy frames.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "diagonal_lines_slim",
+      "description": "Slanting/diagonal lines minimize girth. The double-breasted jacket's asymmetrical lapels lead the eye away from center of torso.",
+      "sources": ["Flusser"]
+    },
+    {
+      "principle": "details_break_verticality",
+      "description": "Pocket flaps, ticket pockets, turn-back sleeve cuffs inject 'stylish clutter' that impedes long vertical sweeps. Useful for tall men.",
+      "sources": ["Flusser"]
+    }
+  ],
+  "flusser_five_intersections": {
+    "description": "Flusser identifies five major body intersections where proportion rules apply. Each contains a network of lines and curves that, when correctly connected, enhance the overall aesthetic.",
+    "intersections": [
+      {
+        "name": "neck",
+        "key_elements": ["collar shape relative to face shape", "collar height relative to neck length", "tie knot size relative to collar spread"],
+        "flusser_rule": "Face is a picture, collar is its frame. Small face = restrained collar. Larger face = correspondingly larger collar."
+      },
+      {
+        "name": "shoulder",
+        "key_elements": ["shoulder width relative to head size", "shoulder padding/slope", "lapel width relative to shoulder breadth"],
+        "flusser_rule": "Shoulders frame the head. Too narrow = head appears larger. Too wide = head appears smaller. Broad shoulders need fuller lapels for balance."
+      },
+      {
+        "name": "waist",
+        "key_elements": ["waist button placement", "jacket length", "trouser rise", "belt vs suspenders"],
+        "flusser_rule": "Waist button is the fulcrum — should sit 1/2 inch below natural waist. Must divide body so torso and legs appear at maximum length."
+      },
+      {
+        "name": "wrist",
+        "key_elements": ["jacket sleeve length", "shirt cuff exposure", "sleeve taper"],
+        "flusser_rule": "Jacket sleeve should finish at wrist bone. 1/2 to 1 inch of shirt cuff must show. Sleeves should taper from shoulder to wrist — no flapping."
+      },
+      {
+        "name": "ankle",
+        "key_elements": ["trouser bottom width", "trouser break", "shoe scale", "cuff width"],
+        "flusser_rule": "Trouser bottom should cover about two-thirds of the shoe. Width must harmonize with shoe scale. Narrow bottoms + large feet = feet loom larger."
+      }
+    ]
+  }
+}

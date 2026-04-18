@@ -1,0 +1,140 @@
+{
+  "version": "1.0",
+  "description": "User input schema for AIFA style consultation. Single source of truth — scoring engine, prompt, and frontend all reference this file.",
+
+  "fields": {
+    "required": {
+      "build": {
+        "label": "Body Build",
+        "type": "enum",
+        "values": ["slim", "average", "athletic", "stocky", "heavy"],
+        "help": "Your overall frame and mass. Slim = lean/narrow. Heavy = prominent midsection.",
+        "domain": "D01"
+      },
+      "height": {
+        "label": "Height",
+        "type": "enum",
+        "values": ["short", "average", "tall"],
+        "help": "Short = under 5'7\". Average = 5'7\"–6'. Tall = above 6'.",
+        "domain": "D01"
+      },
+      "face_shape": {
+        "label": "Face Shape",
+        "type": "enum",
+        "values": ["small_delicate", "average", "wide_broad", "thin_narrow"],
+        "help": "Look in a mirror. Is your face wider than long? Narrow? Round? Small-featured?",
+        "domain": "D01"
+      },
+      "neck": {
+        "label": "Neck Type",
+        "type": "enum",
+        "values": ["short", "average", "long", "thick"],
+        "help": "Short = collars feel crowded. Long = lots of space between chin and chest. Thick = wide, often with athletic build.",
+        "domain": "D01"
+      },
+      "skin_undertone": {
+        "label": "Skin Undertone",
+        "type": "enum",
+        "values": ["warm", "cool", "neutral"],
+        "help": "Check your wrist veins: green = warm, blue/purple = cool. Gold jewelry suits you = warm. Silver = cool. Both = neutral.",
+        "domain": "D03"
+      }
+    },
+
+    "recommended": {
+      "body_shape": {
+        "label": "Body Shape",
+        "type": "enum",
+        "values": ["trapezoid", "inverted_triangle", "rectangle", "triangle", "oval", "rhomboid"],
+        "help": "Trapezoid = proportional. Inverted triangle = broad shoulders, narrow waist. Rectangle = straight up-and-down. Oval = round midsection.",
+        "domain": "D01"
+      },
+      "skin_depth": {
+        "label": "Skin Depth",
+        "type": "enum",
+        "values": ["light", "medium_light", "medium", "medium_dark", "dark"],
+        "help": "How light or dark your overall skin tone is, regardless of undertone.",
+        "domain": "D03"
+      },
+      "overall_contrast": {
+        "label": "Feature Contrast",
+        "type": "enum",
+        "values": ["low", "medium", "high"],
+        "help": "How much difference between your skin, hair, and eye color. Dark hair + light skin = high. Similar tones all over = low.",
+        "domain": "D03"
+      },
+      "facial_hair": {
+        "label": "Facial Hair",
+        "type": "enum",
+        "values": ["clean_shaven", "stubble", "short_beard", "full_beard", "long_beard"],
+        "help": "Your typical facial hair style. This affects neckline and collar recommendations.",
+        "domain": "D01"
+      }
+    },
+
+    "optional": {
+      "hair_style": {
+        "label": "Hair Style",
+        "type": "enum",
+        "values": ["buzz_short", "medium", "long", "bald_balding"],
+        "help": "Your typical hairstyle. Affects overall head proportion and hat recommendations.",
+        "domain": "D01"
+      },
+      "glasses_style": {
+        "label": "Glasses",
+        "type": "enum",
+        "values": ["none", "thin_frame", "bold_thick_frame", "round", "rectangular"],
+        "help": "If you wear glasses daily, what frame style? This affects neckline framing.",
+        "domain": "D01"
+      },
+      "torso_vs_leg_ratio": {
+        "label": "Torso-Leg Ratio",
+        "type": "enum",
+        "values": ["long_torso", "balanced", "long_legs"],
+        "help": "Are your legs short relative to your torso, or vice versa? Affects trouser rise recommendations.",
+        "domain": "D01"
+      },
+      "waist_definition": {
+        "label": "Waist Definition",
+        "type": "enum",
+        "values": ["defined", "moderate", "undefined", "prominent"],
+        "help": "How defined is your waist? Defined = clear taper. Prominent = midsection is widest point.",
+        "domain": "D01"
+      },
+      "head_size": {
+        "label": "Head Size",
+        "type": "enum",
+        "values": ["small", "proportional", "large"],
+        "help": "Relative to your shoulders. Small head + wide shoulders looks different from large head + narrow shoulders.",
+        "domain": "D01"
+      },
+      "style_track": {
+        "label": "Style Preference",
+        "type": "enum",
+        "values": ["casual", "smart_casual"],
+        "default": "casual",
+        "help": "Casual = tees, jeans, sneakers. Smart casual = polos, chinos, loafers.",
+        "domain": "D05"
+      }
+    }
+  },
+
+  "field_order": [
+    "build", "height", "body_shape",
+    "face_shape", "neck", "facial_hair",
+    "hair_style", "glasses_style", "head_size",
+    "skin_undertone", "skin_depth", "overall_contrast",
+    "torso_vs_leg_ratio", "waist_definition",
+    "style_track"
+  ],
+
+  "validation_rules": {
+    "build_is_required": "Cannot generate report without build",
+    "height_is_required": "Cannot generate report without height",
+    "face_shape_is_required": "Cannot generate report without face_shape",
+    "neck_is_required": "Cannot generate report without neck",
+    "skin_undertone_is_required": "Cannot generate report without skin_undertone",
+    "min_fields_for_good_report": 7,
+    "min_fields_for_great_report": 10
+  }
+}

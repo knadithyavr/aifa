@@ -1,0 +1,530 @@
+[
+  {
+    "name": "sneaker_type",
+    "description": "Classification of sneaker by silhouette, construction, purpose, or heritage style",
+    "style_track": ["casual", "smart_casual", "athleisure", "streetwear"],
+    "values": [
+      {
+        "value": "low_top",
+        "definition": "Sneaker with a collar that sits below the ankle, offering maximum versatility. Can be paired with casual or smart-casual outfits. The most common sneaker silhouette.",
+        "sources": ["The Modest Man", "The Fashionisto", "Clarks"]
+      },
+      {
+        "value": "high_top",
+        "definition": "Sneaker with a collar extending above the ankle, originally designed for basketball to provide ankle support and cushioned midsole for quick movements and impact protection. Associated with streetwear and statement looks.",
+        "sources": ["The Modest Man", "The Fashionisto", "Clarks"]
+      },
+      {
+        "value": "mid_top",
+        "definition": "Sneaker with a collar that sits at the ankle, splitting the difference between low-top and high-top. Offers moderate ankle support with a less dramatic silhouette than a high-top.",
+        "sources": ["The Modest Man", "FashionBeans"]
+      },
+      {
+        "value": "runner_retro",
+        "definition": "Retro-styled running sneaker first popularized by Nike in the 1970s. Simple technical performance silhouette now chosen more for throwback aesthetics than sporting use. Sporty, streamlined, versatile, and casual.",
+        "sources": ["The Modest Man", "FashionBeans", "MR PORTER"]
+      },
+      {
+        "value": "runner_modern",
+        "definition": "Contemporary running sneaker featuring breathable mesh uppers and often thick soles (especially in the heel) for cushioning and forward propulsion. Designed for performance rather than fashion.",
+        "sources": ["The Modest Man", "The Fashionisto"]
+      },
+      {
+        "value": "minimalist_white",
+        "definition": "Clean, simple leather sneaker in white (or other neutral) with minimal branding, flat laces, slim profile, and relatively slim soles. A staple of smart-casual wardrobes that bridges casual and dressy. Exemplified by Common Projects Achilles Low.",
+        "sources": ["The Modest Man", "The Fashionisto", "Bespoke Unit", "Primer Magazine"]
+      },
+      {
+        "value": "chunky_dad",
+        "definition": "Oversized sneaker with exaggerated chunky soles and retro 1990s aesthetic. Associated with the dad-shoe trend. New Balance 993 is a leading example. Best paired with loose-fitting denim.",
+        "sources": ["The Modest Man", "Clarks", "FashionBeans"]
+      },
+      {
+        "value": "canvas_plimsoll",
+        "definition": "Lightweight sneaker with a canvas upper and flat rubber sole. Named after the plimsoll line on ships. Keds and Converse Chuck Taylors are classic examples. Has an athletic, youthful, and beachy tone.",
+        "sources": ["The Modest Man", "The Fashionisto", "Clarks"]
+      },
+      {
+        "value": "court_tennis",
+        "definition": "Flat-soled sneaker designed for lateral court movement with specific tread patterns for stops and starts. Evolved into a sleek lifestyle sneaker. Adidas Stan Smith is the archetype. Pairs well with both casual and dressy looks.",
+        "sources": ["The Modest Man", "FashionBeans", "MR PORTER"]
+      },
+      {
+        "value": "skate",
+        "definition": "Sneaker with flat, grippy sole designed for skateboarding. Characterized by durable construction and board-feel. Ranges from slim profiles (Vans Authentic) to bulky models (Adidas Forum Low, Osiris D3). Has crossed over from skatepark to everyday streetwear.",
+        "sources": ["The Modest Man", "FashionBeans"]
+      },
+      {
+        "value": "slip_on",
+        "definition": "Laceless sneaker designed for convenience. Vans made the first slip-ons in the 1970s for the skater community. Now a staple of casual style adopted by fashion brands like Rick Owens.",
+        "sources": ["The Modest Man", "The Fashionisto"]
+      },
+      {
+        "value": "knit_sock",
+        "definition": "Sneaker with stretch-knit fabric upper that fits like a sock, offering extreme comfort and a fashion-forward silhouette. Balenciaga Speed Trainer popularized the style. Ranges from everyday wearable to avant-garde.",
+        "sources": ["The Modest Man", "Clarks", "FashionBeans"]
+      },
+      {
+        "value": "retro_lifestyle",
+        "definition": "Reissued or retro-inspired sneaker from the 1980s-1990s era, valued for heritage aesthetics and cultural significance rather than performance. Includes styles like Puma Clyde, Puma Suede, and Nike Air Max.",
+        "sources": ["The Modest Man", "Clarks", "FashionBeans"]
+      },
+      {
+        "value": "dress_sneaker",
+        "definition": "Minimalist leather sneaker with a low cuff, slim soles, flat laces, slim profile, and simple leather colorway. Designed to bridge formal and casual, suitable for smart-casual settings. Not appropriate for full suits.",
+        "sources": ["The Modest Man", "The Fashionisto", "Gentleman's Gazette"]
+      },
+      {
+        "value": "basketball",
+        "definition": "Performance sneaker designed for the basketball court, typically high-top with ankle support, cushioned midsole, and impact protection. Iconic styles like Air Jordan have become cultural fashion staples.",
+        "sources": ["The Fashionisto", "FashionBeans"]
+      },
+      {
+        "value": "cross_trainer",
+        "definition": "Versatile athletic sneaker designed for dynamic multi-directional movement in the gym. Features reinforced lacing systems for mid-foot lockdown and breathable mesh. Nike Metcon and Adidas Powerlift are key examples.",
+        "sources": ["The Fashionisto"]
+      },
+      {
+        "value": "platform",
+        "definition": "Sneaker with an exaggerated elevated sole adding significant height. Part of the chunky sneaker trend that gripped fashion from 2017 onward. Ranges from subtle to garish designs.",
+        "sources": ["FashionBeans", "Clarks"]
+      },
+      {
+        "value": "boat_sneaker",
+        "definition": "Hybrid sneaker merging boat shoe aesthetics with sneaker construction. Features slip-resistant soles and lightweight designs suited for maritime activities and summer casual wear.",
+        "sources": ["The Fashionisto"]
+      },
+      {
+        "value": "suede_sneaker",
+        "definition": "Sneaker with suede leather upper, offering a softer, more textured look than smooth leather. A grey suede minimalist sneaker works across an entire wardrobe. Requires suede protector and should be avoided in rain.",
+        "sources": ["FashionBeans", "MR PORTER"]
+      },
+      {
+        "value": "leather_sneaker",
+        "definition": "Sneaker with full leather upper, tough and easy to clean, that gets more comfortable with age. Can be dressed up or down. Full-grain and top-grain leather versions look finer than cheaper alternatives.",
+        "sources": ["FashionBeans", "The Modest Man", "Clarks"]
+      },
+      {
+        "value": "sustainable",
+        "definition": "Eco-conscious sneaker made from recycled or sustainable materials. Adidas Parley line (recycled ocean plastic) is a leading example. Growing segment driven by environmentally aware consumers.",
+        "sources": ["The Fashionisto", "Clarks"]
+      },
+      {
+        "value": "trail_runner",
+        "definition": "Performance sneaker designed for off-road running with aggressive tread patterns, reinforced toe bumpers, and rugged construction for uneven terrain. Increasingly adopted as a lifestyle/fashion sneaker.",
+        "sources": ["FashionBeans"]
+      },
+      {
+        "value": "recovery_therapeutic",
+        "definition": "Sneaker designed for post-workout recovery and foot health, featuring superior cushioning, orthotic-friendly builds, and strain-alleviating design. Asics and New Balance are known for these comfort-centric designs.",
+        "sources": ["The Fashionisto"]
+      }
+    ]
+  },
+  {
+    "name": "sneaker_formality",
+    "description": "How dressy or casual a sneaker type is and the contexts where it is appropriate",
+    "style_track": ["casual", "smart_casual"],
+    "values": [
+      {
+        "value": "smart_casual_appropriate",
+        "definition": "Sneakers that can be worn in smart-casual settings: minimalist leather sneakers, clean white sneakers, and dress sneakers. Must be low-top, slim-profiled, monochrome or subtle two-tone, minimal branding, leather or suede, with flat laces. Appropriate with blazers, chinos, and button-downs but not full suits.",
+        "sources": ["The Modest Man", "The Fashionisto", "Bespoke Unit", "Primer Magazine", "Gentleman's Gazette"]
+      },
+      {
+        "value": "elevated_casual",
+        "definition": "Sneakers suitable for polished casual looks: clean court sneakers (Stan Smiths), quality suede sneakers, retro runners in neutral tones, and premium canvas sneakers. Work with chinos, dark denim, and casual button-downs.",
+        "sources": ["The Modest Man", "FashionBeans", "Bespoke Unit"]
+      },
+      {
+        "value": "casual_only",
+        "definition": "Sneakers appropriate only for casual settings: chunky dad shoes, high-tops, skate shoes, platform sneakers, bright/loud colorways, and heavily branded designs. Best with jeans, shorts, t-shirts, and streetwear.",
+        "sources": ["The Modest Man", "Clarks", "FashionBeans"]
+      },
+      {
+        "value": "athletic_only",
+        "definition": "Performance sneakers meant for sport and exercise only: modern running shoes, cross-trainers, basketball shoes (when worn for sport), and trail runners. Should not be worn as fashion footwear according to traditional style guidance.",
+        "sources": ["Bespoke Unit", "The Fashionisto"]
+      }
+    ]
+  },
+  {
+    "name": "casual_sandal_type",
+    "description": "Classification of men's casual sandal styles by construction and aesthetic",
+    "style_track": ["casual", "resort", "ethnic"],
+    "values": [
+      {
+        "value": "leather_sandal",
+        "definition": "Sandal with leather upper and sole construction, offering a more refined casual look. Can range from simple two-strap designs to more complex constructions. Suitable for destination weddings, garden parties, and slightly dressier casual occasions.",
+        "sources": ["Nimble Made", "Bespoke Unit"]
+      },
+      {
+        "value": "sport_sandal",
+        "definition": "Rugged sandal with adjustable straps, arch support, deep heel cups, and shock-absorbing midsoles. Designed for outdoor activities like hiking and exploring. Brands like Teva and KEEN are leaders. Prioritizes function over fashion.",
+        "sources": ["Nimble Made", "KEEN"]
+      },
+      {
+        "value": "slide",
+        "definition": "Sandal featuring one wide strap across the top of the foot with no heel strap. Ranges from sporty rubber pool slides to woven leather versions suitable for casual dining. Easy on-off convenience.",
+        "sources": ["Nimble Made", "Bespoke Unit"]
+      },
+      {
+        "value": "flip_flop",
+        "definition": "The most casual sandal, defined by a Y-shaped strap running between the toes and across the foot. Lightweight and inexpensive. Best relegated to pool, beach, and very relaxed environments. Modern versions available in leather or suede for a slightly elevated look.",
+        "sources": ["Nimble Made", "Bespoke Unit", "Baronton"]
+      },
+      {
+        "value": "kolhapuri",
+        "definition": "Hand-crafted Indian braided leather T-strap sandal from the Kolhapur region with GI tag, dating to the 13th century. Open-toed with a big-toe loop and ankle-area foot loop. Locally tanned with vegetable dyes and hand-decorated with patterns. Pairs with ethnic wear (kurtas, dhotis) and also works with jeans and linen for Indo-fusion looks. Sub-types include Paytaan, Kachkadi, Pukri, Kapashi, Senapati Kapashi, Maharaja/Shahu, Moja Shape, Kurundwad, and Amdar.",
+        "sources": ["Wikipedia", "Pernia's Pop-Up Shop", "Korakari"]
+      },
+      {
+        "value": "gladiator",
+        "definition": "Sandal inspired by ancient Roman warriors, defined by multiple horizontal crisscrossing straps that often extend up the ankle. Typically made of leather or vegan leather. Offers a bold, vintage European aesthetic.",
+        "sources": ["Nimble Made", "Dr. Martens"]
+      },
+      {
+        "value": "fisherman",
+        "definition": "Closed-toe sandal with woven leather straps and a buckled ankle strap, offering breathability of a sandal with coverage of a shoe. Classic vintage European design that can be dressed up or down with shorts or khaki pants.",
+        "sources": ["Nimble Made", "Rockport"]
+      },
+      {
+        "value": "espadrille_sandal",
+        "definition": "Sandal or slip-on with canvas upper and esparto jute rope sole, originating from the Pyrenees region of Spain and France. Ultra-casual summertime footwear suited for beach, resort, and relaxed warm-weather occasions. Can be worn with casual trousers, shorts, and bathing trunks.",
+        "sources": ["Bespoke Unit"]
+      }
+    ]
+  },
+  {
+    "name": "casual_boot_type",
+    "description": "Classification of men's casual boot styles by construction, heritage, and intended use",
+    "style_track": ["casual", "smart_casual", "rugged"],
+    "values": [
+      {
+        "value": "chelsea",
+        "definition": "Laceless ankle boot with elastic gore panels at the sides, close-to-the-foot fit, and pull tabs. Popularized by the 1960s British Mod scene. Extremely versatile, can be dressed up (dark brown/black leather) or worn casually. Sleek silhouette works with jeans to smart trousers.",
+        "sources": ["Baronton", "Bespoke Unit", "The Modest Man"]
+      },
+      {
+        "value": "chukka",
+        "definition": "Low-ankle lace-up boot with 2-3 eyelets, open-laced construction. Common materials include suede and soft calfskin with crepe rubber or leather soles. Versatile from business casual to weekend wear. Pairs well with flannels, corduroys, jeans, and can even work with suits in dressier calfskin versions.",
+        "sources": ["Bespoke Unit", "Baronton", "The Modest Man"]
+      },
+      {
+        "value": "desert",
+        "definition": "Specific type of chukka boot with crepe rubber sole, suede upper, and rounded toe. Originated from UK military use in the 1940s, became fashionable in the 1950s. All desert boots are chukkas, but not all chukkas are desert boots. Clark's Desert Boot is the archetype.",
+        "sources": ["Bespoke Unit", "Stridewise", "Blundstone"]
+      },
+      {
+        "value": "hiking",
+        "definition": "Boot designed for outdoor trekking with aggressive lugged soles, ankle support, and durable materials. Modern versions update vintage hiking boot aesthetics for both trail and pavement wear. Can serve dual duty in casual wardrobes.",
+        "sources": ["The Modest Man", "Baronton"]
+      },
+      {
+        "value": "combat",
+        "definition": "Military-heritage boot with lace-up front, typically mid-calf height, and rugged construction. Dr. Martens is the iconic civilian brand. Has crossed over into casual streetwear and punk/alternative fashion subcultures.",
+        "sources": ["The Modest Man", "Journeys"]
+      },
+      {
+        "value": "work",
+        "definition": "Heritage workwear boot with lugged rubber or anti-slip outsoles, reinforced leather uppers, and sometimes safety toes. Red Wing is the quintessential brand. Borrows from vintage American workwear aesthetic and pairs naturally with denim.",
+        "sources": ["The Modest Man", "Baronton"]
+      },
+      {
+        "value": "moc_toe",
+        "definition": "Boot with a hand-sewn moccasin-style toe seam, considered the ultimate casual boot. Very difficult to dress up but pairs effortlessly with t-shirts and jeans. Red Wing Classic Moc is the definitive example.",
+        "sources": ["The Modest Man"]
+      },
+      {
+        "value": "duck",
+        "definition": "Waterproof boot combining a rubber lower with a leather or fabric upper, designed for rain and snow. L.L. Bean Boot is the classic. Functional wet-weather footwear that has become a casual style staple.",
+        "sources": ["The Modest Man", "Journeys"]
+      }
+    ]
+  },
+  {
+    "name": "casual_shoe_formality_hierarchy",
+    "description": "Ranking of casual footwear types from most dressy/formal to most casual/informal, establishing where each type sits on the formality spectrum",
+    "style_track": ["casual", "smart_casual"],
+    "values": [
+      {
+        "value": "tier_1_smart_casual_bridge",
+        "definition": "Most dressy casual footwear that can bridge into smart-casual and business-casual contexts. Includes: (1) Venetian/penny/bit loafers in leather with dress soles, (2) minimalist white leather dress sneakers, (3) clean suede or leather court sneakers (Stan Smith-type). These can be worn with blazers, sport coats, and chinos.",
+        "sources": ["Bespoke Unit", "The Modest Man", "Primer Magazine", "Gentleman's Gazette"]
+      },
+      {
+        "value": "tier_2_elevated_casual",
+        "definition": "Polished casual footwear suitable for dates, casual dining, and weekend outfits. Includes: (1) Chelsea boots, (2) chukka/desert boots, (3) driving shoes/moccasins, (4) boat shoes, (5) quality leather sneakers in neutral tones, (6) clean retro runners. Pairs with dark denim, chinos, and casual button-downs.",
+        "sources": ["Bespoke Unit", "Baronton", "The Modest Man"]
+      },
+      {
+        "value": "tier_3_everyday_casual",
+        "definition": "Standard casual footwear for daily wear. Includes: (1) canvas sneakers/plimsolls, (2) skate shoes, (3) retro lifestyle sneakers, (4) work boots, (5) hiking boots, (6) combat boots, (7) fisherman sandals, (8) leather sandals. Suitable with jeans, t-shirts, and casual weekend wear.",
+        "sources": ["Bespoke Unit", "The Modest Man", "Baronton"]
+      },
+      {
+        "value": "tier_4_ultra_casual",
+        "definition": "Most informal footwear reserved for very relaxed settings. Includes: (1) chunky dad sneakers, (2) high-top sneakers, (3) knit/sock sneakers, (4) platform sneakers, (5) espadrilles, (6) sport sandals, (7) slide sandals, (8) flip flops. Best for beach, pool, lounging, errands, and very casual social occasions.",
+        "sources": ["Bespoke Unit", "The Modest Man", "Nimble Made"]
+      }
+    ]
+  },
+  {
+    "name": "sneaker_material",
+    "description": "Primary upper material of a sneaker, which significantly affects formality, durability, and styling versatility",
+    "style_track": ["casual", "smart_casual"],
+    "values": [
+      {
+        "value": "full_grain_leather",
+        "definition": "Highest quality leather sneaker material. Tough, easy to clean, develops a patina with age, and gets more comfortable over time. Looks finer than cheaper alternatives and enables a sneaker to work in smart-casual settings.",
+        "sources": ["FashionBeans", "The Modest Man", "Gentleman's Gazette"]
+      },
+      {
+        "value": "top_grain_leather",
+        "definition": "Second-tier leather quality, slightly corrected and more uniform than full-grain. Still appropriate for dress sneakers and smart-casual wear. More affordable entry point for leather sneakers.",
+        "sources": ["FashionBeans", "Gentleman's Gazette"]
+      },
+      {
+        "value": "suede",
+        "definition": "The nappy underside of cow's skin (also called reverse calf). Softer and more pliable than smooth leather, with a casual texture. Looks great but requires protector spray and should be avoided in rain. A grey suede minimalist sneaker works across an entire wardrobe.",
+        "sources": ["Bespoke Unit", "FashionBeans"]
+      },
+      {
+        "value": "nubuck",
+        "definition": "Buffed top-grain leather with a velvety surface similar to suede but more durable. Offers a refined casual texture. Available in Clarks and other brands as a premium sneaker material option.",
+        "sources": ["Clarks"]
+      },
+      {
+        "value": "canvas",
+        "definition": "Lightweight woven cotton or synthetic fabric. The original sneaker upper material. Breathable and casual, associated with plimsolls and skate shoes. Less formal than leather but highly versatile in casual settings.",
+        "sources": ["The Modest Man", "Clarks"]
+      },
+      {
+        "value": "knit_mesh",
+        "definition": "Stretch-knit or mesh fabric providing sock-like fit and maximum breathability. Used in modern runners, sock sneakers, and athleisure styles. Fashion-forward but firmly casual.",
+        "sources": ["Clarks", "The Modest Man", "FashionBeans"]
+      },
+      {
+        "value": "synthetic",
+        "definition": "Man-made materials including recycled plastics and vegan leather alternatives. Growing segment driven by sustainability concerns. Adidas Parley line uses recycled ocean plastic.",
+        "sources": ["The Fashionisto", "Clarks"]
+      }
+    ]
+  },
+  {
+    "name": "kolhapuri_subtype",
+    "description": "Specific traditional subtypes of the Kolhapuri chappal, an Indian hand-crafted leather sandal with geographical indication (GI) tag from the Kolhapur region",
+    "style_track": ["ethnic", "casual"],
+    "values": [
+      {
+        "value": "paytaan",
+        "definition": "One of the most popular and traditional Kolhapuri chappal types, named after its construction pattern. Features the classic T-strap open-toe design with distinctive braided leather work.",
+        "sources": ["Wikipedia", "Pernia's Pop-Up Shop"]
+      },
+      {
+        "value": "kachkadi",
+        "definition": "Traditional Kolhapuri chappal variant with a specific regional braiding pattern. Part of the classic repertoire of Kolhapuri designs.",
+        "sources": ["Wikipedia", "Pernia's Pop-Up Shop"]
+      },
+      {
+        "value": "pukri",
+        "definition": "Traditional Kolhapuri chappal style, one of the historically recognized patterns from the Kolhapur region.",
+        "sources": ["Wikipedia", "Pernia's Pop-Up Shop"]
+      },
+      {
+        "value": "kapashi",
+        "definition": "Popular Kolhapuri chappal style with distinctive construction. The Senapati Kapashi variant is a prestigious design sometimes featuring a characteristic sound.",
+        "sources": ["Pernia's Pop-Up Shop", "Korakari"]
+      },
+      {
+        "value": "maharaja_shahu",
+        "definition": "Royal-designed Kolhapuri chappal with antique styling, named after the Maharaja. A premium, heritage design variant.",
+        "sources": ["Pernia's Pop-Up Shop", "Korakari"]
+      },
+      {
+        "value": "moja_shape",
+        "definition": "T-shaped design Kolhapuri chappal with a distinctive silhouette differing from the standard open-toe construction.",
+        "sources": ["Pernia's Pop-Up Shop"]
+      },
+      {
+        "value": "kurundwad",
+        "definition": "Regional Kolhapuri chappal design also known as Chor Kaan, originating from the Kurundwad area with a specific construction technique.",
+        "sources": ["Pernia's Pop-Up Shop"]
+      },
+      {
+        "value": "amdar",
+        "definition": "Kolhapuri chappal variant also known as Paper Kapashi style, featuring a distinctive construction method.",
+        "sources": ["Pernia's Pop-Up Shop"]
+      }
+    ]
+  },
+  {
+    "name": "casual_shoe_type_other",
+    "description": "Non-sneaker, non-boot, non-sandal casual shoe types for men",
+    "style_track": ["casual", "smart_casual"],
+    "values": [
+      {
+        "value": "boat_shoe",
+        "definition": "American summertime classic slip-on with slip-resistant soles (won't scratch fiberglass), water-resistant leather upper, and 360-degree lacing. Also called topsiders (Sperry brand). Nautical chic, worn with shorts, rolled-up casual trousers, and chinos. Available in wide range of colors.",
+        "sources": ["Bespoke Unit"]
+      },
+      {
+        "value": "driving_moccasin",
+        "definition": "Italian-origin moccasin with rubber nubs on the sole for gripping car pedals. Extremely comfortable but not ideal for extensive walking. Popularized by Tod's in the mid-1950s. Pairs with casual trousers, denim, and shorts.",
+        "sources": ["Bespoke Unit"]
+      },
+      {
+        "value": "camp_moc",
+        "definition": "Traditional moccasin construction with a one-piece leather wrap, handsewn seams, and a casual rubber sole. Derived from North American indigenous footwear. A subset of the broader moccasin family alongside boat shoes and driving shoes.",
+        "sources": ["Bespoke Unit", "Quoddy"]
+      },
+      {
+        "value": "penny_loafer",
+        "definition": "Slip-on shoe with a strap across the vamp featuring a diamond-shaped cutout (originally for holding a penny). Ivy League classic popularized by G.H. Bass Weejun in the 1950s. Bridges casual and smart-casual contexts.",
+        "sources": ["Bespoke Unit", "Baronton"]
+      },
+      {
+        "value": "bit_loafer",
+        "definition": "Slip-on shoe characterized by a metal horsebit decoration across the vamp, popularized by Gucci in the 1950s. Great for business casual and evening wear.",
+        "sources": ["Bespoke Unit"]
+      },
+      {
+        "value": "venetian_loafer",
+        "definition": "Unadorned slip-on free of broguing, straps, bits, or decoration. The most formal of all slip-on shoes when paired with a dress sole and heel. In black patent leather, suitable for black-tie events.",
+        "sources": ["Bespoke Unit"]
+      },
+      {
+        "value": "espadrille",
+        "definition": "Slip-on with canvas upper and jute esparto rope sole from the Pyrenees region of Spain and France. Originally a dock worker's shoe, now ultra-casual summertime footwear. Worn with casual trousers, shorts, and bathing trunks.",
+        "sources": ["Bespoke Unit"]
+      }
+    ]
+  },
+  {
+    "name": "essential_casual_footwear_rotation",
+    "description": "Recommended core footwear rotation for a men's casual wardrobe, organized by priority of acquisition",
+    "style_track": ["casual", "smart_casual"],
+    "values": [
+      {
+        "value": "everyday_sneaker",
+        "definition": "First priority purchase. A versatile, comfortable sneaker for daily wear. Should be a clean design in a neutral color that works with most casual outfits.",
+        "sources": ["Baronton"]
+      },
+      {
+        "value": "smart_casual_sneaker",
+        "definition": "Second priority. A minimalist leather or premium sneaker that can bridge casual to smart-casual occasions. White leather low-top is the most versatile choice.",
+        "sources": ["Baronton", "The Modest Man"]
+      },
+      {
+        "value": "dress_shoe",
+        "definition": "Third priority. One pair of core dress shoes: Oxfords for most formal needs, Derbies for more relaxed professional settings, or loafers for warm weather and semi-formal events.",
+        "sources": ["Baronton"]
+      },
+      {
+        "value": "casual_boot",
+        "definition": "Fourth priority. Chelsea boots for something sleek, lace-up boots for rugged appeal, or chukka boots for a laid-back yet intentional look. Boots outperform sneakers in rough weather and develop character with wear as leather softens and molds to the foot.",
+        "sources": ["Baronton"]
+      },
+      {
+        "value": "training_shoe",
+        "definition": "Fifth priority. Dedicated athletic shoe for gym and sports, kept separate from fashion sneakers. Cross-trainers or running shoes depending on primary activity.",
+        "sources": ["Baronton"]
+      },
+      {
+        "value": "seasonal_sandal",
+        "definition": "Sixth priority. Warm-weather backup footwear. Not for office, nice restaurants, or events requiring closed-toe shoes. Think of sandals as casual warm-weather backup, not main footwear.",
+        "sources": ["Baronton"]
+      },
+      {
+        "value": "winter_boot",
+        "definition": "Conditional priority for cold climates. Dedicated design with insulation, waterproofing, and tough sole for harsh winter conditions. Separate from fashion boots.",
+        "sources": ["Baronton"]
+      }
+    ]
+  },
+  {
+    "name": "sneaker_style_era",
+    "description": "The era or cultural movement a sneaker style is associated with, affecting how it reads in an outfit",
+    "style_track": ["casual", "streetwear"],
+    "values": [
+      {
+        "value": "heritage_70s",
+        "definition": "Sneakers originating from the 1970s including early running shoes (Nike Cortez), first slip-ons (Vans), and early court shoes. Simple construction, clean lines, now valued for retro authenticity.",
+        "sources": ["The Modest Man", "FashionBeans"]
+      },
+      {
+        "value": "classic_80s",
+        "definition": "Sneakers from the 1980s basketball and hip-hop era including Air Jordan, Adidas Superstar, and Puma Suede. Represent the merging of basketball, hip hop, street fashion, and high fashion.",
+        "sources": ["The Modest Man", "Clarks"]
+      },
+      {
+        "value": "retro_90s",
+        "definition": "1990s era chunky sneakers and early dad shoes. Currently experiencing a strong revival. Includes bulky skate shoes (Osiris D3) and early chunky runners.",
+        "sources": ["The Modest Man", "Clarks"]
+      },
+      {
+        "value": "minimalist_modern",
+        "definition": "Contemporary minimalist sneakers emphasizing clean design, quality materials, and versatility. Common Projects-led movement toward sneakers as smart-casual footwear. Current dominant trend alongside the retro revival.",
+        "sources": ["The Modest Man", "The Fashionisto", "Gentleman's Gazette"]
+      },
+      {
+        "value": "tech_contemporary",
+        "definition": "Current-era sneakers featuring advanced materials (knit, 3D-printed elements), innovative cushioning (Boost, React, ZoomX), and futuristic silhouettes. Includes sock sneakers and hybrid athletic-fashion designs.",
+        "sources": ["The Fashionisto", "FashionBeans"]
+      }
+    ]
+  },
+  {
+    "_metadata": {
+      "extraction_date": "2026-04-02",
+      "sources_attempted": [
+        {
+          "name": "The Modest Man",
+          "url": "https://www.themodestman.com/types-of-sneakers/",
+          "status": "extracted_via_search",
+          "notes": "30 types of sneaker styles for 2025. WebFetch blocked; content retrieved via web search summaries."
+        },
+        {
+          "name": "The Fashionisto",
+          "url": "https://www.thefashionisto.com/men/types-of-sneakers/",
+          "status": "extracted_via_search",
+          "notes": "Sneaker categories by use including casual, high-top, low-top, cross-training, dress, fashion, boat, recovery, plimsolls, sustainable. Retrieved via web search."
+        },
+        {
+          "name": "Clarks",
+          "url": "https://www.clarks.com/en-us/editorial/types-of-sneakers",
+          "status": "extracted_via_search",
+          "notes": "Sneaker style categories including retro, minimalist, sustainable, dad shoes, collabs. Retrieved via web search."
+        },
+        {
+          "name": "Bespoke Unit",
+          "url": "https://bespokeunit.com/shoes/styles/",
+          "status": "extracted_via_search",
+          "notes": "Comprehensive casual shoe types including loafers, boat shoes, espadrilles, moccasins, driving shoes, and formality hierarchy. Retrieved via web search."
+        },
+        {
+          "name": "Wikipedia - Kolhapuri Chappal",
+          "url": "https://en.wikipedia.org/wiki/Kolhapuri_chappal",
+          "status": "extracted_via_search",
+          "notes": "Indian sandal types including Kolhapuri chappal subtypes (Paytaan, Kachkadi, Pukri, etc.). Retrieved via web search."
+        },
+        {
+          "name": "Baronton",
+          "url": "https://baronton.com/mens-footwear-essentials-every-guy-should-own-in-2025/",
+          "status": "extracted_via_search",
+          "notes": "Essential casual footwear rotation including everyday sneakers, smart casual sneakers, dress shoes, boots, sandals. Retrieved via web search."
+        }
+      ],
+      "additional_sources_used": [
+        "FashionBeans - 15 Types of Sneakers for Men",
+        "MR PORTER - Ultimate Guide to Sneaker Trends",
+        "Primer Magazine - Smart Casual Sneakers Guide",
+        "Gentleman's Gazette - Dress Sneakers for Men",
+        "Nimble Made - 12 Types of Sandals for Men",
+        "Pernia's Pop-Up Shop - Types of Kolhapuri Chappal",
+        "Real Men Real Style - Dress Sneakers",
+        "Stridewise - Chukka vs Chelsea Boots"
+      ]
+    }
+  }
+]

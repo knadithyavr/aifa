@@ -1,0 +1,580 @@
+{
+  "extraction_metadata": {
+    "category": "B1 - T-Shirts & Polos",
+    "extracted_date": "2026-04-02",
+    "sources": [
+      {
+        "id": "modaknits_tshirts",
+        "name": "Moda Knits - 62 Types of T-Shirts",
+        "url": "https://modaknits.com/62-types-of-t-shirts-for-men/",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "dtfdatabase_fit",
+        "name": "DTF Database - T-Shirt Fit Guide",
+        "url": "https://dtfdatabase.com/blog/tshirt-fit-guide-necklines-sizing-how-shirts-should-fit/",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "veirdo_india",
+        "name": "Veirdo - Indian T-Shirt Style Guide 2025",
+        "url": "https://veirdo.in/blogs/t-shirts/types-of-tshirts-men-complete-style-guide-2025",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "modaknits_polo",
+        "name": "Moda Knits - Types of Polo Shirts",
+        "url": "https://modaknits.com/types-of-polo-shirts/",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "gentlemans_gazette",
+        "name": "Gentleman's Gazette - Polo Shirt Guide",
+        "url": "https://www.gentlemansgazette.com/polo-shirt-guide/",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "bearhouse_fabric",
+        "name": "The Bear House - Polo Fabric Guide",
+        "url": "https://thebearhouse.com/blogs/blog/polo-tshirt-fabric-guide-pique-vs-jersey-vs-blend-vs-cotton-silk",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "fashionisto_polo",
+        "name": "The Fashionisto - Types of Polo Shirts",
+        "url": "https://www.thefashionisto.com/men/types-of-polo-shirts/",
+        "status": "fetched_via_search"
+      },
+      {
+        "id": "vistaprint_necklines",
+        "name": "Vistaprint - T-Shirt Necklines Guide",
+        "url": "https://www.vistaprint.com/hub/t-shirt-necklines",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "vistaprint_fits",
+        "name": "Vistaprint - T-Shirt Fits Guide",
+        "url": "https://www.vistaprint.com/hub/t-shirt-fits",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "printful_weight",
+        "name": "Printful - T-Shirt Weight Guide",
+        "url": "https://www.printful.com/blog/t-shirt-weight-guide",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "sanvt_gsm",
+        "name": "SANVT - Fabric GSM Guide",
+        "url": "https://sanvt.com/blogs/journal/fabric-weight-a-guide-to-gsm",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "allseasons_collars",
+        "name": "All Seasons Uniforms - Polo Collar Styles",
+        "url": "https://www.allseasonsuniforms.com/blog/collared-elegance-unraveling-the-styles-and-varieties-of-polo-shirt-collars",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "poloshirtsonly_placket",
+        "name": "Polo Shirts Only - Decoding Fits Collars Plackets",
+        "url": "https://www.poloshirtsonly.com.au/blog/decoding-the-polo-shirt-understanding-fits-collars-plackets.htm",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "qiandao_placket",
+        "name": "Qiandao Apparel - Placket Button Guide",
+        "url": "https://qiandaoapparel.com/blogs/b2b-apparel-insights/3-button-golf-polo-placket-2-vs-3-vs-4-buttons",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "tapered_polo_fit",
+        "name": "Tapered Menswear - Polo Classic vs Slim Fit",
+        "url": "https://taperedmenswear.com/blogs/tapered-blog/classic-fit-vs-regular-fit-polo-shirts",
+        "status": "supplementary_search"
+      },
+      {
+        "id": "ralph_lauren_fit",
+        "name": "Ralph Lauren - Polo Fit Guide",
+        "url": "https://www.ralphlauren.com/polo-fit-guide/cyo-men-fit-guide.html",
+        "status": "supplementary_search"
+      }
+    ]
+  },
+  "parameters": [
+    {
+      "name": "tshirt_neckline",
+      "description": "The shape and style of the neckline opening on a t-shirt, which determines formality, comfort, visual proportion, and suitability for different face/body shapes",
+      "style_track": ["casual", "smart_casual", "streetwear", "athleisure"],
+      "values": [
+        {
+          "value": "crew_neck",
+          "definition": "A close-fitting, round neckline that sits at the base of the neck with a ribbed collar providing elasticity and shape retention. The most universal and classic t-shirt neckline, originating from 1930s U.S. Navy undershirts. Suits virtually all body types.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Moda Knits - 62 Types of T-Shirts", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "v_neck",
+          "definition": "A neckline that dips into a sharp V shape at the center front, creating visual length and elongating the neck. Depth varies from shallow to deep cuts. Reinforced seams around the V-cut prevent sagging. Particularly flattering for rounder faces and broader builds as it visually slims the appearance.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Moda Knits - 62 Types of T-Shirts", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "henley",
+          "definition": "A round neckline with a buttoned placket (typically 2-5 buttons, 3-5 inch length) extending down the chest. A hybrid between crew neck and polo shirt, originating from rowers in Henley-on-Thames in the 1800s. More elevated than a standard tee but less formal than a polo, offering adjustable ventilation through the button placket.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Veirdo - Indian T-Shirt Style Guide 2025", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "scoop_neck",
+          "definition": "A broader, U-shaped neckline that dips lower and wider than a crew neck, revealing more of the collarbone. Offers a relaxed, modern aesthetic that is both casual and contemporary. The wider and deeper cut provides excellent comfort and breathability, making it a favorite for summer wear.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "mock_neck",
+          "definition": "A collar that rises 1-2 inches above the base of the neck without extending to a full turtleneck height. Sits close to the neck creating a sleek, sophisticated silhouette. Splits the difference between a crew neck and a full turtleneck. Works well as a standalone piece or layered under jackets.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "boat_neck",
+          "definition": "A horizontal neckline running across the collarbones from shoulder to shoulder, skimming the collarbones and accentuating the shoulders. Rooted in 1930s French nautical wear and popularized by Coco Chanel. Requires strong shoulder seams to maintain structure. Can visually widen narrow shoulders.",
+          "sources": ["Vistaprint - T-Shirt Necklines Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "turtleneck",
+          "definition": "A high, close-fitting collar that folds over and covers the entire neck, typically extending 3-4 inches above the base. Provides maximum neck coverage and warmth, suitable for cold weather. Creates a refined, intellectual aesthetic often associated with smart casual to semi-formal styling.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "polo_collar",
+          "definition": "A fold-over collar with a buttoned placket, combining the comfort of a t-shirt with the structure of a collared shirt. Associated with sporty elegance and smart-casual dressing. The collar provides formality that round-neck tees lack.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "notch_neck",
+          "definition": "A small V-shaped cut at the center of an otherwise round neckline, typically only 1-2 inches deep. Provides a subtle detail that differentiates from a plain crew neck while remaining understated and versatile.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "keyhole_neck",
+          "definition": "A round neckline featuring a small, teardrop or keyhole-shaped opening at the front, sometimes secured with a button or loop. Adds visual interest to an otherwise simple neckline while maintaining modesty.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "split_neck",
+          "definition": "A neckline with a short vertical opening at the center front, similar to a henley but without buttons. Creates a casual, slightly open appearance that offers more breathability than a crew neck.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts"]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_fit",
+      "description": "The overall silhouette and cut of a t-shirt relative to the wearer's body, determining how closely the garment follows the body's contours and how much ease (extra fabric) is built in",
+      "style_track": ["casual", "smart_casual", "streetwear", "athleisure"],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Sits closer to the body from chest to waist with narrower sleeves and minimal extra fabric. Follows the natural body shape more tightly than regular fit, emphasizing the torso's definition. Best suited for lean to average builds. Creates a sharper, more tailored casual appearance.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "Tapered Menswear - Polo Classic vs Slim Fit", "DTF Database - T-Shirt Fit Guide"]
+        },
+        {
+          "value": "regular",
+          "definition": "A straight, classic cut that sits close to the body without clinging. The middle-of-the-road approach with standard proportions: not too tight, not too loose. The most versatile fit suitable for all-day comfort across most body types. Often used interchangeably with 'standard fit' or 'classic fit'.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "DTF Database - T-Shirt Fit Guide", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "relaxed",
+          "definition": "The middle ground between regular and oversized. Offers extra space around the chest, shoulders, and sleeves while still following the wearer's frame. Drapes away from the body slightly without entering oversized territory, providing comfort and ease of movement.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "Tapered Menswear - Polo Classic vs Slim Fit"]
+        },
+        {
+          "value": "oversized",
+          "definition": "Significantly larger than the wearer's typical size, creating a baggy, drapey silhouette. Features more fabric everywhere, especially in body length and sleeve drop. Popular in streetwear and hip-hop fashion. Often several sizes up from usual, with dropped shoulders and extended length.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "muscle",
+          "definition": "A form-fitting cut designed to closely follow the contours of a muscular physique. Tight-fitting around the chest and waist with sleeves that hug the biceps, but may have slightly more room in the shoulders compared to slim fit. Emphasizes chest, shoulders, and arms.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "DTF Database - T-Shirt Fit Guide"]
+        },
+        {
+          "value": "longline",
+          "definition": "Features an extended hemline that typically reaches past the hips, sometimes to mid-thigh. The body fit can be slim, standard, or relaxed, but the defining characteristic is the extra length. Particularly flattering on taller individuals and useful for covering the hip and thigh area.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "boxy",
+          "definition": "A square-shaped cut that is wide through the torso and sleeves, hanging straight down from the shoulders without tapering. Features minimal body contouring with a wider, squarer silhouette. Unlike oversized, boxy tees are not necessarily long and do not typically have dropped shoulders; they focus on horizontal volume, often with a slightly cropped length.",
+          "sources": ["Vistaprint - T-Shirt Fits Guide", "Tapered Menswear - Polo Classic vs Slim Fit"]
+        },
+        {
+          "value": "athletic",
+          "definition": "A tapered fit with more room through the chest and shoulders that narrows at the waist, accommodating a V-shaped torso. Designed for athletic builds (broad shoulders, defined chest, tapered waist) without being excessively tight. Ideal for layering under blazers or sweaters.",
+          "sources": ["Tapered Menswear - Polo Classic vs Slim Fit", "DTF Database - T-Shirt Fit Guide"]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_sleeve_length",
+      "description": "The length and style of the sleeve on a t-shirt, affecting coverage, formality, seasonal suitability, and visual proportions of the arm",
+      "style_track": ["casual", "smart_casual", "streetwear", "athleisure"],
+      "values": [
+        {
+          "value": "sleeveless",
+          "definition": "Completely removes the sleeve, leaving the upper arms fully exposed. Also called tank tops or muscle shirts. Ideal for workouts, beach days, or casual summer outfits. Maximizes freedom of movement and keeps the wearer cool in hot weather.",
+          "sources": ["Fabriclore - Men T-Shirt Sleeve Styles Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "cap",
+          "definition": "Covers only the top of the shoulder, shorter than standard short sleeves. Adds an edgy, trendy touch best suited for men with toned arms as it highlights biceps and shoulders. More common in women's styles but increasingly seen in men's activewear and summer fashion.",
+          "sources": ["Fabriclore - Men T-Shirt Sleeve Styles Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "short",
+          "definition": "The most common and traditional t-shirt sleeve length, covering approximately half of the upper arm. Length varies slightly depending on design and can be more or less fitted. Often called 'regular sleeves' as it is the default for both men's and women's t-shirts. Universally versatile across seasons and occasions.",
+          "sources": ["Fabriclore - Men T-Shirt Sleeve Styles Guide", "Veirdo - Indian T-Shirt Style Guide 2025", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "three_quarter",
+          "definition": "Hits between the elbow and wrist, covering approximately three-quarters of the arm. Commonly associated with baseball/raglan tees. A great transitional piece for unpredictable weather, providing more coverage than short sleeves while remaining lighter than full long sleeves. Visually elongates the arms.",
+          "sources": ["Fabriclore - Men T-Shirt Sleeve Styles Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "long",
+          "definition": "Extends all the way to the wrist, providing full arm coverage from a single layer of lightweight fabric. Can end in a ribbed cuff that is tighter around the wrist (more common in men's styles) or have a looser, open wrist. Ideal for cooler weather while maintaining the casual comfort of a t-shirt.",
+          "sources": ["Fabriclore - Men T-Shirt Sleeve Styles Guide", "Veirdo - Indian T-Shirt Style Guide 2025", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "rolled",
+          "definition": "Short sleeves that are folded or rolled up once or twice for a more casual, relaxed appearance. Often pre-stitched in the rolled position. Gives a slightly shorter, more intentional look than standard short sleeves and adds textural detail to the silhouette.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts"]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_fabric_weight",
+      "description": "The weight of the t-shirt fabric measured in GSM (grams per square meter) or oz/yd2 (ounces per square yard), directly affecting drape, opacity, durability, warmth, and seasonal suitability",
+      "style_track": ["casual", "smart_casual", "streetwear", "athleisure"],
+      "values": [
+        {
+          "value": "lightweight",
+          "definition": "120-150 GSM (3.5-4.5 oz/yd2). Thinner, breathable fabric that drapes naturally. Ideal for summer, hot climates, layering, or a casual slouchy look. Dries quickly but wrinkles more easily. May be more transparent and prone to shrinkage. Best for warm weather and athletic applications.",
+          "sources": ["Printful - T-Shirt Weight Guide", "SANVT - Fabric GSM Guide", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "midweight",
+          "definition": "150-180 GSM (4.5-5.3 oz/yd2). The 'Goldilocks' range offering the best balance of comfort, durability, and professional appearance. Suitable for year-round and mid-season wear. Works well with all printing techniques (DTG, sublimation, screen printing). The most commonly recommended weight for everyday t-shirts.",
+          "sources": ["Printful - T-Shirt Weight Guide", "SANVT - Fabric GSM Guide"]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "180-200+ GSM (5.3-6+ oz/yd2). Thicker, sturdier fabric with a substantial, premium feel. Highly durable, resists wear and tear from frequent washing, and retains shape over many laundry cycles. Better suited for cooler fall/winter weather or workwear. Provides superior opacity and structure. Popular in streetwear and premium basics.",
+          "sources": ["Printful - T-Shirt Weight Guide", "SANVT - Fabric GSM Guide"]
+        },
+        {
+          "value": "ultra_heavyweight",
+          "definition": "220+ GSM (6.5+ oz/yd2). The thickest, most substantial t-shirt fabric weight. Extremely durable with a rigid, structured feel. Most commonly found in premium streetwear and designer basics. Provides maximum opacity and a distinctly luxurious hand feel. Very warm, best for cold weather.",
+          "sources": ["Printful - T-Shirt Weight Guide", "SANVT - Fabric GSM Guide"]
+        }
+      ]
+    },
+    {
+      "name": "polo_collar_type",
+      "description": "The style, construction, and material of the collar on a polo shirt, affecting formality, structure, and visual character of the garment",
+      "style_track": ["smart_casual", "business_casual", "athleisure", "sporty"],
+      "values": [
+        {
+          "value": "classic_ribbed",
+          "definition": "The standard polo collar made from ribbed knit fabric, creating a distinct pattern of vertical lines. The ribbed construction provides elasticity, shape retention, and a subtle textured sophistication. Introduced in the 1970s, it is the most common polo collar type. Designed to stand up against the neck and frame the face when worn properly.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "button_down",
+          "definition": "A polo collar whose points are anchored to the shirt body by small buttons, creating a billowing effect known as a 'collar roll'. Originally invented for polo players to keep collar points from moving during matches. Associated with preppy style and offers a more secure, windproof collar that stays in place during activity.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "mandarin",
+          "definition": "A short, stand-up collar (band collar) without the traditional fold-over points. Does not meet at the front, creating a clean, minimalist look. Named after Imperial China's Mandarin officials. Also called a band collar, Mao collar, or grandad collar. Creates a modern, Asian-inspired aesthetic that works in both casual and contemporary settings.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "spread",
+          "definition": "A collar with wide-set points, creating more space between the collar tips than a classic point collar. Borrowed from dress shirt styling, the spread collar on a polo creates a smarter, more formal appearance. Often combined with slim-fit shirts for a dressier casual look.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles"]
+        },
+        {
+          "value": "tipped",
+          "definition": "A polo collar featuring contrast-colored stripes or piping along the edge of the collar (and often matching at the cuffs). The tipping detail adds visual interest, color accent, and a sporting heritage reference. A hallmark of classic British and tennis-inspired polo styling.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "contrast",
+          "definition": "A polo collar made from a fabric or color entirely different from the shirt body. Offers a bold visual statement where the collar becomes a distinct design element. Popular since the 1980s-90s and continues to evolve with modern interpretations pairing different textures and colors.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles"]
+        },
+        {
+          "value": "self_fabric",
+          "definition": "A collar constructed from the same fabric as the shirt body rather than ribbed knit. Often includes sewn-in collar stays and a collar stand for structure. Creates a smoother, more uniform appearance. Common on performance and polyester polos; less expensive to manufacture than ribbed knit collars.",
+          "sources": ["All Seasons Uniforms - Polo Collar Styles"]
+        },
+        {
+          "value": "woven",
+          "definition": "A collar made from woven (non-knit) fabric attached to a knit polo body. Bridges the gap between a polo and a dress shirt, providing the crispness and formality of a woven collar with the comfort of a knit body. Often seen on dress-code-friendly polos.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "collarless",
+          "definition": "A polo-style shirt that completely omits a collar, presenting a clean neckline similar to a crew-neck t-shirt but retaining other polo elements like a button placket. Offers a minimalist, modern alternative for those who prefer a pared-back aesthetic.",
+          "sources": ["The Fashionisto - Types of Polo Shirts", "All Seasons Uniforms - Polo Collar Styles"]
+        }
+      ]
+    },
+    {
+      "name": "polo_fabric",
+      "description": "The knit construction and fiber composition of a polo shirt fabric, determining texture, weight, breathability, structure, and occasion suitability",
+      "style_track": ["smart_casual", "business_casual", "sporty", "athleisure"],
+      "values": [
+        {
+          "value": "pique",
+          "definition": "A textured, double-weave knit with a distinctive waffle or honeycomb surface. Invented by Rene Lacoste in 1926 for tennis. Medium weight with 8-12% natural elasticity. The micro-chambers in the weave trap air for insulation while allowing vapor escape, providing excellent moisture-wicking. Holds shape well, resists creases, and conceals perspiration. The classic polo fabric ideal for business casual and smart settings. Best for embroidery.",
+          "sources": ["The Bear House - Polo Fabric Guide", "Gentleman's Gazette - Polo Shirt Guide", "Moda Knits - Types of Polo Shirts"]
+        },
+        {
+          "value": "jersey",
+          "definition": "A smooth, flat, single-knit fabric that is lightweight and soft to the touch. Has 15-25% natural mechanical stretch. Feels like a favorite t-shirt with a polo's structured collar. Revolutionized by Coco Chanel in the 1910s. More casual than pique, lighter weight, wrinkles less, and drapes more naturally. Better for physical activity, warmer climates, and travel. Works well for screen printing.",
+          "sources": ["The Bear House - Polo Fabric Guide", "Moda Knits - Types of Polo Shirts", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "interlock",
+          "definition": "A dense, double-layered knit produced by two rows of stitches interwoven together. Heavier than pique with a stretchy, comfortable fit and a more luxurious feel. Drapes more elegantly and is less prone to wrinkling. The thicker construction provides superior insulation, making it ideal for cooler weather, loungewear, and cold-weather layering.",
+          "sources": ["The Bear House - Polo Fabric Guide", "Moda Knits - Types of Polo Shirts"]
+        },
+        {
+          "value": "cotton_silk",
+          "definition": "A blend combining cotton's natural breathability with silk's softness and subtle sheen. Creates a lightweight, elegant feel that transitions easily from casual to elevated occasions. The silk component adds a luxurious hand-feel and slight luster that differentiates it from standard cotton polos. Particularly suited for Indian smart-casual dressing.",
+          "sources": ["The Bear House - Polo Fabric Guide"]
+        },
+        {
+          "value": "performance",
+          "definition": "Engineered synthetic or blended fabrics (often polyester, spandex, nylon) designed for athletic and active wear. Features include moisture-wicking, quick-dry capability, anti-odor properties, UV protection (UPF30+), wrinkle resistance, shape retention, and built-in stretch. May contain reflective elements. Typically slim-fitted for sport applications.",
+          "sources": ["The Bear House - Polo Fabric Guide", "The Fashionisto - Types of Polo Shirts", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "mercerized_cotton",
+          "definition": "Cotton yarn that has undergone a mercerization treatment creating a permanent luster and subtle sheen. The process also improves dye uptake, color fastness, and fabric strength. Results in a smooth, polished appearance that pairs well with dress trousers. Dominates the business casual polo space alongside fine-gauge knits.",
+          "sources": ["The Fashionisto - Types of Polo Shirts", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "double_pique",
+          "definition": "A variation of pique where multiple threads are bundled together during knitting. Can combine different fibers (expensive + affordable), strengthen fabric through thread doubling, or create a subtle mottled color effect by knitting two colored threads together. Heavier and more substantial than standard pique.",
+          "sources": ["The Bear House - Polo Fabric Guide", "Moda Knits - Types of Polo Shirts"]
+        },
+        {
+          "value": "cotton_polyester_blend",
+          "definition": "A blended fabric combining cotton's breathability and comfort with polyester's durability, wrinkle resistance, and color retention. Dries faster than pure cotton and holds shape well after many washes. Widely used in Indian market polo shirts for its balance of comfort and easy maintenance. Common in sport, uniform, and everyday categories.",
+          "sources": ["The Bear House - Polo Fabric Guide", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "knitted_wool",
+          "definition": "A polo constructed from fine-gauge knitted wool or merino wool, offering warmth, texture, and a vintage-inspired aesthetic. Straddles the line between casual and formal, providing more structure than cotton knits. Heavier than standard polo fabrics, best suited for autumn/winter wear.",
+          "sources": ["The Fashionisto - Types of Polo Shirts"]
+        }
+      ]
+    },
+    {
+      "name": "polo_fit",
+      "description": "The overall silhouette and cut of a polo shirt relative to the wearer's body, from trim and body-hugging to loose and comfortable",
+      "style_track": ["smart_casual", "business_casual", "sporty"],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "The trimmest silhouette with sleeves that hug the bicep and a slim cut through the chest and waist. Sits closer to the body, emphasizing the torso's shape and definition without excess material around the waist or hips. Best for leaner physiques. Creates the most tailored, modern casual appearance.",
+          "sources": ["Ralph Lauren - Polo Fit Guide", "Tapered Menswear - Polo Classic vs Slim Fit", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "custom_slim",
+          "definition": "A trim silhouette positioned between classic and slim fit. The sleeve hugs the bicep and the shirt is tailored through the waist but with slightly more room than a full slim fit. Offers a tailored shape without being too tight, making it versatile for almost any body type.",
+          "sources": ["Ralph Lauren - Polo Fit Guide", "Tapered Menswear - Polo Classic vs Slim Fit"]
+        },
+        {
+          "value": "classic",
+          "definition": "The roomiest silhouette with a lower armhole and a fuller sleeve that falls closer to the elbow. Provides more room in the chest, arms, and waist without clinging. Highly versatile, suiting most body types, particularly broader builds. Allows better air circulation, making it comfortable for hot weather. Follows the body's contours without hugging.",
+          "sources": ["Ralph Lauren - Polo Fit Guide", "Tapered Menswear - Polo Classic vs Slim Fit", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A looser fit than classic with a more relaxed opening through the shoulder, chest, and waist. Standard sleeve length finishing just above the elbow with a wider sleeve opening. Prioritizes comfort and ease of movement over a tailored silhouette. Ideal for casual, off-duty wear.",
+          "sources": ["Tapered Menswear - Polo Classic vs Slim Fit", "Ralph Lauren - Polo Fit Guide"]
+        },
+        {
+          "value": "athletic",
+          "definition": "Designed for athletic or V-shaped builds with broad shoulders and a tapered waist. Provides more room in the chest and shoulders while narrowing at the midsection. Accommodates muscular physiques without excess fabric in the waist area, creating a clean silhouette that follows the body's natural taper.",
+          "sources": ["Tapered Menswear - Polo Classic vs Slim Fit"]
+        }
+      ]
+    },
+    {
+      "name": "polo_placket",
+      "description": "The reinforced strip at the front opening of a polo shirt where the buttonholes and buttons are located, including button count and construction style. The placket frames the neckline and affects how open or controlled the collar appears.",
+      "style_track": ["smart_casual", "business_casual", "sporty"],
+      "values": [
+        {
+          "value": "two_button",
+          "definition": "A placket with two buttons, providing a slightly more laid-back and casual appearance. Creates a shorter placket opening. Ideal for relaxed, leisure-oriented occasions and warm-weather wear. The reduced button count gives a cleaner, more minimal front appearance.",
+          "sources": ["Polo Shirts Only - Decoding Fits Collars Plackets", "Qiandao Apparel - Placket Button Guide"]
+        },
+        {
+          "value": "three_button",
+          "definition": "The most popular and versatile placket style, considered the classic polo standard. Three buttons provide enough structure to look polished while maintaining a sporty feel. Holds the center front visually and works for more customers, body types, and occasions than any other button count. Often sells best in retail settings.",
+          "sources": ["Polo Shirts Only - Decoding Fits Collars Plackets", "Qiandao Apparel - Placket Button Guide", "Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "four_button",
+          "definition": "A longer placket with four buttons, signaling heritage, premium intent, or a signature design detail. Creates a deeper front opening that can be worn partially unbuttoned for a relaxed look. Less common than two or three-button versions, often seen on designer or rugby-influenced polos.",
+          "sources": ["Qiandao Apparel - Placket Button Guide"]
+        },
+        {
+          "value": "hidden",
+          "definition": "Also called a fly-front or concealed placket. Features an extra layer of fabric that covers the buttons underneath, hiding all fasteners and creating a clean, smooth line down the front. Produces the most polished, minimal appearance with no visible openings or stitching. Common on dressier, designer, and fashion-forward polos.",
+          "sources": ["Polo Shirts Only - Decoding Fits Collars Plackets", "Qiandao Apparel - Placket Button Guide"]
+        },
+        {
+          "value": "zip",
+          "definition": "Replaces the traditional button placket with a zipper closure, offering quick adjustability and a sporty, modern aesthetic. Common on performance and activewear polos. Can range from a short quarter-zip to a full-length zip. Adds a functional, technical character to the garment.",
+          "sources": ["Polo Shirts Only - Decoding Fits Collars Plackets", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "snap",
+          "definition": "Uses snap fasteners instead of buttons or zippers for a quick-open, quick-close mechanism. Often found on performance and utility-oriented polos. Provides a clean front appearance when closed and allows rapid ventilation adjustment.",
+          "sources": ["Polo Shirts Only - Decoding Fits Collars Plackets"]
+        }
+      ]
+    },
+    {
+      "name": "polo_sleeve_length",
+      "description": "The length of the sleeve on a polo shirt, affecting seasonal suitability, formality, and styling versatility",
+      "style_track": ["smart_casual", "business_casual", "sporty"],
+      "values": [
+        {
+          "value": "short",
+          "definition": "The standard polo sleeve length, ending at or just above mid-bicep. The most common and classic option, suitable for warm weather and the majority of polo shirt styling scenarios. Sleeve should be snug but not restricting, ideally finishing at the mid-point of the upper arm.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide", "Ralph Lauren - Polo Fit Guide"]
+        },
+        {
+          "value": "long",
+          "definition": "Extends to the wrist, providing full arm coverage. Ideal for cooler temperatures, transitional weather, and more elevated styling. Long-sleeve polos bridge the gap between a standard polo and an Oxford cloth button-down shirt (OCBD). Often made from pique cotton with ribbed cuffs.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "sleeveless",
+          "definition": "A polo shirt without sleeves, combining the collar and placket formality of a polo with the freedom and ventilation of a tank top. Primarily seen in golf, tennis, and resort wear. Less common in men's fashion than women's.",
+          "sources": ["The Fashionisto - Types of Polo Shirts"]
+        }
+      ]
+    },
+    {
+      "name": "polo_type",
+      "description": "The overall category or sub-type of polo shirt based on its design heritage, construction, and intended use",
+      "style_track": ["smart_casual", "business_casual", "sporty", "streetwear"],
+      "values": [
+        {
+          "value": "classic_pique",
+          "definition": "The standard polo shirt with a ribbed collar, 2-3 button placket, and pique cotton body. The original sporting polo design pioneered by Rene Lacoste in the 1920s-30s. The foundation of the polo shirt category and the most widely recognized variant.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide", "Moda Knits - Types of Polo Shirts", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "rugby",
+          "definition": "A heavier-weight, long-sleeve polo variant with reinforced stitching, a rigid woven collar, and a long front placket. Originally designed for the sport of rugby. Features heavyweight jersey fabric, often with horizontal stripes. Provides a rugged, casual aesthetic suited for fall/winter layering.",
+          "sources": ["The Fashionisto - Types of Polo Shirts", "Moda Knits - Types of Polo Shirts"]
+        },
+        {
+          "value": "performance",
+          "definition": "An athletic-oriented polo made from technical fabrics with moisture-wicking, quick-dry, anti-odor, UV protection, and stretch properties. Designed for golf, tennis, and active lifestyles. Typically slim-fitted with functional features prioritized over traditional aesthetics.",
+          "sources": ["The Fashionisto - Types of Polo Shirts", "The Bear House - Polo Fabric Guide"]
+        },
+        {
+          "value": "knitted",
+          "definition": "A polo constructed from a heavier, textured knit fabric (often wool or fine-gauge cotton) that provides a vintage-inspired, sweater-like appearance. Sits between casual and formal, offering more visual depth than a standard polo. Popular for smart casual and business casual contexts.",
+          "sources": ["The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "jersey",
+          "definition": "A polo made from smooth, lightweight jersey knit rather than textured pique. Has a more relaxed, t-shirt-like drape and feel while retaining the polo's collar and placket structure. Ideal for travel, weekend wear, and casual settings where comfort is prioritized over structure.",
+          "sources": ["The Bear House - Polo Fabric Guide", "The Fashionisto - Types of Polo Shirts"]
+        },
+        {
+          "value": "dress_polo",
+          "definition": "A refined polo designed to substitute for a dress shirt in business-casual or smart-casual settings. Typically features a woven collar, mercerized cotton or fine-gauge knit, hidden placket, and a tailored fit. May include collar stays. Pairs with blazers and dress trousers.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide"]
+        }
+      ]
+    },
+    {
+      "name": "polo_button_material",
+      "description": "The material used for the buttons on a polo shirt placket, which serves as a quality and price-point indicator",
+      "style_track": ["smart_casual", "business_casual"],
+      "values": [
+        {
+          "value": "plastic",
+          "definition": "The most common and affordable button material for polo shirts. Available in a wide range of colors and finishes. Durable and easy to maintain but lacks the premium feel and visual depth of natural materials.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "mother_of_pearl",
+          "definition": "Buttons cut from the nacre (inner shell lining) of mollusks, offering a natural iridescent sheen and depth of color. A hallmark of high-quality polo construction. More fragile than plastic and horn but valued for their luminous, premium appearance. One of the most classic button materials.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide"]
+        },
+        {
+          "value": "horn",
+          "definition": "Buttons made from natural animal horn, each unique in its patterning and coloring. Another classic, premium button material associated with quality craftsmanship. Durable with a rich, organic appearance that develops character over time.",
+          "sources": ["Gentleman's Gazette - Polo Shirt Guide"]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_style_type",
+      "description": "The overall design category or sub-type of t-shirt based on print, wash treatment, or design approach, particularly relevant to the Indian market",
+      "style_track": ["casual", "streetwear"],
+      "values": [
+        {
+          "value": "plain",
+          "definition": "A solid-colored t-shirt with no prints, graphics, or patterns. The most versatile type, serving as a wardrobe staple that can be dressed up or down. Works for layering, casual wear, and as a base for accessorizing.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "graphic",
+          "definition": "Features printed images, artwork, illustrations, or photo-realistic designs on the fabric. Makes a bold visual statement and serves as a form of self-expression. Can range from band logos and pop culture references to abstract art and anime themes.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "typographic",
+          "definition": "Features text, slogans, quotes, or bold typography as the primary design element. Popular for making statements, showing brand identity, or expressing humor and personality. A strong trend in the Indian market with bold typography styles.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "striped",
+          "definition": "Features horizontal, vertical, or diagonal stripes in contrasting colors. A classic pattern that adds visual interest while remaining relatively understated. Horizontal stripes can visually broaden the torso while vertical stripes create a lengthening effect.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "acid_wash",
+          "definition": "A treatment where the fabric is washed with chemicals (or pumice stones soaked in bleach) to create an intentionally uneven, faded appearance with a vintage aesthetic. Popular in Indian streetwear, acid wash adds unique texture and a retro-contemporary character. Trending strongly in 2025.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "tie_dye",
+          "definition": "A technique where the fabric is tied, folded, or scrunched and then dyed to create patterns of color swirls, spirals, or radiating designs. Each piece is somewhat unique. Associated with bohemian and festival aesthetics, gaining renewed popularity in casual and streetwear contexts.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025", "Moda Knits - 62 Types of T-Shirts"]
+        },
+        {
+          "value": "color_block",
+          "definition": "Features two or more large sections of contrasting solid colors combined in a single garment. Creates a bold, modern look through the juxtaposition of distinct color panels rather than gradual blends or patterns.",
+          "sources": ["Moda Knits - 62 Types of T-Shirts", "Veirdo - Indian T-Shirt Style Guide 2025"]
+        },
+        {
+          "value": "ethnic_print",
+          "definition": "Features traditional Indian motifs, block prints, paisley, mandala, or other culturally inspired patterns. An emerging trend in the Indian market that blends heritage aesthetics with modern t-shirt construction and fits.",
+          "sources": ["Veirdo - Indian T-Shirt Style Guide 2025"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3681 @@
+{
+  "domain": "garment_properties_and_visual_effects",
+  "version": "1.0",
+  "extraction_sources": [
+    "Dressing the Man - Alan Flusser - Chapter 5: The Suit",
+    "Dressing the Man - Alan Flusser - Chapter 6: The Odd Jacket, Blazer, and Odd Trouser",
+    "Dressing the Man - Alan Flusser - Chapter 7: The Dress Shirt",
+    "Dressing the Man - Alan Flusser - Chapter 8: The Necktie",
+    "Gentleman's Gazette - Suit Jacket Anatomy",
+    "Gentleman's Gazette - Shirt Collar Styles Guide",
+    "Gentleman's Gazette - Trouser Fit & Break Guide",
+    "Gentleman's Gazette - Tie Knot Pairing Guide"
+  ],
+  "removed_parameters_log": [
+    {
+      "name": "odd_trouser_fabric_formality",
+      "moved_to": "D08",
+      "canonical_param": "fabric_formality_hierarchy",
+      "reason": "Fabric formality ranking consolidated in D08. D07 owns business-casual-specific trouser guidance."
+    }
+  ],
+  "parameters": [
+    {
+      "name": "jacket_closure",
+      "description": "Whether the jacket front is single-breasted or double-breasted, affecting formality and visual width",
+      "values": [
+        {
+          "value": "single_breasted",
+          "definition": "Single row of buttons with a narrow overlap. More versatile, can be worn open or closed. Slimmer silhouette.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "double_breasted",
+          "definition": "Two parallel rows of buttons with wide overlap. Incrementally more stylish than single-breasted. Pointed diagonal lapels dress up any worsted. Should be worn buttoned. Projects broader chest.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "DB adds visual width to torso and projects formality. SB is more neutral and versatile.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_button_configuration",
+      "description": "Number and arrangement of front buttons on the jacket, affecting the V-opening and visual proportions",
+      "values": [
+        {
+          "value": "one_button",
+          "definition": "Single button, lowest stance. Maximum V-opening exposing furnishings. Most elongating. Typically reserved for formal/dinner jackets.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "two_button",
+          "definition": "Most popular modern configuration. Lower button stance than three-button, showing more shirt and tie. Gives trimmer look with defined waistline via darts.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "three_button",
+          "definition": "Higher button stance, less V-opening. Classic conservative look. Top button optional (often rolled). Shortens perceived torso length.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "three_roll_two",
+          "definition": "Three-button jacket where the top button is hidden under a soft lapel roll. Combines the height of a 3-button with the openness of a 2-button. Neapolitan style.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "db_six_on_two",
+          "definition": "Most common double-breasted: 6 front buttons, 2 that fasten. Broad lapels mark a high waist, straight tails hug hips. Classic DB configuration.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "db_six_on_one",
+          "definition": "6 front buttons, only bottom one fastens. Lapels roll down below waist, giving illusion of height. Known as the 'Kent' style after Duke of Kent.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        },
+        {
+          "value": "db_four_on_two",
+          "definition": "4 front buttons, 2 that fasten. More relaxed, laid-back double-breasted look.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Higher button stance = shorter perceived torso. Lower stance = more elongating. The V-opening frames the shirt/tie and draws the eye upward to the face.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "lapel_style",
+      "description": "Shape of the jacket lapel, affecting formality and the framing of the face/chest area",
+      "values": [
+        {
+          "value": "notch",
+          "definition": "Standard lapel with a triangular notch where collar meets lapel. Most common on single-breasted jackets. Neutral formality.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "peak",
+          "definition": "Pointed lapels that angle upward toward the shoulders. Standard on double-breasted jackets. On single-breasted, it virtually neutralizes the DB's edge in formality. Spearheaded the popularity of the V-shaped male chest.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "shawl",
+          "definition": "Continuous rounded lapel with no notch or peak. Reserved for dinner jackets and tuxedos. Most formal.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Peak lapels widen the chest visually and direct the eye outward/upward. Notch is neutral. Shawl creates a smooth, formal line.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "lapel_width",
+      "description": "Width of the jacket lapel measured at its widest point, which should harmonize with tie width and collar spread",
+      "values": [
+        {
+          "value": "narrow",
+          "definition": "Under 3 inches. Slims the chest area. Fashion-forward or casual.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "standard",
+          "definition": "3 to 3.5 inches. Classic proportion. Harmonizes with standard tie width.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "wide",
+          "definition": "Over 3.5 inches. Broadens the chest. More traditional/powerful look.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Wider lapels add visual breadth to the chest. Should match tie width for visual harmony. Rule: lapel width ≈ tie width ≈ collar spread.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "gorge_height",
+      "description": "Position of the collar-lapel junction (gorge) on the jacket, affecting perceived shoulder line and modernity",
+      "values": [
+        {
+          "value": "low",
+          "definition": "Below the collarbone. Vintage/classic look. Elongates the lapel line.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "standard",
+          "definition": "At or near the collarbone/shoulder line. Timeless positioning.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "high",
+          "definition": "Above the shoulder line. Contemporary Italian style. Creates a more modern, shorter lapel look.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Higher gorge creates a more contemporary look and can make the wearer appear taller. Lower gorge is more classic.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_shoulder_type",
+      "description": "Construction and shape of the jacket shoulder, significantly affecting the silhouette and perceived body shape",
+      "values": [
+        {
+          "value": "structured_padded",
+          "definition": "Built-up shoulder with padding. Creates a defined, broad shoulder line. British tradition. Projects authority and width.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "natural_soft",
+          "definition": "Minimal or no padding, following the body's natural shoulder line. American Ivy League/sack suit tradition. Also Neapolitan 'spalla camicia' (shirt shoulder).",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "roped",
+          "definition": "Slightly extended with a raised ridge at the sleevehead (spalla con rollino). Neapolitan tradition. Adds subtle width without bulk.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "extended",
+          "definition": "Shoulder line extends beyond the natural shoulder point. Creates illusion of broader shoulders.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "pagoda",
+          "definition": "Concave/saddle-shaped shoulder (spalla insellata). Dramatic Neapolitan detail.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Structured shoulders broaden a narrow frame. Soft shoulders suit already-broad shoulders. Extended/padded shoulders add visual width.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_vent_style",
+      "description": "Slit(s) at the back of the jacket affecting movement, silhouette, and formality",
+      "values": [
+        {
+          "value": "ventless",
+          "definition": "No slit in back. Clean, trim contour. Dressier. But bunches up when sitting or reaching into pockets. Between the wars, most bespoke lounge suits and dinner jackets were ventless.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "center_vent",
+          "definition": "Single slit at center back. American predilection, Ivy League look. Least expensive to manufacture. Pulls open like a garage door when hand reaches for pocket, revealing the derriere. Least stylish option per Flusser.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "side_vents",
+          "definition": "Two slits on either side. Highest union of function and form. Permits pocket access while covering buttocks. Leads the eye up either side, imbuing illusion of greater height. Subtle concert of motion between vents and trousers lends fluidity and grace. British tradition.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Side vents elongate and add grace to movement. Ventless is sleek but restrictive. Center vent is functional but inelegant.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_pocket_type",
+      "description": "Style of the jacket's lower pockets, affecting formality and visual bulk",
+      "values": [
+        {
+          "value": "jetted",
+          "definition": "Narrow welted slit pockets with no flap. Most formal. Clean, sleek surface. Used on tuxedos and dressier suits. Double-besom construction is the highest quality.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "flapped",
+          "definition": "Pockets with a fabric flap covering the opening. Standard formality. Flaps add a layer of fabric, making the jacket slightly less sleek. Can be tucked in for a cleaner look.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "patch",
+          "definition": "Pockets sewn onto the jacket's surface. Most casual. Add another layer to the surface. Would be a sartorial oxymoron on a dark pinstriped suit. Appropriate for sport jackets and light-colored suits.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "hacking",
+          "definition": "Diagonally angled flap pockets. Originally from riding/hacking jackets. Chisels breadth away from the hip while adding a line of height. Sporty, slightly Anglicized character.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "notes": "Ticket/cash pocket: small extra pocket above the lower hip pocket. Flapped version diminishes dressiness; besom version heightens it.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_silhouette",
+      "description": "The overall cut tradition of the jacket, determined by the combination of shoulder, waist, and drape characteristics",
+      "note": "This parameter is the canonical owner of silhouette/tailoring tradition concepts. D02 and D06 reference this parameter.",
+      "values": [
+        {
+          "value": "british_structured",
+          "definition": "British/Savile Row tradition. Structured, padded shoulders, fuller chest with drape, suppressed waist, close-fitting hip. Side vents. Also known as 'structured' silhouette. The driving force behind tailored fashion in the 1920s-30s.",
+          "aliases": [
+            "structured",
+            "british_drape",
+            "savile_row"
+          ],
+          "sources": [
+            "Flusser Ch5",
+            "Flusser Ch6",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "american_natural",
+          "definition": "American/Ivy League tradition. Natural/unpadded shoulders, undarted straight-hanging body, minimal waist suppression. Soft rolled lapels, three-button front. Brooks Brothers signature. Also known as 'natural' silhouette.",
+          "aliases": [
+            "natural",
+            "american_sack",
+            "ivy_league"
+          ],
+          "sources": [
+            "Flusser Ch5",
+            "Flusser Ch6",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "italian_soft",
+          "definition": "Italian tradition. Soft/minimal shoulder padding, low gorge, lightweight construction. Ranges from Neapolitan (unstructured, spalla camicia) to Milanese (clean, precise). Also known as 'soft/draped' silhouette. Generally lighter and more body-conscious.",
+          "aliases": [
+            "soft_draped",
+            "neapolitan",
+            "milanese"
+          ],
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "British drape creates a V-shaped athletic silhouette. American sack is relaxed and straight. Italian is body-conscious and light.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_sleeve_buttons",
+      "description": "Number of buttons on the jacket sleeve cuff, a subtle marker of sartorial attention",
+      "values": [
+        {
+          "value": "two",
+          "definition": "Minimal, clean. Acceptable on two-button jackets.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        },
+        {
+          "value": "three",
+          "definition": "Often used on summer/lighter jackets. Harmonizes with three-button front.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        },
+        {
+          "value": "four",
+          "definition": "Standard on suit jackets. Conveys superior sartorial breeding per London tradition. Buttons set close together with edges 'kissing.'",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "notes": "Working/surgeon's cuffs (functional buttonholes) are a bespoke marker. Bottom button should finish no more than 3/4 inch above the sleeve bottom.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_construction",
+      "description": "Internal construction method affecting drape, shape retention, and quality",
+      "values": [
+        {
+          "value": "fused",
+          "definition": "Interlining glued to outer fabric. Budget construction. Can bubble over time. Less natural drape.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "half_canvas",
+          "definition": "Canvas interlining in upper chest and lapels only. Good balance of quality and cost. Lapels roll naturally.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "full_canvas",
+          "definition": "Canvas throughout entire front panel. Highest quality. Molds to the wearer's body over time. Best drape and shape retention.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Full canvas creates the most natural, fluid drape. Fused jackets appear stiffer and less organic.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "jacket_formality_tier",
+      "description": "Hierarchical formality ranking of tailored upper garments",
+      "values": [
+        {
+          "value": "suit_jacket",
+          "definition": "Matched with trousers of same fabric. Highest formality in daily wear. Should not be worn as a standalone piece.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        },
+        {
+          "value": "blazer",
+          "definition": "Ranks between suit and sport jacket in dressiness. Metal buttons (brass/gilt/nickel/mother-of-pearl). Chameleon-like versatility — works with flannels, jeans, shorts. DB blazer is slightly more formal than SB.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "sport_jacket",
+          "definition": "Most casual of tailored jackets. 'Odd' detailing: bellows pleats, action backs, patch pockets, bold patterns. Not meant to be mistaken for a suit jacket.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        }
+      ],
+      "notes": "Within each tier: DB > SB, flap pockets > patch, peaked lapels > notched, side vents > center vent, dark trousers > light trousers — each increments formality.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_front",
+      "description": "Whether trousers have pleats and their configuration, affecting comfort, drape, and formality",
+      "values": [
+        {
+          "value": "flat_front",
+          "definition": "No pleats. Clean, slim appearance. Pared-down, uncluttered simplicity. Low rise and form-fitting contour.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "single_pleat",
+          "definition": "One pleat on each side. Moderate fullness.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "double_pleat",
+          "definition": "Two pleats on each side — a deep one near the fly and a shallower one toward the pocket. Classic design. The smaller pleat helps the larger one remain closed. More than two pleats is a fashion gimmick.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "forward_pleat",
+          "definition": "Pleat folds face toward the fly/center. Traditional English style.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "reverse_pleat",
+          "definition": "Pleat folds face toward the pocket/side seam. Most common in ready-to-wear.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Pleats look dressier and provide comfort. Flat-front is slimmer and more modern. Pleats accommodate hip widening when seated.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_rise",
+      "description": "Distance from crotch seam to waistband top, determining where trousers sit on the body",
+      "values": [
+        {
+          "value": "high_rise",
+          "definition": "Sits at the natural waist (near navel). Classical positioning. Returned in the 1980s with pleats and suspenders. Creates ideal balance between jacket and trousers.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "mid_rise",
+          "definition": "Sits between natural waist and hip bones. Modern standard for most ready-to-wear.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "low_rise",
+          "definition": "Sits at or below the hip bones. If waistband rests between natural waist and hip, the ideal balance between jacket and trousers is doomed per Flusser.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "High rise elongates the legs visually. Low rise shortens the leg line and can cause jacket-trouser proportion imbalance.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_break",
+      "description": "Amount of fabric that folds at the front crease where the trouser meets the shoe",
+      "values": [
+        {
+          "value": "no_break",
+          "definition": "Hem just above the shoe with no horizontal fold. Clean, modern, slightly shorter appearance.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "slight_break",
+          "definition": "Minor horizontal crease/dimple where trouser meets shoe. Most versatile and recommended.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "medium_break",
+          "definition": "Moderate fold of fabric over the shoe. Traditional business standard.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "full_break",
+          "definition": "Significant fabric pooling on the shoe. More casual, can look sloppy if unintentional.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Less break creates a cleaner, more elongating line. Full break can shorten apparent leg length.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_cuff",
+      "description": "Whether trouser hems are turned up (cuffed) or left plain, affecting visual weight at the ankle",
+      "values": [
+        {
+          "value": "cuffed",
+          "definition": "Trouser hem turned up, typically 1.5-2 inches. Adds visual weight at the bottom. Helps the trouser hang straight. Cuffed bottoms and crease significantly improve the line of a trouser. Not used on formal trousers.",
+          "sources": [
+            "Flusser Ch5",
+            "Flusser Ch6",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "uncuffed",
+          "definition": "Plain hem with no turn-up. Required for formal wear. Creates a slightly longer, uninterrupted leg line.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Cuffs add horizontal line at ankle (shortening effect) but also weight that improves drape. Short men should use narrower cuffs or skip them.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_width",
+      "description": "Width of the trouser leg, particularly at the knee and hem",
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Tapered, body-conscious cut. Modern/fashion-forward. Narrower through thigh and hem.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "regular",
+          "definition": "Medium width with gentle taper from thigh to hem. Classic proportion.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "full_cut",
+          "definition": "Generous width allowing natural drape and movement. Full across hip and thigh, tapering to bottom. Classical tailoring tradition. Long, wide trousers supported the columnar, athletic silhouette of the 1920s-30s.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Fuller trousers add volume and can balance a broader upper body. Slim trousers elongate but expose leg shape.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "trouser_waistband",
+      "description": "Fastening method at the trouser waist, affecting silhouette and formality",
+      "values": [
+        {
+          "value": "belt_loops",
+          "definition": "Standard loops for a belt, 1.25 to 1.5 inch width. Most common modern construction.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "side_adjusters",
+          "definition": "Tab adjusters on either side of the waist. Cleaner waistline without belt bulk. Also known as side tabs.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "suspender_buttons",
+          "definition": "Buttons inside waistband for braces/suspenders. Allows trousers to hang from shoulders. Cleaner drape.",
+          "sources": [
+            "Flusser Ch5",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "self_belt",
+          "definition": "Matching fabric belt integrated into the waistband. Removed the bother of a separate belt. Popular for resort and casual wear. Fastened with D-ring.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "daks",
+          "definition": "Self-supporting beltless trouser with internal elastic and side tabs. First self-supporting beltless trouser, invented 1932. Comfort-in-action design.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "hollywood_waistband",
+          "definition": "One-piece front and back with narrow belt loops positioned below the trouser's top. Created in the 1930s. Requires narrow belts.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shirt_collar_style",
+      "description": "Shape and style of the dress shirt collar, which frames the face and must harmonize with face shape, tie knot, and jacket lapels",
+      "values": [
+        {
+          "value": "straight_point",
+          "definition": "Standard collar with points angled downward. Most stylisticaly neutral. Points should be 2.75 to 3.375 inches long. Narrow opening between points favors a rounder, oval face rather than narrow one.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "spread",
+          "definition": "Collar points spread apart at a wider angle. Keystone of the English bespoke look since the 1920s. Inherently dressy and elegant. Wider spread counters narrow faces. Several models available to flatter any head shape.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "cutaway",
+          "definition": "Extreme spread where points angle almost horizontally or backward. Most formal spread variant. Also called Windsor collar.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "button_down",
+          "definition": "Collar points fastened to shirt front with buttons. American contribution to dress shirt fashion. Quintessential Ivy League. Can be dressed up or down. Less formal than other collar types. Projects casual elegance.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "tab",
+          "definition": "Collar with small fabric tabs that connect behind the tie knot, pushing the knot up and forward. Raises the tie knot higher on the neck. Functions like a pin collar. Adds extra measure of nattiness but demands precision in execution.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "pinned",
+          "definition": "Collar points connected by a decorative pin underneath the tie knot. Raises the knot, creating an elegant arch in the tie. Demands a bit more aplomb. Once worn by half of all American men. Pointed ends work to counterpoint the rounded or oval contour of chin.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "club_round",
+          "definition": "Collar with rounded points instead of sharp ones. Vintage style. Originated in Eton College. Less common today.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "wing",
+          "definition": "Small standing collar with folded-down tips (wings). Reserved for formal evening wear with bow ties.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Collar frames the face like a picture frame. Spread collars widen a narrow face. Point collars narrow a wide face. Collar height must suit neck length — longer necks need higher collars. Small collars make a large head appear larger.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shirt_collar_height",
+      "description": "Height of the collar band that sits around the neck, which must relate to the wearer's neck length",
+      "values": [
+        {
+          "value": "low",
+          "definition": "Short collar band sitting lower on the neck. Casual. Can make neck appear longer.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "standard",
+          "definition": "Medium height collar band. Appropriate for most neck lengths.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "tall",
+          "definition": "Higher collar band sitting higher on the neck. More formal. Italian tradition. Long necklines require higher-sitting collars to maintain proper proportion.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Collar height should be proportional to neck length. A long neck is best balanced by a higher collar. A short neck needs a lower collar to avoid looking compressed.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shirt_collar_stiffness",
+      "description": "The firmness or softness of the collar fabric, affecting its drape and formality",
+      "values": [
+        {
+          "value": "soft",
+          "definition": "Unfused, natural drape. Casual feel. Pairs with natural-shoulder jackets. Button-down collars are inherently soft.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "medium",
+          "definition": "Light interlining for some structure. Most versatile.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "stiff",
+          "definition": "Heavily fused or starched for crisp, formal appearance. A full face that sags around chin or cheeks demands a stiffer collar to counteract effects of age and gravity.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "shirt_cuff_style",
+      "description": "Style of the shirt sleeve cuff, affecting formality and what accessories are worn",
+      "values": [
+        {
+          "value": "barrel",
+          "definition": "Standard button cuff. Can have 1-3 buttons. Most common and versatile. Less formal.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "french_double",
+          "definition": "Folded-back cuff fastened with cufflinks. More formal. The 'showing linen' — exposing shirt cuff at the wrist — was historically a sign of gentility.",
+          "sources": [
+            "Flusser Ch7",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "convertible",
+          "definition": "Can be fastened with either buttons or cufflinks. Versatile.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Shirt cuffs should show 1/2 to 3/4 inch below jacket sleeve. This 'showing linen' at the wrist is one of Flusser's 5 key body intersections.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "tie_knot_type",
+      "description": "Method used to tie the necktie, producing different knot sizes and shapes that must harmonize with collar spread",
+      "values": [
+        {
+          "value": "four_in_hand",
+          "definition": "Small, slightly asymmetrical knot. Most versatile and classic. Works best with point and button-down collars. Uses least tie length.",
+          "sources": [
+            "Flusser Ch8",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "half_windsor",
+          "definition": "Medium, symmetrical triangular knot. Works well with spread and semi-spread collars.",
+          "sources": [
+            "Flusser Ch8",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "full_windsor",
+          "definition": "Large, symmetrical triangular knot. Designed for wide spread/cutaway collars. Flusser warns against its bulbous mass forcing truncated collar points farther off the chest.",
+          "sources": [
+            "Flusser Ch8",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "pratt_shelby",
+          "definition": "Medium, symmetrical knot tied inside-out. Good alternative to Half-Windsor.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Knot size must fill the collar opening — outer borders of tie knot should correspond with inner borders of the collar. Too-small knot in wide spread looks lost; too-large knot in narrow collar forces points apart.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "tie_width",
+      "description": "Width of the necktie blade at its widest point, which should harmonize with lapel width",
+      "values": [
+        {
+          "value": "skinny",
+          "definition": "Under 2.5 inches. Fashion-forward, casual. Pairs with narrow lapels.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "slim",
+          "definition": "2.5 to 3 inches. Modern proportion.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "standard",
+          "definition": "3.25 to 3.5 inches. Classic width. Harmonizes with standard lapels.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "wide",
+          "definition": "Over 3.5 inches. Traditional/vintage proportion.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "visual_effect": "Tie width should roughly match jacket lapel width for visual harmony. Mismatched widths create visual imbalance.",
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "tie_length",
+      "description": "Where the tie blade tip terminates relative to the waistband",
+      "values": [
+        {
+          "value": "at_waistband",
+          "definition": "Tip reaches the trouser waistband or belt buckle center. Ideal length. Both blades should be close in length.",
+          "sources": [
+            "Flusser Ch8",
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "above_waistband",
+          "definition": "Tip ends above the belt. Too short. Exposes the narrow end behind.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "below_waistband",
+          "definition": "Tip hangs below the belt. Too long. Looks sloppy and shortens the torso visually.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_casual",
+        "business_formal"
+      ]
+    },
+    {
+      "name": "tie_dimple",
+      "description": "Whether the tie has a pinched crease/dimple just below the knot",
+      "values": [
+        {
+          "value": "with_dimple",
+          "definition": "Pinched crease below the knot creating a small indentation. Adds dimension, texture, and elegance. Sign of sartorial attention.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        },
+        {
+          "value": "without_dimple",
+          "definition": "Flat, smooth tie below the knot. Simpler, less fussy.",
+          "sources": [
+            "Gentleman's Gazette"
+          ]
+        }
+      ],
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "suit_piece_count",
+      "description": "Number of matched pieces in the suit ensemble",
+      "values": [
+        {
+          "value": "two_piece",
+          "definition": "Jacket and matching trousers. Modern standard.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        },
+        {
+          "value": "three_piece",
+          "definition": "Jacket, matching trousers, and matching waistcoat/vest. The waistcoat adds gravitas, holds tie in place, keeps shirt tidy, lends efficient appearance when in shirtsleeves. Prior to WWII, most suits were three-piece.",
+          "sources": [
+            "Flusser Ch5"
+          ]
+        }
+      ],
+      "visual_effect": "Waistcoat adds a layer of formality, covers the trouser waistband, and provides additional opportunity for visual interest via odd waistcoats.",
+      "style_track": [
+        "business_formal"
+      ]
+    },
+    {
+      "name": "blazer_button_material",
+      "description": "Material of blazer buttons, affecting formality and character",
+      "values": [
+        {
+          "value": "brass_gilt",
+          "definition": "Traditional blazer button. Classiest is plain, flat English gilt with shank. Implies gentility and tradition.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "nickel_silver",
+          "definition": "Dulled nickel or pewter shade. Good for men with gray hair or predominantly gray-toned trousers.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "mother_of_pearl",
+          "definition": "Off-white buttons. Option for brighter blue tropical wool or linen blazers.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        },
+        {
+          "value": "horn",
+          "definition": "Dark brown horn. First non-metal alternative considered. But its dullish character lacks personality to offset the dark jacket.",
+          "sources": [
+            "Flusser Ch6"
+          ]
+        }
+      ],
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ]
+    },
+    {
+      "name": "tshirt_neckline",
+      "description": "The shape and style of the neckline opening on a t-shirt, which determines formality, comfort, visual proportion, and suitability for different face/body shapes",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear",
+        "athleisure"
+      ],
+      "values": [
+        {
+          "value": "crew_neck",
+          "definition": "A close-fitting, round neckline that sits at the base of the neck with a ribbed collar providing elasticity and shape retention. The most universal and classic t-shirt neckline, originating from 1930s U.S. Navy undershirts. Suits virtually all body types.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Moda Knits - 62 Types of T-Shirts",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "v_neck",
+          "definition": "A neckline that dips into a sharp V shape at the center front, creating visual length and elongating the neck. Depth varies from shallow to deep cuts. Reinforced seams around the V-cut prevent sagging. Particularly flattering for rounder faces and broader builds as it visually slims the appearance.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Moda Knits - 62 Types of T-Shirts",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "henley",
+          "definition": "A round neckline with a buttoned placket (typically 2-5 buttons, 3-5 inch length) extending down the chest. A hybrid between crew neck and polo shirt, originating from rowers in Henley-on-Thames in the 1800s. More elevated than a standard tee but less formal than a polo, offering adjustable ventilation through the button placket.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "scoop_neck",
+          "definition": "A broader, U-shaped neckline that dips lower and wider than a crew neck, revealing more of the collarbone. Offers a relaxed, modern aesthetic that is both casual and contemporary. The wider and deeper cut provides excellent comfort and breathability, making it a favorite for summer wear.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "mock_neck",
+          "definition": "A collar that rises 1-2 inches above the base of the neck without extending to a full turtleneck height. Sits close to the neck creating a sleek, sophisticated silhouette. Splits the difference between a crew neck and a full turtleneck. Works well as a standalone piece or layered under jackets.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "boat_neck",
+          "definition": "A horizontal neckline running across the collarbones from shoulder to shoulder, skimming the collarbones and accentuating the shoulders. Rooted in 1930s French nautical wear and popularized by Coco Chanel. Requires strong shoulder seams to maintain structure. Can visually widen narrow shoulders.",
+          "sources": [
+            "Vistaprint - T-Shirt Necklines Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "turtleneck",
+          "definition": "A high, close-fitting collar that folds over and covers the entire neck, typically extending 3-4 inches above the base. Provides maximum neck coverage and warmth, suitable for cold weather. Creates a refined, intellectual aesthetic often associated with smart casual to semi-formal styling.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "polo_collar",
+          "definition": "A fold-over collar with a buttoned placket, combining the comfort of a t-shirt with the structure of a collared shirt. Associated with sporty elegance and smart-casual dressing. The collar provides formality that round-neck tees lack.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "notch_neck",
+          "definition": "A small V-shaped cut at the center of an otherwise round neckline, typically only 1-2 inches deep. Provides a subtle detail that differentiates from a plain crew neck while remaining understated and versatile.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "keyhole_neck",
+          "definition": "A round neckline featuring a small, teardrop or keyhole-shaped opening at the front, sometimes secured with a button or loop. Adds visual interest to an otherwise simple neckline while maintaining modesty.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "split_neck",
+          "definition": "A neckline with a short vertical opening at the center front, similar to a henley but without buttons. Creates a casual, slightly open appearance that offers more breathability than a crew neck.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_fit",
+      "description": "The overall silhouette and cut of a t-shirt relative to the wearer's body, determining how closely the garment follows the body's contours and how much ease (extra fabric) is built in",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear",
+        "athleisure"
+      ],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Sits closer to the body from chest to waist with narrower sleeves and minimal extra fabric. Follows the natural body shape more tightly than regular fit, emphasizing the torso's definition. Best suited for lean to average builds. Creates a sharper, more tailored casual appearance.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit",
+            "DTF Database - T-Shirt Fit Guide"
+          ]
+        },
+        {
+          "value": "regular",
+          "definition": "A straight, classic cut that sits close to the body without clinging. The middle-of-the-road approach with standard proportions: not too tight, not too loose. The most versatile fit suitable for all-day comfort across most body types. Often used interchangeably with 'standard fit' or 'classic fit'.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "DTF Database - T-Shirt Fit Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "relaxed",
+          "definition": "The middle ground between regular and oversized. Offers extra space around the chest, shoulders, and sleeves while still following the wearer's frame. Drapes away from the body slightly without entering oversized territory, providing comfort and ease of movement.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit"
+          ]
+        },
+        {
+          "value": "oversized",
+          "definition": "Significantly larger than the wearer's typical size, creating a baggy, drapey silhouette. Features more fabric everywhere, especially in body length and sleeve drop. Popular in streetwear and hip-hop fashion. Often several sizes up from usual, with dropped shoulders and extended length.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "muscle",
+          "definition": "A form-fitting cut designed to closely follow the contours of a muscular physique. Tight-fitting around the chest and waist with sleeves that hug the biceps, but may have slightly more room in the shoulders compared to slim fit. Emphasizes chest, shoulders, and arms.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "DTF Database - T-Shirt Fit Guide"
+          ]
+        },
+        {
+          "value": "longline",
+          "definition": "Features an extended hemline that typically reaches past the hips, sometimes to mid-thigh. The body fit can be slim, standard, or relaxed, but the defining characteristic is the extra length. Particularly flattering on taller individuals and useful for covering the hip and thigh area.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "boxy",
+          "definition": "A square-shaped cut that is wide through the torso and sleeves, hanging straight down from the shoulders without tapering. Features minimal body contouring with a wider, squarer silhouette. Unlike oversized, boxy tees are not necessarily long and do not typically have dropped shoulders; they focus on horizontal volume, often with a slightly cropped length.",
+          "sources": [
+            "Vistaprint - T-Shirt Fits Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "A tapered fit with more room through the chest and shoulders that narrows at the waist, accommodating a V-shaped torso. Designed for athletic builds (broad shoulders, defined chest, tapered waist) without being excessively tight. Ideal for layering under blazers or sweaters.",
+          "sources": [
+            "Tapered Menswear - Polo Classic vs Slim Fit",
+            "DTF Database - T-Shirt Fit Guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_sleeve_length",
+      "description": "The length and style of the sleeve on a t-shirt, affecting coverage, formality, seasonal suitability, and visual proportions of the arm",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear",
+        "athleisure"
+      ],
+      "values": [
+        {
+          "value": "sleeveless",
+          "definition": "Completely removes the sleeve, leaving the upper arms fully exposed. Also called tank tops or muscle shirts. Ideal for workouts, beach days, or casual summer outfits. Maximizes freedom of movement and keeps the wearer cool in hot weather.",
+          "sources": [
+            "Fabriclore - Men T-Shirt Sleeve Styles Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "cap",
+          "definition": "Covers only the top of the shoulder, shorter than standard short sleeves. Adds an edgy, trendy touch best suited for men with toned arms as it highlights biceps and shoulders. More common in women's styles but increasingly seen in men's activewear and summer fashion.",
+          "sources": [
+            "Fabriclore - Men T-Shirt Sleeve Styles Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "short",
+          "definition": "The most common and traditional t-shirt sleeve length, covering approximately half of the upper arm. Length varies slightly depending on design and can be more or less fitted. Often called 'regular sleeves' as it is the default for both men's and women's t-shirts. Universally versatile across seasons and occasions.",
+          "sources": [
+            "Fabriclore - Men T-Shirt Sleeve Styles Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "three_quarter",
+          "definition": "Hits between the elbow and wrist, covering approximately three-quarters of the arm. Commonly associated with baseball/raglan tees. A great transitional piece for unpredictable weather, providing more coverage than short sleeves while remaining lighter than full long sleeves. Visually elongates the arms.",
+          "sources": [
+            "Fabriclore - Men T-Shirt Sleeve Styles Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "long",
+          "definition": "Extends all the way to the wrist, providing full arm coverage from a single layer of lightweight fabric. Can end in a ribbed cuff that is tighter around the wrist (more common in men's styles) or have a looser, open wrist. Ideal for cooler weather while maintaining the casual comfort of a t-shirt.",
+          "sources": [
+            "Fabriclore - Men T-Shirt Sleeve Styles Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "rolled",
+          "definition": "Short sleeves that are folded or rolled up once or twice for a more casual, relaxed appearance. Often pre-stitched in the rolled position. Gives a slightly shorter, more intentional look than standard short sleeves and adds textural detail to the silhouette.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_fabric_weight",
+      "description": "The weight of the t-shirt fabric measured in GSM (grams per square meter) or oz/yd2 (ounces per square yard), directly affecting drape, opacity, durability, warmth, and seasonal suitability",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear",
+        "athleisure"
+      ],
+      "values": [
+        {
+          "value": "lightweight",
+          "definition": "120-150 GSM (3.5-4.5 oz/yd2). Thinner, breathable fabric that drapes naturally. Ideal for summer, hot climates, layering, or a casual slouchy look. Dries quickly but wrinkles more easily. May be more transparent and prone to shrinkage. Best for warm weather and athletic applications.",
+          "sources": [
+            "Printful - T-Shirt Weight Guide",
+            "SANVT - Fabric GSM Guide",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "midweight",
+          "definition": "150-180 GSM (4.5-5.3 oz/yd2). The 'Goldilocks' range offering the best balance of comfort, durability, and professional appearance. Suitable for year-round and mid-season wear. Works well with all printing techniques (DTG, sublimation, screen printing). The most commonly recommended weight for everyday t-shirts.",
+          "sources": [
+            "Printful - T-Shirt Weight Guide",
+            "SANVT - Fabric GSM Guide"
+          ]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "180-200+ GSM (5.3-6+ oz/yd2). Thicker, sturdier fabric with a substantial, premium feel. Highly durable, resists wear and tear from frequent washing, and retains shape over many laundry cycles. Better suited for cooler fall/winter weather or workwear. Provides superior opacity and structure. Popular in streetwear and premium basics.",
+          "sources": [
+            "Printful - T-Shirt Weight Guide",
+            "SANVT - Fabric GSM Guide"
+          ]
+        },
+        {
+          "value": "ultra_heavyweight",
+          "definition": "220+ GSM (6.5+ oz/yd2). The thickest, most substantial t-shirt fabric weight. Extremely durable with a rigid, structured feel. Most commonly found in premium streetwear and designer basics. Provides maximum opacity and a distinctly luxurious hand feel. Very warm, best for cold weather.",
+          "sources": [
+            "Printful - T-Shirt Weight Guide",
+            "SANVT - Fabric GSM Guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_collar_type",
+      "description": "The style, construction, and material of the collar on a polo shirt, affecting formality, structure, and visual character of the garment",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "athleisure",
+        "sporty"
+      ],
+      "values": [
+        {
+          "value": "classic_ribbed",
+          "definition": "The standard polo collar made from ribbed knit fabric, creating a distinct pattern of vertical lines. The ribbed construction provides elasticity, shape retention, and a subtle textured sophistication. Introduced in the 1970s, it is the most common polo collar type. Designed to stand up against the neck and frame the face when worn properly.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "button_down",
+          "definition": "A polo collar whose points are anchored to the shirt body by small buttons, creating a billowing effect known as a 'collar roll'. Originally invented for polo players to keep collar points from moving during matches. Associated with preppy style and offers a more secure, windproof collar that stays in place during activity.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "mandarin",
+          "definition": "A short, stand-up collar (band collar) without the traditional fold-over points. Does not meet at the front, creating a clean, minimalist look. Named after Imperial China's Mandarin officials. Also called a band collar, Mao collar, or grandad collar. Creates a modern, Asian-inspired aesthetic that works in both casual and contemporary settings.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "spread",
+          "definition": "A collar with wide-set points, creating more space between the collar tips than a classic point collar. Borrowed from dress shirt styling, the spread collar on a polo creates a smarter, more formal appearance. Often combined with slim-fit shirts for a dressier casual look.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles"
+          ]
+        },
+        {
+          "value": "tipped",
+          "definition": "A polo collar featuring contrast-colored stripes or piping along the edge of the collar (and often matching at the cuffs). The tipping detail adds visual interest, color accent, and a sporting heritage reference. A hallmark of classic British and tennis-inspired polo styling.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "contrast",
+          "definition": "A polo collar made from a fabric or color entirely different from the shirt body. Offers a bold visual statement where the collar becomes a distinct design element. Popular since the 1980s-90s and continues to evolve with modern interpretations pairing different textures and colors.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles"
+          ]
+        },
+        {
+          "value": "self_fabric",
+          "definition": "A collar constructed from the same fabric as the shirt body rather than ribbed knit. Often includes sewn-in collar stays and a collar stand for structure. Creates a smoother, more uniform appearance. Common on performance and polyester polos; less expensive to manufacture than ribbed knit collars.",
+          "sources": [
+            "All Seasons Uniforms - Polo Collar Styles"
+          ]
+        },
+        {
+          "value": "woven",
+          "definition": "A collar made from woven (non-knit) fabric attached to a knit polo body. Bridges the gap between a polo and a dress shirt, providing the crispness and formality of a woven collar with the comfort of a knit body. Often seen on dress-code-friendly polos.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "collarless",
+          "definition": "A polo-style shirt that completely omits a collar, presenting a clean neckline similar to a crew-neck t-shirt but retaining other polo elements like a button placket. Offers a minimalist, modern alternative for those who prefer a pared-back aesthetic.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts",
+            "All Seasons Uniforms - Polo Collar Styles"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_fabric",
+      "description": "The knit construction and fiber composition of a polo shirt fabric, determining texture, weight, breathability, structure, and occasion suitability",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "sporty",
+        "athleisure"
+      ],
+      "values": [
+        {
+          "value": "pique",
+          "definition": "A textured, double-weave knit with a distinctive waffle or honeycomb surface. Invented by Rene Lacoste in 1926 for tennis. Medium weight with 8-12% natural elasticity. The micro-chambers in the weave trap air for insulation while allowing vapor escape, providing excellent moisture-wicking. Holds shape well, resists creases, and conceals perspiration. The classic polo fabric ideal for business casual and smart settings. Best for embroidery.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "Gentleman's Gazette - Polo Shirt Guide",
+            "Moda Knits - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "jersey",
+          "definition": "A smooth, flat, single-knit fabric that is lightweight and soft to the touch. Has 15-25% natural mechanical stretch. Feels like a favorite t-shirt with a polo's structured collar. Revolutionized by Coco Chanel in the 1910s. More casual than pique, lighter weight, wrinkles less, and drapes more naturally. Better for physical activity, warmer climates, and travel. Works well for screen printing.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "Moda Knits - Types of Polo Shirts",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "interlock",
+          "definition": "A dense, double-layered knit produced by two rows of stitches interwoven together. Heavier than pique with a stretchy, comfortable fit and a more luxurious feel. Drapes more elegantly and is less prone to wrinkling. The thicker construction provides superior insulation, making it ideal for cooler weather, loungewear, and cold-weather layering.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "Moda Knits - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "cotton_silk",
+          "definition": "A blend combining cotton's natural breathability with silk's softness and subtle sheen. Creates a lightweight, elegant feel that transitions easily from casual to elevated occasions. The silk component adds a luxurious hand-feel and slight luster that differentiates it from standard cotton polos. Particularly suited for Indian smart-casual dressing.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide"
+          ]
+        },
+        {
+          "value": "performance",
+          "definition": "Engineered synthetic or blended fabrics (often polyester, spandex, nylon) designed for athletic and active wear. Features include moisture-wicking, quick-dry capability, anti-odor properties, UV protection (UPF30+), wrinkle resistance, shape retention, and built-in stretch. May contain reflective elements. Typically slim-fitted for sport applications.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "The Fashionisto - Types of Polo Shirts",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "mercerized_cotton",
+          "definition": "Cotton yarn that has undergone a mercerization treatment creating a permanent luster and subtle sheen. The process also improves dye uptake, color fastness, and fabric strength. Results in a smooth, polished appearance that pairs well with dress trousers. Dominates the business casual polo space alongside fine-gauge knits.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "double_pique",
+          "definition": "A variation of pique where multiple threads are bundled together during knitting. Can combine different fibers (expensive + affordable), strengthen fabric through thread doubling, or create a subtle mottled color effect by knitting two colored threads together. Heavier and more substantial than standard pique.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "Moda Knits - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "cotton_polyester_blend",
+          "definition": "A blended fabric combining cotton's breathability and comfort with polyester's durability, wrinkle resistance, and color retention. Dries faster than pure cotton and holds shape well after many washes. Widely used in Indian market polo shirts for its balance of comfort and easy maintenance. Common in sport, uniform, and everyday categories.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "knitted_wool",
+          "definition": "A polo constructed from fine-gauge knitted wool or merino wool, offering warmth, texture, and a vintage-inspired aesthetic. Straddles the line between casual and formal, providing more structure than cotton knits. Heavier than standard polo fabrics, best suited for autumn/winter wear.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_fit",
+      "description": "The overall silhouette and cut of a polo shirt relative to the wearer's body, from trim and body-hugging to loose and comfortable",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "sporty"
+      ],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "The trimmest silhouette with sleeves that hug the bicep and a slim cut through the chest and waist. Sits closer to the body, emphasizing the torso's shape and definition without excess material around the waist or hips. Best for leaner physiques. Creates the most tailored, modern casual appearance.",
+          "sources": [
+            "Ralph Lauren - Polo Fit Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "custom_slim",
+          "definition": "A trim silhouette positioned between classic and slim fit. The sleeve hugs the bicep and the shirt is tailored through the waist but with slightly more room than a full slim fit. Offers a tailored shape without being too tight, making it versatile for almost any body type.",
+          "sources": [
+            "Ralph Lauren - Polo Fit Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit"
+          ]
+        },
+        {
+          "value": "classic",
+          "definition": "The roomiest silhouette with a lower armhole and a fuller sleeve that falls closer to the elbow. Provides more room in the chest, arms, and waist without clinging. Highly versatile, suiting most body types, particularly broader builds. Allows better air circulation, making it comfortable for hot weather. Follows the body's contours without hugging.",
+          "sources": [
+            "Ralph Lauren - Polo Fit Guide",
+            "Tapered Menswear - Polo Classic vs Slim Fit",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A looser fit than classic with a more relaxed opening through the shoulder, chest, and waist. Standard sleeve length finishing just above the elbow with a wider sleeve opening. Prioritizes comfort and ease of movement over a tailored silhouette. Ideal for casual, off-duty wear.",
+          "sources": [
+            "Tapered Menswear - Polo Classic vs Slim Fit",
+            "Ralph Lauren - Polo Fit Guide"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "Designed for athletic or V-shaped builds with broad shoulders and a tapered waist. Provides more room in the chest and shoulders while narrowing at the midsection. Accommodates muscular physiques without excess fabric in the waist area, creating a clean silhouette that follows the body's natural taper.",
+          "sources": [
+            "Tapered Menswear - Polo Classic vs Slim Fit"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_placket",
+      "description": "The reinforced strip at the front opening of a polo shirt where the buttonholes and buttons are located, including button count and construction style. The placket frames the neckline and affects how open or controlled the collar appears.",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "sporty"
+      ],
+      "values": [
+        {
+          "value": "two_button",
+          "definition": "A placket with two buttons, providing a slightly more laid-back and casual appearance. Creates a shorter placket opening. Ideal for relaxed, leisure-oriented occasions and warm-weather wear. The reduced button count gives a cleaner, more minimal front appearance.",
+          "sources": [
+            "Polo Shirts Only - Decoding Fits Collars Plackets",
+            "Qiandao Apparel - Placket Button Guide"
+          ]
+        },
+        {
+          "value": "three_button",
+          "definition": "The most popular and versatile placket style, considered the classic polo standard. Three buttons provide enough structure to look polished while maintaining a sporty feel. Holds the center front visually and works for more customers, body types, and occasions than any other button count. Often sells best in retail settings.",
+          "sources": [
+            "Polo Shirts Only - Decoding Fits Collars Plackets",
+            "Qiandao Apparel - Placket Button Guide",
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "four_button",
+          "definition": "A longer placket with four buttons, signaling heritage, premium intent, or a signature design detail. Creates a deeper front opening that can be worn partially unbuttoned for a relaxed look. Less common than two or three-button versions, often seen on designer or rugby-influenced polos.",
+          "sources": [
+            "Qiandao Apparel - Placket Button Guide"
+          ]
+        },
+        {
+          "value": "hidden",
+          "definition": "Also called a fly-front or concealed placket. Features an extra layer of fabric that covers the buttons underneath, hiding all fasteners and creating a clean, smooth line down the front. Produces the most polished, minimal appearance with no visible openings or stitching. Common on dressier, designer, and fashion-forward polos.",
+          "sources": [
+            "Polo Shirts Only - Decoding Fits Collars Plackets",
+            "Qiandao Apparel - Placket Button Guide"
+          ]
+        },
+        {
+          "value": "zip",
+          "definition": "Replaces the traditional button placket with a zipper closure, offering quick adjustability and a sporty, modern aesthetic. Common on performance and activewear polos. Can range from a short quarter-zip to a full-length zip. Adds a functional, technical character to the garment.",
+          "sources": [
+            "Polo Shirts Only - Decoding Fits Collars Plackets",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "snap",
+          "definition": "Uses snap fasteners instead of buttons or zippers for a quick-open, quick-close mechanism. Often found on performance and utility-oriented polos. Provides a clean front appearance when closed and allows rapid ventilation adjustment.",
+          "sources": [
+            "Polo Shirts Only - Decoding Fits Collars Plackets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_sleeve_length",
+      "description": "The length of the sleeve on a polo shirt, affecting seasonal suitability, formality, and styling versatility",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "sporty"
+      ],
+      "values": [
+        {
+          "value": "short",
+          "definition": "The standard polo sleeve length, ending at or just above mid-bicep. The most common and classic option, suitable for warm weather and the majority of polo shirt styling scenarios. Sleeve should be snug but not restricting, ideally finishing at the mid-point of the upper arm.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide",
+            "Ralph Lauren - Polo Fit Guide"
+          ]
+        },
+        {
+          "value": "long",
+          "definition": "Extends to the wrist, providing full arm coverage. Ideal for cooler temperatures, transitional weather, and more elevated styling. Long-sleeve polos bridge the gap between a standard polo and an Oxford cloth button-down shirt (OCBD). Often made from pique cotton with ribbed cuffs.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "sleeveless",
+          "definition": "A polo shirt without sleeves, combining the collar and placket formality of a polo with the freedom and ventilation of a tank top. Primarily seen in golf, tennis, and resort wear. Less common in men's fashion than women's.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_type",
+      "description": "The overall category or sub-type of polo shirt based on its design heritage, construction, and intended use",
+      "style_track": [
+        "smart_casual",
+        "business_casual",
+        "sporty",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "classic_pique",
+          "definition": "The standard polo shirt with a ribbed collar, 2-3 button placket, and pique cotton body. The original sporting polo design pioneered by Rene Lacoste in the 1920s-30s. The foundation of the polo shirt category and the most widely recognized variant.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide",
+            "Moda Knits - Types of Polo Shirts",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "rugby",
+          "definition": "A heavier-weight, long-sleeve polo variant with reinforced stitching, a rigid woven collar, and a long front placket. Originally designed for the sport of rugby. Features heavyweight jersey fabric, often with horizontal stripes. Provides a rugged, casual aesthetic suited for fall/winter layering.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts",
+            "Moda Knits - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "performance",
+          "definition": "An athletic-oriented polo made from technical fabrics with moisture-wicking, quick-dry, anti-odor, UV protection, and stretch properties. Designed for golf, tennis, and active lifestyles. Typically slim-fitted with functional features prioritized over traditional aesthetics.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts",
+            "The Bear House - Polo Fabric Guide"
+          ]
+        },
+        {
+          "value": "knitted",
+          "definition": "A polo constructed from a heavier, textured knit fabric (often wool or fine-gauge cotton) that provides a vintage-inspired, sweater-like appearance. Sits between casual and formal, offering more visual depth than a standard polo. Popular for smart casual and business casual contexts.",
+          "sources": [
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "jersey",
+          "definition": "A polo made from smooth, lightweight jersey knit rather than textured pique. Has a more relaxed, t-shirt-like drape and feel while retaining the polo's collar and placket structure. Ideal for travel, weekend wear, and casual settings where comfort is prioritized over structure.",
+          "sources": [
+            "The Bear House - Polo Fabric Guide",
+            "The Fashionisto - Types of Polo Shirts"
+          ]
+        },
+        {
+          "value": "dress_polo",
+          "definition": "A refined polo designed to substitute for a dress shirt in business-casual or smart-casual settings. Typically features a woven collar, mercerized cotton or fine-gauge knit, hidden placket, and a tailored fit. May include collar stays. Pairs with blazers and dress trousers.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "polo_button_material",
+      "description": "The material used for the buttons on a polo shirt placket, which serves as a quality and price-point indicator",
+      "style_track": [
+        "smart_casual",
+        "business_casual"
+      ],
+      "values": [
+        {
+          "value": "plastic",
+          "definition": "The most common and affordable button material for polo shirts. Available in a wide range of colors and finishes. Durable and easy to maintain but lacks the premium feel and visual depth of natural materials.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "mother_of_pearl",
+          "definition": "Buttons cut from the nacre (inner shell lining) of mollusks, offering a natural iridescent sheen and depth of color. A hallmark of high-quality polo construction. More fragile than plastic and horn but valued for their luminous, premium appearance. One of the most classic button materials.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        },
+        {
+          "value": "horn",
+          "definition": "Buttons made from natural animal horn, each unique in its patterning and coloring. Another classic, premium button material associated with quality craftsmanship. Durable with a rich, organic appearance that develops character over time.",
+          "sources": [
+            "Gentleman's Gazette - Polo Shirt Guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tshirt_style_type",
+      "description": "The overall design category or sub-type of t-shirt based on print, wash treatment, or design approach, particularly relevant to the Indian market",
+      "style_track": [
+        "casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "plain",
+          "definition": "A solid-colored t-shirt with no prints, graphics, or patterns. The most versatile type, serving as a wardrobe staple that can be dressed up or down. Works for layering, casual wear, and as a base for accessorizing.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "graphic",
+          "definition": "Features printed images, artwork, illustrations, or photo-realistic designs on the fabric. Makes a bold visual statement and serves as a form of self-expression. Can range from band logos and pop culture references to abstract art and anime themes.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "typographic",
+          "definition": "Features text, slogans, quotes, or bold typography as the primary design element. Popular for making statements, showing brand identity, or expressing humor and personality. A strong trend in the Indian market with bold typography styles.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "striped",
+          "definition": "Features horizontal, vertical, or diagonal stripes in contrasting colors. A classic pattern that adds visual interest while remaining relatively understated. Horizontal stripes can visually broaden the torso while vertical stripes create a lengthening effect.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "acid_wash",
+          "definition": "A treatment where the fabric is washed with chemicals (or pumice stones soaked in bleach) to create an intentionally uneven, faded appearance with a vintage aesthetic. Popular in Indian streetwear, acid wash adds unique texture and a retro-contemporary character. Trending strongly in 2025.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "tie_dye",
+          "definition": "A technique where the fabric is tied, folded, or scrunched and then dyed to create patterns of color swirls, spirals, or radiating designs. Each piece is somewhat unique. Associated with bohemian and festival aesthetics, gaining renewed popularity in casual and streetwear contexts.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025",
+            "Moda Knits - 62 Types of T-Shirts"
+          ]
+        },
+        {
+          "value": "color_block",
+          "definition": "Features two or more large sections of contrasting solid colors combined in a single garment. Creates a bold, modern look through the juxtaposition of distinct color panels rather than gradual blends or patterns.",
+          "sources": [
+            "Moda Knits - 62 Types of T-Shirts",
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        },
+        {
+          "value": "ethnic_print",
+          "definition": "Features traditional Indian motifs, block prints, paisley, mandala, or other culturally inspired patterns. An emerging trend in the Indian market that blends heritage aesthetics with modern t-shirt construction and fits.",
+          "sources": [
+            "Veirdo - Indian T-Shirt Style Guide 2025"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_type",
+      "description": "The category or style of casual shirt, defined by its construction, fabric, collar design, and intended use context. Covers the full spectrum of non-dress shirts for menswear.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "resort",
+        "weekend"
+      ],
+      "values": [
+        {
+          "value": "oxford_cloth_button_down",
+          "definition": "A shirt made from basket-weave oxford cloth fabric with a soft roll button-down collar. Durable yet soft, it bridges casual and smart-casual dressing. The quintessential preppy staple, invented by Brooks Brothers in 1896.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "camp_collar",
+          "definition": "A short-sleeve, button-front shirt with an open, unstructured collar that lies flat against the chest (no collar band). Creates a notched V-neckline. Also called a revere collar shirt. Often features relaxed boxy fit and bold prints. Originated in 1950s Cuba for hot climates.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman",
+            "Art of Manliness",
+            "Percival Menswear"
+          ]
+        },
+        {
+          "value": "cuban_collar",
+          "definition": "A variant of the camp collar with a slightly more structured V-shaped neckline and retro-inspired aesthetic. Terms 'camp collar' and 'Cuban collar' are often used interchangeably, though Cuban tends to imply a more vintage, louche silhouette with a boxy fit.",
+          "sources": [
+            "The Fashionisto",
+            "Percival Menswear",
+            "Art of Manliness"
+          ]
+        },
+        {
+          "value": "mandarin_collar",
+          "definition": "A shirt featuring a short stand-up collar band (1-2 inches high) without collar leaves or points. The edges slightly overlap or meet at center front. Inspired by traditional Chinese Qing dynasty attire. Provides a clean, minimal, modern look.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Fabriclore",
+            "Linen Trail"
+          ]
+        },
+        {
+          "value": "linen_shirt",
+          "definition": "A casual shirt made from linen fabric, prized for its natural breathability, moisture-wicking properties, and textured hand-feel. Slight wrinkling is characteristic and considered part of the charm. Ideal for hot and humid climates including Indian summers.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman",
+            "Linen Trail",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "denim_shirt",
+          "definition": "A casual shirt constructed from denim twill-weave fabric. Versatile and durable, it ages well with unique wear patterns developing over time. Available in various washes from raw indigo to light bleached. Heavier than chambray.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "chambray_shirt",
+          "definition": "A shirt made from chambray, a plain-weave fabric using single strands of colored and white yarn. Visually similar to denim but lighter, softer, and more breathable. Offers a classic blue hue without denim's heaviness. Suitable for warm and transitional weather.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "flannel_shirt",
+          "definition": "A casual shirt made from brushed cotton or wool flannel fabric, known for its soft, napped texture and warmth. Often features plaid or check patterns, though solid colors exist. A cold-weather staple associated with rugged, outdoorsy style. Excellent for layering.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "henley",
+          "definition": "A collarless shirt with a round neckline and a short button placket (typically 3-5 buttons). Resembles a polo without the collar. Available in long and short sleeves, cotton or waffle-knit. Provides a laid-back, masculine look and works well as a layering piece.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "overshirt",
+          "definition": "A heavier-weight shirt designed to be worn as a light outer layer (also called a shacket or shirt jacket). Typically made from flannel, corduroy, wool blends, or heavy cotton. Features a boxier fit, often with chest pockets. Bridges the gap between shirt and jacket for transitional weather.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "A Pe to Gentleman"
+          ]
+        },
+        {
+          "value": "polo_shirt",
+          "definition": "A short-sleeved casual shirt with a soft collar and a two-or-three-button placket. Typically made from pique cotton knit. Straddles the line between casual and smart-casual. A staple of sporty, preppy style.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "hawaiian_shirt",
+          "definition": "A camp-collar shirt characterized by bold, tropical-themed prints (floral, palm, scenic). Made from lightweight fabrics like rayon, cotton, or silk. A subset of camp collar shirts with distinctly vacation/resort-inspired aesthetics.",
+          "sources": [
+            "The Fashionisto",
+            "Art of Manliness"
+          ]
+        },
+        {
+          "value": "band_collar_shirt",
+          "definition": "A shirt with a simple fabric band encircling the neck instead of a traditional folded collar. Also called a grandad collar shirt. The band stands 1-2 inches high. Provides a clean, contemporary aesthetic suited to smart-casual occasions. Related to but distinct from the mandarin collar.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Gear Patrol",
+            "Tapered Menswear"
+          ]
+        },
+        {
+          "value": "kurta_shirt",
+          "definition": "A modern hybrid garment blending the Indian kurta silhouette with Western shirt construction. Features a longer length, often with mandarin or band collar, side slits, and lightweight fabrics like linen or cotton. Popular for casual and festive occasions in the Indian market.",
+          "sources": [
+            "Linen Trail",
+            "French Crown",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "linen_cotton_blend_shirt",
+          "definition": "A casual shirt made from a blend of linen and cotton fibers, combining the breathability and texture of linen with the structure, softness, and durability of cotton. Popular in Indian and tropical markets for its balanced comfort properties.",
+          "sources": [
+            "Linen Trail",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "poplin_shirt",
+          "definition": "A casual or smart-casual shirt made from poplin, a tightly-woven plain-weave fabric with a smooth finish. Lighter and crisper than oxford cloth. Often used for summer casual shirts and can range from fully casual to business-appropriate.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "twill_shirt",
+          "definition": "A casual shirt made from twill-weave fabric, identifiable by its diagonal ribbing. Heavier and more textured than poplin, softer than denim. Provides warmth and drape, making it suitable for cooler weather casual wear.",
+          "sources": [
+            "The Fashionisto",
+            "Fabriclore"
+          ]
+        },
+        {
+          "value": "corduroy_shirt",
+          "definition": "A casual shirt made from corduroy fabric featuring distinctive vertical ridges (wales). A warm-weather alternative to flannel with a distinctive texture. Often used in overshirt form for layering.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "jersey_shirt",
+          "definition": "A casual button-front shirt made from knit jersey fabric rather than woven material. Combines the look of a traditional shirt with the stretch and comfort of a knit. Often used for travel and relaxed casual contexts.",
+          "sources": [
+            "The Fashionisto"
+          ]
+        },
+        {
+          "value": "baseball_shirt",
+          "definition": "A casual knit shirt featuring raglan sleeves (typically in a contrasting color) and a button placket. Named for its association with baseball uniforms. A distinctly casual, sporty piece.",
+          "sources": [
+            "The Fashionisto"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_fit",
+      "description": "The cut and silhouette of a casual shirt, determining how closely it follows the body's contours and where it falls on the torso.",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Tailored to follow the body's natural contours with minimal excess fabric. Sits closer to the body from chest to waist with narrower sleeves. Often features slight stretch for mobility. Creates a sharp, modern silhouette. Best for lean to average builds, smart-casual settings, and layering under blazers.",
+          "sources": [
+            "The LVLL",
+            "Batch Mens",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "regular",
+          "definition": "A balanced, moderate fit offering room across the chest, waist, and sleeves without being oversized. Straighter cut than slim fit. Versatile for everyday wear, works well both tucked and untucked. Suits a wide range of body shapes. Also called 'classic fit' by some brands.",
+          "sources": [
+            "The LVLL",
+            "Batch Mens",
+            "FashionBeans",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A looser cut prioritizing freedom of movement and casual ease. Extra space in the torso, shoulders, and arms. Fabric drapes more freely rather than following body shape. Ideal for all-day comfort and laid-back styling. Works well in warmer climates where airflow is desired.",
+          "sources": [
+            "The LVLL",
+            "FashionBeans",
+            "Linen Trail"
+          ]
+        },
+        {
+          "value": "oversized",
+          "definition": "A deliberately roomy, boxy cut with significant extra volume throughout. Dropped shoulders and wider body. A trend-forward silhouette that pairs well with slim bottoms for contrast. Best styled tucked into slim jeans or with structured bottoms to avoid a shapeless look.",
+          "sources": [
+            "The LVLL",
+            "FashionBeans"
+          ]
+        },
+        {
+          "value": "untucked",
+          "definition": "Not a body fit per se, but a specific length cut designed to be worn untucked. Front hem ends between the middle and bottom of the pants zipper; back hem ends between the middle and bottom of pants back pockets. Shorter than standard shirt length to avoid looking sloppy when worn out.",
+          "sources": [
+            "Primer Magazine",
+            "Batch Mens"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "A fit designed for muscular or athletic builds, offering more room in the chest and shoulders while tapering through the waist. Prevents the pulling and bunching that standard slim fits cause on larger upper bodies.",
+          "sources": [
+            "The LVLL",
+            "FashionBeans"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_collar",
+      "description": "The collar style on a casual shirt, which defines the neckline shape, formality level, and tie compatibility.",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "button_down",
+          "definition": "A collar with small buttons fastening the collar points to the shirt front. Creates a soft, rolling collar shape. The quintessential casual-to-smart-casual collar. Invented by Brooks Brothers in 1896, inspired by English polo players. Can be worn with or without a tie, though the tie look is distinctly American preppy.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Tapered Menswear",
+            "Gear Patrol"
+          ]
+        },
+        {
+          "value": "camp_collar",
+          "definition": "A flat, open collar with no collar band that lies against the chest, creating a notched V-neckline. Unstructured and never worn with a tie. The most casual collar type, associated with vacation and resort wear. Provides excellent ventilation in hot weather.",
+          "sources": [
+            "The Fashionisto",
+            "Art of Manliness",
+            "Percival Menswear",
+            "Gear Patrol"
+          ]
+        },
+        {
+          "value": "mandarin",
+          "definition": "A short stand-up collar band (1-2 inches) without folded-over collar leaves. Edges may slightly overlap or meet at center. Rooted in traditional Chinese fashion. Projects a modern, minimalist aesthetic. Cannot accommodate a tie.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans",
+            "Fabriclore",
+            "Tapered Menswear"
+          ]
+        },
+        {
+          "value": "band",
+          "definition": "A simple fabric band encircling the neck without any collar points or leaves. Also called a grandad collar. Similar to mandarin but sometimes slightly shorter and without the characteristic slight overlap. A smart-casual choice that captures contemporary informality.",
+          "sources": [
+            "FashionBeans",
+            "Tapered Menswear",
+            "Gear Patrol",
+            "Linen Trail"
+          ]
+        },
+        {
+          "value": "spread_casual",
+          "definition": "A collar with wider-set points creating a broad opening. The casual version uses softer construction (no collar stays) compared to dress shirt spreads. Versatile enough for open-neck casual wear or with a tie for smart-casual. Flatters most face shapes.",
+          "sources": [
+            "FashionBeans",
+            "Tapered Menswear",
+            "Oliver Wicks"
+          ]
+        },
+        {
+          "value": "point_collar",
+          "definition": "The most traditional collar with narrow, pointed tips angled downward. In casual shirts, often made with softer construction than dress versions. Creates a slimming effect, making it suitable for wider faces and shorter necks.",
+          "sources": [
+            "Tapered Menswear",
+            "Oliver Wicks"
+          ]
+        },
+        {
+          "value": "club_collar",
+          "definition": "A collar with small, rounded points instead of sharp tips. Has a vintage, early 20th-century aesthetic. Originally designed for evening wear but now used in casual and smart-casual contexts for its retro appeal.",
+          "sources": [
+            "Tapered Menswear",
+            "Mr Porter"
+          ]
+        },
+        {
+          "value": "henley_neckline",
+          "definition": "A collarless round neckline with a short button placket (typically 3-5 buttons). Not technically a collar but a distinct neckline treatment found on henley shirts. Provides casual masculinity without any collar structure.",
+          "sources": [
+            "The Fashionisto",
+            "FashionBeans"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jeans_fit",
+      "description": "The overall silhouette and cut of men's jeans, defined by the width through the seat, thigh, knee, and leg opening. The primary classification parameter for jeans.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "skinny",
+          "definition": "The narrowest fit, sitting tight from hip to ankle with a very slim leg opening (typically 12-14 inches). Hugs the legs closely throughout. Associated with indie/rock aesthetics and experiencing a revival via the 'indie sleaze' trend. Best for lean builds.",
+          "sources": [
+            "Denimhunters",
+            "Tops and Bottoms USA",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "slim",
+          "definition": "A modern, tapered fit that is snug through the thigh and knee but not skin-tight. Leg opening typically 14-16 inches. Provides a sharp silhouette without the extremity of skinny. The go-to fit for men who want a put-together look. Works for most body types except very muscular thighs.",
+          "sources": [
+            "Denimhunters",
+            "Coofandy",
+            "Levi's",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "tapered",
+          "definition": "Wider through the thigh for comfort, then gradually narrows from the knee to the ankle. Combines relaxed room up top with a tailored lower leg. Ideal for men with athletic or muscular thighs who want a contemporary look. The 'best of both worlds' fit.",
+          "sources": [
+            "Denimhunters",
+            "Tops and Bottoms USA",
+            "Calvin Klein",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "straight",
+          "definition": "A consistent width from the hip down to the ankle with no taper. The most classic, timeless jeans silhouette. Versatile enough to dress up or down. Works well for most body types. The leg opening matches the knee width.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Silver Jeans",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "regular",
+          "definition": "A moderate fit that is neither slim nor relaxed, offering comfortable room through the seat and thigh with a straight or slightly tapered leg. Often used as a brand's default or standard fit. Very similar to straight but may have slightly more room in the seat.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Coofandy"
+          ]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A loose, comfortable fit with extra room in the seat, thigh, and leg. Sits comfortably without clinging to the body. Gaining momentum in 2025 as casual comfort takes priority. Best for larger builds or those prioritizing ease of movement.",
+          "sources": [
+            "Denimhunters",
+            "Tops and Bottoms USA",
+            "Levi's",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "bootcut",
+          "definition": "Fitted through the thigh, then gradually widens from the knee to the hem to accommodate boots. The leg opening is wider than the knee (typically 18-20 inches). A classic American style experiencing a clean, modern revival in 2025. Helps balance wider shoulders and hips.",
+          "sources": [
+            "Denimhunters",
+            "Tops and Bottoms USA",
+            "Levi's",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "Specifically designed for muscular or athletic builds. Relaxed through the hip and thigh for room around muscular legs, then tapers below the knee for a modern look. Essentially a tapered fit with extra thigh room. Fills the gap between slim and relaxed for built physiques.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Silver Jeans"
+          ]
+        },
+        {
+          "value": "wide_leg",
+          "definition": "A roomy fit with significant width from thigh to hem, creating a dramatic, flowing silhouette. Sits on the hips with a relaxed fit throughout. A trend-forward style in 2025 associated with vintage and streetwear aesthetics. Often features shorter inseams designed to stack.",
+          "sources": [
+            "Tops and Bottoms USA",
+            "Bless Denim",
+            "Urbanofashion"
+          ]
+        },
+        {
+          "value": "baggy",
+          "definition": "An extremely loose fit with maximum room throughout the seat, thigh, and leg. More voluminous than relaxed fit. Associated with 1990s streetwear and hip-hop culture. Trending in 2025 with a more structured, intentional approach compared to the original 90s versions.",
+          "sources": [
+            "Tops and Bottoms USA",
+            "Bless Denim"
+          ]
+        },
+        {
+          "value": "slim_straight",
+          "definition": "A hybrid fit combining the narrower proportions of slim with the consistent leg width of straight. Slimmer through the thigh than standard straight but without the dramatic taper of slim fit. A versatile middle ground.",
+          "sources": [
+            "Levi's",
+            "Calvin Klein"
+          ]
+        },
+        {
+          "value": "slim_tapered",
+          "definition": "A hybrid combining the close fit of slim jeans with aggressive tapering toward the ankle. Tighter overall than standard tapered. Creates the most streamlined modern silhouette while still offering some thigh room.",
+          "sources": [
+            "Levi's",
+            "Denimhunters"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jeans_wash",
+      "description": "The wash treatment applied to denim, which determines the color intensity, surface texture, and aesthetic character of the jeans. Ranges from untreated raw denim to heavily processed distressed styles.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "raw",
+          "definition": "Completely untreated denim in its most natural state, with no washing, fading, or distressing. Also called 'dry denim.' Features a rich, deep indigo hue and stiff, structured feel. Molds to the wearer's body over time, developing personalized fades, creases, and whisker patterns. Prized by denim purists.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide",
+            "Wanza Jeans"
+          ]
+        },
+        {
+          "value": "rinse",
+          "definition": "Denim that has undergone a single, minimal wash to remove excess indigo dye and soften the fabric slightly. Also called 'mill wash' or 'one wash.' Produces the darkest available wash after raw. Clean, uniform appearance. The most versatile dark denim for smart-casual dressing.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide"
+          ]
+        },
+        {
+          "value": "dark_wash",
+          "definition": "Denim with minimal processing, preserving the deep indigo shade. May include a gentle rinse to remove excess dye. The most versatile wash: easily dressed up (with blazer) or down (with t-shirt). Slimming visual effect. Hides stains well.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide",
+            "Tops and Bottoms USA"
+          ]
+        },
+        {
+          "value": "medium_wash",
+          "definition": "Denim treated to sit between dark and light, showing moderate fading while retaining structure. The most 'classic jeans' look. Versatile and approachable, mixing easily with color and pattern. Hides small stains better than light wash.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide"
+          ]
+        },
+        {
+          "value": "light_wash",
+          "definition": "Heavily faded denim with a pale, sun-bleached appearance. Created through extended stone washing or bleaching processes. Associated with relaxed, casual vibes. Particularly popular in summer. Can read as very casual or vintage depending on styling.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide"
+          ]
+        },
+        {
+          "value": "stone_wash",
+          "definition": "Denim treated by tumbling with pumice stones to soften the fabric and create an evenly worn-in, faded appearance. A classic technique popularized in the 1980s. Produces a softer hand-feel than raw or rinse denim. Can range from light to medium fading.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide",
+            "Wanza Jeans"
+          ]
+        },
+        {
+          "value": "enzyme_wash",
+          "definition": "An eco-friendly alternative to stone washing using biological enzymes (cellulase) to break down indigo dye. Creates a faded look without harsh chemicals or physical abrasion. Produces a softer feel while causing less fiber damage than stone washing, extending garment lifespan.",
+          "sources": [
+            "American Rag",
+            "Wanza Jeans",
+            "Rhysley"
+          ]
+        },
+        {
+          "value": "acid_wash",
+          "definition": "Denim treated with pumice stones pre-soaked in bleach solution (not actual acid). Creates high-contrast, non-uniform marbling and splotchy patterns. Originally popularized in the 1980s. A bold, statement-making wash that cycles in and out of fashion.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide",
+            "Wanza Jeans"
+          ]
+        },
+        {
+          "value": "bleach_wash",
+          "definition": "Denim soaked in diluted bleach solution to strip color uniformly. Produces a lighter, evenly faded appearance ranging from light blue to nearly white. Unlike acid wash, creates uniform lightening rather than high-contrast marbling.",
+          "sources": [
+            "American Rag",
+            "Wanza Jeans"
+          ]
+        },
+        {
+          "value": "distressed",
+          "definition": "A treatment (not a color wash) featuring intentional rips, tears, frayed edges, and abraded areas for an edgy, lived-in aesthetic. Achieved through manual ripping, laser distressing, sandblasting, or enzyme washing. Can be applied over any wash color. Associated with grunge and streetwear.",
+          "sources": [
+            "American Rag",
+            "ThredUp",
+            "Macys Denim Guide",
+            "Tops and Bottoms USA"
+          ]
+        },
+        {
+          "value": "black",
+          "definition": "Denim dyed with black (sulfur) dye rather than traditional indigo. Can range from jet black to faded charcoal. Black denim is versatile for evening and smart-casual wear. Tends to fade faster than indigo unless specially treated (overdyed or coated).",
+          "sources": [
+            "ThredUp",
+            "Macys Denim Guide"
+          ]
+        },
+        {
+          "value": "overdyed",
+          "definition": "Denim that has been dyed a second time over its original indigo base with another color (often black, grey, or other hues). Creates deeper, richer color with a unique tonal quality. As the overdye wears off with use, the original indigo may show through.",
+          "sources": [
+            "Wanza Jeans",
+            "WiesMade"
+          ]
+        },
+        {
+          "value": "vintage_wash",
+          "definition": "A wash designed to replicate the naturally aged, worn-in appearance of old denim. Combines techniques like enzyme washing, whiskering, and strategic fading to simulate years of wear. Often features honeycomb fading behind knees and whisker lines at the hip crease.",
+          "sources": [
+            "ThredUp",
+            "Wanza Jeans"
+          ]
+        },
+        {
+          "value": "whiskered",
+          "definition": "A surface treatment producing thin, faded lines (whiskers) across the jeans, simulating natural crease patterns. Created by hand using abrasive rods or via laser. Applied around areas known to naturally crease: across thighs and behind knees. Often combined with other wash treatments.",
+          "sources": [
+            "American Rag",
+            "Wanza Jeans",
+            "Rhysley"
+          ]
+        },
+        {
+          "value": "laser_wash",
+          "definition": "A modern, sustainable technique using lasers to burn off indigo dye, creating precise fading and whiskering effects without water, stones, or chemicals. Allows highly detailed and reproducible patterns. Increasingly used by premium and eco-conscious brands.",
+          "sources": [
+            "Wanza Jeans",
+            "DUER"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jeans_rise",
+      "description": "The vertical distance from the crotch seam to the top of the waistband, determining where jeans sit on the body and creating the perceived waistline.",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "low",
+          "definition": "Rise measurement of 7-8 inches. Waistband sits near the top of the hip bones, well below the navel. Creates a contemporary, casual silhouette. Best for men with long legs and shorter torsos, or athletic builds. Can appear disproportionate on shorter men. The most casual rise option.",
+          "sources": [
+            "Spykar",
+            "Tapered Menswear",
+            "Primer Magazine",
+            "Mavi Jeans",
+            "Lee"
+          ]
+        },
+        {
+          "value": "mid",
+          "definition": "Rise measurement of 9-11 inches. Also called regular or normal rise. Waistband sits at or just below the navel at the natural waist. The most universally flattering rise, suiting virtually all body types. The default for most modern jeans including Levi's 501, slim fits, and athletic fits. Comfortable for all-day wear.",
+          "sources": [
+            "Spykar",
+            "Tapered Menswear",
+            "Primer Magazine",
+            "Mavi Jeans",
+            "Lee",
+            "Bronze Snake"
+          ]
+        },
+        {
+          "value": "high",
+          "definition": "Rise measurement of 10-12+ inches. Waistband sits above the navel, covering it. Often called high-waisted. Creates a sophisticated, retro-inspired look. Elongates the appearance of legs, making it beneficial for both shorter and taller men. Minimizes muffin top appearance. More comfortable around the waist and less likely to slide down.",
+          "sources": [
+            "Spykar",
+            "Tapered Menswear",
+            "Primer Magazine",
+            "Mavi Jeans",
+            "Lee",
+            "Dave's New York"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jeans_leg_shape",
+      "description": "The shape of the jeans leg from the knee down, which is a sub-component of overall fit but a useful standalone parameter for precise classification.",
+      "style_track": [
+        "casual",
+        "smart_casual",
+        "streetwear"
+      ],
+      "values": [
+        {
+          "value": "tapered",
+          "definition": "The leg narrows progressively from the knee to the ankle, creating a smaller leg opening. The most modern leg shape. Flattering on most builds as it creates a clean silhouette at the ankle.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Calvin Klein"
+          ]
+        },
+        {
+          "value": "straight",
+          "definition": "Consistent leg width from knee to ankle with no narrowing or widening. The most classic, timeless leg shape. The leg opening matches or is very close to the knee width.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Silver Jeans"
+          ]
+        },
+        {
+          "value": "flared",
+          "definition": "The leg widens significantly from the knee to the hem, creating a bell or trumpet shape. More dramatic than bootcut. Associated with 1970s fashion and periodic revival cycles.",
+          "sources": [
+            "Tops and Bottoms USA",
+            "Bless Denim"
+          ]
+        },
+        {
+          "value": "bootcut_leg",
+          "definition": "A subtle widening from the knee to the hem, enough to comfortably fit over boot shafts. Less dramatic than a full flare. The functional leg shape for wearing jeans over cowboy boots or work boots.",
+          "sources": [
+            "Denimhunters",
+            "Levi's",
+            "Tops and Bottoms USA"
+          ]
+        },
+        {
+          "value": "wide",
+          "definition": "A generously wide leg from knee to hem, creating a flowing, voluminous silhouette. Associated with streetwear, vintage Americana, and Japanese denim culture. Often designed with shorter inseams to create stacking.",
+          "sources": [
+            "Tops and Bottoms USA",
+            "Bless Denim"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jeans_body_type_mapping",
+      "description": "A guide mapping body types to recommended jeans fits, based on proportional considerations from multiple sources.",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "lean_slim_build",
+          "definition": "Slender frame with narrow hips, thighs, and waist. Recommended fits: skinny, slim, or slim-tapered to complement the frame without excess fabric. Avoid very wide or baggy cuts that can overwhelm the silhouette.",
+          "sources": [
+            "Denimhunters",
+            "Coofandy",
+            "French Crown"
+          ]
+        },
+        {
+          "value": "athletic_muscular_build",
+          "definition": "Well-developed thighs, glutes, and calves with a defined waist. Recommended fits: athletic fit, tapered, or relaxed-tapered that provide thigh room while tapering below the knee. Slim fits may restrict and pull across the quads.",
+          "sources": [
+            "Denimhunters",
+            "Tapered Menswear",
+            "Silver Jeans"
+          ]
+        },
+        {
+          "value": "average_build",
+          "definition": "Balanced proportions without extreme muscle development or leanness. Recommended fits: straight, regular, or slim-straight offer the most versatility. Virtually any fit works, making personal style preference the deciding factor.",
+          "sources": [
+            "Denimhunters",
+            "Coofandy",
+            "Levi's"
+          ]
+        },
+        {
+          "value": "larger_stocky_build",
+          "definition": "Broader frame with fuller hips, thighs, and waist. Recommended fits: relaxed, straight, or bootcut provide comfort and balanced proportions. Bootcut helps balance wider hips and shoulders. Avoid very slim or skinny fits that restrict movement and create pulling.",
+          "sources": [
+            "Denimhunters",
+            "Coofandy",
+            "French Crown"
+          ]
+        },
+        {
+          "value": "tall_build",
+          "definition": "Height 6 feet or above with longer legs and torso. Recommended rise: high rise to sit at the right part of a longer waist. Any leg shape works, but straight and tapered are most universally flattering. Look for extended inseam options.",
+          "sources": [
+            "Mavi Jeans",
+            "Spykar",
+            "Dave's New York"
+          ]
+        },
+        {
+          "value": "shorter_build",
+          "definition": "Below-average height with proportionally shorter legs. Recommended: high-rise jeans to elongate the leg line. Tapered or slim fits create a streamlined look. Avoid low-rise which shortens the leg visually. Avoid excessively wide or bootcut fits that can overwhelm shorter frames.",
+          "sources": [
+            "Spykar",
+            "Tapered Menswear",
+            "Primer Magazine"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_type",
+      "description": "The category/style of casual trousers or pants, distinguishing between different silhouettes, constructions, and intended use cases",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "chino",
+          "definition": "Lightweight cotton twill trousers with hidden stitching and a tapered, form-fitting cut. Originated from the 1898 Spanish-American War when soldiers improvised uniforms using Chinese twill cotton. Strikes a balance between casual and formal, suitable for business-casual to casual settings.",
+          "sources": [
+            "Real Men Real Style",
+            "Primal Gray",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "khaki",
+          "definition": "Cotton twill trousers with visible stitching and pockets, offering a more relaxed fit than chinos. Heavier, thicker cotton twill fabric with a sturdy workwear heritage. Name derived from Persian for 'dust', originating from British military uniforms in 19th-century India.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "jogger",
+          "definition": "Modern evolution of sweatpants with elastic or drawstring waist and close-fitting leg that tapers to elasticated cuffs. Made from softer fabrics like fleece, cotton, or tech materials. Offers a streamlined, athletic-casual silhouette compared to traditional sweatpants.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project",
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "cargo",
+          "definition": "Rugged cotton or cotton-blend trousers featuring multiple large utility pockets on the legs. Military-inspired design originating from 1938 British army and later adopted by US military in WWII. The most storage-friendly pant style.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project",
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "linen_trouser",
+          "definition": "Lightweight, breathable trousers made from linen fabric, ideal for warm weather and summer occasions. Ultra-breathable, naturally cooling, with a relaxed drape. Suited for resort, travel, and minimalist summer looks.",
+          "sources": [
+            "Real Men Real Style",
+            "Primal Gray",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "drawstring_trouser",
+          "definition": "Casual trousers with an elastic or drawstring waistband instead of a traditional button/zip closure. Offers maximum comfort with easy fit adjustment. Often made from linen, cotton, or blended fabrics.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "corduroy",
+          "definition": "Trousers made from corduroy fabric featuring distinctive raised parallel ridges (wales). Available in various wale widths from fine to wide. A textured alternative to chinos suited for autumn/winter.",
+          "sources": [
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "seersucker",
+          "definition": "Lightweight trousers made from puckered seersucker fabric, traditionally in blue-and-white stripes. The puckered texture allows airflow, making them ideal for hot weather. A preppy, summer-specific option.",
+          "sources": [
+            "Pant Project",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "sweatpant",
+          "definition": "Soft, loose-fitting athletic trousers with elastic waist and often elastic cuffs. Made from fleece or jersey cotton. Primarily loungewear or athletic wear, less streamlined than joggers.",
+          "sources": [
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "chino_jogger",
+          "definition": "Hybrid style combining the polished look of chinos with the elastic waist and tapered cuffs of joggers. Offers a contemporary option that transitions from casual weekends to informal business meetings.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "korean_pant",
+          "definition": "Wide-leg, relaxed-fit trousers inspired by Korean fashion trends. Often features a high waist, pleated front, and generous drape through the leg. A fashion-forward alternative to traditional relaxed-fit trousers.",
+          "sources": [
+            "Pant Project"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_fit",
+      "description": "The silhouette and cut of casual trousers, determining how closely the fabric follows the body from waist to ankle",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Cut closer to the body throughout the leg creating a sleek, modern silhouette. Pairs well with fitted blazers and dress shirts. Best suited for lean to average builds.",
+          "sources": [
+            "Primal Gray",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "tapered",
+          "definition": "Features a gradual narrowing from the thigh to the ankle, offering room at the hip and thigh while maintaining a clean ankle line. A contemporary balance between classic and slim fits, versatile for both professional and casual settings.",
+          "sources": [
+            "Primal Gray",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "straight",
+          "definition": "Consistent width from the thigh through the leg opening with no tapering. The most traditional and universally flattering silhouette. A balanced look that works for most body types.",
+          "sources": [
+            "Primal Gray",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "relaxed",
+          "definition": "Looser cut through the seat and thigh area providing maximum ease of movement and comfort. A more traditional, generous fit ideal for casual settings and weekend wear. Works well for broader frames.",
+          "sources": [
+            "Primal Gray",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "athletic",
+          "definition": "Roomier through the thigh and seat to accommodate muscular builds, then tapering to a narrower leg opening. Designed for men with larger thighs relative to waist. Combines comfort with a modern silhouette.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "classic",
+          "definition": "The most traditional silhouette with a straight leg and comfortable room throughout. Sits at the natural waist and provides a balanced look that flatters most body types without being too loose or too fitted.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "cropped",
+          "definition": "Trousers that end above the ankle, creating a modern, fashion-forward look. Works particularly well in warmer weather and when styled with loafers or sneakers. Often combined with slim or tapered cuts.",
+          "sources": [
+            "Primal Gray"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_rise",
+      "description": "The distance from the crotch seam to the top of the waistband, affecting comfort, proportions, and visual leg length",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "high",
+          "definition": "Waistband sits at or above the natural waist. Elongates the legs visually and provides a more classic, polished appearance. Comfortable for most body types.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "mid",
+          "definition": "Waistband sits between the hip bone and the natural waist. The most common and versatile rise, offering a balanced silhouette suitable for most occasions.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "low",
+          "definition": "Waistband sits below the hip bone. Offers a casual, contemporary vibe. Can visually shorten the legs and is best suited for taller frames.",
+          "sources": [
+            "Primal Gray"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_trouser_color",
+      "description": "The predominant color of casual trousers, affecting versatility, formality, and outfit coordination",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "navy",
+          "definition": "Deep blue tone that is among the most versatile chino colors. Pairs well with a variety of blazers and dress shirts. Appropriate for any occasion and easily dressed up or down. Contrasts nicely with lighter tops.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "khaki",
+          "definition": "The original and most traditional chino color, a dusty tan derived from the Persian word for 'dust'. Highly versatile neutral that pairs with most colors. A wardrobe essential.",
+          "sources": [
+            "Real Men Real Style",
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "charcoal_grey",
+          "definition": "Dark grey tone that is among the most versatile trouser colors alongside navy. Pairs with a wide range of tops and can read as semi-formal. A sophisticated neutral suitable for office and evening wear.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "grey",
+          "definition": "Medium grey offering a contemporary, modern aesthetic. Works well in chino jogger styles. Transitions easily from casual weekends to informal business settings.",
+          "sources": [
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "olive",
+          "definition": "Military-inspired green-brown tone that adds visual interest while remaining neutral enough for versatile pairing. A classic casual trouser color with outdoor and heritage connotations.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "stone",
+          "definition": "Light, warm neutral tone similar to beige or sand. A lighter alternative to khaki that works well in spring/summer. Pairs easily with most tops.",
+          "sources": [
+            "Real Men Real Style",
+            "Primal Gray"
+          ]
+        },
+        {
+          "value": "black",
+          "definition": "The darkest neutral, offering maximum versatility and a sleek, modern appearance. Can read as more formal than other casual trouser colors. A wardrobe staple.",
+          "sources": [
+            "Primal Gray",
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "white_cream",
+          "definition": "Light, summer-appropriate color that creates a clean, fresh look. Best suited for warm weather and resort settings. Requires more care to maintain.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "burgundy",
+          "definition": "A bold, rich color option that adds personality to an outfit. Best balanced with neutral tops (white, grey, navy). A seasonal autumn/winter accent color.",
+          "sources": [
+            "Primal Gray"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shorts_type",
+      "description": "The category/style of men's shorts, distinguishing between different constructions, pocket configurations, and intended use cases",
+      "style_track": [
+        "casual"
+      ],
+      "values": [
+        {
+          "value": "chino_shorts",
+          "definition": "Tailored shorts made from cotton twill with a polished, clean finish. Sharp and classy, suitable for lunch dates and relaxed days out. Often feature a flat front and welt or slant pockets. Pair well with polos, casual tees, sneakers, or loafers.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "athletic_shorts",
+          "definition": "Performance-oriented shorts made from moisture-wicking polyester blends. Typically feature an elastic waist, lightweight construction, and quick-dry properties. Often end 5-6 inches above the knee. Designed for workouts, running, and gym activities.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "cargo_shorts",
+          "definition": "Casual shorts featuring multiple large utility pockets on the legs. Made from sturdy cotton blends for durability. Popular across all ages for their functionality, ideal for hiking, outdoor activities, and casual wear.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "swim_trunks",
+          "definition": "Swim-specific shorts made from nylon with a mesh inner lining for quick drying. Available as shorter trunks with elastic waistband or longer boardshorts with a front opening. Designed specifically for water activities.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "denim_shorts",
+          "definition": "Shorts cut from denim fabric, either manufactured or cut from full-length jeans. Casual summer staple with a relaxed, laid-back aesthetic. Best suited for very casual settings.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "linen_shorts",
+          "definition": "Lightweight, breathable shorts made from linen fabric. Extremely skin-friendly and ideal for warm weather. Look great on weekend getaways and at seaside resorts. A summer wardrobe necessity.",
+          "sources": [
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "stretch_chino_shorts",
+          "definition": "Chino shorts with added elastane for flexibility and comfort. Popular in shorter inseams (5-inch). Combines the polished look of traditional chinos with modern comfort technology.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shorts_length",
+      "description": "The inseam length of shorts relative to the knee, affecting both aesthetics and occasion-appropriateness",
+      "style_track": [
+        "casual"
+      ],
+      "values": [
+        {
+          "value": "above_knee",
+          "definition": "Shorts ending 2-3 inches above the knee (typically 5-7 inch inseam). The most recommended length for casual shorts with t-shirts, button-downs, or polos. Creates a balanced, modern look.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "mid_thigh",
+          "definition": "Shorts ending at mid-thigh (typically 5 inch inseam or shorter). Common for athletic and swim shorts. A fashion-forward length that works best on taller or leaner frames.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        },
+        {
+          "value": "at_knee",
+          "definition": "Shorts ending right at the kneecap (typically 9-10 inch inseam). A more conservative, traditional length. Common in cargo shorts and older chino short styles.",
+          "sources": [
+            "Real Men Real Style",
+            "Pant Project"
+          ]
+        },
+        {
+          "value": "below_knee",
+          "definition": "Shorts ending below the kneecap (11+ inch inseam). Common in boardshorts and some cargo styles. Generally considered a dated or sport-specific length in modern menswear.",
+          "sources": [
+            "Real Men Real Style"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_jacket_type",
+      "description": "The category/style of men's casual jackets and outerwear, distinguishing between different heritage origins, constructions, and silhouettes",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "bomber",
+          "definition": "Short, cropped jacket originally designed for Air Force fighter pilots. Defined by elasticated cuffs, collar, and hem, full-zip front, zip pockets including one on the arm, and typically a shiny nylon face fabric. The MA-1 by Alpha Industries is the definitive model. Currently enjoying a renewed spike in popularity.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "denim_trucker",
+          "definition": "Cropped jacket usually cut from denim with button front, chest pockets, classic collar, and seam details. Dates back to the late 1800s, originally created for farmers and gold prospectors. Raw denim versions develop unique fades over time. Extremely versatile and timeless.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "harrington",
+          "definition": "Lightweight blouson jacket with stand collar, ribbed or tapered waist, and slanted or vertical pockets. Originally the Baracuta G9, created in 1930s Manchester. A pop culture icon worn by Steve McQueen, James Dean, and Elvis Presley. Perfect for transitional weather and smart casual outfits.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "windbreaker",
+          "definition": "Sporty, lightweight jacket designed primarily for wind and light rain protection. Made from thin synthetic fabric, often nylon. A functional transitional jacket brought back into spotlight by the gorpcore trend. Typically features zip front, elastic cuffs, and drawstring hem.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "hoodie",
+          "definition": "Casual hooded sweatshirt available in pullover and zip-up variants. Made from cotton, fleece, or blended fabrics. Ranges from athletic to streetwear styling. Can be worn as a standalone top or layered under jackets. See hoodie_type parameter for subtypes.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "puffer",
+          "definition": "Down-insulated jacket defined by oversized baffles creating a distinctive 'Michelin Man' appearance. First rose to fame in the 1990s. Often features a cropped body and oversized fit. Only works as an outer layer due to bulk. Current trend favors big baffles and cropped cuts.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "field_jacket",
+          "definition": "Military-heritage utilitarian outerwear based on the M-65. Constructed from heavy cotton twill with a funnel collar. Features multiple pockets and a rugged, practical design. Three main variants: military field jacket, barn-style field coat, and motorcycle field jacket. Extremely versatile for layering.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "leather_biker",
+          "definition": "Cropped leather jacket with asymmetric zipper, belted waist, and large collar. First introduced by Schott NYC as the 'Perfecto' in 1928. Popularized by Marlon Brando in The Wild One (1953). A counterculture icon and universal symbol of rebellion. The most recognizable outerwear design.",
+          "sources": [
+            "Ape to Gentleman",
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "leather_bomber",
+          "definition": "The oldest and most iconic leather jacket style, originally designed for WWI pilots. Features a relaxed fit, shoulder epaulets, standup collar, front slit or flap pockets, and side zip pockets. Often includes sherpa or shearling collar. Also called flight or aviator jacket.",
+          "sources": [
+            "Buffalo Jackson",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "leather_racer",
+          "definition": "Sleek leather jacket with minimal embellishments, also called a cafe racer or moto jacket. Features a snap-over band collar, straightforward zip front, and slim fit. A cleaner, more versatile alternative to the biker jacket with a polished aesthetic.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "leather_trucker",
+          "definition": "Leather version of the classic denim trucker jacket. Features a waist-length cut, button-flap chest pockets, button front closure, and heavy seam work. Combines the classic trucker silhouette with premium leather for a rugged, elevated look.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "chore_coat",
+          "definition": "Lightweight workwear jacket originating from 1900s France, designed for laborers and artists. Features oversized pockets (at least one chest pocket and larger hip pockets), generous cut for unrestricted movement, and button front. Made from denim, waxed cotton, canvas, or boiled wool.",
+          "sources": [
+            "Primer Magazine",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "coach_jacket",
+          "definition": "Lightweight windbreaker-style jacket with snap button closure, originally worn by NFL coaches in the 1990s. Made from thin nylon with a classic collar, slit pockets, elasticated cuffs, and drawstring hem. Moves easily, resists moisture, and goes on/off quickly.",
+          "sources": [
+            "Primer Magazine",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "quilted_jacket",
+          "definition": "Jacket featuring insulating padding stitched in quilted patterns for lightweight warmth. Less bulky than puffers, with a more tailored appearance. Available in diamond or horizontal quilt patterns. Perfect for layering in transitional weather.",
+          "sources": [
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "track_jacket",
+          "definition": "Lightweight zip-front athletic jacket, often with contrast stripes along the sleeves. Typically made from polyester or tricot fabric with a stand-up collar. Originates from sportswear but adopted into casual and retro-inspired street style.",
+          "sources": [
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "varsity_letterman",
+          "definition": "Cropped, boxy jacket originating from US high school and college sports. Traditional version has a wool body with leather sleeves. Modern interpretations use fleece or cotton blends with a trimmer cut. Snap-button front closure with ribbed cuffs, hem, and collar.",
+          "sources": [
+            "Primer Magazine",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "waxed_jacket",
+          "definition": "Country-heritage jacket made from cotton treated with wax coating (beeswax or paraffin) for water resistance and durability. Develops a unique patina over time. Features storm fly front, corduroy collar, fleece-lined pockets. Best in earthy green and brown. Needs periodic re-waxing.",
+          "sources": [
+            "Primer Magazine",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "barn_jacket",
+          "definition": "Farm-heritage jacket built from heavy cotton canvas or waxed cotton with a boxier cut and soft corduroy collar. Features flannel or quilted lining, patch pockets placed lower on the body, and a relaxed fit. A more easy-going, broken-in alternative to the field jacket.",
+          "sources": [
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "shacket_overshirt",
+          "definition": "Hybrid garment between a shirt and a jacket, also known as a shirt jacket, shirt jac, or CPO jacket. Provides warmth of a light jacket without bulk. Excellent freedom of movement. Made from cotton blends, flannel, corduroy, or wool. An alternative to a cardigan or hoodie for layering.",
+          "sources": [
+            "Primer Magazine",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "fleece_jacket",
+          "definition": "Cozy mid-layer jacket primarily designed for insulation, particularly when combined with a shell jacket. Heavy-pile versions (like Patagonia's Retro-X) are popular. Associated with gorpcore trend. Great for adding texture to autumn/winter outfits.",
+          "sources": [
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "aviator_shearling",
+          "definition": "US Air Force-style jacket made from sheepskin with a thick shearling collar. Similar in cut to a bomber but differs in materials and lining. Predates the nylon MA-1 bomber. Provides exceptional warmth and a rugged, heritage aesthetic.",
+          "sources": [
+            "Ape to Gentleman",
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "parka",
+          "definition": "Long, heavily insulated winter coat, often extending to mid-thigh or below. Features a hood (frequently fur-trimmed), multiple pockets, and a drawstring waist. Favored by Arctic explorers and mountaineers. The ultimate winter coat for extreme cold protection.",
+          "sources": [
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "anorak",
+          "definition": "Pullover-style weatherproof jacket, typically with a half-zip or quarter-zip front and a kangaroo pocket. Lighter than a parka, designed for wind and rain protection. Often features a hood. A practical outdoor and urban option.",
+          "sources": [
+            "Primer Magazine"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hoodie_type",
+      "description": "The specific subtype or variation of hoodie, distinguished by closure style, fit, sleeve configuration, and fabric weight",
+      "style_track": [
+        "casual"
+      ],
+      "values": [
+        {
+          "value": "pullover",
+          "definition": "Classic collarless, slip-on hooded sweatshirt without a front opening. Often features a kangaroo pocket. Offers more warmth and a cleaner silhouette than zip-up variants. The most traditional hoodie design.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "full_zip",
+          "definition": "Hoodie with a full-length zipper from hem to collar allowing easy wear and temperature control. Also called a zip-front hoodie. Offers better breathability and layering versatility than pullovers. The most common hoodie closure variant.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "half_zip",
+          "definition": "Hoodie with a zipper extending from the chest to the collar (approximately half the front). Provides some ventilation control while maintaining a cleaner front aesthetic than a full zip. A sportier, more polished alternative.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "quarter_zip",
+          "definition": "Hoodie with a short zipper at the collar for minimal ventilation adjustment. Maintains most of the pullover's clean front appearance while allowing easier on/off. Often seen in athletic and performance styles.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "oversized",
+          "definition": "Relaxed, generously cut hoodie with a street-style aesthetic. Often gender-neutral in design. Features dropped shoulders and extra room throughout. Popular in streetwear and athleisure contexts.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "fitted",
+          "definition": "Tailored hoodie with a sleek, close-to-body silhouette. Ideal for layering under jackets or for activewear. Available in both pullover and zip-up designs. Creates a more polished appearance than standard-fit hoodies.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "sleeveless",
+          "definition": "Hoodie with sleeves removed for greater arm mobility and ventilation. Provides a more athletic silhouette. Commonly used in training, bodybuilding, and casual streetwear crossover. Often features a half-zip front.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "fleece",
+          "definition": "Hoodie made from fleece fabric with a soft brushed interior for excellent insulation. Best for cold weather and lounging. Can pill if low-quality. Available in heavyweight variants for outerwear-level warmth.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "lightweight",
+          "definition": "Hoodie under 300g/m2 fabric weight. Ideal for spring layering and workouts. Made from thin cotton, cotton-poly blends, or performance fabrics. Not designed as standalone cold-weather wear.",
+          "sources": [
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "heavyweight",
+          "definition": "Hoodie at 400g/m2 or above fabric weight. Structured, premium feel perfect for outerwear looks. Provides substantial warmth and body. Often features a more boxy, substantial silhouette.",
+          "sources": [
+            "ModaKnits"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "casual_jacket_formality",
+      "description": "The formality range of a casual jacket, indicating the dress codes it can appropriately serve within the casual-to-smart-casual spectrum",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "casual_only",
+          "definition": "Jacket suitable exclusively for casual, relaxed settings. Not appropriate for business-casual or smart-casual dress codes. Includes: puffer, anorak, track jacket, hoodie (standard), fleece jacket, parka, sleeveless hoodie. These styles read as athletic, outdoor, or loungewear.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine",
+            "ModaKnits"
+          ]
+        },
+        {
+          "value": "casual_to_smart_casual",
+          "definition": "Jacket that spans from casual to smart-casual settings, versatile enough to pair with both t-shirts/jeans and chinos/button-downs. Includes: bomber, denim trucker, harrington, field jacket, chore coat, barn jacket, coach jacket, waxed jacket, shacket/overshirt, quilted jacket, varsity. These styles can be dressed up or down depending on what is worn underneath.",
+          "sources": [
+            "Ape to Gentleman",
+            "Primer Magazine"
+          ]
+        },
+        {
+          "value": "smart_casual",
+          "definition": "Jacket that leans toward the dressier end of casual outerwear, suitable for smart-casual occasions and can sometimes work for informal business settings. Includes: leather racer/cafe racer, leather bomber (quality versions), suede bomber, harrington (in premium fabrics). These styles pair well with dress shirts, tailored trousers, and loafers.",
+          "sources": [
+            "Ape to Gentleman",
+            "Buffalo Jackson"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leather_jacket_subtype",
+      "description": "The specific subtype of leather jacket based on design origin, silhouette, and closure style",
+      "style_track": [
+        "casual",
+        "smart_casual"
+      ],
+      "values": [
+        {
+          "value": "biker_perfecto",
+          "definition": "The iconic double-rider jacket with an asymmetric front zipper, belted waist, wide lapels/collar, and cropped length. First produced by Schott NYC in 1928. Double layer of front material for insulation. The most recognizable leather jacket style and a symbol of rebellion.",
+          "sources": [
+            "Buffalo Jackson",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "cafe_racer",
+          "definition": "Clean, minimalist leather jacket with a snap-over band collar, simple zip front, and slim fit. Few embellishments for a polished, versatile look. Named after 1960s British motorcycle culture. The most versatile leather jacket style for everyday wear.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "bomber_flight",
+          "definition": "Relaxed-fit leather jacket inspired by WWI pilot gear. Features shoulder epaulets, standup collar, front slit or flap pockets, side zip pockets. Often with sherpa or shearling collar. The oldest leather jacket style.",
+          "sources": [
+            "Buffalo Jackson",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "aviator_shearling",
+          "definition": "Sheepskin leather jacket with thick shearling wool lining visible at the collar, cuffs, and sometimes the hem. Inspired by WWII Air Force jackets. Provides exceptional warmth. A heritage style combining rugged leather with luxurious wool.",
+          "sources": [
+            "Buffalo Jackson",
+            "Ape to Gentleman"
+          ]
+        },
+        {
+          "value": "leather_trucker",
+          "definition": "Leather interpretation of the classic denim trucker jacket silhouette. Waist-length cut with button-flap chest pockets, button front, and heavy seam work. Combines workwear heritage with leather's premium feel.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "leather_field",
+          "definition": "Military-inspired leather jacket with the practical, multi-pocket design of a field jacket rendered in premium leather. Features funnel collar and utilitarian pocket placement. Looks sharp paired with slacks and tucked-in shirts.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        },
+        {
+          "value": "leather_blazer",
+          "definition": "Structured leather jacket cut in a blazer silhouette with notch lapels and button front. Bridges the gap between casual leather and tailored clothing. A refined option for smart-casual to semi-formal settings. Shearling versions available for added warmth.",
+          "sources": [
+            "Buffalo Jackson"
+          ]
+        }
+      ]
+    }
+  ],
+  "garment_harmony_principles": [
+    {
+      "name": "width_harmony_rule",
+      "description": "Tie width, lapel width, and collar spread should be approximately equal for visual balance",
+      "sources": [
+        "Flusser Ch8",
+        "Gentleman's Gazette"
+      ]
+    },
+    {
+      "name": "collar_face_matching",
+      "description": "Collar style should complement face shape: spread collars widen narrow faces, point collars narrow wide faces. Collar height should match neck length. Small collars make large heads appear larger.",
+      "note": "D04 defines garment capability (e.g., 'spread collar achieves widening visual effect'). D01 defines body requirement (e.g., 'wide face needs narrowing collar'). The mapping between them is via cross_domain_dependencies.",
+      "sources": [
+        "Flusser Ch7"
+      ]
+    },
+    {
+      "name": "knot_collar_fill",
+      "description": "The tie knot should fill the collar opening appropriately — outer borders of the knot should correspond with inner borders of the collar points.",
+      "sources": [
+        "Flusser Ch8",
+        "Gentleman's Gazette"
+      ]
+    },
+    {
+      "name": "formality_consistency",
+      "canonical_domain": "D06",
+      "cross_reference": true,
+      "summary": "All ensemble elements should be at roughly the same formality level. See D06 for the canonical formality_consistency principle."
+    },
+    {
+      "name": "showing_linen_principle",
+      "description": "The shirt collar should sit above the jacket collar (showing 1/2 inch) and shirt cuffs should show 1/2 to 3/4 inch below jacket sleeves. These are two of Flusser's five critical body intersections.",
+      "sources": [
+        "Flusser Ch5",
+        "Flusser Ch7"
+      ]
+    },
+    {
+      "name": "trouser_jacket_balance",
+      "description": "Trouser rise must be high enough that the waistband sits at or near the natural waist for ideal visual balance between jacket and trousers. Low-rise trousers doom this balance.",
+      "sources": [
+        "Flusser Ch5"
+      ]
+    },
+    {
+      "name": "stripe_elongation_effect",
+      "description": "Vertical elements (stripes, side vents, hacking pockets, peak lapels) create illusion of height. Horizontal elements (cuffs, wide lapels, pocket flaps, double-breasted closure) add visual width.",
+      "sources": [
+        "Flusser Ch5"
+      ]
+    }
+  ],
+  "cross_domain_dependencies": [
+    {
+      "from_param": "jacket_silhouette",
+      "to_domain": "D01",
+      "to_param": "body_shape",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "jacket_silhouette",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "jacket_shoulder_type",
+      "to_domain": "D01",
+      "to_param": "shoulder_width",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "jacket_shoulder_type",
+      "to_domain": "D01",
+      "to_param": "shoulder_slope",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "shirt_collar_style",
+      "to_domain": "D01",
+      "to_param": "face_shape",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "shirt_collar_height",
+      "to_domain": "D01",
+      "to_param": "neck",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "lapel_width",
+      "to_domain": "D02",
+      "to_framework": "lapel_width_rule",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "tie_width",
+      "to_domain": "D02",
+      "to_framework": "tie_width_rule",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "trouser_rise",
+      "to_domain": "D02",
+      "to_framework": "flusser_fulcrum_principle",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "jacket_formality_tier",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "trouser_break",
+      "to_domain": "D01",
+      "to_param": "height",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "jacket_pocket_type",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "tshirt_fit",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "tshirt_fit",
+      "to_domain": "D01",
+      "to_param": "body_shape",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "tshirt_neckline",
+      "to_domain": "D01",
+      "to_param": "face_shape",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "tshirt_neckline",
+      "to_domain": "D01",
+      "to_param": "neck",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "polo_fit",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "polo_collar_type",
+      "to_domain": "D01",
+      "to_param": "face_shape",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "casual_shirt_fit",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "casual_shirt_collar",
+      "to_domain": "D01",
+      "to_param": "face_shape",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "jeans_fit",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "jeans_fit",
+      "to_domain": "D01",
+      "to_param": "height",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "jeans_body_type_mapping",
+      "to_domain": "D01",
+      "to_param": "body_shape",
+      "relationship": "maps_to"
+    },
+    {
+      "from_param": "casual_trouser_fit",
+      "to_domain": "D01",
+      "to_param": "build",
+      "relationship": "determined_by"
+    },
+    {
+      "from_param": "shorts_length",
+      "to_domain": "D01",
+      "to_param": "height",
+      "relationship": "influences"
+    },
+    {
+      "from_param": "casual_jacket_type",
+      "to_domain": "D07",
+      "to_param": "indian_occasion_category",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "casual_jacket_formality",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "must_align_with"
+    },
+    {
+      "from_param": "tshirt_fabric_weight",
+      "to_domain": "D08",
+      "to_param": "casual_fabric_weight",
+      "relationship": "references"
+    },
+    {
+      "from_param": "polo_fabric",
+      "to_domain": "D08",
+      "to_param": "casual_fabric_type",
+      "relationship": "references"
+    },
+    {
+      "from_param": "jeans_wash",
+      "to_domain": "D06",
+      "to_param": "dress_code_level",
+      "relationship": "influences"
+    }
+  ],
+  "intra_domain_dependencies": [
+    {
+      "from_param": "jacket_silhouette",
+      "to_param": "jacket_shoulder_type",
+      "relationship": "determines",
+      "note": "British → structured_padded; American → natural_soft; Italian → roped/natural"
+    },
+    {
+      "from_param": "jacket_closure",
+      "to_param": "lapel_style",
+      "relationship": "determines",
+      "note": "DB requires peak lapels; SB allows notch/peak/shawl"
+    },
+    {
+      "from_param": "jacket_closure",
+      "to_param": "jacket_button_configuration",
+      "relationship": "determines",
+      "note": "SB vs DB determines button options"
+    },
+    {
+      "from_param": "lapel_style",
+      "to_param": "lapel_width",
+      "relationship": "influences",
+      "note": "Peak lapels tend wider; notch more variable"
+    },
+    {
+      "from_param": "lapel_width",
+      "to_param": "tie_width",
+      "relationship": "determines",
+      "note": "Width harmony rule: lapel ≈ tie width"
+    },
+    {
+      "from_param": "shirt_collar_style",
+      "to_param": "tie_knot_type",
+      "relationship": "determines",
+      "note": "Spread → half/full windsor; point → four-in-hand"
+    },
+    {
+      "from_param": "shirt_collar_style",
+      "to_param": "shirt_collar_height",
+      "relationship": "influences",
+      "note": "Some collar styles come in fixed heights"
+    },
+    {
+      "from_param": "trouser_front",
+      "to_param": "trouser_rise",
+      "relationship": "influences",
+      "note": "Pleats pair with high rise; flat front with mid/low"
+    },
+    {
+      "from_param": "trouser_rise",
+      "to_param": "trouser_waistband",
+      "relationship": "influences",
+      "note": "High rise works with suspenders; low rise needs belt"
+    },
+    {
+      "from_param": "trouser_width",
+      "to_param": "trouser_cuff",
+      "relationship": "influences",
+      "note": "Fuller trousers benefit from cuffs; slim can skip"
+    },
+    {
+      "from_param": "trouser_width",
+      "to_param": "trouser_break",
+      "relationship": "influences",
+      "note": "Slim → less break; full → more break acceptable"
+    },
+    {
+      "from_param": "jacket_formality_tier",
+      "to_param": "jacket_pocket_type",
+      "relationship": "determines",
+      "note": "Suit → jetted/flapped; blazer → flapped; sport → patch"
+    },
+    {
+      "from_param": "jacket_formality_tier",
+      "to_param": "jacket_vent_style",
+      "relationship": "influences",
+      "note": "Formal → ventless/side vents; casual → center/side"
+    },
+    {
+      "from_param": "suit_piece_count",
+      "to_param": "trouser_waistband",
+      "relationship": "influences",
+      "note": "Three-piece with waistcoat may use suspenders (hidden)"
+    },
+    {
+      "from_param": "shirt_cuff_style",
+      "to_param": "jacket_sleeve_buttons",
+      "relationship": "influences",
+      "note": "French cuffs with cufflinks affect sleeve length/interaction"
+    }
+  ],
+  "status": "production"
+}

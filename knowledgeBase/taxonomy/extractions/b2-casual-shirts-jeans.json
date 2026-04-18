@@ -1,0 +1,563 @@
+{
+  "extraction_metadata": {
+    "batch": "b2-casual-shirts-jeans",
+    "extracted_date": "2026-04-02",
+    "categories": ["casual_shirts", "jeans"],
+    "sources_attempted": [
+      {"id": 1, "name": "The Fashionisto", "url": "https://www.thefashionisto.com/men/types-of-shirts/", "status": "fetched_via_search"},
+      {"id": 2, "name": "FashionBeans", "url": "https://www.fashionbeans.com/article/types-of-shirt-men/", "status": "fetched_via_search"},
+      {"id": 3, "name": "APe to Gentleman", "url": "https://www.apetogentleman.com/types-of-shirt/", "status": "fetched_via_search"},
+      {"id": 4, "name": "Linen Trail", "url": "https://linentrail.com/blogs/the-pure-linen-journal/best-casual-shirt-styles-for-men-in-2025", "status": "fetched_via_search"},
+      {"id": 5, "name": "Fabriclore", "url": "https://fabriclore.com/blogs/garment-wiki/casual-shirts-for-men-and-their-types", "status": "fetched_via_search"},
+      {"id": 6, "name": "Restart Your Style", "url": "https://restartyourstyle.com/types-of-jeans/", "status": "referenced_via_search"},
+      {"id": 7, "name": "Denimhunters", "url": "https://denimhunters.com/jeans-fit-guide-for-men/", "status": "fetched_via_search"},
+      {"id": 8, "name": "Wanza Jeans", "url": "https://wanzajeans.com/complete-guide-to-denim-wash-types-for-fashion-brands-2025-edition/", "status": "referenced_via_search"},
+      {"id": 9, "name": "Dapper Confidential", "url": "https://www.dapperconfidential.com/mens-jeans-fits/", "status": "referenced_via_search"},
+      {"id": 10, "name": "Peplos Jeans", "url": "https://peplosjeans.in/blogs/all/types-of-jeans-for-men-and-jeans-fit-types", "status": "referenced_via_search"}
+    ],
+    "additional_sources_used": [
+      {"name": "Tapered Menswear", "url": "https://taperedmenswear.com/blogs/tapered-blog/shirt-collar-types"},
+      {"name": "Gear Patrol", "url": "https://www.gearpatrol.com/style/a253128/guide-to-casual-shirt-collars-for-men/"},
+      {"name": "The LVLL", "url": "https://www.thelvll.com/blogs/clothing-size/shirt-fit-guide"},
+      {"name": "Primer Magazine", "url": "https://www.primermagazine.com/2019/learn/untucked-shirt-should-fit"},
+      {"name": "Batch Mens", "url": "https://www.batchmens.com/pages/how-should-a-mens-casual-shirt-fit"},
+      {"name": "The Jeans Blog", "url": "https://thejeansblog.com/jeans-advice/the-different-types-of-stretch-in-denim/"},
+      {"name": "Todd Shelton", "url": "https://toddshelton.com/blog/jeans/mens-stretch-jeans-vs-non-stretch-jeans"},
+      {"name": "American Rag", "url": "https://americanrag.com/blogs/word-on-the-block/types-of-denim-washes"},
+      {"name": "ThredUp", "url": "https://www.thredup.com/bg/p/10-types-of-denim-washes-and-how-to-wear-them"},
+      {"name": "Spykar", "url": "https://spykar.com/blogs/blog/lets-take-a-closer-look-at-high-mid-and-low-rise-jeans-for-men"},
+      {"name": "Percival Menswear", "url": "https://www.percivalclo.com/blogs/style-guides/how-to-wear-men-s-cuban-collar-shirts"},
+      {"name": "Art of Manliness", "url": "https://www.artofmanliness.com/style/clothing/the-camp-collar-shirt/"},
+      {"name": "French Crown", "url": "https://frenchcrown.com/collections/kurta-shirts"},
+      {"name": "Urbanofashion", "url": "https://www.urbanofashion.com/blogs/jeans/trending-mens-jeans-2025"},
+      {"name": "Macys Denim Guide", "url": "https://www.macys.com/ce/mens-jeans-guide/types-of-denim-washes-for-men-and-to-acid-wash-jeans"}
+    ]
+  },
+  "parameters": [
+    {
+      "name": "casual_shirt_type",
+      "description": "The category or style of casual shirt, defined by its construction, fabric, collar design, and intended use context. Covers the full spectrum of non-dress shirts for menswear.",
+      "style_track": ["casual", "smart_casual", "resort", "weekend"],
+      "values": [
+        {
+          "value": "oxford_cloth_button_down",
+          "definition": "A shirt made from basket-weave oxford cloth fabric with a soft roll button-down collar. Durable yet soft, it bridges casual and smart-casual dressing. The quintessential preppy staple, invented by Brooks Brothers in 1896.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman", "Fabriclore"]
+        },
+        {
+          "value": "camp_collar",
+          "definition": "A short-sleeve, button-front shirt with an open, unstructured collar that lies flat against the chest (no collar band). Creates a notched V-neckline. Also called a revere collar shirt. Often features relaxed boxy fit and bold prints. Originated in 1950s Cuba for hot climates.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman", "Art of Manliness", "Percival Menswear"]
+        },
+        {
+          "value": "cuban_collar",
+          "definition": "A variant of the camp collar with a slightly more structured V-shaped neckline and retro-inspired aesthetic. Terms 'camp collar' and 'Cuban collar' are often used interchangeably, though Cuban tends to imply a more vintage, louche silhouette with a boxy fit.",
+          "sources": ["The Fashionisto", "Percival Menswear", "Art of Manliness"]
+        },
+        {
+          "value": "mandarin_collar",
+          "definition": "A shirt featuring a short stand-up collar band (1-2 inches high) without collar leaves or points. The edges slightly overlap or meet at center front. Inspired by traditional Chinese Qing dynasty attire. Provides a clean, minimal, modern look.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore", "Linen Trail"]
+        },
+        {
+          "value": "linen_shirt",
+          "definition": "A casual shirt made from linen fabric, prized for its natural breathability, moisture-wicking properties, and textured hand-feel. Slight wrinkling is characteristic and considered part of the charm. Ideal for hot and humid climates including Indian summers.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman", "Linen Trail", "Fabriclore"]
+        },
+        {
+          "value": "denim_shirt",
+          "definition": "A casual shirt constructed from denim twill-weave fabric. Versatile and durable, it ages well with unique wear patterns developing over time. Available in various washes from raw indigo to light bleached. Heavier than chambray.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman", "Fabriclore"]
+        },
+        {
+          "value": "chambray_shirt",
+          "definition": "A shirt made from chambray, a plain-weave fabric using single strands of colored and white yarn. Visually similar to denim but lighter, softer, and more breathable. Offers a classic blue hue without denim's heaviness. Suitable for warm and transitional weather.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore"]
+        },
+        {
+          "value": "flannel_shirt",
+          "definition": "A casual shirt made from brushed cotton or wool flannel fabric, known for its soft, napped texture and warmth. Often features plaid or check patterns, though solid colors exist. A cold-weather staple associated with rugged, outdoorsy style. Excellent for layering.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman", "Fabriclore"]
+        },
+        {
+          "value": "henley",
+          "definition": "A collarless shirt with a round neckline and a short button placket (typically 3-5 buttons). Resembles a polo without the collar. Available in long and short sleeves, cotton or waffle-knit. Provides a laid-back, masculine look and works well as a layering piece.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore"]
+        },
+        {
+          "value": "overshirt",
+          "definition": "A heavier-weight shirt designed to be worn as a light outer layer (also called a shacket or shirt jacket). Typically made from flannel, corduroy, wool blends, or heavy cotton. Features a boxier fit, often with chest pockets. Bridges the gap between shirt and jacket for transitional weather.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman"]
+        },
+        {
+          "value": "polo_shirt",
+          "definition": "A short-sleeved casual shirt with a soft collar and a two-or-three-button placket. Typically made from pique cotton knit. Straddles the line between casual and smart-casual. A staple of sporty, preppy style.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        },
+        {
+          "value": "hawaiian_shirt",
+          "definition": "A camp-collar shirt characterized by bold, tropical-themed prints (floral, palm, scenic). Made from lightweight fabrics like rayon, cotton, or silk. A subset of camp collar shirts with distinctly vacation/resort-inspired aesthetics.",
+          "sources": ["The Fashionisto", "Art of Manliness"]
+        },
+        {
+          "value": "band_collar_shirt",
+          "definition": "A shirt with a simple fabric band encircling the neck instead of a traditional folded collar. Also called a grandad collar shirt. The band stands 1-2 inches high. Provides a clean, contemporary aesthetic suited to smart-casual occasions. Related to but distinct from the mandarin collar.",
+          "sources": ["The Fashionisto", "FashionBeans", "Gear Patrol", "Tapered Menswear"]
+        },
+        {
+          "value": "kurta_shirt",
+          "definition": "A modern hybrid garment blending the Indian kurta silhouette with Western shirt construction. Features a longer length, often with mandarin or band collar, side slits, and lightweight fabrics like linen or cotton. Popular for casual and festive occasions in the Indian market.",
+          "sources": ["Linen Trail", "French Crown", "Fabriclore"]
+        },
+        {
+          "value": "linen_cotton_blend_shirt",
+          "definition": "A casual shirt made from a blend of linen and cotton fibers, combining the breathability and texture of linen with the structure, softness, and durability of cotton. Popular in Indian and tropical markets for its balanced comfort properties.",
+          "sources": ["Linen Trail", "Fabriclore"]
+        },
+        {
+          "value": "poplin_shirt",
+          "definition": "A casual or smart-casual shirt made from poplin, a tightly-woven plain-weave fabric with a smooth finish. Lighter and crisper than oxford cloth. Often used for summer casual shirts and can range from fully casual to business-appropriate.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        },
+        {
+          "value": "twill_shirt",
+          "definition": "A casual shirt made from twill-weave fabric, identifiable by its diagonal ribbing. Heavier and more textured than poplin, softer than denim. Provides warmth and drape, making it suitable for cooler weather casual wear.",
+          "sources": ["The Fashionisto", "Fabriclore"]
+        },
+        {
+          "value": "corduroy_shirt",
+          "definition": "A casual shirt made from corduroy fabric featuring distinctive vertical ridges (wales). A warm-weather alternative to flannel with a distinctive texture. Often used in overshirt form for layering.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        },
+        {
+          "value": "jersey_shirt",
+          "definition": "A casual button-front shirt made from knit jersey fabric rather than woven material. Combines the look of a traditional shirt with the stretch and comfort of a knit. Often used for travel and relaxed casual contexts.",
+          "sources": ["The Fashionisto"]
+        },
+        {
+          "value": "baseball_shirt",
+          "definition": "A casual knit shirt featuring raglan sleeves (typically in a contrasting color) and a button placket. Named for its association with baseball uniforms. A distinctly casual, sporty piece.",
+          "sources": ["The Fashionisto"]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_fit",
+      "description": "The cut and silhouette of a casual shirt, determining how closely it follows the body's contours and where it falls on the torso.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "slim",
+          "definition": "Tailored to follow the body's natural contours with minimal excess fabric. Sits closer to the body from chest to waist with narrower sleeves. Often features slight stretch for mobility. Creates a sharp, modern silhouette. Best for lean to average builds, smart-casual settings, and layering under blazers.",
+          "sources": ["The LVLL", "Batch Mens", "FashionBeans"]
+        },
+        {
+          "value": "regular",
+          "definition": "A balanced, moderate fit offering room across the chest, waist, and sleeves without being oversized. Straighter cut than slim fit. Versatile for everyday wear, works well both tucked and untucked. Suits a wide range of body shapes. Also called 'classic fit' by some brands.",
+          "sources": ["The LVLL", "Batch Mens", "FashionBeans", "Primer Magazine"]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A looser cut prioritizing freedom of movement and casual ease. Extra space in the torso, shoulders, and arms. Fabric drapes more freely rather than following body shape. Ideal for all-day comfort and laid-back styling. Works well in warmer climates where airflow is desired.",
+          "sources": ["The LVLL", "FashionBeans", "Linen Trail"]
+        },
+        {
+          "value": "oversized",
+          "definition": "A deliberately roomy, boxy cut with significant extra volume throughout. Dropped shoulders and wider body. A trend-forward silhouette that pairs well with slim bottoms for contrast. Best styled tucked into slim jeans or with structured bottoms to avoid a shapeless look.",
+          "sources": ["The LVLL", "FashionBeans"]
+        },
+        {
+          "value": "untucked",
+          "definition": "Not a body fit per se, but a specific length cut designed to be worn untucked. Front hem ends between the middle and bottom of the pants zipper; back hem ends between the middle and bottom of pants back pockets. Shorter than standard shirt length to avoid looking sloppy when worn out.",
+          "sources": ["Primer Magazine", "Batch Mens"]
+        },
+        {
+          "value": "athletic",
+          "definition": "A fit designed for muscular or athletic builds, offering more room in the chest and shoulders while tapering through the waist. Prevents the pulling and bunching that standard slim fits cause on larger upper bodies.",
+          "sources": ["The LVLL", "FashionBeans"]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_collar",
+      "description": "The collar style on a casual shirt, which defines the neckline shape, formality level, and tie compatibility.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "button_down",
+          "definition": "A collar with small buttons fastening the collar points to the shirt front. Creates a soft, rolling collar shape. The quintessential casual-to-smart-casual collar. Invented by Brooks Brothers in 1896, inspired by English polo players. Can be worn with or without a tie, though the tie look is distinctly American preppy.",
+          "sources": ["The Fashionisto", "FashionBeans", "Tapered Menswear", "Gear Patrol"]
+        },
+        {
+          "value": "camp_collar",
+          "definition": "A flat, open collar with no collar band that lies against the chest, creating a notched V-neckline. Unstructured and never worn with a tie. The most casual collar type, associated with vacation and resort wear. Provides excellent ventilation in hot weather.",
+          "sources": ["The Fashionisto", "Art of Manliness", "Percival Menswear", "Gear Patrol"]
+        },
+        {
+          "value": "mandarin",
+          "definition": "A short stand-up collar band (1-2 inches) without folded-over collar leaves. Edges may slightly overlap or meet at center. Rooted in traditional Chinese fashion. Projects a modern, minimalist aesthetic. Cannot accommodate a tie.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore", "Tapered Menswear"]
+        },
+        {
+          "value": "band",
+          "definition": "A simple fabric band encircling the neck without any collar points or leaves. Also called a grandad collar. Similar to mandarin but sometimes slightly shorter and without the characteristic slight overlap. A smart-casual choice that captures contemporary informality.",
+          "sources": ["FashionBeans", "Tapered Menswear", "Gear Patrol", "Linen Trail"]
+        },
+        {
+          "value": "spread_casual",
+          "definition": "A collar with wider-set points creating a broad opening. The casual version uses softer construction (no collar stays) compared to dress shirt spreads. Versatile enough for open-neck casual wear or with a tie for smart-casual. Flatters most face shapes.",
+          "sources": ["FashionBeans", "Tapered Menswear", "Oliver Wicks"]
+        },
+        {
+          "value": "point_collar",
+          "definition": "The most traditional collar with narrow, pointed tips angled downward. In casual shirts, often made with softer construction than dress versions. Creates a slimming effect, making it suitable for wider faces and shorter necks.",
+          "sources": ["Tapered Menswear", "Oliver Wicks"]
+        },
+        {
+          "value": "club_collar",
+          "definition": "A collar with small, rounded points instead of sharp tips. Has a vintage, early 20th-century aesthetic. Originally designed for evening wear but now used in casual and smart-casual contexts for its retro appeal.",
+          "sources": ["Tapered Menswear", "Mr Porter"]
+        },
+        {
+          "value": "henley_neckline",
+          "definition": "A collarless round neckline with a short button placket (typically 3-5 buttons). Not technically a collar but a distinct neckline treatment found on henley shirts. Provides casual masculinity without any collar structure.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        }
+      ]
+    },
+    {
+      "name": "casual_shirt_fabric",
+      "description": "The primary fabric used in casual shirt construction, which affects breathability, texture, weight, seasonality, and overall aesthetic.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "oxford_cloth",
+          "definition": "A basket-weave cotton fabric with a slightly textured surface. Heavier than poplin but softer than denim. Durable, breathable, and gets softer with washing. The classic OCBD fabric. Works across seasons.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman"]
+        },
+        {
+          "value": "linen",
+          "definition": "A natural fiber woven from flax, known for exceptional breathability and moisture-wicking. Has a distinctive slubby texture and naturally wrinkles. 30% stronger than cotton when dry. Ideal for hot, humid climates like Indian summers. Eco-friendly and biodegradable.",
+          "sources": ["The Fashionisto", "Linen Trail", "Fabriclore", "A Pe to Gentleman"]
+        },
+        {
+          "value": "chambray",
+          "definition": "A lightweight plain-weave fabric using single colored and white yarns. Visually resembles denim but is lighter, softer, and more breathable. The weave creates a subtle sheen. Works in warm and transitional weather.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore"]
+        },
+        {
+          "value": "denim",
+          "definition": "A sturdy twill-weave cotton fabric using indigo-dyed warp and white weft yarns. Heavier and more structured than chambray. Ages beautifully with unique fade patterns. Available in various weights and washes.",
+          "sources": ["The Fashionisto", "FashionBeans", "Fabriclore"]
+        },
+        {
+          "value": "flannel",
+          "definition": "A brushed cotton or wool fabric with a soft, napped surface. Provides warmth and insulation. Available in plaid patterns or solid colors. A cold-weather essential with a cozy, rugged character.",
+          "sources": ["The Fashionisto", "FashionBeans", "A Pe to Gentleman"]
+        },
+        {
+          "value": "poplin",
+          "definition": "A tightly-woven plain-weave fabric with a smooth, crisp finish. Lighter weight than oxford cloth. Provides a cleaner, more polished look for casual shirts. Good for warm weather.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        },
+        {
+          "value": "linen_cotton_blend",
+          "definition": "A fabric blending linen and cotton fibers, combining linen's breathability with cotton's softness and structure. More wrinkle-resistant than pure linen. Popular in Indian and tropical markets for balanced performance.",
+          "sources": ["Linen Trail", "Fabriclore"]
+        },
+        {
+          "value": "cotton_twill",
+          "definition": "A cotton fabric with a diagonal weave pattern. Heavier and more textured than poplin, with good drape. Suitable for cooler weather casual shirts and overshirts.",
+          "sources": ["The Fashionisto", "Fabriclore"]
+        },
+        {
+          "value": "corduroy",
+          "definition": "A ridged fabric with vertical wales (ribs) cut from extra sets of yarn. Provides warmth, texture, and visual interest. Measured by wale count (wider wales are more casual). A fall/winter fabric.",
+          "sources": ["The Fashionisto", "FashionBeans"]
+        },
+        {
+          "value": "seersucker",
+          "definition": "A puckered cotton fabric with alternating smooth and textured stripes. The puckering allows airflow, making it ideal for hot weather. A classic warm-weather fabric with a distinctly preppy, Southern American heritage.",
+          "sources": ["The Fashionisto"]
+        },
+        {
+          "value": "rayon_viscose",
+          "definition": "A semi-synthetic fabric derived from wood pulp. Soft, drapey, and breathable. Commonly used for camp collar and Hawaiian shirts due to its smooth hand-feel and ability to hold vibrant prints.",
+          "sources": ["The Fashionisto", "Art of Manliness"]
+        },
+        {
+          "value": "tencel_lyocell",
+          "definition": "A sustainable semi-synthetic fiber made from eucalyptus wood pulp. Extremely soft, breathable, and moisture-wicking. Used in premium casual shirts and kurta shirts. Eco-friendly production process.",
+          "sources": ["Linen Trail", "French Crown"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_fit",
+      "description": "The overall silhouette and cut of men's jeans, defined by the width through the seat, thigh, knee, and leg opening. The primary classification parameter for jeans.",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "skinny",
+          "definition": "The narrowest fit, sitting tight from hip to ankle with a very slim leg opening (typically 12-14 inches). Hugs the legs closely throughout. Associated with indie/rock aesthetics and experiencing a revival via the 'indie sleaze' trend. Best for lean builds.",
+          "sources": ["Denimhunters", "Tops and Bottoms USA", "Urbanofashion"]
+        },
+        {
+          "value": "slim",
+          "definition": "A modern, tapered fit that is snug through the thigh and knee but not skin-tight. Leg opening typically 14-16 inches. Provides a sharp silhouette without the extremity of skinny. The go-to fit for men who want a put-together look. Works for most body types except very muscular thighs.",
+          "sources": ["Denimhunters", "Coofandy", "Levi's", "Urbanofashion"]
+        },
+        {
+          "value": "tapered",
+          "definition": "Wider through the thigh for comfort, then gradually narrows from the knee to the ankle. Combines relaxed room up top with a tailored lower leg. Ideal for men with athletic or muscular thighs who want a contemporary look. The 'best of both worlds' fit.",
+          "sources": ["Denimhunters", "Tops and Bottoms USA", "Calvin Klein", "Urbanofashion"]
+        },
+        {
+          "value": "straight",
+          "definition": "A consistent width from the hip down to the ankle with no taper. The most classic, timeless jeans silhouette. Versatile enough to dress up or down. Works well for most body types. The leg opening matches the knee width.",
+          "sources": ["Denimhunters", "Levi's", "Silver Jeans", "Urbanofashion"]
+        },
+        {
+          "value": "regular",
+          "definition": "A moderate fit that is neither slim nor relaxed, offering comfortable room through the seat and thigh with a straight or slightly tapered leg. Often used as a brand's default or standard fit. Very similar to straight but may have slightly more room in the seat.",
+          "sources": ["Denimhunters", "Levi's", "Coofandy"]
+        },
+        {
+          "value": "relaxed",
+          "definition": "A loose, comfortable fit with extra room in the seat, thigh, and leg. Sits comfortably without clinging to the body. Gaining momentum in 2025 as casual comfort takes priority. Best for larger builds or those prioritizing ease of movement.",
+          "sources": ["Denimhunters", "Tops and Bottoms USA", "Levi's", "Urbanofashion"]
+        },
+        {
+          "value": "bootcut",
+          "definition": "Fitted through the thigh, then gradually widens from the knee to the hem to accommodate boots. The leg opening is wider than the knee (typically 18-20 inches). A classic American style experiencing a clean, modern revival in 2025. Helps balance wider shoulders and hips.",
+          "sources": ["Denimhunters", "Tops and Bottoms USA", "Levi's", "Urbanofashion"]
+        },
+        {
+          "value": "athletic",
+          "definition": "Specifically designed for muscular or athletic builds. Relaxed through the hip and thigh for room around muscular legs, then tapers below the knee for a modern look. Essentially a tapered fit with extra thigh room. Fills the gap between slim and relaxed for built physiques.",
+          "sources": ["Denimhunters", "Levi's", "Silver Jeans"]
+        },
+        {
+          "value": "wide_leg",
+          "definition": "A roomy fit with significant width from thigh to hem, creating a dramatic, flowing silhouette. Sits on the hips with a relaxed fit throughout. A trend-forward style in 2025 associated with vintage and streetwear aesthetics. Often features shorter inseams designed to stack.",
+          "sources": ["Tops and Bottoms USA", "Bless Denim", "Urbanofashion"]
+        },
+        {
+          "value": "baggy",
+          "definition": "An extremely loose fit with maximum room throughout the seat, thigh, and leg. More voluminous than relaxed fit. Associated with 1990s streetwear and hip-hop culture. Trending in 2025 with a more structured, intentional approach compared to the original 90s versions.",
+          "sources": ["Tops and Bottoms USA", "Bless Denim"]
+        },
+        {
+          "value": "slim_straight",
+          "definition": "A hybrid fit combining the narrower proportions of slim with the consistent leg width of straight. Slimmer through the thigh than standard straight but without the dramatic taper of slim fit. A versatile middle ground.",
+          "sources": ["Levi's", "Calvin Klein"]
+        },
+        {
+          "value": "slim_tapered",
+          "definition": "A hybrid combining the close fit of slim jeans with aggressive tapering toward the ankle. Tighter overall than standard tapered. Creates the most streamlined modern silhouette while still offering some thigh room.",
+          "sources": ["Levi's", "Denimhunters"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_wash",
+      "description": "The wash treatment applied to denim, which determines the color intensity, surface texture, and aesthetic character of the jeans. Ranges from untreated raw denim to heavily processed distressed styles.",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "raw",
+          "definition": "Completely untreated denim in its most natural state, with no washing, fading, or distressing. Also called 'dry denim.' Features a rich, deep indigo hue and stiff, structured feel. Molds to the wearer's body over time, developing personalized fades, creases, and whisker patterns. Prized by denim purists.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide", "Wanza Jeans"]
+        },
+        {
+          "value": "rinse",
+          "definition": "Denim that has undergone a single, minimal wash to remove excess indigo dye and soften the fabric slightly. Also called 'mill wash' or 'one wash.' Produces the darkest available wash after raw. Clean, uniform appearance. The most versatile dark denim for smart-casual dressing.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide"]
+        },
+        {
+          "value": "dark_wash",
+          "definition": "Denim with minimal processing, preserving the deep indigo shade. May include a gentle rinse to remove excess dye. The most versatile wash: easily dressed up (with blazer) or down (with t-shirt). Slimming visual effect. Hides stains well.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide", "Tops and Bottoms USA"]
+        },
+        {
+          "value": "medium_wash",
+          "definition": "Denim treated to sit between dark and light, showing moderate fading while retaining structure. The most 'classic jeans' look. Versatile and approachable, mixing easily with color and pattern. Hides small stains better than light wash.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide"]
+        },
+        {
+          "value": "light_wash",
+          "definition": "Heavily faded denim with a pale, sun-bleached appearance. Created through extended stone washing or bleaching processes. Associated with relaxed, casual vibes. Particularly popular in summer. Can read as very casual or vintage depending on styling.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide"]
+        },
+        {
+          "value": "stone_wash",
+          "definition": "Denim treated by tumbling with pumice stones to soften the fabric and create an evenly worn-in, faded appearance. A classic technique popularized in the 1980s. Produces a softer hand-feel than raw or rinse denim. Can range from light to medium fading.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide", "Wanza Jeans"]
+        },
+        {
+          "value": "enzyme_wash",
+          "definition": "An eco-friendly alternative to stone washing using biological enzymes (cellulase) to break down indigo dye. Creates a faded look without harsh chemicals or physical abrasion. Produces a softer feel while causing less fiber damage than stone washing, extending garment lifespan.",
+          "sources": ["American Rag", "Wanza Jeans", "Rhysley"]
+        },
+        {
+          "value": "acid_wash",
+          "definition": "Denim treated with pumice stones pre-soaked in bleach solution (not actual acid). Creates high-contrast, non-uniform marbling and splotchy patterns. Originally popularized in the 1980s. A bold, statement-making wash that cycles in and out of fashion.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide", "Wanza Jeans"]
+        },
+        {
+          "value": "bleach_wash",
+          "definition": "Denim soaked in diluted bleach solution to strip color uniformly. Produces a lighter, evenly faded appearance ranging from light blue to nearly white. Unlike acid wash, creates uniform lightening rather than high-contrast marbling.",
+          "sources": ["American Rag", "Wanza Jeans"]
+        },
+        {
+          "value": "distressed",
+          "definition": "A treatment (not a color wash) featuring intentional rips, tears, frayed edges, and abraded areas for an edgy, lived-in aesthetic. Achieved through manual ripping, laser distressing, sandblasting, or enzyme washing. Can be applied over any wash color. Associated with grunge and streetwear.",
+          "sources": ["American Rag", "ThredUp", "Macys Denim Guide", "Tops and Bottoms USA"]
+        },
+        {
+          "value": "black",
+          "definition": "Denim dyed with black (sulfur) dye rather than traditional indigo. Can range from jet black to faded charcoal. Black denim is versatile for evening and smart-casual wear. Tends to fade faster than indigo unless specially treated (overdyed or coated).",
+          "sources": ["ThredUp", "Macys Denim Guide"]
+        },
+        {
+          "value": "overdyed",
+          "definition": "Denim that has been dyed a second time over its original indigo base with another color (often black, grey, or other hues). Creates deeper, richer color with a unique tonal quality. As the overdye wears off with use, the original indigo may show through.",
+          "sources": ["Wanza Jeans", "WiesMade"]
+        },
+        {
+          "value": "vintage_wash",
+          "definition": "A wash designed to replicate the naturally aged, worn-in appearance of old denim. Combines techniques like enzyme washing, whiskering, and strategic fading to simulate years of wear. Often features honeycomb fading behind knees and whisker lines at the hip crease.",
+          "sources": ["ThredUp", "Wanza Jeans"]
+        },
+        {
+          "value": "whiskered",
+          "definition": "A surface treatment producing thin, faded lines (whiskers) across the jeans, simulating natural crease patterns. Created by hand using abrasive rods or via laser. Applied around areas known to naturally crease: across thighs and behind knees. Often combined with other wash treatments.",
+          "sources": ["American Rag", "Wanza Jeans", "Rhysley"]
+        },
+        {
+          "value": "laser_wash",
+          "definition": "A modern, sustainable technique using lasers to burn off indigo dye, creating precise fading and whiskering effects without water, stones, or chemicals. Allows highly detailed and reproducible patterns. Increasingly used by premium and eco-conscious brands.",
+          "sources": ["Wanza Jeans", "DUER"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_rise",
+      "description": "The vertical distance from the crotch seam to the top of the waistband, determining where jeans sit on the body and creating the perceived waistline.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "low",
+          "definition": "Rise measurement of 7-8 inches. Waistband sits near the top of the hip bones, well below the navel. Creates a contemporary, casual silhouette. Best for men with long legs and shorter torsos, or athletic builds. Can appear disproportionate on shorter men. The most casual rise option.",
+          "sources": ["Spykar", "Tapered Menswear", "Primer Magazine", "Mavi Jeans", "Lee"]
+        },
+        {
+          "value": "mid",
+          "definition": "Rise measurement of 9-11 inches. Also called regular or normal rise. Waistband sits at or just below the navel at the natural waist. The most universally flattering rise, suiting virtually all body types. The default for most modern jeans including Levi's 501, slim fits, and athletic fits. Comfortable for all-day wear.",
+          "sources": ["Spykar", "Tapered Menswear", "Primer Magazine", "Mavi Jeans", "Lee", "Bronze Snake"]
+        },
+        {
+          "value": "high",
+          "definition": "Rise measurement of 10-12+ inches. Waistband sits above the navel, covering it. Often called high-waisted. Creates a sophisticated, retro-inspired look. Elongates the appearance of legs, making it beneficial for both shorter and taller men. Minimizes muffin top appearance. More comfortable around the waist and less likely to slide down.",
+          "sources": ["Spykar", "Tapered Menswear", "Primer Magazine", "Mavi Jeans", "Lee", "Dave's New York"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_stretch",
+      "description": "The elasticity level of the denim fabric, determined by the percentage of stretch fibers (typically elastane/spandex) blended with cotton. Affects comfort, mobility, shape retention, and aging character.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "rigid",
+          "definition": "100% cotton denim with zero stretch fibers. Heavier weight (12-16 oz). Stiff initially but molds to the body over time. Develops the best natural fading and wear patterns prized by denim enthusiasts. Maximum durability and structure. Requires a break-in period.",
+          "sources": ["Todd Shelton", "The Jeans Blog", "Szonei Fabrics", "Hanna Banna Clothing"]
+        },
+        {
+          "value": "comfort_stretch",
+          "definition": "Denim blended with 1-2% elastane (typically 98% cotton / 2% elastane). The most common stretch level in men's jeans. Provides slight flexibility and ease of movement while feeling almost as structured as rigid denim. Best balance of shape retention and comfort. Minimal impact on fading potential.",
+          "sources": ["Todd Shelton", "The Jeans Blog", "Sene Studio", "Make Your Own Jeans"]
+        },
+        {
+          "value": "super_stretch",
+          "definition": "Denim with 3-5% elastane content offering enhanced flexibility and a softer feel. Greater range of motion than comfort stretch. May include dual-core yarn technology for better shape recovery. More prone to shape loss (bagging at knees) over time than lower-stretch options. Less traditional denim feel.",
+          "sources": ["The Jeans Blog", "Szonei Fabrics", "Sene Studio"]
+        },
+        {
+          "value": "power_stretch",
+          "definition": "High-performance denim with 5%+ elastane or engineered bi-stretch (4-way stretch) construction. Maximum mobility in all directions. Used in athletic and performance jeans lines. Feels significantly softer and more flexible than traditional denim. Highest risk of shape loss over time.",
+          "sources": ["The Jeans Blog", "Szonei Fabrics", "Mott and Bow"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_leg_shape",
+      "description": "The shape of the jeans leg from the knee down, which is a sub-component of overall fit but a useful standalone parameter for precise classification.",
+      "style_track": ["casual", "smart_casual", "streetwear"],
+      "values": [
+        {
+          "value": "tapered",
+          "definition": "The leg narrows progressively from the knee to the ankle, creating a smaller leg opening. The most modern leg shape. Flattering on most builds as it creates a clean silhouette at the ankle.",
+          "sources": ["Denimhunters", "Levi's", "Calvin Klein"]
+        },
+        {
+          "value": "straight",
+          "definition": "Consistent leg width from knee to ankle with no narrowing or widening. The most classic, timeless leg shape. The leg opening matches or is very close to the knee width.",
+          "sources": ["Denimhunters", "Levi's", "Silver Jeans"]
+        },
+        {
+          "value": "flared",
+          "definition": "The leg widens significantly from the knee to the hem, creating a bell or trumpet shape. More dramatic than bootcut. Associated with 1970s fashion and periodic revival cycles.",
+          "sources": ["Tops and Bottoms USA", "Bless Denim"]
+        },
+        {
+          "value": "bootcut_leg",
+          "definition": "A subtle widening from the knee to the hem, enough to comfortably fit over boot shafts. Less dramatic than a full flare. The functional leg shape for wearing jeans over cowboy boots or work boots.",
+          "sources": ["Denimhunters", "Levi's", "Tops and Bottoms USA"]
+        },
+        {
+          "value": "wide",
+          "definition": "A generously wide leg from knee to hem, creating a flowing, voluminous silhouette. Associated with streetwear, vintage Americana, and Japanese denim culture. Often designed with shorter inseams to create stacking.",
+          "sources": ["Tops and Bottoms USA", "Bless Denim"]
+        }
+      ]
+    },
+    {
+      "name": "jeans_body_type_mapping",
+      "description": "A guide mapping body types to recommended jeans fits, based on proportional considerations from multiple sources.",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "lean_slim_build",
+          "definition": "Slender frame with narrow hips, thighs, and waist. Recommended fits: skinny, slim, or slim-tapered to complement the frame without excess fabric. Avoid very wide or baggy cuts that can overwhelm the silhouette.",
+          "sources": ["Denimhunters", "Coofandy", "French Crown"]
+        },
+        {
+          "value": "athletic_muscular_build",
+          "definition": "Well-developed thighs, glutes, and calves with a defined waist. Recommended fits: athletic fit, tapered, or relaxed-tapered that provide thigh room while tapering below the knee. Slim fits may restrict and pull across the quads.",
+          "sources": ["Denimhunters", "Tapered Menswear", "Silver Jeans"]
+        },
+        {
+          "value": "average_build",
+          "definition": "Balanced proportions without extreme muscle development or leanness. Recommended fits: straight, regular, or slim-straight offer the most versatility. Virtually any fit works, making personal style preference the deciding factor.",
+          "sources": ["Denimhunters", "Coofandy", "Levi's"]
+        },
+        {
+          "value": "larger_stocky_build",
+          "definition": "Broader frame with fuller hips, thighs, and waist. Recommended fits: relaxed, straight, or bootcut provide comfort and balanced proportions. Bootcut helps balance wider hips and shoulders. Avoid very slim or skinny fits that restrict movement and create pulling.",
+          "sources": ["Denimhunters", "Coofandy", "French Crown"]
+        },
+        {
+          "value": "tall_build",
+          "definition": "Height 6 feet or above with longer legs and torso. Recommended rise: high rise to sit at the right part of a longer waist. Any leg shape works, but straight and tapered are most universally flattering. Look for extended inseam options.",
+          "sources": ["Mavi Jeans", "Spykar", "Dave's New York"]
+        },
+        {
+          "value": "shorter_build",
+          "definition": "Below-average height with proportionally shorter legs. Recommended: high-rise jeans to elongate the leg line. Tapered or slim fits create a streamlined look. Avoid low-rise which shortens the leg visually. Avoid excessively wide or bootcut fits that can overwhelm shorter frames.",
+          "sources": ["Spykar", "Tapered Menswear", "Primer Magazine"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "extraction_metadata": {
+    "batch": "b6-occasions-coordination",
+    "focus": "Indian urban men's everyday occasions and smart casual coordination",
+    "extraction_date": "2026-04-02",
+    "sources_attempted": 12,
+    "sources_accessible": 12,
+    "sources_inaccessible": 0,
+    "notes": "All sources accessed via web search. Content extracted from search result summaries and cached page content."
+  },
+  "sources": [
+    {"id": "S1", "name": "FashionBeans", "url": "https://www.fashionbeans.com/article/mens-smart-casual-dress-guide/", "status": "accessible"},
+    {"id": "S2", "name": "ApeToGentleman", "url": "https://www.apetogentleman.com/mens-smart-casual-dress-code-guide/", "status": "accessible"},
+    {"id": "S3", "name": "EffortlessGent Lean Wardrobe", "url": "https://effortlessgent.com/lean-wardrobe-minimalist-wardrobe-men/", "status": "accessible"},
+    {"id": "S4", "name": "EffortlessGent Casual Style", "url": "https://effortlessgent.com/casual-style/", "status": "accessible"},
+    {"id": "S5", "name": "Albatross Clothing", "url": "https://albatrossclothing.in/blogs/albatross-blogs/capsule-wardrobe-for-indian-men-how-to-dress-better-with-less-in-2025", "status": "accessible"},
+    {"id": "S6", "name": "Deux Vincente", "url": "https://www.deuxvincente.in/blogs/the-style-journal/the-ultimate-capsule-wardrobe-for-the-modern-indian-man", "status": "accessible"},
+    {"id": "S7", "name": "Pant Project", "url": "https://pantproject.com/blogs/pantology/how-indian-men-are-redefining-office-fashion-from-workwear-to-weekendwear", "status": "accessible"},
+    {"id": "S8", "name": "StyleBuddy Fashion", "url": "https://www.stylebuddy.fashion/post/business-casual-ideas-for-men-in-india-2025", "status": "accessible"},
+    {"id": "S9", "name": "Siyaram", "url": "https://www.siyaram.com/blogs/indian-wedding-style-guide-men-2025-outfit-ideas/", "status": "accessible"},
+    {"id": "S10", "name": "Meridian Looks", "url": "https://meridianlooks.com/5-smart-casual-looks-every-indian-man-should-own-in-2025/", "status": "accessible"},
+    {"id": "S11", "name": "Bewakoof", "url": "https://www.bewakoof.com/blog/10-men-fashion-college-outfits-ideas/", "status": "accessible"},
+    {"id": "S12", "name": "StyleBuddy India", "url": "https://stylebuddy.in/post/trendy-outfits-2025-for-men-in-india", "status": "accessible"}
+  ],
+  "parameters": [
+    {
+      "name": "indian_occasion_category",
+      "description": "Categorization of everyday and special occasions for Indian urban men, each with distinct dress expectations and social norms",
+      "style_track": ["casual", "smart_casual", "ethnic", "formal"],
+      "values": [
+        {
+          "value": "tech_office",
+          "definition": "Workplace dress code for technology companies and startups with flexible/relaxed policies. 90% of Indian startups have ditched formal wear. Emphasis on comfort with smart-casual polish: clean tees, chinos, sneakers, optional layering with bombers or lightweight jackets",
+          "sources": ["Pant Project", "StyleBuddy Fashion"]
+        },
+        {
+          "value": "startup_office",
+          "definition": "Even more relaxed than tech_office. Athleisure-adjacent dressing is acceptable. Joggers, co-ord sets, premium tees with clean sneakers. Key constraint is looking intentional rather than sloppy",
+          "sources": ["Pant Project", "StyleBuddy Fashion", "Albatross Clothing"]
+        },
+        {
+          "value": "corporate_office",
+          "definition": "Traditional Indian corporate environment requiring business casual to business formal. Well-fitting dress pants or chinos paired with blazers, crisp white or light blue dress shirts. Nehru jackets or bandhgalas acceptable for semi-formal corporate events",
+          "sources": ["StyleBuddy Fashion", "Pant Project", "Deux Vincente"]
+        },
+        {
+          "value": "college",
+          "definition": "Indian college campus dressing emphasizing self-expression within budget. Athleisure (joggers, hoodies, designer tees), sweater-vest combos, blue denim essentials, graphic tees with blazers for presentations, streetwear influences, and Indo-western fusion with Nehru jackets over jeans",
+          "sources": ["Bewakoof", "Albatross Clothing"]
+        },
+        {
+          "value": "casual_date",
+          "definition": "Date night or casual dining requiring polished-casual effort. Well-fitted collared shirt with chinos, smart casual blazer for polish, or linen shirt with tailored trousers. Polo with chinos and loafers for daytime dates. Sneakers acceptable if clean and minimal",
+          "sources": ["Meridian Looks", "FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "weekend_outing",
+          "definition": "Relaxed weekend socializing including brunches, mall visits, and outings with friends. Oxford shirt or polo with chinos and desert boots, or tee with dark jeans and clean sneakers. Layering with denim or bomber jacket adds visual interest",
+          "sources": ["FashionBeans", "EffortlessGent Casual Style", "Albatross Clothing"]
+        },
+        {
+          "value": "house_party",
+          "definition": "Social gathering at someone's home ranging from casual to semi-dressy. For Indian context: printed Nehru jackets, embroidered kurtas, party-wear shirts in fabrics like art silk or satin, or smart-casual Western wear. Can experiment with bolder styling choices. Add a blazer or jacket layer for crispness",
+          "sources": ["Bewakoof", "StyleBuddy India"]
+        },
+        {
+          "value": "indian_wedding_guest_haldi",
+          "definition": "Pre-wedding daytime ceremony involving turmeric application. Requires breathable, stain-friendly clothing in vibrant yellows, deep mustard, warm orange, or bright hues. Lightweight cotton kurtas are ideal. Accessorize with Kolhapuri sandals. Skip heavy jewelry. Comfort-first, easygoing charm",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "indian_wedding_guest_mehendi",
+          "definition": "Pre-wedding henna ceremony, relaxed and festive daytime event. Short kurtas with Nehru jackets, printed cotton sets, or casual dhoti styles. Colors: shades of green (traditional for mehendi), rust, mustard, turquoise, pink. Casual yet festive: printed kurtas with jeans or ethnic joggers. Mojris for footwear",
+          "sources": ["Siyaram", "Ethnix by Raymond", "Bharat Reshma"]
+        },
+        {
+          "value": "indian_wedding_guest_sangeet",
+          "definition": "High-energy evening celebration with dance performances and music. Outfit must allow freedom of movement while reflecting bold personality. Fabrics with luxurious drape, subtle sheen, and wrinkle-resistance. Kurta with pajamas or dhoti, rich jewel tones and metallics. Jodhpuri mojaris or ethnic shoes. Statement accessories welcome",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "indian_wedding_guest_pheras",
+          "definition": "The sacred main wedding ceremony (Saath Phere). Most traditional and formal of all functions. Regal sherwanis, sophisticated bandhgalas, or classic kurta sets. Rich colors: royal blue, emerald green, deep pink. Avoid red (reserved for bride), white, and black. Pair with mojaris or juttis. Formal and respectful attire required",
+          "sources": ["Siyaram", "CBazaar"]
+        },
+        {
+          "value": "indian_wedding_guest_reception",
+          "definition": "The red-carpet moment of Indian weddings. Most formal Western-influenced function. Tuxedos with satin accents, midnight blue velvet jackets, charcoal dinner suits, double-breasted jackets, or premium bandhgala suits. Oxford shoes, bow ties, metallic lapel pins. Alternatively, heavily embroidered sherwanis. Evening glamour expected",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "temple_visit",
+          "definition": "Religious site visit requiring modest, respectful attire. Full-length trousers mandatory (no shorts; jeans may be refused at some temples). Simple collared shirts covering shoulders. Dhoti or lungi ideal for traditional temples. No tank tops, tight jeans, or casual sportswear. Head covering may be required at certain temples. Footwear removed at entrance",
+          "sources": ["IndusBus", "Hindu Temple of Atlanta"]
+        },
+        {
+          "value": "family_gathering",
+          "definition": "Meeting extended family for meals, festivals, or celebrations. Ranges from casual kurta-pajama to collared shirts with trousers. For festive family events: kurta with Nehru jacket or bandhgala. For casual family meals: polo or collared shirt with chinos. Shoes removed before entering home. Accept offered refreshments as cultural respect",
+          "sources": ["CBazaar", "StyleBuddy India"]
+        }
+      ]
+    },
+    {
+      "name": "indian_occasion_dress_code",
+      "description": "The actual dress code requirements mapped to each Indian occasion, specifying formality level, acceptable garment categories, and constraints",
+      "style_track": ["casual", "smart_casual", "ethnic", "formal"],
+      "values": [
+        {
+          "value": "tech_casual",
+          "definition": "For tech/startup offices: Clean tee or polo + chinos or dark jeans + clean sneakers. Optional: lightweight jacket or bomber. No formal shoes or ties required. Emphasis on looking intentional. Avoid: flip-flops, distressed jeans, gym wear",
+          "sources": ["Pant Project", "StyleBuddy Fashion"]
+        },
+        {
+          "value": "indian_business_casual",
+          "definition": "For corporate offices: Well-fitting dress pants or chinos + crisp white/light blue shirt or polo + blazer or sweater. Nehru jacket or bandhgala for semi-formal corporate events. Loafers or brogues. Avoid: t-shirts, distressed jeans, flip-flops. Well-maintained grooming essential",
+          "sources": ["StyleBuddy Fashion", "Pant Project"]
+        },
+        {
+          "value": "campus_casual",
+          "definition": "For college: Athleisure (joggers + hoodies + sneakers), denim-forward looks (jeans + tees + canvas shoes), sweater-vest combos for presentations, graphic tees layered with blazers for semi-formal occasions. Indo-western fusion with Nehru jackets over jeans for cultural events",
+          "sources": ["Bewakoof"]
+        },
+        {
+          "value": "smart_casual_date",
+          "definition": "For dates and social evenings: Collared shirt or polo + chinos or tailored trousers + loafers or clean sneakers. Optional blazer for polish. Linen shirt with tailored trousers for summer. Dark denim acceptable. One statement accessory (watch). No sportswear or athleisure",
+          "sources": ["Meridian Looks", "FashionBeans"]
+        },
+        {
+          "value": "weekend_relaxed",
+          "definition": "For weekend outings: Tee or polo + dark jeans or chinos + sneakers or desert boots. Layering with denim jacket, bomber, or open shirt over tee. Oxford shirt with rolled sleeves for brunch. Relaxed but not sloppy. Clean footwear essential",
+          "sources": ["FashionBeans", "EffortlessGent Casual Style"]
+        },
+        {
+          "value": "festive_ethnic",
+          "definition": "For haldi/mehendi/family festivals: Kurta-pajama in bright or pastel colors + Kolhapuris or mojaris. Optional Nehru jacket for added polish. Lightweight cotton or linen fabrics for Indian climate. Colors occasion-appropriate: yellows for haldi, greens for mehendi, jewel tones for evening events",
+          "sources": ["Siyaram", "Albatross Clothing"]
+        },
+        {
+          "value": "wedding_formal_ethnic",
+          "definition": "For sangeet/pheras: Sherwani, bandhgala, or heavily embroidered kurta set. Rich fabrics: silk, velvet, brocade. Colors: royal blue, emerald, deep pink, gold accents. Mojaris or juttis. Statement accessories: pocket square, brooch, layered necklaces. Avoid red, white, black at pheras",
+          "sources": ["Siyaram", "Ethnix by Raymond"]
+        },
+        {
+          "value": "reception_formal",
+          "definition": "For receptions: Tuxedo with satin accents, midnight blue velvet jacket, charcoal dinner suit, or premium bandhgala. Oxford shoes, bow tie, metallic lapel pin. Most formal of all Indian wedding functions. Western formal or Indo-western fusion acceptable",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "temple_modest",
+          "definition": "For temple visits: Full-length trousers (no shorts) + collared shirt covering shoulders. Traditional dhoti/lungi preferred at some temples. No tight clothing, sportswear, or revealing attire. Head covering at certain temples/gurudwaras. Footwear removed. Conservative colors preferred",
+          "sources": ["IndusBus", "Hindu Temple of Atlanta"]
+        },
+        {
+          "value": "house_party_smart",
+          "definition": "For house parties: Printed Nehru jacket or embroidered kurta for ethnic vibe, or party-wear shirt in premium fabric + blazer + fitted trousers for Western look. Statement accessories welcome. Can experiment with bolder colors and patterns. Shoes may need to be removed at entrance",
+          "sources": ["Bewakoof", "CBazaar"]
+        }
+      ]
+    },
+    {
+      "name": "casual_outfit_formula",
+      "description": "Specific, repeatable outfit formulas for casual and smart-casual occasions, expressed as garment combinations that reliably work together",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "tee_jeans_sneakers",
+          "definition": "Foundation casual: well-fitted crew-neck tee (white, black, or grey) + dark wash jeans + clean white court-style sneakers. The universal casual starting point. Can be elevated by swapping tee color or adding a layer",
+          "sources": ["EffortlessGent Lean Wardrobe", "EffortlessGent Casual Style", "Albatross Clothing"]
+        },
+        {
+          "value": "polo_chinos_loafers",
+          "definition": "Smart-casual bridge: minimalist polo in navy/grey/olive + chinos in khaki/beige/navy + brown or black leather loafers. Steps up from pure casual without being formal. Works for casual offices, brunches, and daytime dates",
+          "sources": ["EffortlessGent Casual Style", "Deux Vincente", "Meridian Looks"]
+        },
+        {
+          "value": "oxford_shirt_jeans_desert_boots",
+          "definition": "Elevated casual: Oxford cloth button-down shirt (white or light blue) + dark denim jeans + suede desert boots. Classic smart-casual formula that balances casual denim with dressier shirt and footwear",
+          "sources": ["FashionBeans", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "linen_shirt_tailored_trousers_loafers",
+          "definition": "Indian summer smart-casual: linen shirt (white, light blue, or pastel) + tailored trousers + leather loafers. Perfect for Indian climate. Works for office-to-party transitions, daytime events, and summer occasions",
+          "sources": ["Meridian Looks", "Pant Project"]
+        },
+        {
+          "value": "chinos_oxford_sweater_desert_boots",
+          "definition": "Layered smart-casual: navy chinos + pale blue Oxford shirt + oatmeal crewneck sweater + desert boots. Clean, fuss-free, trend-immune. The quintessential smart-casual formula per FashionBeans",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "blazer_tee_chinos_sneakers",
+          "definition": "High-low smart-casual: unstructured navy blazer + plain crew-neck tee (white or grey) + chinos + clean minimal sneakers. The blazer elevates the casual base. Works for dates, dinners, and semi-formal events",
+          "sources": ["FashionBeans", "ApeToGentleman", "Meridian Looks"]
+        },
+        {
+          "value": "henley_dark_jeans_boots",
+          "definition": "Rugged casual: henley (waffle-knit or thermal) + dark wash jeans + leather boots (Chelsea or lace-up). Masculine, textured, effortless. Great for evening outings and weekend activities",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "kurta_jeans_sneakers",
+          "definition": "Indian fusion casual: traditional kurta + distressed or dark denim jeans + clean sneakers. Blends traditional and contemporary Indian style. Works for casual festive occasions, house parties, and cultural events on campuses",
+          "sources": ["Albatross Clothing", "Bewakoof", "StyleBuddy India"]
+        },
+        {
+          "value": "polo_blazer_chinos_monk_straps",
+          "definition": "Elevated smart-casual: knitted polo + unstructured blazer + tailored chinos + monk-strap shoes or Derbys. Elevated date night or business dinner formula. Replace dress shirt with polo for modern smart-casual approach",
+          "sources": ["ApeToGentleman", "FashionBeans"]
+        },
+        {
+          "value": "graphic_tee_blazer_jeans",
+          "definition": "Creative casual: graphic tee + grey or black blazer + fitted jeans + clean sneakers. For semi-formal creative contexts: college presentations, casual dinners, house parties. The blazer dresses up the casual tee",
+          "sources": ["Bewakoof"]
+        },
+        {
+          "value": "athleisure_joggers_hoodie_sneakers",
+          "definition": "Modern campus/weekend casual: joggers + oversized hoodie or premium sweatshirt + court-style sneakers + baseball cap. Sporty but intentional. Add headphones and sporty watch as accessories. For campus, casual hangouts, and errand runs",
+          "sources": ["Bewakoof", "Albatross Clothing"]
+        },
+        {
+          "value": "chambray_shirt_chinos_white_sneakers",
+          "definition": "Versatile everyday: chambray shirt + chinos (khaki or olive) + white sneakers. The chambray is the single most versatile casual collared shirt. Can be worn tucked or untucked, sleeves rolled. Works across almost all casual occasions",
+          "sources": ["EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "denim_jacket_tee_chinos",
+          "definition": "Layered weekend: denim jacket (medium wash) + plain tee + chinos or joggers + sneakers. The denim jacket serves as a lightweight Indian-weather-appropriate outer layer. Adds texture and visual interest to simple base",
+          "sources": ["Albatross Clothing", "EffortlessGent Casual Style"]
+        },
+        {
+          "value": "nehru_jacket_shirt_trousers",
+          "definition": "Indian smart-casual: Nehru jacket (structured, mandarin collar) + crisp shirt or polo + tailored trousers or chinos + loafers. Indian alternative to Western blazer for semi-formal occasions, corporate events, and family gatherings",
+          "sources": ["Deux Vincente", "StyleBuddy Fashion", "Bewakoof"]
+        }
+      ]
+    },
+    {
+      "name": "smart_casual_layering",
+      "description": "Three-layer system combinations for smart-casual dressing, specifying base layer, mid layer, and outer layer options that work together",
+      "style_track": ["smart_casual"],
+      "values": [
+        {
+          "value": "oxford_crewneck_sweater_blazer",
+          "definition": "Base: white or light blue Oxford shirt. Mid: crewneck sweater in grey, navy, or oatmeal (merino wool or cashmere blend). Outer: unstructured navy blazer. The quintessential three-layer smart-casual stack for cooler weather and air-conditioned offices",
+          "sources": ["FashionBeans", "EffortlessGent Casual Style", "ApeToGentleman"]
+        },
+        {
+          "value": "polo_quilted_vest",
+          "definition": "Base: polo shirt in solid color. Mid: quilted vest in navy, black, or army green. No outer layer needed. Vest adds warmth and visual interest without bulk. Works for office casual and weekend outings. The vest transitions between smart and casual contexts",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "tee_flannel_shirt_denim_jacket",
+          "definition": "Base: plain crew-neck tee (white or grey). Mid: flannel or denim shirt worn open as mid-layer. Outer: denim jacket or chore coat. Rugged, textured layering for weekend activities and casual outings. The flannel adds warmth and pattern",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "henley_cardigan_sport_coat",
+          "definition": "Base: henley in neutral color. Mid: shawl-collar cardigan. Outer: sport coat or unstructured blazer. Creates a high-low mix that is casually sophisticated. The henley replaces the dress shirt for a relaxed foundation with smart outer layers",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "dress_shirt_v_neck_sweater_blazer",
+          "definition": "Base: crisp dress shirt (white, light blue, or subtle pattern). Mid: V-neck sweater in complementary neutral. Outer: structured blazer or sport coat. More formal end of smart-casual. Suitable for business casual offices and evening events",
+          "sources": ["ApeToGentleman", "FashionBeans"]
+        },
+        {
+          "value": "tee_hoodie_bomber_jacket",
+          "definition": "Base: fitted crew-neck tee. Mid: lightweight hoodie. Outer: bomber jacket or motorcycle jacket. Casual-leaning layer stack for campus, weekends, and relaxed social settings. Modern and youthful",
+          "sources": ["Bewakoof", "Albatross Clothing"]
+        },
+        {
+          "value": "oxford_quarter_zip_chore_coat",
+          "definition": "Base: Oxford sport shirt (checkered or solid). Mid: quarter-zip sweater in coordinating color. Outer: chore coat or field jacket. Modern business-casual to weekend-ready layering. The quarter-zip is a refined mid-layer appropriate for office",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "kurta_nehru_jacket",
+          "definition": "Base: plain or textured kurta in solid neutral color. Outer: structured Nehru jacket in complementary color. Two-layer Indian smart-casual system. No mid-layer needed due to Indian climate. The Nehru jacket elevates the kurta for semi-formal occasions, family functions, and festive events",
+          "sources": ["Deux Vincente", "Siyaram", "Albatross Clothing"]
+        },
+        {
+          "value": "tee_open_shirt_no_outer",
+          "definition": "Base: fitted tee or tank. Mid: open button-down shirt (linen, chambray, or printed) worn unbuttoned as a lightweight layer. No outer. Indian-climate-appropriate two-layer approach. Adds visual interest and pattern without overheating. For casual outings and weekends",
+          "sources": ["Albatross Clothing", "StyleBuddy India"]
+        }
+      ]
+    },
+    {
+      "name": "capsule_wardrobe_essentials",
+      "description": "The 10-15 core wardrobe pieces recommended for Indian urban men to cover all everyday occasions with minimal items and maximum versatility",
+      "style_track": ["casual", "smart_casual", "ethnic"],
+      "values": [
+        {
+          "value": "white_crew_neck_tee",
+          "definition": "The most versatile piece in any wardrobe. Premium fabric (Supima cotton or equivalent) that holds shape. Worn solo with jeans, layered under open shirts, or paired under blazer for high-low look. Quantity: 2-3",
+          "sources": ["Albatross Clothing", "Deux Vincente", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "neutral_tees_set",
+          "definition": "Set of 3-4 crew-neck tees in neutral colors: white, black, beige/grey, olive. Foundation layer pieces that anchor casual outfits. Well-fitted, quality fabric essential",
+          "sources": ["Albatross Clothing", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "minimalist_polo",
+          "definition": "Polo shirt in solid muted color (navy, grey, or olive). Bridges casual and smart-casual. More sophisticated than a tee, works for office casual, brunches, and daytime dates. Quantity: 1-2",
+          "sources": ["Deux Vincente", "Albatross Clothing", "Meridian Looks"]
+        },
+        {
+          "value": "oxford_button_down_shirt",
+          "definition": "Oxford cloth button-down in white and/or light blue. The workhorse smart-casual shirt. Works tucked with chinos for office or untucked with jeans for weekend. Essential base-level item",
+          "sources": ["FashionBeans", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "chambray_shirt",
+          "definition": "If you own only one casual collared shirt, make it chambray. Versatile texture between denim and dress shirt. Works with chinos, dark jeans, or layered under blazer. Quantity: 1",
+          "sources": ["EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "smart_shirts_pair",
+          "definition": "Two smart shirts: one solid (white or light blue), one in subtle pattern (checks or micro-print). For office, dates, and occasions requiring collar. Crisp cotton or linen for Indian climate",
+          "sources": ["Albatross Clothing", "Pant Project"]
+        },
+        {
+          "value": "dark_wash_denim",
+          "definition": "Dark blue jeans (raw or rigid preferred). The most versatile bottom in menswear. Straddles casual and smart-casual. Pairs with tees, polos, shirts, and blazers. The single most important bottom. Quantity: 1-2",
+          "sources": ["EffortlessGent Lean Wardrobe", "Albatross Clothing", "FashionBeans"]
+        },
+        {
+          "value": "chinos_pair",
+          "definition": "Two pairs of chinos: classic khaki/beige and versatile navy blue. More formal than jeans, more relaxed than dress trousers. Perfect for Indian workplace and social gatherings. The essential smart-casual bottom",
+          "sources": ["Deux Vincente", "FashionBeans", "Pant Project"]
+        },
+        {
+          "value": "jogger_or_coord_set",
+          "definition": "One jogger or co-ord set for casual comfort. For campus wear, startup offices, weekend errands. Indian-climate-friendly in breathable fabric. Modern casual essential for younger Indian men",
+          "sources": ["Albatross Clothing"]
+        },
+        {
+          "value": "navy_blazer_unstructured",
+          "definition": "Single-breasted, two-button unstructured navy blazer in hopsack or twill fabric. The most versatile outer layer. Wears with dress chinos, mismatched trousers, and dark denim. Elevates any outfit from casual to smart-casual",
+          "sources": ["EffortlessGent Lean Wardrobe", "FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "layering_jacket",
+          "definition": "One lightweight layering jacket: bomber or denim jacket. Appropriate for Indian weather. Serves as everyday outerwear for casual contexts. Navy, black, or army green",
+          "sources": ["Albatross Clothing", "Deux Vincente"]
+        },
+        {
+          "value": "crewneck_sweater",
+          "definition": "Medium-weight crewneck sweater in neutral (grey, navy, or oatmeal). Merino wool or cashmere blend. Works as mid-layer in AC environments or as outer layer in mild weather. Year-round use in Indian AC offices",
+          "sources": ["EffortlessGent Lean Wardrobe", "FashionBeans"]
+        },
+        {
+          "value": "white_sneakers",
+          "definition": "Clean, low-profile white leather or canvas court-style sneakers. The ultimate versatile footwear. Pairs with jeans, chinos, shorts, and even casual kurtas. Classic shape that never goes out of style. Quantity: 1",
+          "sources": ["Deux Vincente", "Albatross Clothing", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "leather_loafers",
+          "definition": "Brown or black leather loafers. For occasions requiring something smarter than sneakers. Works with chinos, trousers, tailored shorts. Comfortable and stylish. The smart-casual dress shoe. Quantity: 1",
+          "sources": ["Deux Vincente", "Albatross Clothing", "FashionBeans"]
+        },
+        {
+          "value": "well_tailored_kurta",
+          "definition": "A well-tailored kurta in solid neutral color (white, beige, or navy). Essential for festive occasions, family functions, religious ceremonies, and cultural events. India-specific capsule piece that blends modern minimalism with tradition. Quantity: 1",
+          "sources": ["Deux Vincente", "Albatross Clothing"]
+        },
+        {
+          "value": "nehru_jacket",
+          "definition": "Structured Nehru jacket (mandarin collar, hip-length) in navy, black, or earthy tone. Indian alternative to Western blazer. Elevates kurtas for weddings and formal events. Also wears over shirts for smart-casual Indian occasions. Versatile layering piece",
+          "sources": ["Deux Vincente", "StyleBuddy Fashion", "Bewakoof"]
+        },
+        {
+          "value": "classic_watch",
+          "definition": "One understated classic watch with leather strap or metal bracelet. The only essential accessory. Avoid sport/smart watches for smart-casual contexts. Adds final touch of polish and personality. Tool watch (diver or field) recommended",
+          "sources": ["Deux Vincente", "FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "kolhapuri_or_mojari",
+          "definition": "One pair of traditional Indian footwear (Kolhapuri sandals or embroidered mojaris). For festive events, haldi/mehendi ceremonies, temple visits, and family gatherings requiring ethnic dress. India-specific capsule essential",
+          "sources": ["Siyaram", "Albatross Clothing"]
+        }
+      ]
+    },
+    {
+      "name": "indian_wedding_guest_dress",
+      "description": "Specific outfit recommendations for male wedding guests at each function of an Indian wedding, including garment type, fabric, color, and accessory guidelines",
+      "style_track": ["ethnic", "formal"],
+      "values": [
+        {
+          "value": "haldi_outfit",
+          "definition": "Function: Haldi (turmeric ceremony, daytime). Outfit: Lightweight cotton kurta in sunny yellow, deep mustard, or warm orange. Paired with pajama or cotton churidar. Fabric: breathable cotton or cotton blends with rich surface texture. Footwear: simple leather Kolhapuris. Accessories: minimal, skip heavy jewelry. Vibe: easygoing charm, comfort-first. Colors to favor: yellows, oranges, warm tones. Tip: expect turmeric stains, don't wear anything precious",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "mehendi_outfit",
+          "definition": "Function: Mehendi (henna ceremony, daytime/evening). Outfit: Short kurta with Nehru jacket, printed cotton sets, or casual dhoti-style bottom. Indo-western fusion acceptable (Nehru jacket over shirt and trousers). Fabric: cotton, linen. Footwear: Kolhapuris or mojris. Colors to favor: shades of green (traditional for mehendi), also rust, mustard, turquoise, pink. Accessories: pocket square, brooch, or lapel pin for polish. Vibe: relaxed, festive, colorful",
+          "sources": ["Siyaram", "Ethnix by Raymond", "Bharat Reshma"]
+        },
+        {
+          "value": "sangeet_outfit",
+          "definition": "Function: Sangeet (music and dance night, evening). Outfit: Kurta with pajamas or dhoti in fabrics with luxurious drape and subtle sheen. Alternatively, Indo-western jacket with fitted trousers. Must allow freedom of movement for dancing. Fabric: wrinkle-resistant materials with sheen (silk-blend, art silk). Footwear: Jodhpuri mojaris or formal ethnic shoes. Colors: rich jewel tones (emerald, sapphire blue, deep purple) and metallics. Accessories: statement pieces welcome (layered brooches, pocket squares). Vibe: bold, high-energy, performance-ready",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "pheras_outfit",
+          "definition": "Function: Pheras/Main ceremony (sacred vows, most formal). Outfit: Regal sherwani with intricate embroidery, sophisticated bandhgala suit, or heavily embellished kurta set. This is the most traditional and culturally significant event. Fabric: silk, velvet, brocade, premium wool blends. Footwear: embroidered mojaris or juttis. Colors: royal blue, emerald green, deep pink, ivory and gold. AVOID: red (reserved for bride), white (mourning connotation), black (inauspicious). Accessories: turban/safa (if appropriate to region), pocket square, brooch, cufflinks. Vibe: regal, traditional, respectful",
+          "sources": ["Siyaram", "Ethnix by Raymond", "CBazaar"]
+        },
+        {
+          "value": "reception_outfit",
+          "definition": "Function: Reception (post-wedding celebration, evening, most Western-influenced). Outfit Option A (Western): Tuxedo with satin lapel accents in black, midnight blue velvet jacket, or charcoal dinner suit. Double-breasted jacket variant. Oxford shoes, bow tie, metallic lapel pin. Outfit Option B (Indo-Western): Premium bandhgala in velvet or fine wool, paired with tailored trousers. Outfit Option C (Traditional): Heavily embroidered sherwani with premium fabric. Fabric: premium wool, satin, velvet. Colors: black, midnight blue, charcoal, deep jewel tones. Accessories: bow tie or cravat, pocket square, cufflinks, refined watch. Vibe: red-carpet, glamorous, camera-ready",
+          "sources": ["Siyaram"]
+        },
+        {
+          "value": "baraat_outfit",
+          "definition": "Function: Baraat (groom's procession, high energy). Outfit: Silk sherwani in deep shades with intricate embroidery for royal touch, or kurta-pajama with Nehru jacket for comfort while dancing. Must be comfortable enough for extended dancing and movement. Fabric: silk, silk blends. Footwear: comfortable ethnic shoes (mojaris). Colors: deep, rich shades. Accessories: minimal due to physical activity. Vibe: celebratory, energetic, comfortable",
+          "sources": ["Ethnix by Raymond", "CBazaar"]
+        }
+      ]
+    },
+    {
+      "name": "smart_casual_coordination_rules",
+      "description": "Principles and rules for coordinating smart-casual outfits, including balance, texture mixing, color strategy, and formality calibration",
+      "style_track": ["smart_casual"],
+      "values": [
+        {
+          "value": "swap_up_rule",
+          "definition": "Start with a casual outfit and swap one or two pieces for smarter alternatives to achieve smart-casual. Example: swap graphic tee for Oxford shirt, swap sneakers for loafers. More practical than building from formal and dressing down",
+          "sources": ["FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "color_darkness_formality",
+          "definition": "Darker colors skew more formal. Swapping olive bomber for navy one, or stonewashed jeans for indigo, makes outfit feel dressier without changing garment types. Use this to calibrate formality within same outfit framework",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "texture_formality_spectrum",
+          "definition": "Smooth and shiny textures are more formal; matte and textured fabrics are more casual. Swap worsted wool for flannel or tweed to casualize. Swap cotton for linen to add casual warmth. Texture mixing adds visual depth to smart-casual outfits",
+          "sources": ["FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "minimize_accessories",
+          "definition": "Modern smart-casual requires minimal accessories. Remove tie, lose belt buckle prominence, skip pocket square. Easier to look sharp with less going on. One statement piece (watch) is sufficient. Sport watches drag down smart outfits",
+          "sources": ["ApeToGentleman", "Deux Vincente"]
+        },
+        {
+          "value": "footwear_mood_shift",
+          "definition": "Shoes have disproportionate power to alter outfit mood. Loafers or Chelsea boots dress up casual outfits. Clean minimal sneakers dress down smart outfits. Sneakers must be sufficiently smart (no beaters). Derby shoes for maximum smart-casual range",
+          "sources": ["FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "warm_neutral_palette_2025",
+          "definition": "2025-2026 palette has shifted from navy/black dominance to warmer, natural tones: browns, clay, sage, soft neutrals. These feel richer when worn tonally (different shades of same color family). Build new purchases in this direction",
+          "sources": ["ApeToGentleman"]
+        },
+        {
+          "value": "context_calibration",
+          "definition": "Smart-casual means different things by context. Graduation smart-casual differs from date-night smart-casual. Always consider where you're heading and who you're with. This informs how smart or how casual to skew within the smart-casual range",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "light_inside_dark_outside",
+          "definition": "Layering color rule: light colors closest to body, darker colors in outer layers. White tee under grey sweater under navy blazer. Creates natural visual depth and slimming effect. Reliable formula that always works",
+          "sources": ["The Tie Bar", "Bronze Snake"]
+        },
+        {
+          "value": "rule_of_three_layers",
+          "definition": "Three visible layers is the sweet spot for smart-casual. Two is good, three is optimal, four is overkill creating bulk and clutter. In Indian climate, two layers is often the practical maximum (base + one layer)",
+          "sources": ["The Tie Bar", "Family Britches"]
+        },
+        {
+          "value": "formality_proximity",
+          "definition": "Items close in formality level on the casual-to-formal spectrum pair well together. Don't mix extremes (tuxedo jacket with gym shorts). Polo with chinos works because they're adjacent in formality. Spectrum thinking prevents awkward mismatches",
+          "sources": ["EffortlessGent Casual Style"]
+        },
+        {
+          "value": "indian_climate_adaptation",
+          "definition": "Indian smart-casual must account for heat and humidity. Favor breathable fabrics: linen, cotton, lightweight blends. Two-layer maximum in summer. Open-shirt-over-tee as lightweight layering alternative. Nehru jacket as Indian-appropriate structured layer that is lighter than Western blazer",
+          "sources": ["Meridian Looks", "Albatross Clothing", "Pant Project"]
+        }
+      ]
+    },
+    {
+      "name": "indian_style_archetype",
+      "description": "Personal style archetypes identified for Indian men, each representing a distinct approach to everyday dressing",
+      "style_track": ["casual", "smart_casual", "ethnic"],
+      "values": [
+        {
+          "value": "classic_minimalist",
+          "definition": "Wardrobe built around whites, blacks, clean tailoring, and minimal design. Capsule wardrobe philosophy. Neutral palette, quality over quantity. Think: white tee, dark jeans, navy blazer, white sneakers",
+          "sources": ["Albatross Clothing"]
+        },
+        {
+          "value": "streetwear_aficionado",
+          "definition": "Graphics-forward, baggy silhouettes, sneaker culture. Oversized hoodies, graphic tees, joggers, statement sneakers, caps. Campus and youth-oriented. Influenced by Indian rap and global streetwear culture",
+          "sources": ["Albatross Clothing", "Bewakoof"]
+        },
+        {
+          "value": "indo_fusion_lover",
+          "definition": "Ethnic layers with modern flair. Kurta with denim, Nehru jacket over Western shirt, sneakers with ethnic wear, bandhgala with jeans. Blends traditional Indian elements with contemporary Western silhouettes",
+          "sources": ["Albatross Clothing", "Meridian Looks", "StyleBuddy India"]
+        },
+        {
+          "value": "rugged_explorer",
+          "definition": "Earth tones, utility wear, boots. Cargo pants, field jackets, henleys, leather boots, canvas accessories. Outdoor-influenced aesthetic adapted for Indian urban contexts",
+          "sources": ["Albatross Clothing"]
+        }
+      ]
+    },
+    {
+      "name": "indian_capsule_color_palette",
+      "description": "Recommended core color palette for building a versatile Indian men's capsule wardrobe, with neutral base and seasonal accent colors",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "core_neutrals",
+          "definition": "Base palette: white, black, navy, grey, beige/khaki. These are timeless menswear neutrals that pair easily with one another. All capsule wardrobe purchases should primarily come from this group. Build 80% of wardrobe here",
+          "sources": ["Deux Vincente", "Albatross Clothing", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "extended_neutrals",
+          "definition": "Additional neutral tones: olive/military green, brown/tan, light blue, charcoal. Expand the core palette without introducing bold color. These work as secondary wardrobe colors that still pair with everything",
+          "sources": ["EffortlessGent Lean Wardrobe", "ApeToGentleman"]
+        },
+        {
+          "value": "seasonal_accents",
+          "definition": "Introduce 1-2 accent colors per season through tees or accessories: olive green, maroon/burgundy, mustard, rust, sage. 2025-2026 trend favors warmer natural tones (browns, clay, sage) over traditional navy/black dominance",
+          "sources": ["Deux Vincente", "ApeToGentleman"]
+        },
+        {
+          "value": "wedding_event_colors",
+          "definition": "Occasion-specific palette: yellows/oranges for haldi, greens for mehendi, jewel tones (emerald, sapphire, deep pink) for sangeet/pheras, pastels for daytime ceremonies, midnight blue/black for receptions. Avoid: red (bride's color), white, black at pheras",
+          "sources": ["Siyaram", "Ethnix by Raymond"]
+        }
+      ]
+    },
+    {
+      "name": "indian_recommended_brands",
+      "description": "Homegrown Indian brands recommended for building a capsule wardrobe at accessible price points",
+      "style_track": ["casual", "smart_casual"],
+      "values": [
+        {
+          "value": "bhaane",
+          "definition": "Urban, clean designs. Good for smart-casual basics and modern Indian menswear. Mid-range pricing",
+          "sources": ["Albatross Clothing"]
+        },
+        {
+          "value": "march_tee",
+          "definition": "Comfortable, minimal t-shirts and joggers. Strong basics brand for building capsule wardrobe foundation",
+          "sources": ["Albatross Clothing"]
+        },
+        {
+          "value": "nicobar",
+          "definition": "Modern Indian classics: linen shirts, kurtas, and relaxed tailoring. Good for India-specific smart-casual and ethnic-casual pieces",
+          "sources": ["Albatross Clothing"]
+        },
+        {
+          "value": "uniqlo_india",
+          "definition": "Excellent for basics and functional layers. Quality-to-price ratio strong for capsule wardrobe foundations. Good for tees, chinos, and layering pieces",
+          "sources": ["Albatross Clothing"]
+        }
+      ]
+    },
+    {
+      "name": "workwear_to_weekend_transition",
+      "description": "Strategies for transitioning office outfits to weekend or after-work social contexts, specific to Indian urban men",
+      "style_track": ["smart_casual"],
+      "values": [
+        {
+          "value": "shirt_swap",
+          "definition": "Swap dress shirt for knitted polo, fine-gauge sweater, or grandad-collar button-up. Instantly casualizes a smart outfit for after-work drinks or weekend brunch",
+          "sources": ["ApeToGentleman", "FashionBeans"]
+        },
+        {
+          "value": "footwear_swap",
+          "definition": "Swap formal Oxfords for clean sneakers or loafers to transition from office to weekend. Shoes have the most power to shift outfit mood. Keep a pair of clean sneakers at desk or in bag",
+          "sources": ["FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "remove_structure",
+          "definition": "Remove blazer, untuck shirt, roll up sleeves, lose the belt. Removing structured elements and loosening fit cues signals weekend mode. Works for Indian business-casual-to-evening transitions",
+          "sources": ["FashionBeans", "Pant Project"]
+        },
+        {
+          "value": "linen_versatility",
+          "definition": "Linen shirts and trousers work for Indian office-to-party transitions seamlessly. The fabric reads professional in office context and relaxed in social context. Ideal for Indian climate where same outfit must span both environments",
+          "sources": ["Meridian Looks", "Pant Project"]
+        },
+        {
+          "value": "chinos_bridge",
+          "definition": "Chinos are the bridge garment between workwear and weekendwear. Pair with blazer and shirt for office, swap to tee and sneakers for weekend. The single most versatile Indian office-to-casual bottom",
+          "sources": ["Pant Project", "Deux Vincente"]
+        }
+      ]
+    },
+    {
+      "name": "outfit_elevation_technique",
+      "description": "Specific techniques to elevate a basic casual outfit to smart-casual or semi-formal without changing the entire outfit",
+      "style_track": ["smart_casual"],
+      "values": [
+        {
+          "value": "add_blazer",
+          "definition": "Adding an unstructured blazer over any casual outfit (tee+jeans, polo+chinos) instantly elevates it to smart-casual. The single most effective elevation technique. Navy blazer is the universal choice",
+          "sources": ["FashionBeans", "ApeToGentleman", "EffortlessGent Lean Wardrobe"]
+        },
+        {
+          "value": "add_nehru_jacket",
+          "definition": "Indian alternative to blazer elevation. Adding a Nehru jacket over a shirt, polo, or kurta instantly creates a polished, semi-formal Indian look. Works for both ethnic and Western base outfits",
+          "sources": ["Deux Vincente", "StyleBuddy Fashion"]
+        },
+        {
+          "value": "upgrade_footwear",
+          "definition": "Swap sneakers for leather loafers, Chelsea boots, or monk straps. Footwear upgrade is the second most effective single-change elevation. Sleek Chelsea boot or Derby shoe upgrades casual to smart-casual",
+          "sources": ["FashionBeans", "ApeToGentleman"]
+        },
+        {
+          "value": "darken_colors",
+          "definition": "Swap lighter/washed tones for darker equivalents. Stonewashed jeans to indigo, olive jacket to navy, light tee to dark sweater. Darker palette reads more formal without changing garment types",
+          "sources": ["FashionBeans"]
+        },
+        {
+          "value": "add_watch",
+          "definition": "A classic watch (diver or field watch, not smartwatch) is the single accessory that most elevates an outfit. Avoid sport/smart watches that drag down otherwise sharp looks. Leather strap or metal bracelet",
+          "sources": ["FashionBeans", "Deux Vincente"]
+        },
+        {
+          "value": "tuck_the_shirt",
+          "definition": "Tucking in a shirt with a clean waistline creates a more polished silhouette. Combined with a belt, it signals intentionality. Untucked reads casual, tucked reads smart-casual to formal",
+          "sources": ["Pant Project", "StyleBuddy Fashion"]
+        }
+      ]
+    }
+  ]
+}

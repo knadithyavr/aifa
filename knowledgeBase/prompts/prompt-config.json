@@ -1,0 +1,42 @@
+{
+  "version": "2.0",
+  "description": "API parameters per provider. Edit active_provider to switch. Override at runtime with AIFA_PROVIDER env var or --provider CLI arg.",
+
+  "active_provider": "anthropic",
+
+  "providers": {
+    "anthropic": {
+      "model": "claude-sonnet-4-6",
+      "max_tokens": 16384,
+      "temperature": 0.2,
+      "thinking": {"type": "adaptive"},
+      "_notes": {
+        "models": ["claude-haiku-4-5-20251001", "claude-sonnet-4-6", "claude-opus-4-6"],
+        "cost": "haiku ~$0.003/report | sonnet ~$0.02/report | opus ~$0.15/report"
+      }
+    },
+    "gemini": {
+      "model": "gemini-2.5-pro-preview-05-06",
+      "max_output_tokens": 16384,
+      "temperature": 0.2,
+      "_notes": {
+        "models": ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-2.5-pro-preview-05-06"],
+        "cost": "flash ~$0.001/report | 1.5-pro ~$0.01/report | 2.5-pro ~$0.05/report",
+        "thinking": "gemini-2.5-pro supports thinking_budget. Add 'thinking_budget': 8000 to enable."
+      }
+    }
+  },
+
+  "prompt_assembly": {
+    "system_prompt_file": "system-prompt.md",
+    "user_message_template_file": "user-message-template.md",
+    "output_schema_file": "../schemas/output-schema.json",
+    "input_schema_file": "../schemas/input-schema.json"
+  },
+
+  "notes": {
+    "why_low_temp": "0.2 keeps LLM grounded in provided scores. Increase to 0.4-0.5 if reports feel too robotic.",
+    "why_16k_max_tokens": "~5K for thinking + ~5K for report. Leaves headroom for longer reports.",
+    "why_adaptive_thinking": "Claude extended thinking handles complex multi-step reasoning over the 30K token context."
+  }
+}

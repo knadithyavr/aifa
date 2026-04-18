@@ -1,0 +1,3996 @@
+{
+  "version": "1.0",
+  "description": "Body-based style scoring rules. Each garment parameter is scored against user body inputs. Base scores from primary factor (usually build), adjustments from secondary factors (height, body_shape, etc). Final score = clamp(base + sum(adjustments), 1, 10). Each value also has context tags for occasion/climate filtering.",
+  "scoring_method": {
+    "base_score": "Primary body factor provides score 1-10",
+    "adjustments": "Secondary factors provide -3 to +3 adjustments",
+    "final": "clamp(base + adjustments, 1, 10)",
+    "labels": {
+      "9-10": "best",
+      "7-8": "great",
+      "5-6": "okay",
+      "3-4": "caution",
+      "1-2": "avoid"
+    }
+  },
+  "garment_categories": {
+    "tshirt": {
+      "fit": {
+        "values": [
+          "slim",
+          "regular",
+          "relaxed",
+          "oversized",
+          "muscle",
+          "athletic",
+          "longline",
+          "boxy"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "slim": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 6,
+            "heavy": 2
+          },
+          "regular": {
+            "slim": 6,
+            "average": 9,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 4,
+            "average": 6,
+            "athletic": 5,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "oversized": {
+            "slim": 2,
+            "average": 4,
+            "athletic": 3,
+            "stocky": 5,
+            "heavy": 5
+          },
+          "muscle": {
+            "slim": 5,
+            "average": 6,
+            "athletic": 9,
+            "stocky": 3,
+            "heavy": 1
+          },
+          "athletic": {
+            "slim": 6,
+            "average": 7,
+            "athletic": 9,
+            "stocky": 5,
+            "heavy": 3
+          },
+          "longline": {
+            "slim": 7,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 3,
+            "heavy": 4
+          },
+          "boxy": {
+            "slim": 3,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 6,
+            "heavy": 6
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "slim": 0,
+                "regular": 0,
+                "relaxed": -1,
+                "oversized": -2,
+                "muscle": 0,
+                "athletic": 0,
+                "longline": -2,
+                "boxy": -1
+              },
+              "average": {
+                "slim": 0,
+                "regular": 0,
+                "relaxed": 0,
+                "oversized": 0,
+                "muscle": 0,
+                "athletic": 0,
+                "longline": 0,
+                "boxy": 0
+              },
+              "tall": {
+                "slim": 0,
+                "regular": 0,
+                "relaxed": 1,
+                "oversized": 1,
+                "muscle": 0,
+                "athletic": 0,
+                "longline": 2,
+                "boxy": 1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "slim": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "regular": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "oversized": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "muscle": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "athletic": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "longline": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "boxy": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "slim+heavy": "Slim fit on heavy build creates visible tension lines and unflattering silhouette",
+          "muscle+heavy": "Muscle fit on heavy/stocky build creates stuffed-sausage effect (Flusser)",
+          "oversized+slim": "Oversized on slim frame makes wearer look smaller and swimming in fabric",
+          "longline+short": "Longline on short men makes torso appear disproportionately long",
+          "regular+heavy": "Regular fit provides room without clinging — clean, comfortable silhouette",
+          "slim+stocky": "Slim fit defines your frame without excess fabric. Experts recommend slim (not skinny) for stocky builds."
+        }
+      },
+      "neckline": {
+        "values": [
+          "crew_neck",
+          "v_neck",
+          "henley",
+          "scoop_neck",
+          "mock_neck",
+          "boat_neck"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "crew_neck": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "v_neck": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 8,
+            "heavy": 9
+          },
+          "henley": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 9,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "scoop_neck": {
+            "slim": 7,
+            "average": 6,
+            "athletic": 7,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "mock_neck": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 5,
+            "heavy": 5
+          },
+          "boat_neck": {
+            "slim": 6,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 3,
+            "heavy": 2
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.neck",
+            "scores": {
+              "short": {
+                "crew_neck": 0,
+                "v_neck": 2,
+                "henley": 1,
+                "scoop_neck": 1,
+                "mock_neck": -3,
+                "boat_neck": 0
+              },
+              "average": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "long": {
+                "crew_neck": 0,
+                "v_neck": -1,
+                "henley": 0,
+                "scoop_neck": -1,
+                "mock_neck": 2,
+                "boat_neck": 0
+              },
+              "thick": {
+                "crew_neck": -1,
+                "v_neck": 2,
+                "henley": 1,
+                "scoop_neck": 1,
+                "mock_neck": -2,
+                "boat_neck": -1
+              }
+            }
+          },
+          {
+            "factor": "D01.face_shape",
+            "scores": {
+              "small_delicate": {
+                "crew_neck": 1,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": -1
+              },
+              "average": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "wide_broad": {
+                "crew_neck": -1,
+                "v_neck": 1,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": -2
+              },
+              "thin_narrow": {
+                "crew_neck": 1,
+                "v_neck": -1,
+                "henley": 0,
+                "scoop_neck": -1,
+                "mock_neck": 0,
+                "boat_neck": 1
+              }
+            }
+          },
+          {
+            "factor": "D01.facial_hair",
+            "scores": {
+              "clean_shaven": {
+                "crew_neck": 0,
+                "v_neck": 1,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "stubble": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 1,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "short_beard": {
+                "crew_neck": 1,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "full_beard": {
+                "crew_neck": 1,
+                "v_neck": -1,
+                "henley": 1,
+                "scoop_neck": -1,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "long_beard": {
+                "crew_neck": 1,
+                "v_neck": -1,
+                "henley": 0,
+                "scoop_neck": -1,
+                "mock_neck": 0,
+                "boat_neck": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.glasses_style",
+            "scores": {
+              "bold_thick_frame": {
+                "crew_neck": 1,
+                "v_neck": -1,
+                "henley": 0,
+                "scoop_neck": -1,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "thin_frame": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "round": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": -1
+              },
+              "rectangular": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.head_size",
+            "scores": {
+              "small": {
+                "crew_neck": 1,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": -1
+              },
+              "proportional": {
+                "crew_neck": 0,
+                "v_neck": 0,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              },
+              "large": {
+                "crew_neck": 0,
+                "v_neck": 1,
+                "henley": 0,
+                "scoop_neck": 0,
+                "mock_neck": 0,
+                "boat_neck": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "crew_neck": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "v_neck": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "henley": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "scoop_neck": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "mock_neck": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "boat_neck": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "v_neck+heavy": "V-neck creates vertical line that elongates and slims the torso area",
+          "v_neck+short_neck": "V opening elongates a short neck visually",
+          "mock_neck+short_neck": "Mock neck crowds a short neck, making it appear compressed",
+          "boat_neck+heavy": "Boat neck adds horizontal emphasis, widening an already-wide torso",
+          "crew_neck+wide_face": "Crew neck adds roundness near an already-wide face",
+          "v_neck+clean_shaven": "V-neck showcases a clean jawline — the open neckline highlights the shave",
+          "v_neck+full_beard": "V-neck with full beard exposes too much skin+beard combination, creating visual imbalance",
+          "crew_neck+full_beard": "Crew neck frames a full beard with a clean border, containing the visual mass",
+          "crew_neck+bold_thick_frame": "Crew neck frames the face cleanly, letting bold glasses be the focal point",
+          "v_neck+bold_thick_frame": "V-neck plus bold frames creates too much visual activity competing for attention",
+          "crew_neck+small_head": "Crew neck keeps neckline contained, preventing a small head from looking lost",
+          "v_neck+large_head": "V-neck draws attention downward from a large head, improving visual balance"
+        }
+      },
+      "sleeve_length": {
+        "values": [
+          "short",
+          "three_quarter",
+          "long",
+          "sleeveless",
+          "cap"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "short": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "three_quarter": {
+            "slim": 6,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 6,
+            "heavy": 7
+          },
+          "long": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 7,
+            "heavy": 8
+          },
+          "sleeveless": {
+            "slim": 4,
+            "average": 5,
+            "athletic": 8,
+            "stocky": 3,
+            "heavy": 2
+          },
+          "cap": {
+            "slim": 5,
+            "average": 6,
+            "athletic": 7,
+            "stocky": 4,
+            "heavy": 3
+          }
+        },
+        "tags": {
+          "short": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "three_quarter": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "long": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "sleeveless": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "cap": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "sleeveless+heavy": "Exposes heavy upper arms, draws attention to width",
+          "sleeveless+athletic": "Shows off toned arms — the ideal sleeveless candidate",
+          "long+heavy": "Long sleeves create clean vertical line, covering and slimming arms"
+        }
+      },
+      "style_type": {
+        "values": [
+          "plain",
+          "graphic",
+          "typographic",
+          "striped",
+          "color_block"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "plain": {
+            "casual": 8,
+            "smart_casual": 9
+          },
+          "graphic": {
+            "casual": 8,
+            "smart_casual": 4
+          },
+          "typographic": {
+            "casual": 7,
+            "smart_casual": 3
+          },
+          "striped": {
+            "casual": 7,
+            "smart_casual": 7
+          },
+          "color_block": {
+            "casual": 6,
+            "smart_casual": 5
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.build",
+            "scores": {
+              "heavy": {
+                "plain": 1,
+                "graphic": 0,
+                "typographic": 0,
+                "striped": -1,
+                "color_block": -1
+              },
+              "slim": {
+                "plain": 0,
+                "graphic": 0,
+                "typographic": 0,
+                "striped": 1,
+                "color_block": 1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "plain": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "graphic": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "typographic": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "striped": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "color_block": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "striped+heavy": "Horizontal stripes on 3D body make person look wider (Helmholtz illusion on 3D bodies)",
+          "plain+smart_casual": "Plain tees read cleaner and more intentional for smart casual contexts"
+        }
+      },
+      "fabric_weight": {
+        "values": [
+          "lightweight",
+          "midweight",
+          "heavyweight"
+        ],
+        "primary_factor": "D05.climate_zone",
+        "base_scores": {
+          "lightweight": {
+            "tropical": 9,
+            "warm_temperate": 8,
+            "cool_temperate": 5,
+            "cold": 3,
+            "arid": 9
+          },
+          "midweight": {
+            "tropical": 5,
+            "warm_temperate": 7,
+            "cool_temperate": 9,
+            "cold": 6,
+            "arid": 6
+          },
+          "heavyweight": {
+            "tropical": 2,
+            "warm_temperate": 4,
+            "cool_temperate": 7,
+            "cold": 9,
+            "arid": 3
+          }
+        },
+        "tags": {
+          "lightweight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "midweight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "heavyweight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "lightweight+tropical": "Under 150 GSM — breathable, essential for Indian summers",
+          "heavyweight+tropical": "Over 200 GSM traps heat — uncomfortable in Indian summer/monsoon"
+        }
+      }
+    },
+    "polo": {
+      "fit": {
+        "values": [
+          "slim",
+          "classic",
+          "relaxed",
+          "athletic"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "slim": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 5,
+            "stocky": 6,
+            "heavy": 2
+          },
+          "classic": {
+            "slim": 6,
+            "average": 9,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 3,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "athletic": {
+            "slim": 5,
+            "average": 7,
+            "athletic": 9,
+            "stocky": 5,
+            "heavy": 3
+          }
+        },
+        "tags": {
+          "slim": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "classic": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "athletic": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "slim+heavy": "Slim polo on heavy build pulls at buttons and creates horizontal stress lines",
+          "classic+heavy": "Classic fit provides room through chest and midsection — the safe choice"
+        }
+      },
+      "collar_type": {
+        "values": [
+          "classic_ribbed",
+          "button_down",
+          "mandarin",
+          "tipped",
+          "collarless"
+        ],
+        "primary_factor": "D01.face_shape",
+        "base_scores": {
+          "classic_ribbed": {
+            "small_delicate": 7,
+            "average": 8,
+            "wide_broad": 7,
+            "thin_narrow": 8
+          },
+          "button_down": {
+            "small_delicate": 8,
+            "average": 8,
+            "wide_broad": 6,
+            "thin_narrow": 7
+          },
+          "mandarin": {
+            "small_delicate": 7,
+            "average": 7,
+            "wide_broad": 8,
+            "thin_narrow": 6
+          },
+          "tipped": {
+            "small_delicate": 7,
+            "average": 8,
+            "wide_broad": 7,
+            "thin_narrow": 8
+          },
+          "collarless": {
+            "small_delicate": 6,
+            "average": 6,
+            "wide_broad": 5,
+            "thin_narrow": 7
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.neck",
+            "scores": {
+              "short": {
+                "classic_ribbed": 0,
+                "button_down": 0,
+                "mandarin": -2,
+                "tipped": 0,
+                "collarless": 1
+              },
+              "long": {
+                "classic_ribbed": 0,
+                "button_down": 0,
+                "mandarin": 1,
+                "tipped": 0,
+                "collarless": -1
+              },
+              "thick": {
+                "classic_ribbed": -1,
+                "button_down": 0,
+                "mandarin": -2,
+                "tipped": -1,
+                "collarless": 1
+              }
+            }
+          },
+          {
+            "factor": "D01.facial_hair",
+            "scores": {
+              "clean_shaven": {
+                "classic_ribbed": 0,
+                "button_down": 0,
+                "mandarin": 0,
+                "tipped": 0,
+                "collarless": 0
+              },
+              "stubble": {
+                "classic_ribbed": 0,
+                "button_down": 0,
+                "mandarin": 0,
+                "tipped": 0,
+                "collarless": 0
+              },
+              "short_beard": {
+                "classic_ribbed": 0,
+                "button_down": 1,
+                "mandarin": 0,
+                "tipped": 0,
+                "collarless": 0
+              },
+              "full_beard": {
+                "classic_ribbed": 1,
+                "button_down": 0,
+                "mandarin": -1,
+                "tipped": 0,
+                "collarless": 0
+              },
+              "long_beard": {
+                "classic_ribbed": 1,
+                "button_down": 0,
+                "mandarin": -1,
+                "tipped": 0,
+                "collarless": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "classic_ribbed": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "button_down": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "mandarin": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "tipped": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "collarless": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "mandarin+short_neck": "Mandarin collar sits high on neck, compressing a short neck further",
+          "mandarin+wide_face": "Mandarin's vertical line helps narrow a wide face",
+          "mandarin+full_beard": "Full beard crowds the mandarin collar, creating visual congestion at the neck",
+          "classic_ribbed+full_beard": "Classic ribbed collar frames the beard nicely with clean structure"
+        }
+      },
+      "fabric": {
+        "values": [
+          "pique",
+          "jersey",
+          "interlock",
+          "performance",
+          "cotton_silk"
+        ],
+        "primary_factor": "D05.climate_zone",
+        "base_scores": {
+          "pique": {
+            "tropical": 8,
+            "warm_temperate": 9,
+            "cool_temperate": 8,
+            "cold": 6,
+            "arid": 8
+          },
+          "jersey": {
+            "tropical": 7,
+            "warm_temperate": 7,
+            "cool_temperate": 7,
+            "cold": 6,
+            "arid": 7
+          },
+          "interlock": {
+            "tropical": 5,
+            "warm_temperate": 6,
+            "cool_temperate": 8,
+            "cold": 8,
+            "arid": 5
+          },
+          "performance": {
+            "tropical": 9,
+            "warm_temperate": 8,
+            "cool_temperate": 6,
+            "cold": 4,
+            "arid": 9
+          },
+          "cotton_silk": {
+            "tropical": 6,
+            "warm_temperate": 7,
+            "cool_temperate": 7,
+            "cold": 5,
+            "arid": 6
+          }
+        },
+        "tags": {
+          "pique": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "jersey": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "interlock": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "performance": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "cotton_silk": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "pique+any": "The default polo fabric — textured, breathable, holds collar shape well",
+          "performance+tropical": "Moisture-wicking blends are ideal for Indian heat — stay dry all day",
+          "interlock+cold": "Thicker, smoother than pique — better insulation for winter"
+        }
+      },
+      "placket": {
+        "values": [
+          "two_button",
+          "three_button",
+          "hidden",
+          "zip"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "two_button": {
+            "casual": 8,
+            "smart_casual": 9
+          },
+          "three_button": {
+            "casual": 7,
+            "smart_casual": 8
+          },
+          "hidden": {
+            "casual": 6,
+            "smart_casual": 8
+          },
+          "zip": {
+            "casual": 7,
+            "smart_casual": 5
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.neck",
+            "scores": {
+              "short": {
+                "two_button": 1,
+                "three_button": 0,
+                "hidden": 0,
+                "zip": 1
+              },
+              "thick": {
+                "two_button": 1,
+                "three_button": 0,
+                "hidden": -1,
+                "zip": 1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "two_button": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "three_button": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "hidden": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "zip": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "two_button+any": "Classic, clean, most versatile — the default polo placket",
+          "zip+smart_casual": "Zip polos read as athletic/sporty — less refined for smart casual"
+        }
+      }
+    },
+    "casual_shirt": {
+      "type": {
+        "values": [
+          "ocbd",
+          "camp_collar",
+          "cuban_collar",
+          "mandarin_collar",
+          "linen",
+          "denim",
+          "flannel",
+          "chambray",
+          "overshirt",
+          "henley"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "ocbd": {
+            "casual": 6,
+            "smart_casual": 9
+          },
+          "camp_collar": {
+            "casual": 8,
+            "smart_casual": 8
+          },
+          "cuban_collar": {
+            "casual": 8,
+            "smart_casual": 7
+          },
+          "mandarin_collar": {
+            "casual": 5,
+            "smart_casual": 8
+          },
+          "linen": {
+            "casual": 6,
+            "smart_casual": 9
+          },
+          "denim": {
+            "casual": 8,
+            "smart_casual": 6
+          },
+          "flannel": {
+            "casual": 8,
+            "smart_casual": 5
+          },
+          "chambray": {
+            "casual": 8,
+            "smart_casual": 7
+          },
+          "overshirt": {
+            "casual": 7,
+            "smart_casual": 6
+          },
+          "henley": {
+            "casual": 8,
+            "smart_casual": 5
+          }
+        },
+        "tags": {
+          "ocbd": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "camp_collar": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "cuban_collar": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "mandarin_collar": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "linen": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "denim": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "flannel": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "chambray": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "overshirt": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "henley": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "linen+monsoon": "Linen absorbs moisture heavily, becomes limp in humidity",
+          "ocbd+smart_casual": "Button-down collar frames face well without a tie — the smart casual gold standard",
+          "camp_collar+summer": "Open collar promotes airflow, relaxed silhouette suits summer"
+        }
+      },
+      "fit": {
+        "values": [
+          "slim",
+          "regular",
+          "relaxed",
+          "untucked"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "slim": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 6,
+            "heavy": 2
+          },
+          "regular": {
+            "slim": 6,
+            "average": 9,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 4,
+            "average": 6,
+            "athletic": 5,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "untucked": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          }
+        },
+        "tags": {
+          "slim": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "regular": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "untucked": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        }
+      },
+      "collar": {
+        "values": [
+          "button_down",
+          "camp",
+          "mandarin",
+          "band",
+          "spread_casual"
+        ],
+        "primary_factor": "D01.face_shape",
+        "base_scores": {
+          "button_down": {
+            "small_delicate": 8,
+            "average": 8,
+            "wide_broad": 6,
+            "thin_narrow": 7
+          },
+          "camp": {
+            "small_delicate": 7,
+            "average": 8,
+            "wide_broad": 8,
+            "thin_narrow": 6
+          },
+          "mandarin": {
+            "small_delicate": 6,
+            "average": 7,
+            "wide_broad": 8,
+            "thin_narrow": 5
+          },
+          "band": {
+            "small_delicate": 6,
+            "average": 7,
+            "wide_broad": 7,
+            "thin_narrow": 6
+          },
+          "spread_casual": {
+            "small_delicate": 6,
+            "average": 7,
+            "wide_broad": 5,
+            "thin_narrow": 9
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.neck",
+            "scores": {
+              "short": {
+                "button_down": 0,
+                "camp": 1,
+                "mandarin": -2,
+                "band": -1,
+                "spread_casual": 1
+              },
+              "thick": {
+                "button_down": 0,
+                "camp": 1,
+                "mandarin": -2,
+                "band": -1,
+                "spread_casual": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.facial_hair",
+            "scores": {
+              "clean_shaven": {
+                "button_down": 0,
+                "camp": 0,
+                "mandarin": 0,
+                "band": 0,
+                "spread_casual": 1
+              },
+              "stubble": {
+                "button_down": 0,
+                "camp": 0,
+                "mandarin": 0,
+                "band": 0,
+                "spread_casual": 0
+              },
+              "short_beard": {
+                "button_down": 1,
+                "camp": 0,
+                "mandarin": 0,
+                "band": 0,
+                "spread_casual": 0
+              },
+              "full_beard": {
+                "button_down": 0,
+                "camp": 1,
+                "mandarin": -1,
+                "band": 0,
+                "spread_casual": 0
+              },
+              "long_beard": {
+                "button_down": 0,
+                "camp": 1,
+                "mandarin": -1,
+                "band": -1,
+                "spread_casual": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "button_down": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "camp": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "mandarin": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "band": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "spread_casual": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "spread_casual+thin_narrow": "Wide spread opens up and balances a narrow face",
+          "mandarin+short_neck": "High mandarin collar compresses a short neck",
+          "camp+wide_broad": "Camp collar's horizontal line doesn't widen — the open relaxed shape balances a broad face",
+          "camp+full_beard": "Camp collar's open relaxed shape works well with full beards — gives the beard room to breathe",
+          "mandarin+full_beard": "Full beard crowds the mandarin collar, creating visual congestion at the neckline",
+          "spread_casual+clean_shaven": "Spread collar on a clean-shaven face creates a polished, open look"
+        }
+      },
+      "fabric": {
+        "values": [
+          "oxford_cloth",
+          "linen",
+          "chambray",
+          "flannel",
+          "cotton_poplin",
+          "rayon_viscose",
+          "linen_cotton_blend"
+        ],
+        "primary_factor": "D05.climate_zone",
+        "base_scores": {
+          "oxford_cloth": {
+            "tropical": 5,
+            "warm_temperate": 7,
+            "cool_temperate": 9,
+            "cold": 7,
+            "arid": 6
+          },
+          "linen": {
+            "tropical": 10,
+            "warm_temperate": 9,
+            "cool_temperate": 6,
+            "cold": 3,
+            "arid": 10
+          },
+          "chambray": {
+            "tropical": 7,
+            "warm_temperate": 8,
+            "cool_temperate": 7,
+            "cold": 5,
+            "arid": 7
+          },
+          "flannel": {
+            "tropical": 1,
+            "warm_temperate": 3,
+            "cool_temperate": 8,
+            "cold": 10,
+            "arid": 2
+          },
+          "cotton_poplin": {
+            "tropical": 8,
+            "warm_temperate": 8,
+            "cool_temperate": 7,
+            "cold": 5,
+            "arid": 8
+          },
+          "rayon_viscose": {
+            "tropical": 9,
+            "warm_temperate": 8,
+            "cool_temperate": 5,
+            "cold": 3,
+            "arid": 8
+          },
+          "linen_cotton_blend": {
+            "tropical": 9,
+            "warm_temperate": 9,
+            "cool_temperate": 6,
+            "cold": 3,
+            "arid": 9
+          }
+        },
+        "tags": {
+          "oxford_cloth": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "linen": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "chambray": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "flannel": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "cotton_poplin": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "rayon_viscose": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "linen_cotton_blend": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "linen+tropical": "Most breathable natural fabric — the Indian summer essential",
+          "flannel+tropical": "Heavy, heat-trapping — completely wrong for Indian climate",
+          "rayon_viscose+summer": "Lightweight drape, breathable — great for camp collar summer shirts",
+          "linen+monsoon": "Absorbs moisture, becomes limp and transparent in humidity"
+        }
+      }
+    },
+    "jeans": {
+      "fit": {
+        "values": [
+          "skinny",
+          "slim",
+          "tapered",
+          "straight",
+          "regular",
+          "relaxed",
+          "bootcut",
+          "wide_leg",
+          "athletic"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "skinny": {
+            "slim": 7,
+            "average": 5,
+            "athletic": 2,
+            "stocky": 1,
+            "heavy": 1
+          },
+          "slim": {
+            "slim": 9,
+            "average": 8,
+            "athletic": 6,
+            "stocky": 6,
+            "heavy": 2
+          },
+          "tapered": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "straight": {
+            "slim": 6,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 9,
+            "heavy": 9
+          },
+          "regular": {
+            "slim": 5,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 3,
+            "average": 5,
+            "athletic": 5,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "bootcut": {
+            "slim": 5,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "wide_leg": {
+            "slim": 4,
+            "average": 4,
+            "athletic": 3,
+            "stocky": 5,
+            "heavy": 5
+          },
+          "athletic": {
+            "slim": 4,
+            "average": 6,
+            "athletic": 9,
+            "stocky": 6,
+            "heavy": 5
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "skinny": -1,
+                "slim": 0,
+                "tapered": 1,
+                "straight": 0,
+                "regular": 0,
+                "relaxed": -1,
+                "bootcut": -2,
+                "wide_leg": -2,
+                "athletic": 0
+              },
+              "tall": {
+                "skinny": 0,
+                "slim": 0,
+                "tapered": 0,
+                "straight": 1,
+                "regular": 0,
+                "relaxed": 1,
+                "bootcut": 1,
+                "wide_leg": 1,
+                "athletic": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.body_shape",
+            "scores": {
+              "oval": {
+                "skinny": -1,
+                "slim": -1,
+                "tapered": 0,
+                "straight": 1,
+                "regular": 0,
+                "relaxed": 0,
+                "bootcut": 0,
+                "wide_leg": 0,
+                "athletic": 0
+              },
+              "inverted_triangle": {
+                "skinny": 0,
+                "slim": 0,
+                "tapered": 1,
+                "straight": 0,
+                "regular": 0,
+                "relaxed": 0,
+                "bootcut": 0,
+                "wide_leg": 0,
+                "athletic": 1
+              },
+              "rectangle": {
+                "skinny": 0,
+                "slim": 1,
+                "tapered": 1,
+                "straight": 0,
+                "regular": 0,
+                "relaxed": -1,
+                "bootcut": 0,
+                "wide_leg": -1,
+                "athletic": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "skinny": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "slim": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "tapered": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "straight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "regular": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "bootcut": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "wide_leg": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "athletic": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "skinny+heavy": "Creates stuffed-sausage effect, accentuates width contrast between torso and legs",
+          "tapered+athletic": "Accommodates muscular thighs while tapering below knee — made for athletic builds",
+          "straight+heavy": "Clean vertical line from hip to ankle, doesn't cling to midsection or thighs",
+          "bootcut+short": "Flare at bottom shortens apparent leg line further",
+          "wide_leg+short": "Excess fabric at bottom overwhelms short frame",
+          "slim+stocky": "Slim fit tapers below the knee, cutting excess calf fabric and slimming the silhouette. Slim-straight and athletic cuts also excellent."
+        }
+      },
+      "wash": {
+        "values": [
+          "raw",
+          "rinse",
+          "dark",
+          "medium",
+          "light",
+          "black",
+          "distressed"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "raw": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "rinse": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 8,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "dark": {
+            "slim": 7,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 9,
+            "heavy": 9
+          },
+          "medium": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 5
+          },
+          "light": {
+            "slim": 8,
+            "average": 6,
+            "athletic": 6,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "black": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 8,
+            "heavy": 9
+          },
+          "distressed": {
+            "slim": 7,
+            "average": 6,
+            "athletic": 6,
+            "stocky": 4,
+            "heavy": 3
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 1,
+                "medium": 0,
+                "light": -1,
+                "black": 1,
+                "distressed": -1
+              }
+            }
+          },
+          {
+            "factor": "D03.skin_depth",
+            "scores": {
+              "light": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 1,
+                "medium": 0,
+                "light": -1,
+                "black": 1,
+                "distressed": 0
+              },
+              "medium_light": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 0,
+                "medium": 0,
+                "light": 0,
+                "black": 0,
+                "distressed": 0
+              },
+              "medium": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 0,
+                "medium": 0,
+                "light": 0,
+                "black": 0,
+                "distressed": 0
+              },
+              "medium_dark": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 0,
+                "medium": 0,
+                "light": 1,
+                "black": 0,
+                "distressed": 0
+              },
+              "dark": {
+                "raw": 0,
+                "rinse": 0,
+                "dark": 0,
+                "medium": 0,
+                "light": 1,
+                "black": 0,
+                "distressed": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "raw": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "rinse": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "dark": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "medium": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "light": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "black": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "distressed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "dark+heavy": "Dark denim minimizes and slims — the most flattering wash for larger builds",
+          "light+heavy": "Light denim expands visually, highlighting areas you want to minimize",
+          "distressed+heavy": "Distressing adds visual noise to areas that benefit from clean lines",
+          "dark+short": "Dark from waist to ankle creates unbroken line, maximizing apparent height",
+          "dark+light_skin": "Dark wash against light skin creates strong, flattering contrast",
+          "light+light_skin": "Light wash on light skin can appear washed out — insufficient contrast",
+          "light+dark_skin": "Light wash against dark skin creates beautiful, striking contrast"
+        }
+      },
+      "rise": {
+        "values": [
+          "low",
+          "mid",
+          "high"
+        ],
+        "primary_factor": "D01.height",
+        "base_scores": {
+          "low": {
+            "short": 3,
+            "average": 6,
+            "tall": 7
+          },
+          "mid": {
+            "short": 7,
+            "average": 9,
+            "tall": 8
+          },
+          "high": {
+            "short": 9,
+            "average": 7,
+            "tall": 6
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.torso_vs_leg_ratio",
+            "scores": {
+              "long_torso": {
+                "low": -1,
+                "mid": 0,
+                "high": 1
+              },
+              "balanced": {
+                "low": 0,
+                "mid": 0,
+                "high": 0
+              },
+              "long_legs": {
+                "low": 1,
+                "mid": 0,
+                "high": -1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "low": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "mid": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "high": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "high+short": "High rise elongates the leg line — critical for short men (Flusser fulcrum principle)",
+          "low+short": "Low rise shortens apparent leg line, making short men appear shorter"
+        }
+      },
+      "stretch": {
+        "values": [
+          "rigid",
+          "comfort_stretch",
+          "super_stretch"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "rigid": {
+            "slim": 8,
+            "average": 7,
+            "athletic": 4,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "comfort_stretch": {
+            "slim": 7,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "super_stretch": {
+            "slim": 5,
+            "average": 6,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D05.climate_zone",
+            "scores": {
+              "tropical": {
+                "rigid": -2,
+                "comfort_stretch": 1,
+                "super_stretch": 1
+              },
+              "cold": {
+                "rigid": 1,
+                "comfort_stretch": 0,
+                "super_stretch": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "rigid": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "comfort_stretch": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "super_stretch": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "rigid+heavy": "Zero give in rigid denim makes it uncomfortable and unflattering on larger builds",
+          "rigid+tropical": "Rigid denim is stiff and hot — miserable in Indian summers",
+          "comfort_stretch+athletic": "1-2% elastane accommodates muscular thighs while maintaining denim structure"
+        }
+      },
+      "leg_shape": {
+        "values": [
+          "tapered",
+          "straight",
+          "flared",
+          "wide"
+        ],
+        "primary_factor": "D01.height",
+        "base_scores": {
+          "tapered": {
+            "short": 9,
+            "average": 9,
+            "tall": 8
+          },
+          "straight": {
+            "short": 7,
+            "average": 8,
+            "tall": 9
+          },
+          "flared": {
+            "short": 3,
+            "average": 5,
+            "tall": 7
+          },
+          "wide": {
+            "short": 2,
+            "average": 5,
+            "tall": 7
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.build",
+            "scores": {
+              "heavy": {
+                "tapered": -1,
+                "straight": 1,
+                "flared": 0,
+                "wide": 0
+              },
+              "athletic": {
+                "tapered": 1,
+                "straight": 0,
+                "flared": -1,
+                "wide": -1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "tapered": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "straight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "flared": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "wide": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "tapered+short": "Taper from knee narrows at ankle, creating elongating line",
+          "flared+short": "Flare at bottom adds horizontal weight, shortening leg line",
+          "wide+short": "Excess width overwhelms shorter frames"
+        }
+      }
+    },
+    "chinos": {
+      "fit": {
+        "values": [
+          "slim",
+          "tapered",
+          "straight",
+          "regular",
+          "relaxed",
+          "athletic"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "slim": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 5,
+            "stocky": 6,
+            "heavy": 2
+          },
+          "tapered": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "straight": {
+            "slim": 5,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 9,
+            "heavy": 9
+          },
+          "regular": {
+            "slim": 5,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 3,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "athletic": {
+            "slim": 4,
+            "average": 6,
+            "athletic": 9,
+            "stocky": 6,
+            "heavy": 5
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "slim": 0,
+                "tapered": 1,
+                "straight": 0,
+                "regular": 0,
+                "relaxed": -1,
+                "athletic": 0
+              },
+              "tall": {
+                "slim": 0,
+                "tapered": 0,
+                "straight": 1,
+                "regular": 0,
+                "relaxed": 1,
+                "athletic": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "slim": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "tapered": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "straight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "regular": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "athletic": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        }
+      },
+      "color": {
+        "values": [
+          "navy",
+          "khaki",
+          "charcoal",
+          "olive",
+          "stone",
+          "black",
+          "white",
+          "burgundy"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "navy": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 9,
+            "stocky": 9,
+            "heavy": 9
+          },
+          "khaki": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 6
+          },
+          "charcoal": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 9,
+            "heavy": 9
+          },
+          "olive": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "stone": {
+            "slim": 8,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 5,
+            "heavy": 4
+          },
+          "black": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 8,
+            "heavy": 9
+          },
+          "white": {
+            "slim": 8,
+            "average": 6,
+            "athletic": 6,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "burgundy": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 5
+          }
+        },
+        "tags": {
+          "navy": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "khaki": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "charcoal": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "olive": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "stone": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "black": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "white": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "burgundy": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "navy+heavy": "Dark navy minimizes and creates slimming effect — most versatile chino color",
+          "white+heavy": "White expands visually — draws attention to every contour",
+          "khaki+monsoon": "Light khaki shows water stains and mud splashes during monsoon"
+        }
+      },
+      "trouser_type": {
+        "values": [
+          "chino",
+          "jogger",
+          "cargo",
+          "linen_trouser",
+          "drawstring"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "chino": {
+            "casual": 8,
+            "smart_casual": 10
+          },
+          "jogger": {
+            "casual": 8,
+            "smart_casual": 3
+          },
+          "cargo": {
+            "casual": 7,
+            "smart_casual": 2
+          },
+          "linen_trouser": {
+            "casual": 6,
+            "smart_casual": 8
+          },
+          "drawstring": {
+            "casual": 7,
+            "smart_casual": 5
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.build",
+            "scores": {
+              "heavy": {
+                "chino": 0,
+                "jogger": -1,
+                "cargo": -1,
+                "linen_trouser": 0,
+                "drawstring": 1
+              },
+              "athletic": {
+                "chino": 0,
+                "jogger": 1,
+                "cargo": 0,
+                "linen_trouser": 0,
+                "drawstring": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "chino": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "jogger": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "cargo": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "linen_trouser": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "drawstring": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "jogger+heavy": "Tapered joggers can emphasize hip width — choose straight-leg or drawstring instead",
+          "linen_trouser+smart_casual": "Linen trousers read as elevated casual — perfect for summer smart casual",
+          "cargo+smart_casual": "Cargo pockets add bulk and casualness — too informal for smart casual"
+        }
+      },
+      "rise": {
+        "values": [
+          "low",
+          "mid",
+          "high"
+        ],
+        "primary_factor": "D01.height",
+        "base_scores": {
+          "low": {
+            "short": 3,
+            "average": 6,
+            "tall": 7
+          },
+          "mid": {
+            "short": 8,
+            "average": 9,
+            "tall": 8
+          },
+          "high": {
+            "short": 9,
+            "average": 7,
+            "tall": 6
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.torso_vs_leg_ratio",
+            "scores": {
+              "long_torso": {
+                "low": -1,
+                "mid": 0,
+                "high": 1
+              },
+              "long_legs": {
+                "low": 1,
+                "mid": 0,
+                "high": -1
+              }
+            }
+          },
+          {
+            "factor": "D01.waist_definition",
+            "scores": {
+              "prominent": {
+                "low": -2,
+                "mid": 0,
+                "high": 1
+              },
+              "defined": {
+                "low": 0,
+                "mid": 0,
+                "high": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "low": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "mid": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "high": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "high+short": "High rise elongates leg line — critical for shorter men",
+          "low+prominent_waist": "Low rise on prominent midsection creates muffin-top effect",
+          "high+prominent_waist": "High rise sits above widest point, creating cleaner silhouette"
+        }
+      }
+    },
+    "shorts": {
+      "length": {
+        "values": [
+          "mid_thigh",
+          "above_knee",
+          "at_knee",
+          "below_knee"
+        ],
+        "primary_factor": "D01.height",
+        "base_scores": {
+          "mid_thigh": {
+            "short": 7,
+            "average": 8,
+            "tall": 8
+          },
+          "above_knee": {
+            "short": 9,
+            "average": 9,
+            "tall": 8
+          },
+          "at_knee": {
+            "short": 5,
+            "average": 7,
+            "tall": 7
+          },
+          "below_knee": {
+            "short": 2,
+            "average": 5,
+            "tall": 6
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.build",
+            "scores": {
+              "heavy": {
+                "mid_thigh": -2,
+                "above_knee": 0,
+                "at_knee": 1,
+                "below_knee": 1
+              },
+              "athletic": {
+                "mid_thigh": 1,
+                "above_knee": 0,
+                "at_knee": 0,
+                "below_knee": -1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "mid_thigh": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "above_knee": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "at_knee": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "below_knee": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "above_knee+short": "Above-knee length shows more leg, creating illusion of longer legs",
+          "below_knee+short": "Below-knee length cuts the leg at its widest point, shortening leg line dramatically",
+          "mid_thigh+heavy": "Mid-thigh on heavy build exposes heavy thighs — above-knee is more flattering"
+        }
+      },
+      "type": {
+        "values": [
+          "chino_shorts",
+          "athletic",
+          "cargo",
+          "linen",
+          "denim",
+          "swim_trunks"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "chino_shorts": {
+            "casual": 8,
+            "smart_casual": 9
+          },
+          "athletic": {
+            "casual": 7,
+            "smart_casual": 3
+          },
+          "cargo": {
+            "casual": 7,
+            "smart_casual": 3
+          },
+          "linen": {
+            "casual": 7,
+            "smart_casual": 8
+          },
+          "denim": {
+            "casual": 7,
+            "smart_casual": 5
+          },
+          "swim_trunks": {
+            "casual": 5,
+            "smart_casual": 1
+          }
+        },
+        "tags": {
+          "chino_shorts": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "athletic": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "cargo": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "linen": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "denim": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "swim_trunks": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        }
+      },
+      "fit": {
+        "values": [
+          "slim",
+          "regular",
+          "relaxed"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "slim": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 6,
+            "stocky": 6,
+            "heavy": 3
+          },
+          "regular": {
+            "slim": 6,
+            "average": 9,
+            "athletic": 8,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "relaxed": {
+            "slim": 3,
+            "average": 5,
+            "athletic": 5,
+            "stocky": 7,
+            "heavy": 7
+          }
+        },
+        "tags": {
+          "slim": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "regular": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "relaxed": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        }
+      }
+    },
+    "casual_jacket": {
+      "type": {
+        "values": [
+          "bomber",
+          "denim_trucker",
+          "harrington",
+          "hoodie_zip",
+          "hoodie_pullover",
+          "puffer",
+          "field_jacket",
+          "leather_biker",
+          "windbreaker",
+          "chore_coat",
+          "shacket"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "bomber": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 6
+          },
+          "denim_trucker": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 6
+          },
+          "harrington": {
+            "slim": 8,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "hoodie_zip": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "hoodie_pullover": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "puffer": {
+            "slim": 7,
+            "average": 6,
+            "athletic": 5,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "field_jacket": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "leather_biker": {
+            "slim": 9,
+            "average": 7,
+            "athletic": 8,
+            "stocky": 5,
+            "heavy": 4
+          },
+          "windbreaker": {
+            "slim": 7,
+            "average": 7,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "chore_coat": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 8,
+            "heavy": 8
+          },
+          "shacket": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          }
+        },
+        "tags": {
+          "bomber": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "denim_trucker": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "harrington": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "hoodie_zip": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "hoodie_pullover": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "puffer": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "field_jacket": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "leather_biker": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "windbreaker": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": false
+          },
+          "chore_coat": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "shacket": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "is_optional": true,
+        "optional_note": "Jackets are add-ons, not required for most casual outfits. Recommended only when weather or occasion calls for layering.",
+        "reasons": {
+          "puffer+heavy": "Puffer adds significant visual bulk — avoid on already-heavy builds",
+          "leather_biker+slim": "Leather biker's slim cut showcases lean frame — the ideal leather jacket candidate",
+          "field_jacket+heavy": "Straight-hanging field jacket doesn't cling — works well for heavier builds",
+          "denim_trucker+average": "The most versatile casual jacket — works with almost everything for average builds"
+        }
+      },
+      "hoodie_subtype": {
+        "values": [
+          "pullover",
+          "zip_up",
+          "oversized",
+          "fitted",
+          "quarter_zip"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "pullover": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "zip_up": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 8,
+            "stocky": 7,
+            "heavy": 8
+          },
+          "oversized": {
+            "slim": 4,
+            "average": 5,
+            "athletic": 4,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "fitted": {
+            "slim": 8,
+            "average": 7,
+            "athletic": 9,
+            "stocky": 4,
+            "heavy": 3
+          },
+          "quarter_zip": {
+            "slim": 7,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          }
+        },
+        "tags": {
+          "pullover": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "zip_up": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "oversized": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "fitted": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "quarter_zip": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "is_optional": true,
+        "reasons": {
+          "zip_up+heavy": "Zip-up creates vertical line when open — the most flattering hoodie for larger builds",
+          "fitted+heavy": "Fitted hoodie clings to midsection — avoid on heavy build",
+          "oversized+slim": "Oversized on slim frame looks like wearing someone else's clothes",
+          "quarter_zip+office": "Quarter-zip is the only hoodie variant passable in casual office settings"
+        }
+      },
+      "weight": {
+        "values": [
+          "lightweight",
+          "midweight",
+          "heavyweight"
+        ],
+        "primary_factor": "D05.climate_zone",
+        "base_scores": {
+          "lightweight": {
+            "tropical": 8,
+            "warm_temperate": 8,
+            "cool_temperate": 6,
+            "cold": 3,
+            "arid": 7
+          },
+          "midweight": {
+            "tropical": 3,
+            "warm_temperate": 5,
+            "cool_temperate": 9,
+            "cold": 6,
+            "arid": 4
+          },
+          "heavyweight": {
+            "tropical": 1,
+            "warm_temperate": 3,
+            "cool_temperate": 7,
+            "cold": 10,
+            "arid": 2
+          }
+        },
+        "tags": {
+          "lightweight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "midweight": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "heavyweight": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "is_optional": true,
+        "reasons": {
+          "lightweight+tropical": "Windbreakers, light bombers for AC environments and evening outings",
+          "heavyweight+tropical": "Puffers and heavy leather — completely unnecessary in Indian tropical climate"
+        }
+      }
+    },
+    "sneakers": {
+      "type": {
+        "values": [
+          "minimalist_white",
+          "court_tennis",
+          "retro_lifestyle",
+          "canvas_plimsoll",
+          "runner_modern",
+          "runner_retro",
+          "high_top",
+          "chunky_dad",
+          "slip_on",
+          "skate"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "minimalist_white": {
+            "casual": 9,
+            "smart_casual": 9
+          },
+          "court_tennis": {
+            "casual": 8,
+            "smart_casual": 8
+          },
+          "retro_lifestyle": {
+            "casual": 8,
+            "smart_casual": 6
+          },
+          "canvas_plimsoll": {
+            "casual": 8,
+            "smart_casual": 6
+          },
+          "runner_modern": {
+            "casual": 7,
+            "smart_casual": 4
+          },
+          "runner_retro": {
+            "casual": 7,
+            "smart_casual": 5
+          },
+          "high_top": {
+            "casual": 6,
+            "smart_casual": 3
+          },
+          "chunky_dad": {
+            "casual": 6,
+            "smart_casual": 2
+          },
+          "slip_on": {
+            "casual": 7,
+            "smart_casual": 5
+          },
+          "skate": {
+            "casual": 7,
+            "smart_casual": 3
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 0,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": -1,
+                "chunky_dad": 1,
+                "slip_on": 0,
+                "skate": 0
+              },
+              "tall": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 0,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": 1,
+                "chunky_dad": 0,
+                "slip_on": 0,
+                "skate": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.build",
+            "scores": {
+              "heavy": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 0,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": -1,
+                "chunky_dad": -1,
+                "slip_on": 0,
+                "skate": 0
+              },
+              "slim": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 1,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": 0,
+                "chunky_dad": -1,
+                "slip_on": 0,
+                "skate": 0
+              }
+            }
+          },
+          {
+            "factor": "D01.hair_style",
+            "scores": {
+              "bald_balding": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 0,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": 0,
+                "chunky_dad": 1,
+                "slip_on": 0,
+                "skate": 0
+              },
+              "buzz_short": {
+                "minimalist_white": 0,
+                "court_tennis": 0,
+                "retro_lifestyle": 0,
+                "canvas_plimsoll": 0,
+                "runner_modern": 0,
+                "runner_retro": 0,
+                "high_top": 0,
+                "chunky_dad": 0,
+                "slip_on": 0,
+                "skate": 0
+              }
+            }
+          }
+        ],
+        "tags": {
+          "minimalist_white": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "court_tennis": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "retro_lifestyle": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "canvas_plimsoll": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "runner_modern": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "runner_retro": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "high_top": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "chunky_dad": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "slip_on": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "skate": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "minimalist_white+any": "The most versatile sneaker — works with everything from jeans to chinos",
+          "chunky_dad+heavy": "Chunky shoes add visual weight at the bottom — not ideal for heavy builds",
+          "chunky_dad+short": "Can add slight height boost — one of few sneaker advantages for short men",
+          "high_top+short": "High-top cuts the ankle line, potentially shortening leg appearance",
+          "chunky_dad+bald_balding": "Chunky shoes add visual weight at the bottom to balance a bare head — improves overall proportions"
+        }
+      },
+      "material": {
+        "values": [
+          "leather",
+          "suede",
+          "canvas",
+          "knit_mesh",
+          "synthetic"
+        ],
+        "primary_factor": "D05.climate_zone",
+        "base_scores": {
+          "leather": {
+            "tropical": 6,
+            "warm_temperate": 7,
+            "cool_temperate": 9,
+            "cold": 8,
+            "arid": 7
+          },
+          "suede": {
+            "tropical": 4,
+            "warm_temperate": 6,
+            "cool_temperate": 8,
+            "cold": 7,
+            "arid": 5
+          },
+          "canvas": {
+            "tropical": 8,
+            "warm_temperate": 8,
+            "cool_temperate": 7,
+            "cold": 4,
+            "arid": 8
+          },
+          "knit_mesh": {
+            "tropical": 9,
+            "warm_temperate": 8,
+            "cool_temperate": 6,
+            "cold": 3,
+            "arid": 9
+          },
+          "synthetic": {
+            "tropical": 7,
+            "warm_temperate": 7,
+            "cool_temperate": 6,
+            "cold": 5,
+            "arid": 7
+          }
+        },
+        "tags": {
+          "leather": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "suede": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "canvas": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "knit_mesh": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "synthetic": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        },
+        "reasons": {
+          "knit_mesh+tropical": "Maximum breathability — feet stay cool in Indian heat",
+          "suede+monsoon": "Water ruins suede permanently — never wear in rain",
+          "synthetic+monsoon": "Quick-drying, water-resistant — the monsoon sneaker material",
+          "leather+office": "Leather sneakers bridge casual and office — the cleanest sneaker look"
+        }
+      }
+    },
+    "casual_shoes": {
+      "type": {
+        "values": [
+          "penny_loafer",
+          "tassel_loafer",
+          "driving_moccasin",
+          "boat_shoe",
+          "espadrille",
+          "chelsea_boot",
+          "chukka_desert",
+          "derby_casual"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "penny_loafer": {
+            "casual": 6,
+            "smart_casual": 9
+          },
+          "tassel_loafer": {
+            "casual": 5,
+            "smart_casual": 8
+          },
+          "driving_moccasin": {
+            "casual": 7,
+            "smart_casual": 5
+          },
+          "boat_shoe": {
+            "casual": 7,
+            "smart_casual": 4
+          },
+          "espadrille": {
+            "casual": 7,
+            "smart_casual": 5
+          },
+          "chelsea_boot": {
+            "casual": 6,
+            "smart_casual": 9
+          },
+          "chukka_desert": {
+            "casual": 7,
+            "smart_casual": 8
+          },
+          "derby_casual": {
+            "casual": 5,
+            "smart_casual": 8
+          }
+        },
+        "tags": {
+          "penny_loafer": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "tassel_loafer": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "driving_moccasin": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "boat_shoe": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "espadrille": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "chelsea_boot": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "chukka_desert": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "derby_casual": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          }
+        }
+      },
+      "boot_type": {
+        "values": [
+          "chelsea",
+          "chukka_desert",
+          "hiking",
+          "combat"
+        ],
+        "primary_factor": "D01.build",
+        "base_scores": {
+          "chelsea": {
+            "slim": 9,
+            "average": 8,
+            "athletic": 7,
+            "stocky": 6,
+            "heavy": 6
+          },
+          "chukka_desert": {
+            "slim": 8,
+            "average": 9,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "hiking": {
+            "slim": 5,
+            "average": 6,
+            "athletic": 7,
+            "stocky": 7,
+            "heavy": 7
+          },
+          "combat": {
+            "slim": 6,
+            "average": 6,
+            "athletic": 7,
+            "stocky": 5,
+            "heavy": 4
+          }
+        },
+        "adjustments": [
+          {
+            "factor": "D01.height",
+            "scores": {
+              "short": {
+                "chelsea": 1,
+                "chukka_desert": 0,
+                "hiking": -1,
+                "combat": -1
+              },
+              "tall": {
+                "chelsea": 0,
+                "chukka_desert": 0,
+                "hiking": 1,
+                "combat": 1
+              }
+            }
+          }
+        ],
+        "tags": {
+          "chelsea": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "chukka_desert": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "hiking": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          },
+          "combat": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": false,
+            "winter_ok": true
+          }
+        },
+        "is_optional": true,
+        "reasons": {
+          "chelsea+slim": "Sleek profile complements slim frame — the most elegant casual boot",
+          "chelsea+short": "Slim silhouette with slight heel adds height",
+          "hiking+heavy": "Chunky boots balance heavy frame — visual weight at bottom anchors the look",
+          "combat+short": "Heavy combat boots can overwhelm a short frame"
+        }
+      },
+      "formality_level": {
+        "values": [
+          "smart_casual_bridge",
+          "elevated_casual",
+          "casual",
+          "very_casual"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "smart_casual_bridge": {
+            "casual": 5,
+            "smart_casual": 10
+          },
+          "elevated_casual": {
+            "casual": 7,
+            "smart_casual": 8
+          },
+          "casual": {
+            "casual": 9,
+            "smart_casual": 5
+          },
+          "very_casual": {
+            "casual": 8,
+            "smart_casual": 2
+          }
+        },
+        "value_examples": {
+          "smart_casual_bridge": "Penny loafer, Chelsea boot, derby casual",
+          "elevated_casual": "Suede chukka, tassel loafer, clean leather sneaker",
+          "casual": "Canvas sneaker, boat shoe, driving moc",
+          "very_casual": "Flip-flop, slide, sport sandal"
+        },
+        "tags": {
+          "smart_casual_bridge": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "elevated_casual": {
+            "office_ok": true,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "casual": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": true
+          },
+          "very_casual": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        }
+      }
+    },
+    "sandals": {
+      "type": {
+        "values": [
+          "leather_sandal",
+          "sport_sandal",
+          "kolhapuri",
+          "slide",
+          "flip_flop"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "leather_sandal": {
+            "casual": 7,
+            "smart_casual": 6
+          },
+          "sport_sandal": {
+            "casual": 7,
+            "smart_casual": 3
+          },
+          "kolhapuri": {
+            "casual": 7,
+            "smart_casual": 7
+          },
+          "slide": {
+            "casual": 6,
+            "smart_casual": 2
+          },
+          "flip_flop": {
+            "casual": 5,
+            "smart_casual": 1
+          }
+        },
+        "tags": {
+          "leather_sandal": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "sport_sandal": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "kolhapuri": {
+            "office_ok": false,
+            "wedding_ok": true,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "slide": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "flip_flop": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        },
+        "reasons": {
+          "kolhapuri+wedding": "Traditional Indian sandal — appropriate for daytime wedding events (haldi, mehendi) and temple visits",
+          "sport_sandal+monsoon": "Practical monsoon footwear — quick-drying, grip, comfortable in rain",
+          "flip_flop+smart_casual": "Flip-flops are never smart casual — they're home/beach/neighborhood only"
+        }
+      },
+      "occasion_appropriateness": {
+        "values": [
+          "beach_resort",
+          "casual_errand",
+          "monsoon_practical",
+          "ethnic_traditional",
+          "home_neighborhood"
+        ],
+        "primary_factor": "D05.style_track",
+        "base_scores": {
+          "beach_resort": {
+            "casual": 9,
+            "smart_casual": 5
+          },
+          "casual_errand": {
+            "casual": 8,
+            "smart_casual": 3
+          },
+          "monsoon_practical": {
+            "casual": 8,
+            "smart_casual": 4
+          },
+          "ethnic_traditional": {
+            "casual": 6,
+            "smart_casual": 8
+          },
+          "home_neighborhood": {
+            "casual": 7,
+            "smart_casual": 1
+          }
+        },
+        "sandal_type_mapping": {
+          "beach_resort": [
+            "leather_sandal",
+            "sport_sandal",
+            "flip_flop"
+          ],
+          "casual_errand": [
+            "slide",
+            "sport_sandal",
+            "leather_sandal"
+          ],
+          "monsoon_practical": [
+            "sport_sandal",
+            "slide",
+            "flip_flop"
+          ],
+          "ethnic_traditional": [
+            "kolhapuri",
+            "leather_sandal"
+          ],
+          "home_neighborhood": [
+            "flip_flop",
+            "slide"
+          ]
+        },
+        "tags": {
+          "beach_resort": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "casual_errand": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "monsoon_practical": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "ethnic_traditional": {
+            "office_ok": false,
+            "wedding_ok": true,
+            "monsoon_safe": false,
+            "summer_ok": true,
+            "winter_ok": false
+          },
+          "home_neighborhood": {
+            "office_ok": false,
+            "wedding_ok": false,
+            "monsoon_safe": true,
+            "summer_ok": true,
+            "winter_ok": false
+          }
+        }
+      }
+    }
+  }
+}
